@@ -1,0 +1,240 @@
+# Python para Ciencia de Datos - M2-1 - Que son Outliers y respondiendo consultas
+
+0:022 seconds[Música]
+0:066 secondsOkay entonces veamos tratamiento deers para acá Bueno de forma rápida creo que todos ustedes para los que no saben de
+0:1313 secondsqué hablamos cuando se menciona opers porque sé que algunos también aquí están aprendiendo significan anomalías valores
+0:2121 secondsanómalos valores anómalos datos atípicos que no deberían estar en cierto momento
+0:3030 secondsde acuerdo de forma general Qué es un dato anómalo imaginemos que yo tengo conjunto de triángulos por aquí triángulo triángulo triángulo todos son
+0:3838 secondstriángulos y de repente me aparece un círculo no
+0:4545 secondsEntonces qué pasó tengo un valor atípico algo que no debería estar pero apareció
+0:5252 secondsy aquí hay una base interesante Por qué hago tratamiento lers losers Les comento
+1:001 minutetienen dos caras dentro del análisis descriptivo el un Players es un hallazgo valioso hasta
+1:091 minute, 9 secondspuede ser un hgo valioso comento es una oportunidad para mejorar el proceso de negocio Pero dentro del Análisis ya
+1:181 minute, 18 secondsinferencial cuando estoy hablando de Machine learning y modelos predictivos un ler es para mí un có se dice cómo le
+1:271 minute, 27 secondsdecimos directamente es algo que tenemos que tratar de quitar no es algo es un sesgo que va a generar que mi modelo
+1:351 minute, 35 secondsfalle y no generalice Entonces desde la parte descriptiva muy bien puede ser una oportunidad puede representar un hallazgo valioso para la empresa Pero la
+1:441 minute, 44 secondsparte ya más que todo directamente hablando de un modelo predictivo uno layer ya representa sesgo representa
+1:511 minute, 51 secondserror dentro del modelo y hay que eliminarlo entonces justamente el tratamiento do ler se da más que todo
+1:581 minute, 58 secondspara ir en la ya con miras a un modelo un modelo predictivo que sea que puede ser para tareas de regresión puede ser
+2:062 minutes, 6 secondspara tareas de clasificación o tareas de clasing también tranquilamente ver esos tres no vamos a tratar aprendizaje por
+2:142 minutes, 14 secondsrefuerzo es un tema que se trata poco en lo que es analítica ciencia de datos se utiliza más que todo en otras cosas pero también funciona bastante bien muy bien
+2:212 minutes, 21 secondsentonces Qué es tratamiento de Players directamente por acá es justamente lo que están viendo en términos sencillos no tengo triángulos triángulos triángulos pero un apareció un círculo
+2:302 minutes, 30 secondspor Entonces eso es un valor que no debería estar ahí qué pasó qué ocurre con este círculo Entonces el por qué yo
+2:382 minutes, 38 secondstengo que quitar estos valores es muy simple y ya lo vamos a ver con el material que está aquí entonces un análisis exploratorio es un eda es
+2:472 minutes, 47 secondscrucial como ya vimos y una parte esencial es la detección de valores atípicos como ya les presenté un valor atípico es un elemento objeto de datos
+2:552 minutes, 55 secondsque se desvía significativamente del resto de los objetos por eso se le llama valor anómalo valor atípico etcétera etcétera y pueden ser causados por
+3:043 minutes, 4 secondserrores de medición o o errores de ejecución También muchas veces al eh
+3:113 minutes, 11 secondsesto tiene que ver con la parte no de si nos metemos un poquito en lo que es la metodología de investigación tiene que ver con a veces ocurre porque no hemos
+3:203 minutes, 20 secondsvalidado el instrumento con el cual hemos conectado hemos colectado los datos eso ya se sale un poco del tema pero es bueno mencionarlo muchas veces
+3:273 minutes, 27 secondscuando ustedes están colectando Data el el instrumento no se ha validado no no se validó el instrumento por ejemplo
+3:353 minutes, 35 secondsentonces hay que tener cuidado de construir un instrumento o al definir qué instrumento yo voy a utilizar para la colecta de datos hay que garantizar
+3:433 minutes, 43 secondsque cumpla ciertas propiedades no que mida siempre lo mismo Okay yo puedo hacer mediciones en cuatro grupos
+3:503 minutes, 50 secondsdiferentes y las mediciones y las mediciones tienen que ser o exactas o muy próximas hago una prueba de hipótesis y técnicamente no tiene que
+3:583 minutes, 58 secondshaber diferencia Sign nea bueno Les comento un poquito no directamente entonces tiene que ver con eso errores de medición con en base al instrumento
+4:084 minutes, 8 secondsque utilicé para la colecta de datos o de ejecución donde nuevamente se me fue de las manos y el Script estuvo bastante fatal y tengo que corregir el scrip no
+4:174 minutes, 17 secondsentonces el análisis para la detección de valores atípicos se denomina minería de opers directamente Entonces hasta
+4:234 minutes, 23 secondstiene su nombre mir técnico muy bien deers AC Por qué los valores atípicos pueden causar problemas bueno porque la
+4:324 minutes, 32 secondsciencia de datos a menudo queremos hacer suposiciones sobre una población específica sin embargo estos valores extremos atípicos que pueden estar por
+4:394 minutes, 39 secondsarriba o por abajo o bueno es eso cuando vemos en una dimensión no arriba abajo pero cuando vemos muchas dimensiones pueden estar simplemente fuera del
+4:484 minutes, 48 secondsespacio de distribución normal de los puntos podríamos decirlo de esa forma muy bien entonces un ejemplo de
+4:564 minutes, 56 secondscómo esto de aquí impacta en un modelo productivo por ejemplo miren este es un modelo de regresión Qué opinan
+5:055 minutes, 5 secondsustedes qué opinan ustedes mismos saquen sus conclusiones Estos son losers aquí y
+5:125 minutes, 12 secondsen este escenario simplemente losers se fueron Qué es lo que está ocurriendo a ver este es un modelo de regresión sobre
+5:205 minutes, 20 secondstodo para los que ya trabajan con modelitos se dan cuenta qué es lo que pasa esta recta solamente para aclarar punto esta recta estimados es el modelo
+5:295 minutes, 29 secondsde regresión en este caso he utilizado un un modelo lineal Okay es un modelo lineal directamente la tendencia
+5:375 minutes, 37 secondsdiferente no muy bien diferente los lersan demasiado el modelo correcto no
+5:445 minutes, 44 secondsAsí es profesor Entonces qué hago hay que eliminarlo sí hay que eliminarlo solo que hay un problema ojo aquí viene
+5:515 minutes, 51 secondsuna una verdad muy muy eh Muy cruda directamente no podemos eliminar todos
+6:006 minuteslos opers Les comento no podemos Eliminar todos los opers no de del
+6:096 minutes, 9 secondsdataset si lo hacemos podemos tener dos cosas Una
+6:156 minutes, 15 secondsimaginemos que hay un hay una un dataset de cuatro de cinco variables y y de Esas
+6:236 minutes, 23 secondscinco variables dos datasets a ver se pueden considerar que que también son datos atípicos influyentes sí podemos
+6:306 minutes, 30 secondsconsiderarlo este directamente no influyen y son muy para un modelo para
+6:366 minutes, 36 secondsun modelo descriptivos son muy malos me cambian completamente la tendencia bueno imaginemos que este modelito es una
+6:436 minutes, 43 secondsregresión lineal normal Entonces ustedes saben verdad que un regreso lineal si es impactado por por directamente Pero hay
+6:536 minutes, 53 secondsmejoras verdad hay mejoras en las funciones de coste que evitan esto recuerdan Bueno vamos a ver en Machine Entonces no
+7:027 minutes, 2 secondsse preocupen ha hay mejoras que hacen que el modelo sea un poquito más robusto Players directamente y no ya lo vamos ya
+7:107 minutes, 10 secondslo vamos a ver luego no no se preocupen por eso es mail se va a ver entonces Todavía no todavía no me voy a adelantar hay modelos que ya están un poquito más
+7:187 minutes, 18 secondsrobustos mejoras por ejemplo tengo mi regresor lineal tengo mi función de coste le agrego un factor Alfa la función de coste y tengo un lazo de un
+7:277 minutes, 27 secondsRich no sé si han escuchado esos modelos por ejemplo tengo un lazo y un Rich y luego tengo la mezcla de los dos y vuelvo y Y qué consigo con eso consigo
+7:367 minutes, 36 secondsque directamente el modelo gracias a ese factor Alfa sea un sea menos menos sensible blers y a la vez me ayuda a
+7:447 minutes, 44 secondsreducir dimensionalidad de los datos no entonces pero son cosas que y luego cuando mezclo los dos tengo las dos
+7:517 minutes, 51 secondscaracterísticas que no lo sol la Rich son modelos son mejoras Realmente que se hace que se le hace la función de coste dentro de un modelo de regresión
+8:008 minutesmuy bien pero eso ya lo hablaremos en Machine learning con más calma y ya les explicaré De qué trata muy bien entonces directamente vamos a ver por acá en este
+8:088 minutes, 8 secondspunto los lers como están observando sí generan problemas y no Y desde ya le
+8:168 minutes, 16 secondsdigo no podemos eliminarlos todos porque hay dos cosas Si tengo cinco variables y dos tienen opers si yo elimino y yo
+8:248 minutes, 24 secondselimino los suppliers de esas dos variables puedo puedo comprometer a los otros tres dependiendo de la cantidad de
+8:308 minutes, 30 secondsoers que haya y hay otro problema los obers pueden aparecer no solamente de forma unidimensional como normalmente se
+8:388 minutes, 38 secondsconoce están en forma multidimensional también y eso lo vamos a ver por acá muy bien Por qué sin losers significan
+8:468 minutes, 46 secondsvarias cosas error no si tenemos un grupo de person zona Y tenemos una persona de con0 años seguramente sea un error de carga de datos en este caso la
+8:538 minutes, 53 secondsdetección de layer nos ayuda a detectar errores o sea los layers significa ustedes loen a nivel descriptivo perfecto no podemos darnos cuenta que ha
+9:029 minutes, 2 secondshabido un error en la carga de datos límites en otros casos podemos tener valores que se escapan del grupo medio pero queremos mantener el dato modificado para que no perjudique al
+9:119 minutes, 11 secondsaprendizaje del modelo de Machine lear punto de interés pueden que sean los casos anómalos los que queremos detectar y que sean Nuestro objetivo y no nuestro
+9:199 minutes, 19 secondsenemigo por ejemplo muy bien entonces hay varias formas y varios significados que tienen estimados Los Players por
+9:279 minutes, 27 secondsaquí ahora primer punto miren primer punto losers se pueden tratar de dos formas o
+9:369 minutes, 36 secondslos eliminamos o directamente los llevamos a sus límites superior e inferior por ejemplo Les comento un caso
+9:459 minutes, 45 secondsla edad usted sabemos por efecto bueno dependiendo del tipo de sistema la edad dentro de un sistema se puede considerar en mes se puede contar por años y meses
+9:549 minutes, 54 secondso hasta días Si que son sistemas de Hospital hasta cuentan días Muy bien entonces imaginemos que tenemos una edad
+10:0210 minutes, 2 secondsmenos 10 hasta una edad 200 por ejemplo entonces sabemos que no pueden existir
+10:0910 minutes, 9 secondsenades negativas directamente entonces la primera forma de como ustedes tratan coners si ustedes tienen una variable
+10:1710 minutes, 17 secondsconocida Don donde saben cuáles son sus límites superior e inferior una forma de resolver el problema bastante rápido es
+10:2510 minutes, 25 secondsllevarlo simplemente a sus límites por ejemplo todas las edades que son menor menores a cero las podemos llevar a cero
+10:3210 minutes, 32 secondspor ejemplo directamente simplemente sé que por algún error de carga se ha ido de repente era cero o de repente estaba
+10:4110 minutes, 41 secondsen un valor de meses pero se se quiso convertir a no a a años y dio no sé un error de código de función y salió
+10:5010 minutes, 50 secondsnegativo directamente entonces tranquilamente nosotros podemos revisar el Script y mandar esto a cero y también sabemos que ninguna persona por el
+10:5810 minutes, 58 secondsmomento vive 200 años no la edad máxima creo que es 120 años nadie supera los 120 pero con margen de error nadie
+11:0511 minutes, 5 secondssupera los 125 años entonces también directamente todas las edades superiores a 125 las podemos llevar a 100 las podemos bajar al límite
+11:1411 minutes, 14 secondssuperior directamente o a a un nivel del un cuartil tranquilamente Entonces esto puede
+11:2111 minutes, 21 secondsocurrir por ejemplo con ustedes me recuerdo un trabajo de unos no de así de
+11:2811 minutes, 28 secondsuna capac por ejemplo que trabajaban con niveles de voltaje por ejemplo y ocurría que a veces que el dispositivo claro un
+11:3711 minutes, 37 secondsrato que es real pero escapa la realidad Cómo así Carlos ya eso es otra cosa esa es otra cosa Carlos por ejemplo esa es
+11:4511 minutes, 45 secondsotra por ejemplo yo veo el rendimiento de las personas lo normal que por ejemplo es que veas no s 40 50 pero hay
+11:5511 minutes, 55 secondsun grupo en específico que rompe ese esquema que llega a 60 70 si tú me revisas la Data tiene lógica
+12:0212 minutes, 2 secondsCómo se trabajaría en ese caso ya ahí es otra cosa no eso es un valor atípico esa persona no sé por ejemplo ese valor que
+12:1112 minutes, 11 secondstú estás midiendo Quién fue que Carlos creo no Carlos es valor las personas su rendimiento normal
+12:1912 minutes, 19 secondsme dices que es dónde de dónde a dónde ya por ejemplo es de así pongamos un dato es de 4050 4050 es Es lo normal que
+12:2912 minutes, 29 secondsvas a encontrar Pero hay un hay ctas personas que pueden llegar a rendimiento 60 70 y con las mismas condiciones Ya
+12:3712 minutes, 37 secondsclaro pero es eso en A qué te refieres con rendimiento en cuestión de deporte Por ejemplo yo trabajo en industria y yo veo el rendimiento de kilogramo a
+12:4612 minutes, 46 secondspersona Cuántos kilos cosecha una persona es que es esas personas de repente es eso Por ejemplo esas personas
+12:5512 minutes, 55 secondspor ejemplo Son son justamente esos valores esos valores atípicos son personas fuera de lo común correcto Claro pero no no es
+13:0413 minutes, 4 secondsque escapen del límite superior inferior sino que se van direc puude o sea eso no es que sea un caso aislado esas personas
+13:1213 minutes, 12 secondssí pueden haber pero son pocas son pocas un grupo minoritario que puede aparecer o sea lo normal todos vamos un
+13:2013 minutes, 20 secondscomportamiento de no de 40 50 pero hay un alguien que sí supera el 50 60 ese es un caso excepcional es son t tus hallazgos por ejemplo que pueden ser
+13:2913 minutes, 29 secondspuntos de interés Pero lo que más lo que ahorita estoy más que todo explicando es que hay límites que sabemos que no se pueden superar superar por ejemplo la
+13:3713 minutes, 37 secondsedad Ah ya cuando conocemos una variable que sabemos que no podemos ir más arriba y no podemos ir más abajo como como la edad por ejemplo no hay no hay edad
+13:4513 minutes, 45 secondsnegativa y no hay edad hasta el momento ojo que supere los 125 años por ejemplo Entonces ahí es donde nosotros podemos
+13:5313 minutes, 53 secondsajustar a los límites pero en tu caso en el caso de Carlos no en el caso Sí hay rendimiento de personas por ejemplo que normalmente están entre 40 y 50 Pero hay
+14:0114 minutes, 1 secondgente excepcional no que tiene un buen nivel físico tienen otro tipo de fenotip genotipo Entonces ellos llegan hasta 60
+14:0914 minutes, 9 secondspero eso ya es un punto de interés no es que esté fuera del comportamiento normal sí se pueden dar esos casos directamente no entonces ya eso es parte Entonces lo
+14:1814 minutes, 18 secondsprimero que tienen que hacer por ejemplo es identificar eso primero las columnas que sabemos que tienen límites que no pueden superar entonces hay que ver cómo
+14:2614 minutes, 26 secondslas arreglamos directamente porque a veces es error Por ejemplo del mismo del mismo dispositivo o del mismo instrumento de medición o del mismo
+14:3414 minutes, 34 secondscódigo que quis hacer una conversión Y en vez de que salga cero le salió negativo directamente no y pasa por ejemplo unos unos alumnos están
+14:4214 minutes, 42 secondstrabajando con un dataset y han obtenido edades negativas no lo cual es curioso y parece que justamente el dataset que les
+14:4914 minutes, 49 secondshan dado justo tuvo eso no quisieron hacer una función de de conversión a años y por eso les ha ido un errorcito y les ha salido la la edad negativa lo
+14:5814 minutes, 58 secondscual no no Debería ser directamente entonces lo que lo único que les queda es es llevarlo a cero nada más llevarlo
+15:0515 minutes, 5 secondsa cero porque parece al parecer según lo que estábamos analizando ese tipo esas personas han sido personas que tenían menos de un año
+15:1415 minutes, 14 secondsno han sido bebés directamente que tenían meses nada más entonces lo único que están haciendo es llevarlo a cero alguien
+15:2115 minutes, 21 secondsdirectamente muy bien puede pasar otro caso por ejemplo eh los los había un un caso por ejemplo de unos alumnos que
+15:2915 minutes, 29 secondsestuvieramos haciendo capacitación una empresa y ellos por ejemplo utilizaron Data real por ejemplo de dispositivos que medían voltaje algo dentro de
+15:3715 minutes, 37 secondstransformadores un dispositivo y no no recuerdo exactamente las medidas pero imaginemos que las mediciones debían estar entre 0
+15:4615 minutes, 46 secondsy 100 no podía ha no se podía superar por ejemplo 0 100 ese era el rango máximo Pero qué ocurría a veces por
+15:5315 minutes, 53 secondsejemplo esos sensores esos dispositivos estaban en unas Torres que estaban en una zona donde llovía o veces caían
+16:0016 minutestruenos y rayos qué pasaba en uno en ciertas ocasiones llegaba tan fuerte que generaba una alteración en el dispositivo y por ejemplo se salía de
+16:0916 minutes, 9 secondshaer a 100 llegaban a 150 Entonces qué pasó Aquí está ocurriendo algo entonces su gráfica más o menos de
+16:1616 minutes, 16 secondsellos si yo la grafico vga la redundancia más o menos era así No aquí
+16:2316 minutes, 23 secondscer aquí 100 100 digamos sus gráficas iban así no pero llegaban a algunos
+16:2916 minutes, 29 secondspuntos que tenían esto o hacia abajo Entonces ell se encontraron
+16:3516 minutes, 35 secondsanomalías lers Y eso Por ejemplo les ayudó a identificar que algo estaba ocurriendo
+16:4216 minutes, 42 secondsen los sensores y ellos hicieron un conejo entre eso con la fecha porque es esos sensores justamente registran la fecha fecha y hora exactamente fecha y
+16:5016 minutes, 50 secondshora minuto y segundo creo y se dieron cuenta que era justo en épocas de lluvia o tormenta no donde la el mismo ambiente
+16:5916 minutes, 59 secondsesa alteración en el sensor y encontraron una correlación y luego hicieron otro análisis más a fondo y se dieron cuenta que aquellos sensores que
+17:0717 minutes, 7 secondsestaban más que que habían algunos sensores que estaban ellos creo que utilizaban hasta dos tres marcas Pero había dos marcas específicas que
+17:1617 minutes, 16 secondsresistían más es decir donde se alteraba menos en esas condiciones climatológicas perfecto no se dieron
+17:2317 minutes, 23 secondscuenta Ah chévere y también se dieron cuenta que eso era había una fuerte correlación entre el desgaste de ese sensor o sea ese material esos sensores
+17:3217 minutes, 32 secondsde ese material costaba un poquito más pero resistía más los efectos climatológicos generaba menos alteraciones miren a nivel de blers
+17:4017 minutes, 40 secondsMientras que el otro dispositivo que era de otro material se dieron cuenta que realmente era más cómodo en cuestión de precio Pero
+17:4817 minutes, 48 secondsrápidamente tenía más alteraciones y por lo tanto miren por lo tanto se desgastaba más rápido Entonces al
+17:5517 minutes, 55 secondsfinal hicieron un análisis ya de costos se dieron cuenta que preferían pagar un poquito más pero el dispositivo
+18:0218 minutes, 2 secondsfuncionaba no rendía más tiempo y y presentaba menos alteraciones en en los datos de entrada todo eso analizando
+18:1018 minutes, 10 secondsblers por ejemplo a nivel descriptivo Entonces miren como encuentran algo y eso repercute en todo directamente
+18:1718 minutes, 17 secondsentonces esos son puntos de interés se dan cuenta errores que ocurren puntos de interés que ustedes lo cotejan por ejemplo Ellos tenían la variable tiempo
+18:2518 minutes, 25 secondsy se dieron cuenta que tiene que tenía que ver con el análisis climatológico Entonces cuando quisieron hacer un modelo predictivo de Machine learning tuvieron que tratar justamente estos
+18:3318 minutes, 33 secondssers qué hicieron simplemente los llevaron a sus límites nada más no para no para para no dejar un hueco entonces
+18:4118 minutes, 41 secondssimplemente dijeron Okay vamos a mandarlo todo dentro dentro de los límites normales de comportamiento entonces bajaron y ya no dejaron un
+18:4918 minutes, 49 secondshueco al eliminar los suppliers no sino simplemente se mantuvieron en los límite superior inferior porque ese sensor debería medir ahí no debería nunca nunca
+18:5918 minutes, 59 secondsdebía superar eso pero condiciones climatológicas Si hacían que justamente ocurra ese caso verídico datos reales Entonces es
+19:0919 minutes, 9 secondsbueno este análisis a nivel descriptivo Sí es bastante bueno permite hallazgos y permite cruzar con más información y ya
+19:1619 minutes, 16 secondsrepercu directamente con cosas buenas para la empresa Arturo profesor qué tal este Buenas noches una
+19:2519 minutes, 25 secondsconsulta Sí o sí tendríamos que hacer tratamiento de layers e Mejor dicho
+19:3119 minutes, 31 secondstendríamos que quitar los s layers de un de una serie de tiempo por ejemplo yo le
+19:3719 minutes, 37 secondspongo el caso de de ventas y ejemplo un día en específico no sé usualmente se
+19:4519 minutes, 45 secondsvende tiene estacionalidad semanal y de la nada aparece un día y venden 420,000
+19:5219 minutes, 52 secondssoles pero es un día justificable no es como que de la nada
+19:5919 minutes, 59 secondssucede Entonces entonces este se tendría que quitar eso porque es
+20:0620 minutes, 6 secondsparte como usted dije al inicio es parte del negocio Pero viéndolo desde un punto
+20:1420 minutes, 14 secondsinferencial no sé cómo lo Cómo se tendría que porque ahora yo he estado viendo todo este tema
+20:2020 minutes, 20 secondsy por ejemplo esos lers Por así decirlo lers pero realmente son venta que se ha realizado en ese día yo en mi modelo no
+20:2920 minutes, 29 secondslo he quitado no no lo quité Arturo directamente Cuántas veces
+20:3720 minutes, 37 secondste aparece eso Por ejemplo es puntual es o sea son cosas que son puntuales eh o sea no no son de que pasan porque
+20:4620 minutes, 46 secondspasan son cosas puntuales que suceden en días Ya que vienen predefinidos y así O sea por promociones campañas ahora
+20:5520 minutes, 55 secondsNavidad por ejemplo tengo que hacer Tengo que ver cómo lo voy a modar la estacionalidad para Navidad porque en Navidad literalmente no tiene un
+21:0321 minutes, 3 secondscomportamiento definido todo Navidad se duplica la venta por completo Entonces en ese
+21:1021 minutes, 10 secondscaso yo lo había consultado ya y me dijeron que no no tenía que quitarlos porque es parte de la tendencia del
+21:1921 minutes, 19 secondsnegocio Pero otra persona también me dijo que si los podía quitar pero tenía que tener en cuenta de cómo iba ar eso
+21:2921 minutes, 29 secondsal modelo de si al final Como Ed dice iba a generalizar bien no sé qué opinión tiene de eso ya ahí estamos hablando de
+21:3721 minutes, 37 secondsuna serie de tiempo Arturo Es parte por ejemplo es una serie de tiempo y esa tendencia se va a repetir o sea toda
+21:4521 minutes, 45 secondsNavidad vas a tener un pico toda la Navidad entonces no es eso no es un ler es un comportamiento normal en el movimiento de tu negocio realmente estur
+21:5421 minutes, 54 secondslo que sí puede ser Tal vez uner sea un día que de la nada vendiste 2000 No 2000 normalmente vendes 500 y ese día
+22:0122 minutes, 1 secondvendiste 2000 pero no se vuelve a repetir de aquí no pero fue un obler porque fue algo completamente aleatorio no algo que que no siempre te pasa por
+22:1022 minutes, 10 secondsejemplo los meses de diciembre mis ventas van a tener un incremento de no sé del 20% del 200 por por ejemplo yo
+22:1822 minutes, 18 secondsvendo normalmente 100 Pero en diciembre vendo 300 400 500 Entonces eso es parte del comportamiento normal de tus ventas
+22:2622 minutes, 26 secondsde negocio es una serie de tiempo entonces eso no es como no es como el caso de Data estructurada donde yo no tengo tiempo simplemente tengo un registro y se acabo y bueno columnas y
+22:3522 minutes, 35 secondsanalizo en tu caso yo sí puedo visualizar directamente cómo está evolucionando todas tus ventas no si yo hiciera una gráfica normalmente imagin
+22:4322 minutes, 43 secondspor acá tienes tus ventas y ahora también depende de cómo tú lo trabajas porque Incluso en serie de tiempo uno puede hacer por ejemplo promedios
+22:5122 minutes, 51 secondsmóviles promedios móviles directamente puede suavizar incluso la Gráfica para que ciertos slayers que aparecen
+22:5722 minutes, 57 secondspum disminuyen disminuyan también no entonces y sean más relajados puedo aplicar funciones de suavizamiento
+23:0623 minutes, 6 secondsmás más que por por Navidad lo decía porque a veces hacen y cañas funcionan a
+23:1623 minutes, 16 secondsveces muy bien que ya como no tiene otra Por así decirlo no tiene el año pasado
+23:2323 minutes, 23 secondsno pasó así entonces per es por una campaña o por
+23:2923 minutes, 29 secondsalgo especial que están haciendo y esa todavía no sé cómo tratarla muy bien porque o sea de priori es
+23:4023 minutes, 40 secondsuner Ah pero ojo es porque está haciendo serie de tiempo univariante o multivariante porque si tú le metes una
+23:4723 minutes, 47 secondsvariable llamada campaña cambia la cosa multi porque le a ver hasta donde estamos metiéndole le estamos metiendo
+23:5523 minutes, 55 secondscampañas tráfico a centros comerciales estamos metiendo este pbi inflación o sea tiene muchas variables ya entonces
+24:0324 minutes, 3 secondseste no va a ser uner directamente porque ah porque tú tienes una variable que correlaciona a eso esa venta por ejemplo
+24:1124 minutes, 11 secondscampaña hago campaña y por ejemplo junto con el mes generan que se incremente la venta entonces cada vez que aparezca la
+24:1824 minutes, 18 secondsvariable campaña o por ejemplo no sé 2 por un 3 por un imaginemos eso genera que la gente compre independiente del
+24:2724 minutes, 27 secondsmes entonces si tuvieses solo una variable por ejemplo la variable tiempo y la variable ventas ahí sí sería
+24:3424 minutes, 34 secondsdiferente porque no tengo mira aquí hubo una campaña mira aquí Hub una oferta entonces el modelo no puede mirar a otro lado más que a tu tendencia Cómo crece
+24:4224 minutes, 42 secondstus ventas pero si le estás dando más variables de entrada le estás diciendo Mira esta es la fecha hubo campaña o no
+24:5024 minutes, 50 secondshubo campaña Qué tipo de campaña eh Mira así estuvo el mercado entonces tú le estás alimentando con más información
+24:5824 minutes, 58 secondsque el modelo consiga entender el porqué de de ese de ese valor aquel día entonces oper así como loo no va a ser
+25:0725 minutes, 7 secondsno va a ser tanto te comento las serie de tiempo tienen otro tratamiento y real y es muy bonito hablar de ellos Sí sí a mí me gustaría llegar a esa parte del
+25:1525 minutes, 15 secondscurso porque eh cuando hago la la el Machine learning cuando lo hago en 70 30 a veces como que tal vez me falta
+25:2325 minutes, 23 secondsajustar los hiperparámetros o algo así y las las campañas no lo leen en especial en julio y agosto que es una
+25:3325 minutes, 33 secondspara el sector en el que estoy es muy importante y no no lo lee muy bien y eso que tiene dos años de edad pero
+25:4125 minutes, 41 secondsnoo lo estás haciendo porque no es una regresión es una serie de tiempo Entonces tienes que trabajar con ventanas de días tienes que probar los
+25:5025 minutes, 50 secondsdías los días anteriores y ver el futuro directamente Ah prácticamente lo que
+25:5725 minutes, 57 secondshago es este lo parto en 70 30 y le doy estacionalidad semanal y anual que es lo que tiene la empresa y de ahí le meto
+26:0426 minutes, 4 secondslas campañas y todo He tratado en un inicio me daba un error muy grande y luego cuando ya le he metido más variables más variables se ha ido
+26:1226 minutes, 12 secondsAjustando Ajustando Ajustando pero ya lleg un punto en el cual le digo Oye mira en julio va a haber esta campaña
+26:2026 minutes, 20 secondsque es la mejor campaña de todo bueno No una campaña buenísima y vas a hacer No
+26:2626 minutes, 26 secondssé 10 millones y el modelo no lee eso ya tendría que ver entonces falta falta ajustar eso claro tendría que ver
+26:3626 minutes, 36 secondsvarios factores encos de saber cómo se ajustar Cómo intentar mejorar tu modelo directamente y qué modelo estás utilizando en tu caso para eso Como le
+26:4526 minutes, 45 secondsdigo yo estoy utilizando un paquete este predefinido que se llama fb propet que
+26:5126 minutes, 51 secondssimplemente lo alimento yo lo alimento el modelo Le digo claro Hay un tratamiento antes de eso eh normalizo
+26:5926 minutes, 59 secondslos datos por ejemplo también este al inicio cuando lo hice No lo hice normalizando luego eh Por probar probando probando como usted dice lo
+27:0827 minutes, 8 secondsnormalicemos me salió mucho mejor hay una tienes valores negativos
+27:1727 minutes, 17 secondsDéjame ver por acá no no como son ventas nada más ya trata de de de ver si es que tus variables se pueden aproximar a una
+27:2427 minutes, 24 secondsnormal entonces hay bueno en python bueno estás usando un paquete diferente por ejemplo en python existe lo que es Power Transformer por ejemplo
+27:3227 minutes, 32 secondsde que te trata de llevar a un a una a una normal directamente Déjame ver por
+27:3927 minutes, 39 secondsacá está rápidamente es un Power Transformer eso les quería enseñar bueno Durante este curso les quería enseñar
+27:4727 minutes, 47 secondsPower Transformer ahora en el paquete que tienes no sé normalmente le meten un algoritmica logarítmica y más menos lo
+27:5627 minutes, 56 secondssuaviza per hay aquí está ya la encontré sí Ah no Arturo Arturo había
+28:0328 minutes, 3 secondslevantado mano ya mir por ejemplo en python tenemos Power Transformer pero es la librería pero lo que interesa es Qué
+28:1128 minutes, 11 secondstipo de transformación le hace tenemos la de boxc y la de Johnson cualquiera de estas dos que intentan llevarlo a
+28:2028 minutes, 20 secondsuna el comportamiento de la variable trate dejarse una normal para que para no para cuestiones
+28:2828 minutes, 28 secondselasticidad entre otras cosas Pero bueno aquí la única diferencia es que boxc valores tienen que ser positivos y el
+28:3528 minutes, 35 secondsotro pero el otro sí te acepa valores negativos tanto positivos como negativos es la única diferencia entonces mira si tu paquete que estás utilizando te puede de repente permitir hacer la
+28:4328 minutes, 43 secondstransformadas con boxc o John cualquiera de los dos y depende tambén Si tienes negativos o positivos no el paquete el
+28:5028 minutes, 50 secondspaquete lo único que hace es este es como funciona como el modelo no el model pun fit o sea lo lo entrena y lo dice
+28:5828 minutes, 58 secondsnada más es lo que hace el modelo Pero toda el tratamiento de datos yo lo hago entonces como yo lo hago todo el tratamiento lo puedo meter y puedo ir
+29:0729 minutes, 7 secondsprobando No ya perfecto puedes intentarlo hacer en python con de me enseñar esta librería no que directamente me permite hacer una
+29:1529 minutes, 15 secondstransformada Box Cox y Johnson para hacer que las variables que no son normales se asemejen una distribución normal porque muchas veces hay modelos
+29:2329 minutes, 23 secondspor ejemplo que necesitan por ya por definición que la distribución de la var sea una normal o próxima una normal por
+29:3029 minutes, 30 secondsejemplo pca pca necesita que la distribución de los datos sea normal de las variables normal si no su reducción de dimensionalidad no es óptima no es
+29:3929 minutes, 39 secondsbuena eh mientras que tcn que es otro modelo de reducción de dimensionalidad por ejemplo tsne por ejemplo él no
+29:4829 minutes, 48 secondsnecesita que sea por ejemplo que los variables tengan una distribución normal por eso tcn en la práctica funciona mejor que pca en muchos casos debido a
+29:5629 minutes, 56 secondsque las variables no siempre tienen comport tramiento normal y y otro punto es por ejemplo que ni pca ni tsne por
+30:0430 minutes, 4 secondsejemplo Les comento que son técnicas para reducción de dimensionalidad ninguno de los dos funciona muy bien con variables categóricas Entonces í otro
+30:1130 minutes, 11 secondsproblema y hay otras variantes como mca no MK que sí lo hace bastante bien que si admite categóricas Entonces es todo
+30:1930 minutes, 19 secondsun estudio que les voy enseñando poco a poco directamente bien interesante profesor todo ese tema hay una hay una parte también que es este correlaciones
+30:2730 minutes, 27 secondscon variables binarias Ah encontré un paper de eso que es monstruoso de cómo es que hacen correlaciones con variables binarias que es lo que estoy usando
+30:3430 minutes, 34 secondsahorita Es unin depende porque a ver variables binarias A qué tipo variables binarias por ejemplo por ejemplo cuando yo le
+30:4330 minutes, 43 secondsdigo va a haber una campaña yo tengo una columna campaña no sé campaña uno y cada día cada día que pasa una campaña le
+30:5030 minutes, 50 secondspongo uno y cada día que no sucede le pongo cero Ya entonces eso es una variable Ah correlación entre vari es
+30:5830 minutes, 58 secondsuna variable categórica directamente no una categórica 1 cer es una categórica al final no de de dos de dos categorías
+31:0431 minutes, 4 secondsa y b c y un Ya ese tipo lo haces tú por ejemplo con cramers con la con la función de cramers lo puedes hacer
+31:1231 minutes, 12 secondsdirectamente y cuando ustedes hagan correlación las variables correlación con variables categóricas entre ellas y correlación de variables numéricas entre
+31:1931 minutes, 19 secondsellas no lo mezclen porque si no le sale cosas Med sí les va a salir pero no les va a salir exactamente algo bueno entonces hay que hacer la correlación
+31:2631 minutes, 26 secondsentre entre cada tipo de variable no la categórica y la numérica cada uno por su lado Listo Ya lo vamos a ver no gra si
+31:3531 minutes, 35 secondsno alcan de tiemp okay continuemos

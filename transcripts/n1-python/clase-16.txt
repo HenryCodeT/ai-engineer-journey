@@ -1,0 +1,101 @@
+# Python para Ciencia de Datos - M3-4 - Métodos basados en la importancia
+# (título en el video: Python para Ciencia de Datos - Modulo 3 - Metodos basado en la Importancia)
+
+0:066 secondsy cuál es el modelo entonces que más utilizamos el que es basado en la importancia con Select mod que creo que algunos lo conocen que ustedes
+0:1414 secondsseleccionan pero vamos a seleccionar en función de la importancia no la importancia de los datos pero al hacer
+0:2323 secondsun cierto entrenamiento Entonces miren aquí lo que voy a hacer es generar otro clasificador un clasificador completamente diferente
+0:3131 secondsno O puedo utilizar el mismo si ustedes observan hasta el momento regreso a xin que tiene 16600 registros por 20
+0:3939 secondsvariables y vamos a hacer una selección de características pero basado en la importancia que me da el clasificador
+0:4646 secondsluego de haber entrenado Entonces por acá miren llamo a Select from model directamente hago un Random Forest
+0:5353 secondsclassifier por aquí en este caso y lo llamo no clf r for classifier Max de
+1:021 minute, 2 seconds15 100 creo que aquí era aquí era 100 también no Max not buen aquí le puse 10 Aquí voy
+1:101 minute, 10 secondsa colocar 20 por ejemplo ya lo generé y mando con un
+1:181 minute, 18 secondsumbral de 0.01 por ejemplo. aquí Se generó mi modelito miren con sus hiper parámetros
+1:261 minute, 26 secondsy este modelito si ustedes se dan cuenta lo coloco dentro de un Select from model estoy diciéndole Okay Dentro de este
+1:331 minute, 33 secondsclasificador con estos datos vamos a definir un umbral Aunque ustedes también pueden quitar el umbral y dejarlo y que trabaje con su umbral por
+1:411 minute, 41 secondsdefecto vamos a entrenar los datos y vamos a ver cuáles son no Cuáles son Realmente las características los
+1:481 minute, 48 secondsfeatures más relevantes según el entrenamiento y aquí está directamente y tengo una salida que es una lista
+1:551 minute, 55 secondsrealmente con valores positivos y negativos Enton ahora a continuación una vez que ya hice esto llamo el suport que
+2:042 minutes, 4 secondssimplemente son es una Ray de valores negativos positivos y los filtro y filtro las columnas nada más en y ejecuto por acá y miren lo que
+2:122 minutes, 12 secondstengo tengo 1 2 3 4 5 6 7 8 9 10 Si no me equivocamos a ver Tengo 10 estimados
+2:212 minutes, 21 seconds10 columnas relevantes Según esto el umbral en este caso ser
+2:272 minutes, 27 seconds0.01 ejecuto por aquí hago la transformación directamente y mando a entrenar y miren cuánto obtengo
+2:362 minutes, 36 secondsestimados con un modelo de Select from model luego de analizar las variables obviamente aquí se pueden agregar más
+2:432 minutes, 43 secondscosas como graficar graficar niveles importancia para observarlos mejor aquí por ejemplo tengo
+2:532 minutes, 53 seconds0.9025 Entonces qué es lo que ha pasado al aplicar una experimentación inicial conseguido analizar con Select model
+3:013 minutes, 1 secondCuáles son las variables que aportan mayor información ya al modelo entrenado y en función de eso filtrar y volver hacer un entrenamiento quitando esas
+3:093 minutes, 9 secondsvariables entonces para este caso de uso estoy así no a ver en el vari TR bueno
+3:163 minutes, 16 secondsen el hasta ahora mis resultados van así en el entrenamiento
+3:233 minutes, 23 secondsnormal tengo un r a la 20 y creo que era 0.83 no ahí está con el
+3:313 minutes, 31 secondscon numal de varianza bajé un r la 13 y era 0. 8475 si no
+3:383 minutes, 38 secondsequo listo el método basado no en en lo que es los niveles de correlación para este caso también han dado un 13 si no
+3:473 minutes, 47 secondsme equivoco he llegado a 0.84 75 y para el caso del
+3:543 minutes, 54 secondsun mod con basado en la importancia de una variable luego de entrenamiento con Select model he llegado a un r la 10 y
+4:044 minutes, 4 secondsmis resultados han llegado a 0.9025 Ah pero me faltó una cosa aquí Me falta una cosa Me faltó agregarle lo de
+4:124 minutes, 12 secondsacá arriba Vamos a ver si se mantiene o esto
+4:204 minutes, 20 secondsempeora este estaba así por acá y vamos a ver ya está miren ahora s miren todos
+4:284 minutes, 28 secondsBajo la misma configuraciones he llegado a 0.8775 miren
+4:364 minutes, 36 secondsestimados si se dan cuenta ha ido subiendo la performance de r 20 0.83
+4:434 minutes, 43 secondsaquí la dimensión a bajado y la performance ha subido aquí la dimensión
+4:494 minutes, 49 secondsse mantiene pero la la performance también se mantiene pero aquí la dimensión ha bajado más y la performance
+4:584 minutes, 58 secondsha subido desempeño Entonces al final estimados tengo un modelo de r la 10 con un
+5:065 minutes, 6 secondsdesempeño por el momento de 0.8775 qué tal Qué les parece está bien
+5:135 minutes, 13 secondsno he reducido en 10 en 10 dimensiones y por lo tanto mi modelo es men es menos
+5:215 minutes, 21 secondscomplejo se dan cuenta entonces un buen análisis realmente lo que estamos haciendo por acá entonces bueno obviamente aquí se pueden graficar
+5:295 minutes, 29 secondsdistancia y analizar todo como está directamente pero todavía quiero que ustedes vayan viendo lo básico muy
+5:365 minutes, 36 secondsbien perfecto ya está ya eso es en función de qué tanto
+5:445 minutes, 44 secondsaporta este Samuel directamente dentro del modelo una vez que tú tienes un modelo dependiendo del algoritmo que tú
+5:535 minutes, 53 secondsutilices te va la importancia por ejemplo Random Forest es en función de de árboles de decisión
+6:006 minutesentonces en función de qué aporta Este no es un algoritmo muy tiene partes estadísticas sobre todo
+6:076 minutes, 7 secondsen la función de no en la función de bueno tiene la entropía O guini con lo que trabaja un árbol de decisión
+6:156 minutes, 15 secondsdirectamente te comento Pero igual todo eso tiene que ver con con lo que es el desorden el nivel de desorden no o o
+6:246 minutes, 24 secondsmejor dicho con el nivel de pureza dentro de cada partición entonces tú puedes tener los siguiente Mira te comento por acá un
+6:326 minutes, 32 secondsejempl ito para Bueno al utilizar un árbol Entonces por ejemplo la explicación va
+6:396 minutes, 39 secondsasí un árbol de edón general particiones entonces imaginemos que tú tienes esto las x están por
+6:496 minutes, 49 secondsacá directamente no y las los los triángulos están por
+6:566 minutes, 56 secondsaquí por ejemplo mira los triángulos están por acá por aquí coloco otro triángulo no y por aquí coloco otra X Ya
+7:047 minutes, 4 secondsestá entonces en general los árboles de decisión generan puntos de corte Les comento Entonces
+7:127 minutes, 12 secondsmiren aquí tengo un punto de corte Si se dan cuenta este punto de corte es con respecto a
+7:197 minutes, 19 secondsx1 se dan cuenta Aquí tengo por ejemplo otro punto de corte miren por
+7:257 minutes, 25 secondsacá este punto de corte es por ejemplo a x2 y puedo tener más puntos de corte no
+7:337 minutes, 33 secondsen la dimensión y bueno en una dimensión X3 pero observemos por acá por ejemplo tengo un punto de corte
+7:427 minutes, 42 secondsasí tengo un punto de corte por aquí puedo tener otro punto de corte miren que también está en x2 no en x2 Entonces por ejemplo Cuál es un buen
+7:517 minutes, 51 secondspunto de corte si ustedes observan Acá qué punto me permite separar qué punto me permite separar
+7:587 minutes, 58 secondsbien los los datos este por ejemplo miren este es un buen punto de corte se dan
+8:078 minutes, 7 secondscuenta es es un buen punto de corte técnicamente con esto ya me separo los datos entonces la variable x1 tiene una
+8:178 minutes, 17 secondsimportancia elevada a continuación si ustedes se dan cuenta viene por acá otro punto de
+8:248 minutes, 24 secondscorte que me permite separar también los datos x2 también tiene importancia luego por aquí por ejemplo puedo tener
+8:328 minutes, 32 secondsotro punto de corte El de acá por ejemplo y otra vez viene Bueno Este es x
+8:398 minutes, 39 secondsx2 no x2 que me permite separarlo de acá luego por acá puedo tener otro punto de corte y me permite separarlos
+8:478 minutes, 47 secondsdirectamente Entonces qué pasa bueno Esto también va a depender mucho de la poda como ustedes cortan Pero al final en general si usted bueno puedo tener
+8:558 minutes, 55 secondsmás dimensiones pero ya ya no se puede graficar esto al final queda como un árbol así con reglas de asociación No si x1 mayor que 10 por ejemplo los puntos
+9:049 minutes, 4 secondsvienen por acá si x1 menor que 20 no Entonces al final dependiendo de los de los puntos de corte que al final son
+9:119 minutes, 11 secondsdefinidos por ciertas variables no se define qué variable es la la que más aporta la que más Define en este caso x1
+9:209 minutes, 20 secondses una variable que tiene mayor relevancia aporta muchísima información eh Hay un valor por Def yo
+9:299 minutes, 29 secondslo he colocado ahí no puedo ir variando también podemos también Pueden repetir la experimentación que yo hice arriba y ver cuál sería su su punto de corte
+9:369 minutes, 36 secondsideal pero directamente ya el grado de importancia se puede se puede verificar no hay problema es por defecto realmente
+9:449 minutes, 44 secondses porque estas son métricas bien pequeñitas este podrías utilizar el mismo punto de corte o incluso hacer un análisis como hice con la varianza
+9:539 minutes, 53 secondstranquilamente pero listo entonces en los árboles de decisión esto estimados es como es que aportan no Direct dependiendo de los puntos de corte que
+10:0010 minutesse generan y los nodos No aquí va a aparecer va a predominar cierta variable o ciertas variables para hacer la separación porque los puntos de corte en
+10:0910 minutes, 9 secondsgeneral son definidos por ciertas variables que generan una separación en el árbol ahora si ustedes hablan de un método por ejemplo el regresor logístico
+10:1710 minutes, 17 secondsahí es ahí es diferente no porque ahí tienen ustedes el beta tienen su Beta Beta 0 y tienen su Beta 1 su Beta 2
+10:2510 minutes, 25 secondsetcétera que van a estar relacionados con Bueno aquí no hay nada no aquí es uno por defecto pero aquí tiene x0 x1 x2
+10:3310 minutes, 33 secondsy en función de estos beta en un regreso logístico donde ustedes si pueden hacer pruebas de las pruebas de normalidad y
+10:4010 minutes, 40 secondsotras cosas no su test su p value y todo lo demás no porque es un regreso logístico en función de eso también sacan ustedes el nivel de aporte si se
+10:4810 minutes, 48 secondsdan cuenta en función de eso se puede sacar tranquilamente con el p value no p value por ejemplo hac el análisis ven La
+10:5510 minutes, 55 secondshipótesis directamente y perfecto por ejemplo aquí x0 se aporta x1 se aporta x2 no aporta X3 no Entonces se puede
+11:0511 minutes, 5 secondshacer pero en este caso yo utilicé un modelo de r for classifier que es un modelo que en la práctica funciona bastante bien con este tipo de datos
+11:1311 minutes, 13 secondsdatos estructurados cuando obviamente los datos no tienen cierto comportamiento normal muy bien muy bien estimados entonces listo
+11:2211 minutes, 22 secondseso es estimados métodos de selección de variables hay varios Sí hay varios pero me he concentrado los más utilizados el variance porque lo pueden utilizar
+11:3011 minutes, 30 secondsIncluso en técnicas de clustering Bueno hay otro que también utilizan altamente características altamente correlacionadas pero no lo recomiendo mucho pero igual lo pueden hacer
+11:3811 minutes, 38 secondsdirectamente eliminar las variables que en teoría son colineales no en teoría porque esto de aquí no implica causalidad como ustedes saben Entonces
+11:4611 minutes, 46 secondseso no Entonces mejor una varianza o basado en la importancia que es lo más utilizado directamente por
+11:5311 minutes, 53 secondsacá muy bien y eso estimados es con selección de variables Okay eso es
+12:0312 minutes, 3 secondsselección de variables punto a
+12:1012 minutes, 10 secondsfavor no confundir con reducción de la dimensionalidad que es Al final apuntamos a que el r
+12:1812 minutes, 18 secondsbaje sí Pero existe otra forma estimados que tiene que ver ya con
+12:2512 minutes, 25 secondstransformaciones no directamente de de los puntos o proyecciones de los puntos en una en un nuevo
+12:3312 minutes, 33 secondsespacio entonces ahí vamos a hablar de de reducción de dimensionalidad es decir tengo un r la 20 pero yo le voy a
+12:4112 minutes, 41 secondsaplicar una función F r la 20 para generar este en en un espacio r prima No
+12:4912 minutes, 49 secondspor ejemplo 3 o 4 5 qué es lo que hago entonces estoy
+12:5612 minutes, 56 secondshaciendo reducción de dimensionalidad foreign

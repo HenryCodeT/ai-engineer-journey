@@ -1,0 +1,394 @@
+# Python para Ciencia de Datos - M1-4 - Como identifico datos faltantes (Ejercicio)
+# (título en el video: Python para Ciencia de Datos - Modulo 1 - Como identifico datos faltantes Ejercicio)
+
+0:022 seconds[Música]
+0:066 secondsBueno vamos a ver entonces en nuestro caso ya regresando un poquito al tema vamos a ver imputación de datos pero todavía con Data estructurada que no
+0:1414 secondstienen información secuencial no con datos únicamente una muestra y nada más una muestra por y su objetivo entonces
+0:2323 secondsobservemos este caso el col Bueno me había olvidado mencionarles con fines
+0:3030 secondspara que todos trabajen en igualdad de condiciones y que no haya ningún problema por aquí con cuestiones de profesor control versiones que no me
+0:3939 secondsejecuta el código ciertas librerías Ya no lo vamos a hacer a nivel local y las modificaciones que yo haga aquí se
+0:4646 secondsvan mapear en el otro lado Entonces no se preocupen por
+0:5353 secondseso creo que estoy comparendo toda la pantall ahora muy bien entonces Déjenme
+1:011 minute, 1 secondconectarme por aquí Entonces vamos a trabajar con el entorno de la nube que es Google colab si Ustedes prefieren pueden trabajar a
+1:091 minute, 9 secondsnivel local los que ya tienen experiencia no hay ningún problema pueden trabajar con su jiter Notebook descargan nada más el archivo lo cargan a nivel local tampoco no hay ningún
+1:171 minute, 17 secondsproblema si quieren desplegarlo no en no sé por ejemplo visual Studio c su
+1:251 minute, 25 secondstambién pueden hacerlo solo que van a tener que extraer su Spider también pueden extraer solamente la parte del código directamente si no podos
+1:341 minute, 34 secondstrabajando en Google colap no hay ningún problema al respecto voy a aumentar un poquito por acá el zoom para que ustedes lo vean listo Muy bien Entonces como ya
+1:421 minute, 42 secondsustedes tienen una base en python no me voy a preocupar mucho por la explicación de las librerías directamente vamos a importar lo que es npai pandas y
+1:521 minute, 52 secondslibrería obligatoria para tratamiento de datos con python missing no esta librería aquí es la obligatoria
+2:002 minutesme va a permitir obtener ciertas gráficas que me van a ayudar muchísimo a comprender cómo se está comportando mi información mi Data directamente y sobre
+2:082 minutes, 8 secondstodo en la la parte de datos faltantes Acá hay un dataset que voy a leer está por refecto por acá
+2:172 minutes, 17 secondscargadito por ejemplo Este es un dataset que tiene bueno Tiene bastantes cosas por acá es un Data se les comento
+2:262 minutes, 26 secondsrápidamente sobre char tiene que ver con clientes de un banco y tenemos diferentes cuestiones
+2:342 minutes, 34 secondstenemos por ejemplo la var objetivo en este dataset se llama TR flag que son clientes que se han ido de la empresa y clientes que se mantienen en laesa en la
+2:432 minutes, 43 secondsempresa entonces voy a trabajar con este datas set directamente para poder hacer un ejemplo directo lo primero que voy a
+2:502 minutes, 50 secondshacer aquí es analizar un poquito Cómo está mi dataset aquí aquí sí Les comento algo Bastante interesante e
+3:013 minutes, 1 secondestamos en la en una era bastante moderna Les comento es necesario que ustedes sí
+3:093 minutes, 9 secondstengan cierta base de de python conozcan el lenguaje para que puedan comprender muchos códigos directamente eso es muy
+3:173 minutes, 17 secondsimportante entonces hay veces donde ustedes ya pueden aprender en Sí cómo es que funciona el lenguaje y puedan
+3:243 minutes, 24 secondsentender ciertas cuestiones de cierta librería y en la actualidad mucho información sobre librerías comentos
+3:313 minutes, 31 secondssobre npai sobre pandas incluso por ejemplo está hgpt está por ejemplo Google Bart que les puede ayudar incluso
+3:403 minutes, 40 secondsa generar ciertas líneas de código entonces a los que recién están aprendiendo python siguan aprendiendo no
+3:483 minutes, 48 secondspor eso descuiden el python pero también pueden ayudarse de ciertas eh de ciertos generadores de código
+3:553 minutes, 55 secondsgeneradores de texto directamente algunos de repente de ustedes tien licencia de de PT o de copilot entonces a nivel local pueden hacerlo sin
+4:044 minutes, 4 secondsproblemas sin problemas entonces Muchas veces me me pregunta no profesor Qué pasa si utilizo chpt Qué pasa si utilizo
+4:134 minutes, 13 secondsGoogle Pilot no hay problema pueden utilizarlo Pero la idea es que ustedes entiendan lo que están generando para que luego les ayude a hacer su análisis
+4:204 minutes, 20 secondsde datos también es otro punto que les comparto aquí acuerdo comparto muy bien entonces lo que estoy haciendo aquí es
+4:284 minutes, 28 secondsun código bastante pero luego si ustedes quieren agregarle más cosas pueden hacerlo sin ningún problema si tienen bastante conocimiento de lenguaje pueden
+4:354 minutes, 35 secondshacerlo sin ningún problema muy bien Entonces qué tengo por acá tengo por AC un Data frame que he leído está en un archivo de extensión
+4:434 minutes, 43 secondsccv y directamente tengo si Ed si voy más acá abajo con la función info que es
+4:494 minutes, 49 secondsbastante famosa tengo 10127 entradas 37 registros y Tengo 23 columnas Solo que estas últimas de acá tengo que
+4:584 minutes, 58 secondseliminarlas porque no me AC aquí estas dos aquí están de más tengo que sacarlas y les voy comentando un poquito de queé tiene de qué va esta
+5:065 minutes, 6 secondsbase de datos directamente esta base este dataset son clientes que anularon cancelaron su tarjeta su servicio de
+5:145 minutes, 14 secondstarjeta de crédito y clientes que todavía lo mantienen Ya lo vamos a ver más adelante vamos a seguir analizando esta base de datos pero por el momento me sirve para para lo que queremos
+5:235 minutes, 23 secondsentonces por acá elimino Las dos últimas columnas que no me van a servir si eliminan simplemente para que ustedes
+5:305 minutes, 30 secondsentiendan un poquito de código una forma bastante fácil es que ustedes ya de forma manual saben que columnas no les va a servir Entonces ese es un primer
+5:395 minutes, 39 secondspunto No directamente con python ustedes saben qué columnas ya no sirven y las pueden colocar aquí en una lista
+5:465 minutes, 46 secondssimplemente la eliminan con con con la función que es de la librería pandas aquí tengo un objeto del
+5:535 minutes, 53 secondstipo Data frame listo una vez que hago esto Esta base de datos por ejemplo inicialmente no tiene valores nulos si
+6:026 minutes, 2 secondsustedes observan por acá está todo miren por acá vo por aquí un poquito más arriba tiene tiene 10127
+6:116 minutes, 11 secondsregistros y todos los datos son completamente Disculpen no nulos no están completos por lo tanto con fines
+6:186 minutes, 18 secondsdidácticos lo que voy a hacer es simular en esta base de datos datos nulos Y cómo lo simulo bueno primeramente Bueno voy a
+6:276 minutes, 27 secondshacer una agrupación por aquí rápidamente a ver estatus manital aquí le he puesto bueno la cantidad de divorciados casados
+6:356 minutes, 35 secondsmiren aquí un caso especial para mencionarles Miren esta Este dataset no
+6:436 minutes, 43 secondses que realmente tenga datos nulos Les comento si ustedes observan Aquí hay una columna la que le mencionaba desconocido
+6:526 minutes, 52 seconds740 esa la columnita que les mencionaba muchas veces en la base de datos a veces no me aparece ni siquiera desconocido sino que me aparece con al no no me
+7:017 minutes, 1 secondaparece nulo me aparece una categoría de más eso también es un problema diferente realmente
+7:087 minutes, 8 secondsesta tal vez la tendencia divorciados 748 casados 4687 no solteros 39
+7:187 minutes, 18 seconds3943 desconocidos 749 posiblemente por la tendencia que estoy observando acá estas estos valores
+7:257 minutes, 25 secondsdesconocidos que son 749 se distribuyen de forma equitativa no y se mantenga un poquito la distribución o Posiblemente
+7:327 minutes, 32 secondsno no se sabe realmente Entonces el tener estos datos vacíos directamente ya me afectó a la
+7:397 minutes, 39 secondsvariable se dan cuenta es un punto que quería aclararles por acá y suele pasar suele pasar entonces aquí por ejemplo
+7:477 minutes, 47 secondstengo afectada la variable no sé si se va a mantener la tendencia en el peor de los casos este 749 pasaría por acá no en
+7:567 minutes, 56 secondsel peor de los casos o iría por acá Entonces es un punto No es un punto que nos deja en controversia no sé si
+8:058 minutes, 5 secondsrealmente tenemos en empresa Tenemos aquí en este banco la una cantidad de casados con solteros similar no sabemos
+8:148 minutes, 14 secondseste 749 si va por acá si va por acá o se va por acá o se distribuye de forma equitativa No lo sabemos entonces quizás
+8:238 minutes, 23 secondsalguno de ustedes ya les pasó Ya de repente alguno de ustedes ya les pasó esto Entonces lo único que me queda seguir no pero saber que ya existe
+8:318 minutes, 31 secondscierto sesgo en en esa variable muy bien entonces continuo por aquí y aquí hay un código interesante
+8:408 minutes, 40 secondsqué es lo que voy a hacer miren hay una columna llamada dependent com y la cantidad de dependientes y estatus
+8:478 minutes, 47 secondsmarital a la que a las que les voy a eliminar cierta cantidad no de valores por ejemplo el
+8:548 minutes, 54 seconds60 con fines didácticos nada más una fracción 6% lo voy a colocar como como luego entro por acá y voy a observar la
+9:049 minutes, 4 secondscategoría por ejemplo category categoría de ingresos y también me doy cuenta que tengo otra variable tipo desconocida
+9:139 minutes, 13 secondsentonces Aparentemente no habían datos nulos pero si me doy cuenta comienzan a aparecer
+9:209 minutes, 20 secondsvalorcao la variable suele pasar realmente En estos casos muy bien Entonces por acá voy
+9:299 minutes, 29 secondstambién puedo ir haciendo esto selecciono por ejemplo un 40% de incom category por ejemplo
+9:379 minutes, 37 seconds0.40 y luego lo que puedo hacer estimados es por ejemplo a la variable total trans ya después les voy a explicar De qué trata esta variable
+9:459 minutes, 45 secondstambién le voy a eliminar ciertos registros qué es lo que hago en este código directamente estoy eliminando ciertos valores de cada columna para
+9:549 minutes, 54 secondstener una Data Bueno un dataset que tenga valores entonces este punto
+10:0110 minutes, 1 secondEste dataframe si le hago un análisis rápido
+10:1010 minutes, 10 secondsme doy cuenta de lo siguiente dependent con tiene 4051 valores no nulos es decir le he
+10:1910 minutes, 19 secondseliminado el 60 por si ustedes recuerdan de datos luego por acá estatus medital también tiene 4051 valores
+10:2710 minutes, 27 secondsnulos límite de crédito es una variable que si tiene miren valores faltantes 9114 n luego total transacción ct y lo
+10:3610 minutes, 36 secondsde acá también tienen valores nulos he estado haciéndole un tratamiento a la Data para que directamente aparezcan más valores nulos de los que había y podemos
+10:4510 minutes, 45 secondsestudiar un poquito de qué va esto muy bien el siguiente paso bueno Esto más que todo era para simular un poquito no los datos nuros dentro del datas set
+10:5310 minutes, 53 secondsAunque realmente sí hay solamente que son una categoría desconocida lo cual ya de una u otra forma está gando un
+11:0011 minutespoquito muy bien y aquí lo que hice fue agregar una cierta unas ciertas
+11:0611 minutes, 6 secondsfunciones gráficas para hacer un reporte un poquito más eh avanzado de lo que serían datos nulos dentro de mi de mi
+11:1511 minutes, 15 secondsdataframe Entonces por acá en cierto código P eh de python directamente donde
+11:2311 minutes, 23 secondshago un conteo de los valores nulos los sumo luego los ordeno de forma ascendente y luego lo Expreso en
+11:3111 minutes, 31 secondstérminos de porcentaje por eso multiplico por 100 y rondeo a tres decimales directamente luego genero otro
+11:4011 minutes, 40 secondsdataframe directamente sumo y los ordeno nada más pero ya no los Expreso en función de porcentaje sio normal valores
+11:4911 minutes, 49 secondsla cantidad exacta Y luego como quiero generar un único reporte concat todo en un dataframe
+11:5511 minutes, 55 secondsnuevo con pdcc no aquí hago eh aquí hago estimado lo que sería la concatenación
+12:0312 minutes, 3 secondsen el eje de columnas y reseteo los índices para que no tenga ningún problema y finalmente renombro a las
+12:1012 minutes, 10 secondscolumnas variable cantidad de nulos porcentaje de nulos ya está y luego una variable genera una nueva columna cantidad de nulos que simplemente es la
+12:1912 minutes, 19 secondsdiferencia entre la cantidad de registros que tengo menos la cantidad de registros nulos que están por acá por variable
+12:2812 minutes, 28 secondsobviamente y luego ya vuelvo a hacer una nueva una nueva orden reex me ayuda a
+12:3512 minutes, 35 secondsorganizar nuevamente las columnas y con esto ya tengo acá variable cantidad de nulos cantidad de nulos y porcentaje
+12:4312 minutes, 43 secondsesto este pequeño Codigo me ayuda a tener un informe un poquito más organizado Comparado con lo que me
+12:5012 minutes, 50 secondsdevuelve el info no la función info de que por defecto está en p y a continuación gener un reporte general
+12:5812 minutes, 58 secondsdonde voy a utilizar justo la la librería que les dije missing No aquí tengo missing bueno Miss y voy a
+13:0613 minutes, 6 secondsutilizar ciertas columnas de mi reporte para poder graficarlas directamente con
+13:1213 minutes, 12 secondscon en este caso Y utilizando subfig lo que estoy haciendo es generar un fig gigante y colocar en cada sub figura o
+13:2213 minutes, 22 secondscada ais en este caso una gráfica nueva y ahora ustedes quiero que vean un
+13:3013 minutes, 30 secondspoquito Cómo va a quedar la salida de la función para no hacer tanto código directamente ustedes vean simplemente cómo funciona ustedes Ejecutan este
+13:3813 minutes, 38 secondscódigo y le pasan como valor de entrada a la función el dataframe que quieren analizar y Bueno Este es mi reporte que
+13:4713 minutes, 47 secondsha salido por aquí la primera parte del código que les quería Mostrar justamente es de acá el reporte general ustedes observan tengo la variable el nombre de
+13:5513 minutes, 55 secondslas variables la cantidad de nulos la cantidad de nulos el porcentaje de nulos muy bien pregunta para
+14:0214 minutes, 2 secondstodos pregunta para todos por acá primera pregunta para los que están aquí
+14:0914 minutes, 9 secondsobservando qué variables se pueden imputar y queé no a ver abrimos aquí el primer debate se podrán imputar todas
+14:1814 minutes, 18 secondslas variables o No apenas observo esto independiente de que utiliza un método paramétrico o no paramétrico para completar los datos faltantes creen que
+14:2614 minutes, 26 secondsse puedan imputar todas o no Qué opinan A ver vamos por
+14:3714 minutes, 37 secondsacá Carlos dice que no muy bien a ver qué dice el resto pued pueden encender el micrófono conversamos
+14:4514 minutes, 45 secondsno hay problema es muy bonito no varios de Ustedes ya tienen experiencia Entonces ya podemos conversar aquí sobre esto realmente podemos no podemos
+14:5414 minutes, 54 secondsimputar todas las variables puedo eliminar registros o no puedo eliminar
+15:0215 minutes, 2 secondsregistros qué es lo que pasa aquí qué recomendación daríamos a nuestros compañeros Si observamos este
+15:1215 minutes, 12 secondsreporte directamente yo observo esto por ejemplo
+15:1815 minutes, 18 secondsdirectamente voy y yo así si yo observo este este reporte No
+15:2615 minutes, 26 secondssi me entregan una Data imaginemos de esta forma yo utilizo esta función obtengo esto
+15:3415 minutes, 34 secondsdirectamente qué hago me voy y y me reviso el Script sql o le digo al ingeniero de datos que arregle su
+15:4415 minutes, 44 secondsScript Exacto muy bien abr así es muy bien directamente para los que todavía lo
+15:5215 minutes, 52 secondsestán pensando no muy bien muy bien el muy bien
+16:0016 minutesdirectamente estimados yo veo esto paro el código me voy a revisar el scp sql así de frente Por qué Porque la
+16:0916 minutes, 9 secondscolumna c y la columna un dependen cantidad dependientes y estado civil no se pueden imputar no se
+16:1616 minutes, 16 secondspueden Ok est pueden profesor Pero si yo lo imputo
+16:2416 minutes, 24 secondsSale sale si yo lo completo sale Pero mal sale sesgado sesgados
+16:3116 minutes, 31 secondsrealmente Entonces qué pasa si ustedes ven esto de frente al ingeniero de datos o si ustedes manejan la base de datos revisen su Script de
+16:3916 minutes, 39 secondssql o su Script de extracción de datos en el lenguaje que sea corrían lo revísalo si le sigue saliendo lo mismo
+16:4716 minutes, 47 secondsya es un problema de ingreso de datos Okay es un problema de ingreso de datos y no podemos hacer nada no podemos hacer
+16:5516 minutes, 55 secondsnada y no nos queda Y lamentablemente estas dos variables Tienen que salir de la análisis de acuerdo un reporte diciendo que estas dos variables presentan una
+17:0317 minutes, 3 secondsenorme cantidad de valores n Okay no pueden imputar estos datos Les comento Por qué no profesor es porque no pueden
+17:1117 minutes, 11 secondsreconstruir la mitad de algo con la mitad de lo que como si ustedes tuviesen la mitad de de un
+17:2017 minutes, 20 secondsmapa Este es un mapa no ustedes noen no pueden reconstruir la
+17:2617 minutes, 26 secondsmitad con el otro lado ente con otra mitad incluso es un 60 ni siquiera es un
+17:3317 minutes, 33 seconds5% es un 60 Entonces es más de la mitad o sea ustedes todo lo de acá no lo
+17:4017 minutes, 40 secondspueden reconstruir con esto no se puedeo pueden utilizar modelo de
+17:4917 minutes, 49 secondsavanzado y realmente no le va a acertar o le puede hacer y no lo va a hacer así Les comento Entonces qué hacemos en ese
+17:5717 minutes, 57 secondscaso no nos queda otra más que descartar las dos variables primer paso revisen el Script de extracción de datos si ustedes no lo
+18:0418 minutes, 4 secondsson indíquenle al encargado que lo revise si ustedes tienen acceso al Script revisen ustedes mismos si a pesar de eso ustedes corroboran Script Está
+18:1318 minutes, 13 secondscorrecto y Siguen con lo mismo reporte Lamentablemente estas dos variables tienen muchísimos valores nulos las
+18:2218 minutes, 22 secondscausas ustedes pueden seguir haciendo el análisis de datos porque esto es el análisis para de datos primer paso ver nulos entonces pueden continuar y van a
+18:3018 minutes, 30 secondsla raíz y pu pueden llegar a darse cuenta de repente que mucha gente no le gusta dar esta información entonces ya no es cuestión de de que el scrip esté
+18:3818 minutes, 38 secondsmal es cuestión de que simplemente a la gente no le gusta decir por ejemplo la cantidad de penes que tienen de repente consideran que es información muy personal y también a otros no les gusta
+18:4718 minutes, 47 secondsdar su estado civil de repente considera que es algo muy muy personal y no lo quieren dar puede ser un caso les digo no es que sea así entonces ya escapa de
+18:5518 minutes, 55 secondslas manos de ustedes como analíticos de datos para empezar entonces estas dos variables simplemente estimados no se pueden imputar no
+19:0319 minutes, 3 secondspodemos reconstruir algo con el 40% de acuerdo si la quieres Bueno este
+19:1219 minutes, 12 secondssimplemente Samuel dile que no eres mago O sea al jefe porque no no se puede o sea tu jefe va a ser un científico de datos que sabe entonces él no te puede
+19:2219 minutes, 22 secondsdecir que utiliza la variable no te puede decir no te puede decir utiliza la variable porque realmente no puede ya Y
+19:2919 minutes, 29 secondssi la quieres retener qué es lo que te pueden hacer obligar a hacer en el peor de los casos trabajar solamente con el 40% que
+19:3619 minutes, 36 secondstienes no O sea en el peor de los casos Si te dicen utiliza la variable perfecto trabajas pero con el 40% que tienes pero
+19:4419 minutes, 44 secondsaquí hay un problema Samuel El problema es que esos 40% de datos que tienes serán representativos en todas las columnas porque los que has
+19:5219 minutes, 52 secondshecho es esto Mira si te han obligado a utilizar la variable Por más que tú no quieres si tienes una a b c y d El 40%
+20:0120 minutes, 1 secondde datos no sabemos cómo está no sabemos todavía no analizamos si es MC mnar o Mar no lo sabemos pero imaginemos que
+20:1020 minutes, 10 secondssea el mcar que el 40% de datos sea completamente aleatorio en el peor de los casos Qué vas a hacer tienes dos
+20:1920 minutes, 19 secondsopciones o te te trabajas con el 40% o simplemente te creas una nueva variable llamada cero sesgas con cero sesgas con
+20:2720 minutes, 27 secondscero la variable tienes dos opciones ahí o sesgas con cero la variable pero está sesgando 60
+20:3420 minutes, 34 secondspor de datos faltantes con un cero si es que es una categórica estás generando una nueva categoría si es una numérica
+20:4220 minutes, 42 secondsestás has malogrado completamente la distribución de la de la variable Entonces si trabaja con el 40% no
+20:5120 minutes, 51 secondssolamente cesas las variables todas las variables porque le estás quitando toda esta información de acá Entonces no no hay salida realmente puedes Probar con
+21:0021 minutesel 40% y si es que la información que has eliminado es una información completamente aleatoria entonces
+21:0821 minutes, 8 secondsPosiblemente no afectes mucho la distribución de la variable posiblemente pero más probable que sí lo hagas samel
+21:1521 minutes, 15 secondsentonces realmente es un riesgo Bueno si te dicen no tienes que hacerlo Sí o sí Bueno lo introduces ahora que el modelo
+21:2221 minutes, 22 secondsgeneralice bien al final ya es otra cuestión es otra cuestión va a depender mucho de Cómo realmente estado esos
+21:3021 minutes, 30 secondsdatos técnica de muestra puedes hacerlo pero igual es un 40% esel El problema es que ese 40% que tú tienes que que te
+21:3921 minutes, 39 secondsqueda está bastante bastante fatal te has bajado de un imagina que tienes 1000
+21:4621 minutes, 46 secondsregistros y solamente vas a trabajar con 400 esos 400 son buenos o no son
+21:5221 minutes, 52 secondsbuenos o o técnica de muestreo Boot
+21:5921 minutes, 59 secondsbootstrap puedes aplicar un un bootstrap puedes aplicar bootstrap para
+22:0622 minutes, 6 secondshacer para ir extrayendo pero igual es un 60 por de datos faltantes es un 60 Por más que apliques G vas a mermar un
+22:1522 minutes, 15 secondspoquito el dato faltante porque tienes muchos subgrupos y en entre Esos subgrupos sí vas a tener ciertas cositas pero es muy
+22:2222 minutes, 22 secondsriesgoso te comento tenos tenemos que ver qué es lo que está pasando con los datos que hay acá los datos el 40% de
+22:2922 minutes, 29 secondsdatos que me quedan en esta variable están sesgados o no están sesgados y ahí se abre la gran pregunta
+22:3622 minutes, 36 secondsno si se abre se abre todas las posibilidades realmente y luego las dudas será que el modelo quedó sesgado
+22:4322 minutes, 43 secondssolamente que lo único que puedes hacer apcas un bootstrap comienzas a exer la información poquito a poquito y
+22:5122 minutes, 51 secondsluego ves Si es que el modelo realmente ya en la parte Aunque es un riesgo porque en la parte de despliegue comprueba si es que realmente te
+22:5822 minutes, 58 secondsfuncionó no no quedaría de otra forma tendrías que llegar hasta el modelo final y realmente ahí en el despliegue hacer las pruebas respectivas y ver de
+23:0723 minutes, 7 secondsacuerdo Bueno sí podrías hacerlo pero ya la probabilidad de que tu modelo sal alto
+23:1523 minutes, 15 secondses entonces estimados ya saben no bueno sus colegas que ya tienen experiencia ya saben no pueden trabajar con un 60 de
+23:2223 minutes, 22 secondsdatos sesgados por si nos dicen utiliza lo bueno y buscamos estrategias como
+23:2823 minutes, 28 secondshacerlo y ver cómo cómo nos queda directamente muy bien esa es una idea perfecto continuamos observando más
+23:3723 minutes, 37 secondsabajo muy bien entonces imaginemos Bueno estamos en una cuestión didáctica Pero de aquí sale mucha mucha conversación como Les
+23:4323 minutes, 43 secondscomento continuamos más abajo bajando y ahora están las gráficas no que me qued bueno esta esta gráfica de aquí es de mi
+23:5023 minutes, 50 secondsSign no es una gráfica muy bonita solo que dependiendo de la cantidad de datos a veces se vuelve pesada ojo dependiendo de la base de la la cantidad de
+23:5923 minutes, 59 secondsvariables que ustedes tengan y la cantidad de registros est estas gráficas de missing no a veces se vuelven pesaditos entonces la función de acá
+24:0724 minutes, 7 secondssale más rápida la que he hecho ya si ustedes luego aislan el código se quedan con esta gráfica de aquí que técnicamente es lo mismo del otro lado
+24:1424 minutes, 14 secondssolo que expresado en porcentajes No aquí están los porcentajes y por este lado por ejemplo ustedes pueden observar
+24:2224 minutes, 22 secondso simplemente previamente a esto filtran las columnas que son nulas y esas columnas que son nulas son las que coloca acá mandan a la Gráfica ya eso
+24:3024 minutes, 30 secondsustedes lo pueden hacer tranquilamente ya pueden luego modificar a su gusto y optimizar este código Muy bien Entonces por acá si se dan cuenta
+24:3924 minutes, 39 secondstengo organizadas todas las variables ya de forma gráfica de las cuales tienen valores faltantes las que no tienen directamente Por acá las de aquí no
+24:4824 minutes, 48 secondstienen nada y estas De aquí sí tienen cierto valor de valores nulos directamente muy bien y luego Acá hay
+24:5424 minutes, 54 secondsotras gráficas que son bastante buenas primer punto Cómo identifico que una variable es MC completamente aleatori su
+25:0425 minutes, 4 secondsfalta simple ustedes tienen dos formas la forma más rápida es verlo acá en la matriz de correlación de nulidad entre
+25:1125 minutes, 11 secondsvariables qué es lo que hace todas las variables que presentan valores nulos le va a aplicar
+25:1825 minutes, 18 secondscorrelación y por eso Esta es bastante buena potente y miren lo que pasó la
+25:2625 minutes, 26 secondscorrelación entre estado civil y cantidad de dependientes me salió uno y bueno es porque esto yo lo hice No de forma
+25:3525 minutes, 35 secondsmanual pero miren lo que me reporta esta gráfica hay un uno de correlación entre
+25:4225 minutes, 42 secondslas variables de cantidad de pendientes y estado civil Qué significa Cómo ustedes creen que pueden
+25:5025 minutes, 50 secondsinterpretar esto ya han visto ustedes estadística entonces fácilmente interpretan esto
+25:5925 minutes, 59 secondscreo que se movió cómo lo interpretaría ustedes ya que lo tenemos
+26:0926 minutes, 9 secondsaquí observen estado civil Qué pasa si
+26:1726 minutes, 17 secondsustedes se dan cuenta la interpretación es bastante sencilla si en un registro le falta un dato a estado a estado civil
+26:2626 minutes, 26 secondsen el mismo registro de la columna cantidad dependientes también le va a faltar un dato Por qué Porque es 100% la correlación me voy por
+26:3526 minutes, 35 secondsacá y aquí justamente lo compruebo de este lado miren simplemente aquí falta un dato y aquí falta el dato aquí falta un dato y
+26:4326 minutes, 43 secondsaquí falta un dato bueno eso lo hice manualmente entonces la correlación me salió 100% Entonces eso significa esta grafita
+26:5226 minutes, 52 secondsde al lado les dice que tenemos un problema de correlación entre dos variables punto encontrado obviamente aquí es perfecto
+27:0127 minutes, 1 secondporque lo hice manualmente pero ustedes pueden encontrar casos donde sí se de a un 70 80% bueno la he encontrado les
+27:0927 minutes, 9 secondspuede salir de repente por aquí un 0.8 aquí un 0.6 entonces hay cierta correlación entre datos nulos y una variable Pero
+27:1727 minutes, 17 secondsqué pasa con los que son mcar los que son MC si ustedes observan no tienen correlación con nadie más
+27:2527 minutes, 25 secondsobserven esto de aquí columna no tiene correlación con nadie esa tampoco esta
+27:3127 minutes, 31 secondstampoco significa que estas posiblemente son MK y la pregunta para ustedes sería qué es esto
+27:3927 minutes, 39 secondsEntonces esto de aquí son potenciales m MK
+27:4527 minutes, 45 secondspotenciales Pero qué sería lo de acá recuerdan
+28:0028 minutesrecuerdan Qué sería muy bien aquí justamente no
+28:0828 minutes, 8 secondsausente estos valores dependen de algunas otras características encontramos un m muy bien así es y La
+28:1628 minutes, 16 secondspregunta sería si yo encontré un mar puedo imputar los valores faltantes de estado de estado civil y cantidad de
+28:2428 minutes, 24 secondsdependientes con un método paramétrico o no puedo se puede no se puede imputar con un
+28:3128 minutes, 31 secondsmétodo param un m podríamos o no podríamos
+28:4228 minutes, 42 secondsimputar viene la gran pregunta no no
+28:5128 minutes, 51 secondspodemos porque no es completamente aleatorio que falte un dato de acá depende bueno está con relación lado aunque no es causalidad pero está
+28:5928 minutes, 59 secondscorrelacionado con que falte en otro lado entonces aquí no puedo utilizar un método paré un método paramétrico por
+29:0629 minutes, 6 secondsejemplo bueno de utilizar puedo utilizarlo pero no es recomendable eso sería el detalle no es recomendable Hacerlo con un método paramétrico mejor
+29:1529 minutes, 15 secondshay que utilizar estrategias no paramétricas de acuerdo muy bien lo más difícil de encontrar son los M N estos
+29:2429 minutes, 24 secondsson los más difíciles est valores faltantes tienen alguna razón por la que faltan no sabemos pero hay alguna razón por la que
+29:3129 minutes, 31 secondsfalt porque ingresaron malos datos Porque el estuvo mal etcétera todo eso tiene su repercusión directamente
+29:4029 minutes, 40 secondstenemos que analizar cada vez la base de datos encontrar los mnar es un poquito más difíciles comento normalmente los
+29:4829 minutes, 48 secondsmnar no son completamente aleatorios pero tampoco tienen cierta correlación Entonces qué es lo que
+29:5529 minutes, 55 secondshago ya en este punto el el mar es fácil de encontrar el mcar se puede detectar
+30:0330 minutes, 3 secondsrápidamente una forma de cómo lo hacen es comento es que esta gráfica la vuelven a la vuelven a
+30:1330 minutes, 13 secondsgenerar varias veces a través de la reorganización de índices es decir mezclan los registros de forma aleatoria
+30:1930 minutes, 19 secondsy luego mandan la Gráfica Pero eso pero con tres Creo que ya es suficiente y más esto de acá como que ya da mucha mucha
+30:2830 minutes, 28 secondsprobabilidad de que sea un MK y la otra opción es observar esto correlacionado con ciertos valores de las columnas es un poquito más complicado el
+30:3730 minutes, 37 secondsinstrumento elar tratar de descartar elar directamente bueno por ejemplo aquí hice algo no directamente Alo así ordené
+30:4630 minutes, 46 secondslos datos en una columna y comencé a observar cómo queda Y realmente aparece cantidad de
+30:5430 minutes, 54 secondspendientes junto con estado civil se mantien mantienen la la correlación de uno directamente por acá y el límite de
+31:0231 minutes, 2 secondscrédito sigue tiendo su distribución diferente si se dan cuenta Muy bien Entonces eso más que
+31:1031 minutes, 10 secondstodo Quería mostrarles por acá el día de hoy que ustedes sigan observando estas partes es muy importante realmente Y ahora cómo aplico imputación
+31:1931 minutes, 19 secondsde datos Bueno qué se puede observar por empezar límite de crédito con total de transacciones c Bueno aquí le hemos
+31:2731 minutes, 27 secondspuesto un le he puesto un MC sí es un MC por al menos por la distribución que yo estoy viendo parecen completamente un
+31:3531 minutes, 35 secondsMC Existe alguna existe una correlación de falta de datos entre cantidad dependientes y estado civil Sí ya lo hemos comprobado es un
+31:4331 minutes, 43 secondsmar y algo ocurre con total transacciones amt y se debería analizar total transacciones amt me olvidado de
+31:5031 minutes, 50 secondsesta variable que también bajé algo ocurre por acá hay que analizarlo no directamente Entonces como si ustedes se
+31:5831 minutes, 58 secondsdarán cuenta el análisis de datos nulos ya es un dolor recabe colegas que también trabajan en esa parte lo
+32:0532 minutes, 5 secondsconfirman ya es un dolor de cabeza realmente puedo identificar rápidamente los mcar sí eh Sí pero hay que verificar
+32:1332 minutes, 13 secondsbien que no se confunda un MC con con un este mnar los Mr son más fáciles porque ustedes Encuentran una correlación en la
+32:2132 minutes, 21 secondsgrafiquen todo Ay me había olvidado mostrarles esta gráfica de acá esta gráfica es bastante buena el dendograma
+32:2832 minutes, 28 secondsque también lo van a ver en Machine elrama es muy bueno me había olvidado de mencionarles los niveles de correlación
+32:3732 minutes, 37 secondsque ustedes encuentran permite que ustedes agrupen directamente las variables por ejemplo miren aquí están todas las variables que no tienen ningún
+32:4432 minutes, 44 secondsvalor nulo en un nivel en un solo Grupo luego por acá tengo por ejemplo miren cantidad de pendientes y estado civil en
+32:5232 minutes, 52 secondsun grupo estes están en este grupo luego por acá tengo de crédito que sube por acá un poquito entra luego por acá tengo
+33:0033 minutestotal de transacciones c que se junta con total de transacciones amt miren que forma un solo Grupo buen acá No se ve no
+33:0833 minutes, 8 secondsestá muy vistoso pero directamente estimados esto ya me ayuda a ver un poquito como se organizan las variables entonces este diograma es bastante
+33:1733 minutes, 17 secondsbonito bastante bonito de entender ya lo van a entender mejor Cuando vean Machine learning la generación deama es parte
+33:2433 minutes, 24 secondsdel aprendizaje No supervisado tipo jerárquico y existen variantes cosas bastantes cosas que ver la función de distancia y
+33:3333 minutes, 33 secondstambién el tipo de enlace con el que se trabaja para generar comento es muy chévere realmente
+33:4133 minutes, 41 secondsesta parte Ok entonces directamente profesor ahora cómo hago la imputación de datos
+33:4833 minutes, 48 secondsbueno la imputación de datos ustedes la pueden hacer de diferentes formas si que ustedes corroboran que están en un
+33:5533 minutes, 55 secondsproblema tipo MC ar un método paramétrico no sin problemas acá tengo una funcion cita que
+34:0334 minutes, 3 secondsme muestra distribuciones aquí por ejemplo lo que estoy haciendo directamente es contar Cuáles son las variables que tienen
+34:1134 minutes, 11 secondsvalores nulos para no trabajar con todas porque no quiero imputar todas y me salen todas las que tienen al menos un valor nulo y por
+34:2034 minutes, 20 secondsacá directamente genera una lista no con estas variables Bueno aquí lo hice manualmente aquí lo hice Disculpen aquí
+34:2834 minutes, 28 secondslo hice de forma automática y aquí lo hice manualmente al final tengo las las columnitnas
+34:5034 minutes, 50 secondsy bigotes de cada columna que yo le estoy mandando Y luego el un histograma dividido en 20 BS y
+34:5934 minutes, 59 secondsy eso me permite observar cada una de las variables y ver cómo está su comportamiento dependent límite de
+35:0635 minutes, 6 secondscrédito total transacciones amt toal buque no deb colocar solo porque si no no se deb colocar así realmente deb
+35:1535 minutes, 15 secondscolocar mejor funciones separadas pero directamente se puede observar en este caso mir Cómo están las
+35:2235 minutes, 22 secondsdistribuciones bueno la cantidad de pendientes hacer un valor discreto obviamente me queda y la distribución el histograma más que todo
+35:3035 minutes, 30 secondsel límite de crédito sí no tiene nada histograma está completamente diferente entonces puedo observar directamente que
+35:3835 minutes, 38 secondslos datos mantienen este tipo de distribución al menos los numéricos por el momento un momento ahora cómo se imputan
+35:4635 minutes, 46 secondslos valores Bueno este punto bueno que se ha quedado por acá Forward eh Forward backward Field es por ejemplo utilizado
+35:5535 minutes, 55 secondsen series de tiempo esa aquí por ejemplo se utiliza bastante serie de tiempo Les explico cómo funciona bastante es un
+36:0436 minutes, 4 secondsmétodo bastante sencillo bastante sencillo directamente pero igual se ha quedado por aquí
+36:1336 minutes, 13 secondsSimplemente si aquí hay un cuatro aquí hay un seis dependiendo si es Forward f o backward lo de aquí va a ser un cuatro
+36:2036 minutes, 20 secondslo de aquí va a ser un seis directamente dependiendo si voy hacia adelante hacia atrás por d yo comienzo este m para este
+36:2836 minutes, 28 secondstipo de datos no lo recomiendo que lo utilicen porque se utiliza más en datos serie de tiempo ahí funciona perfecto yo
+36:3536 minutes, 35 secondstengo una continuidad no en Cómo evoluciona cierta cierta variable Aquí no aquí no no tengo una continuidad pero
+36:4436 minutes, 44 secondsigual se puede utilizar Solo que no es recomendable realmente y No deberíamos hacerlo pero igual se ha quedado aquí como
+36:5136 minutes, 51 secondsmuestra como est y miren có quedó más o menos la importación de datos se fue completando Pero no es lo recomendable
+36:5936 minutes, 59 secondsdirectamente lo que sí quisiera colocarles por acá mejor es la basada en estadísticas en métodos paramétricos que es mucho
+37:0837 minutes, 8 secondsmejor aquí pueden ver por ejemplo la distribución de cada variable independiente bien de forma independiente como ustedes observan por
+37:1637 minutes, 16 secondsaquí los s layers todavía no nos vamos a preocupar por ello eso nos vamos a preocupar ya en la siguiente sesión por
+37:2337 minutes, 23 secondsel momento fijémonos más que todo en la cantidad de en Cómo está la distribución de estos
+37:3037 minutes, 30 secondsdatos y yo puedo imputar con un dato estadístico puedo imputar con la media con la mediana con un cuartil uno con un
+37:3837 minutes, 38 secondscuartil tres con la diferencia de cuartiles puedo imputar por bloques como como yo desee puedo utilizar diferentes estrategias y quiero utilizar un método
+37:4737 minutes, 47 secondsparamétrico Pero si yo observo aquí la distribuciones lo último en lo que voy a pensar es imputar con la media No porque
+37:5537 minutes, 55 secondsya veo que hayers y los directamente impactan en la media Entonces no voy a hacer eso entonces puedo utilizar la mediana o
+38:0238 minutes, 2 secondsalgún cuartil dependiendo dependiendo de como yo esté observando por aquí la distribución en el box de los datos cómo están
+38:1138 minutes, 11 secondsconcentrados y si yo aplico Esa esa directamente miren esa imputación por acá aplico simplemente la imputación se
+38:2038 minutes, 20 secondspuede aplicar de forma rápida en python simplemente ustedes escriben por acá y le mandan la estadística que quieren por ejemplo la media si yo
+38:2938 minutes, 29 secondsquisiera imputar con la media lo indicado realmente y me quedan de esta forma si ustedes observan Esto es lo que
+38:3638 minutes, 36 secondsme preocupa Esto es lo que me preocupa este
+38:4438 minutes, 44 secondscuando yo aplico una imputación con un método paramétrico en este caso utilicé la media pero me quedó así se genera un pico
+38:5238 minutes, 52 secondsrealmente sea un pico si impase con la
+39:0039 minutesDiana miren estos son los datos también se sigue generando un pico miren con la mediana
+39:0839 minutes, 8 secondspero está por acá directamente más acá se dan cuenta preguntas para sus colegas ya que
+39:1739 minutes, 17 secondsestamos todos por acá qué tan qué tan este qué tan robusto
+39:2439 minutes, 24 secondses imputar con una mediana A qué opinan
+39:3639 minutes, 36 secondsqué opin estimados qué tan robusto es imputar con con la mediana si observ de forma gráfica cómo
+39:4339 minutes, 43 secondsme está quedando los picos muy bien Por qué no usarían la
+39:5339 minutes, 53 secondsmediana realmente en la práctica no se debería utilizar ni siquiera mediana
+40:0140 minutes, 1 secondo qué opinan estimados estrategia de imputación m
+40:0740 minutes, 7 secondsmedi puede usarlo Solo que hay un problema se genera una cierta concentración que no debería realmente
+40:1540 minutes, 15 secondslos datos Y eso puede conllevar que el modelo tenga que la imputación sea un
+40:2240 minutes, 22 secondspoco más suave su entonces puedo imputar sí qué tanto
+40:3040 minutes, 30 secondsdepende mucho también de la cantidad de datos faltantes que ustedes tengan Si tienen una cantidad por ejemplo imaginemos un valor aceptable que es
+40:3740 minutes, 37 secondshasta un 30% de datos faltantes si imputo con la mediana va a aparecer así una la la mediana no es sensible lers la
+40:4640 minutes, 46 secondsmedia Sí sí es sensible no solo que la mediana Igual me va a generar un pico y mientras más datos no los tengo peor no
+40:5440 minutes, 54 secondspeor Entonces ahí viene valor de cabeza por regresión de cabeza también muy bien regresión de cabeza también
+41:0341 minutes, 3 secondspuede funcionar que Entonces qué es lo que hacemos simple hacemos un que problema de imputación se vuelve un
+41:1141 minutes, 11 secondsproblema de Machine learning y aplicamos un método de regresión y se acabó se puede impar compartiles también
+41:1941 minutes, 19 secondsdirectamente pero los métodos más avanzados son dos el famoso knn Aunque hay varias estrategias ustedes escriben
+41:2641 minutes, 26 secondsAquí input les salir que input directamente incluso hay un input robusto bler incluso ustedes lo pueden
+41:3441 minutes, 34 secondsver entonces estimado los métodos que más utilizan en la práctica son el K input que es el primero que qué es lo
+41:4241 minutes, 42 secondsque hace analicemos los vecinos más próximos directamente el algoritmo kn es uno de los algoritmos más básicos que hay Les comento Y es superfácil de
+41:5141 minutes, 51 secondsentender simplemente ustedes tienen esto este concepto por Aunque es para
+41:5741 minutes, 57 secondsregresión Pero igual el entendimiento es fácil circulito simplemente ustedes van a
+42:0742 minutes, 7 secondsquerer saber a qué valor pertenece con Qué valor yo imputo en este caso entonces imaginemos que por aquí
+42:1442 minutes, 14 secondsaparece esta x y yo quiero saber esta x pertenece a los triángulos o a los círculos entonces La pregunta es simple
+42:2242 minutes, 22 secondscómo yo sé si es un triángulo o un círculo hasta x simplemente pregúntale T vecinos k a cuántos vecinos Yo le pregunto Le voy a preguntar a dos dos
+42:3142 minutes, 31 secondsvecinos Entonces le pregunto a los vecinos más próximos son el Triángulo y son el círculo quién tiene la menor
+42:4042 minutes, 40 secondsQuién tiene la menor distancia en este caso el círculo por lo tanto el X va a ser asignado a un círculo en este caso así de sencillo pero qué pasa si yo le
+42:4842 minutes, 48 secondspregunta tres los tres más próximos nuevamente son dos círculos y un triángulo Entonces
+42:5742 minutes, 57 secondsel X es asignado como círculo al final es un knn de forma general rapidísima nada más así Simplemente ustedes en el
+43:0643 minutes, 6 secondscaso de clasificación simplemente se cuenta entonces qué hago profesor con la con la imputación bastante parecido se
+43:1343 minutes, 13 secondsanalizan los vecinos más próximos y se ve cuál valor se repite más en la vecindad dentro dentro del puntito faltante y el valor que se repite más es
+43:2243 minutes, 22 secondsel que se coloca ahí nada más y pesos uniforme Qué significa que todos los 10 vecinos tienen el mismo el mismo peso
+43:3143 minutes, 31 secondstodos pesan lo mismo puede haber casos de repente dependiendo de como ustedes observen su variable que no que los que
+43:3843 minutes, 38 secondsno son que esos 10 no no tienen el mismo peso entonces también hay que ver aquí ustedes le pueden dar de forma manual
+43:4643 minutes, 46 secondslos pesos que ustedes quieren los cinco primeros vecinos tienen un peso de 0.1 0.1 el resto 0.2 0.2 ya depende o 0.05
+43:5543 minutes, 55 secondsya depende como ustedes quieran darlo pero en este punto a mí me interesa bastante realmente hacer una imputación que kn nn y directamente los pesos son
+44:0444 minutes, 4 secondsuniformes porque tampoco no tengo ni siquiera una serie de tiempo entonces solamente quiero analizar con mis 10 vecinos más próximos Entonces ustedes
+44:1244 minutes, 12 secondsestimados generan importan from eser punto input import canen imputer por acá
+44:1944 minutes, 19 secondsle dicen 10 vecinos pesos uniformes por el momento y aplican la función Fit
+44:2644 minutes, 26 secondstransform que significa entrena aprende Cuáles son los centroides no Cuáles son los vecinos aprenden estos parámetros y
+44:3344 minutes, 33 secondsluego finalmente rellena los valores faltantes en estas columnas que tienen valores vacíos y luego esta salida se vuelve dataframe porque no es un
+44:4244 minutes, 42 secondsdataframe y ya está y si ustedes observan la distribución ya no se ven tant esos picos un poquito más más suave
+44:5044 minutes, 50 secondspero igual todavía se mantiene esa tendencia y ahí está estimado es uno de los métodos avanzados bastante utilizados y directamente lo
+44:5944 minutes, 59 secondsque hace es analizar pero hay otro que es interative imputer no directamente que también se utiliza es decir pasar
+45:0845 minutes, 8 secondsesta tarea de imputación a una tarea de regresión más pero es más costosa ojo Es más robusta pero a la vez más costosa
+45:1745 minutes, 17 secondsdesde el punto de vista computacional el iterative Okay Por qué Porque va a hacer bastantes cosas va a comenzar a iterar a
+45:2545 minutes, 25 secondsiterar tomo un estimador cer arbitrario intenta imputar valores perdidos modelando otras características como una función de características con valores
+45:3345 minutes, 33 secondsperdidos Aquí hay una explicación más granular paso a paso de su funcionalidad para que más o menos entiendan la idea se pasa un regresor al
+45:4245 minutes, 42 secondstransformador luego se elige la primera característica la feature uno con valores faltantes y los datos se dividen en conjuntos de entrenamiento y prueba o
+45:5145 minutes, 51 secondssea de forma automática se hace donde el conjunto de entrenamiento contiene todos los valores conocidos para fiture 1 todos los o sea es decir todos los registros que s tienen valores conocidos
+45:5945 minutes, 59 secondsmandan a entrenar y los datos que están faltando los mandan para pruebas y se va ha serer allí estimados el regresor se
+46:0746 minutes, 7 secondsajusta a todas las demás variables como entradas y con feature un como salida es decir es una regresión multidimensional ojo con ese detalle y el regresor
+46:1546 minutes, 15 secondspredice los valores que faltan el transformador continúa este proceso hasta que se imputan todas las características los pasos del 1 a 6 se
+46:2346 minutes, 23 secondsdenominan Ronda de interacción única y estos pasos se llevan a cabo varias veces según lo especificado por el parámetro más el transformador Por qué
+46:3146 minutes, 31 secondsPorque va a ser diferentes diferentes este imputaciones entrenando entrenando diferentes seleccionando de forma
+46:3846 minutes, 38 secondsaleatoria diferentes muestras muy bien entonces cómo lo puedo hacer ustedes aquí estimados escogen el regresor que
+46:4746 minutes, 47 secondsustedes gusten bueno en este caso con fines didácticos son extra Tris regressor pueden mandarle si quieren una
+46:5346 minutes, 53 secondsxus bgbm regresor también no hay problema y luego llaman experimental ustedes llaman
+47:0247 minutes, 2 secondsenable aquí y luego
+47:0947 minutes, 9 secondsinut lo primero que hago copio los datos directamente de las nulas copio hago una
+47:1647 minutes, 16 secondscopia profunda para tener nuevo y Lu conter ap ex regor máximo iteraciones
+47:2747 minutes, 27 secondsluego un Random State de 12 1 2 3 mi Sevilla ig a 3 para mostrar los resultados y finalmente llamo a fit
+47:3447 minutes, 34 secondstransform y cuando yo mando a ejecutar esto Ahí va a tomar su tiempo aquí está miren entrenando con la
+47:4147 minutes, 41 secondsmatriz completa 10127 por 4 acabó la ronda uno tiempo estimado
+47:4947 minutes, 49 seconds6.17 ch cambio escala tolerancia de escala y sigue sigue disa dos sigue
+47:5647 minutes, 56 secondssigue sigue y aquí entonces estimados está aplicando una técnica el iterative imputer y técnicamente está encapsulando
+48:0448 minutes, 4 secondstoda una regresión en diferentes rondas para poder tener correctamente la los valores más próximos a a lo que sería
+48:1448 minutes, 14 secondsdatos reales pero tampoco estamos e exentos de sesgo o de errores Entonces
+48:2248 minutes, 22 secondsestos métodos de imputación son bastant buenos sí lo son en la prácticas son las que funcionan mejor pero siempre ojo que
+48:3048 minutes, 30 secondspodemos analizar Cuál fue la repercusión en el modelo final ustedes Hasta pueden hacer una
+48:3748 minutes, 37 secondscomparación entre diferentes regresores para ver cuáles funciona mejor en el despliegue o entre estrategias no canen
+48:4448 minutes, 44 secondsinput con iterative input para ver cuál de los dos les funciona mejor Eso Tienen que analizarlo siempre ya en la parte de su protocolo experimental
+48:5348 minutes, 53 secondscuando generen su modelo diferencial y listo estimados con esto ustedes pueden observar más o menos Cómo quedaron las
+49:0149 minutes, 1 seconddistribuciones y bueno si yo quisiera eliminar valores duplicado lo coloqué aquí como algo rapidito simplemente es
+49:0949 minutes, 9 secondspandas datame duplicate y se acabó eliminar valores duplicados no es nada complejo Les comento
+49:1749 minutes, 17 secondsdirectamente simplemente ustedes hac una copia preguntan Cuáles son duplicados mantienen el primer valor y luego
+49:2549 minutes, 25 secondseliminan los se acabó Eso es todo bueno había colocado muy bien estimados entonces la próxima sesión que es el
+49:3349 minutes, 33 secondsmiércoles a ver les voy a traer una base de datos y les voy a dejar a ver cómo ustedes aplican su método de imputación
+49:4049 minutes, 40 secondsdirectamente Y también vamos a ver aunque no primero vamos a ver el día miércoles vemos offers mejor y allí
+49:4849 minutes, 48 secondshacemos un pequeño entrenamiento chiquito nada más de Machine learning no nos concentramos mucho en la parte teórica para ver cómo queda la repercusión de est estatas dentro de esa
+49:5749 minutes, 57 secondsbase de datos y ahí observamos los cambios para que ustedes lo entiendan mejor no sé si tienen alguna consulta por
+50:0850 minutes, 8 secondsaquí las técnicas como y el último iterador Son son aplicables para vares
+50:1950 minutes, 19 secondsnuméricas numéricas también funciona para para las categóricas realmente solamente que la categor previamente tienes que mandarle
+50:2750 minutes, 27 secondstienes que aplicar un encoding nada más una transformación algo así un encoding puedes darle un encoding y te funciona
+50:3550 minutes, 35 secondstranquilamente he probado y normal funci en ambas Gracias por la
+50:4250 minutes, 42 secondspregunta estim entonces Samuel consulta veo que usted
+50:4950 minutes, 49 secondsdebo de imputar revisa la Gráfica no Qué estaría buscando Ah que no haya cuando dicen que no haya picos se
+50:5850 minutes, 58 secondsrefiere a que no se debe alejar un dato demasiado respecto al otro claro o sea porque tú ves así okay No te concentres
+51:0651 minutes, 6 secondsmucho en la distribución porque obviamente sabemos que no hay una distribución normal acá pero no veamos que se genere ese pico gigante que es algo normal dentro de la Data Por más
+51:1551 minutes, 15 secondsque no tiene una distribución normal esto por ejemplo ya sabemos que existe esto sabemos que existe esto sabemos que aparece porque es la
+51:2351 minutes, 23 secondsnaturaleza de la variable en sí es también aparece Pero si yo imputo con un método paramétrico vamos a ver que
+51:3151 minutes, 31 secondsaparece otra tendencia de repente así como esta Entonces eso ya es un problemita porque ya me está como que
+51:3851 minutes, 38 secondstransformando la variable fuera de lo que ya tiene su propio comportamiento la estás alterando más de lo que ya está y luego por ejemplo si ustedes quieren
+51:4751 minutes, 47 secondsaplicar alguna técnica para suavizar Y tratar de que esta variable tienda a tener una distribución normal tipo técnica logarítmica Hay un problema noo
+51:5651 minutes, 56 secondsentonces La idea es tratar de concentrarnos mejor en un método paramétrico que impute de una forma más suave directamente y en la práctica
+52:0552 minutes, 5 secondsfunciona bastante bien ha imputado la son cuatro variables
+52:1352 minutes, 13 secondscreo no son dos no dos variables lo que se busca que se estaría buscando que no haya mucha
+52:2252 minutes, 22 secondsdespro que tod para para veada que se tiene que observar es la performance en el modelo el desempeño de
+52:3052 minutes, 30 secondstu modelo queda Exacto luego vamos a hacer un ejercicio creo que lo hacemos el viernes
+52:3852 minutes, 38 secondsel día miércoles enseño offers porque también los son otro valor de cabeza y el día viernes ya podemos
+52:4652 minutes, 46 secondshacer pruebas directamente no les traigo un nuevo dataset Y hacemos con valores nulos y Hacemos unas pruebas como eso repercute en el modelo para que ustedes
+52:5552 minutes, 55 secondsvean directamente hasta el mismo dat lo podemos probar y y ahí vemos realmente cómo queda

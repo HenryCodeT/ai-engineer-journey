@@ -1,0 +1,306 @@
+# Python para Ciencia de Datos - M4-3 - Métodos a nivel de datos
+# (título en el video: Python para Ciencia de Datos - Modulo 4 - Metodos a nivel de datos)
+
+0:022 seconds[Música]
+0:077 secondsentonces hay diferentes tipos de métodos el día de hoy vamos a estudiar los métodos a nivel de datos y luego vamos a
+0:1414 secondsver a nivel ya de modelos de clasificadores cuando estén dentro del curso Machine learing lo vamos a ir viendo con más calma muy bien Qué son
+0:2222 secondslos métodos a nivel de datos no Estos son unos enfoques que tienen como objetivo reequilibrar el conjunto de datos de entrenamiento antes de aplicar
+0:3030 secondsalgoritmo de aprendizaje automático y ojo con este detalle el reequilibrar el conjunto de datos de entrenamiento tal como les dije al inicio no datos de
+0:3838 secondspruebas entrenamiento los datos de pruebas van a mantenerse en su distribución original 42 23 135 lo único
+0:4848 secondsque yo voy a equilibrar son los datos de entrenamiento que en este caso tienen 160 81 559 Esos son los que voy a
+0:5555 secondsequilibrar los de Test se mantienen tal y como están eso no los podemos alterar Existen dos maneras diferentes no el
+1:031 minute, 3 secondssobr muestreo y el submuestreo no Under sampling y oversampling que es bastante famoso como ustedes pueden ver el Under sampling es bastante sencillo de
+1:121 minute, 12 secondsentender es simplemente recortar el dataset el dataset eliminando muestras
+1:201 minute, 20 secondsde la clase que tiene Mayor Mayor observaciones hasta un equilibrio con la clase con las otras clases no
+1:281 minute, 28 secondsdirectamente y Qué es el sampling es al contrario no seleccionar las clases que tienen menos menos muestras y y hacer un
+1:361 minute, 36 secondsaumento con Data sintética generar Data sintética pero no de forma aleatoria No tanto aleatoria que ayude a tener una
+1:441 minute, 44 secondscantidad similar a los datos de la clase mayoritaria o eso es más que todo entonces undersampling es el famoso su
+1:511 minute, 51 secondsestreo donde yo elimino instancias y el yo creo nuevas instancias directamente definiciones bastante sencillas no ahora
+2:002 minutesvamos con la primera no subm estreo el sub muestreo que casi no se usa algunos no lo usan realmente pero es bueno entenderlo a veces puede funcionar
+2:092 minutes, 9 secondsbastante bien en el caso que tengamos muchísima Data 500,000 registros 800,000 registros y ha y haya cierto desbalance
+2:172 minutes, 17 secondspodríamos aplicarlo Pero siempre y cuando no sea tan extremo tampoco el desbalance muy bien se puede definir como la eliminación de algunas observaciones de la clase mayoritaria no
+2:252 minutes, 25 secondsel subm estreo puede ser una buena opción cuando tienes una gran cantidad de datos como les dije no en millones de filas tengo 500,000 1 millón de filas 1
+2:332 minutes, 33 secondsmillón de registros millón y medio y me doy cuenta que están más o menos no están tan desequilibrados que digamos no más o menos Tengo este esto de aquí no
+2:422 minutes, 42 secondsun desequilibrio así algo así y lo que voy a hacer al final es un corte No un corte para hacer un
+2:502 minutes, 50 secondsequilibrio general de los datos voy a hacer un corte para que todos queden balanceados no una de ventajas de su muestr es que eliminamos información que
+2:572 minutes, 57 secondspuede ser valiosa ese es un punto por eso eso se hace en dataset que tienen miles de datos millones de
+3:043 minutes, 4 secondsdatos 500000 registros 800000 registros en general no lo hagan con pocos registros porque si no es
+3:123 minutes, 12 secondspeligroso muy bien y una gran desventaja como les dije es que podemos eliminar información valiosa no Entonces no No es
+3:213 minutes, 21 secondssimplemente por hacer si es que lo van a hacer hay que ver qué estrategias utilizar la estrategia más fácil es el
+3:283 minutes, 28 secondssub muestro ingenuo amente No si un plot por acá ex train por ejemplo miren Aquí están mis datos Este es el balance
+3:363 minutes, 36 secondsoriginal 160 81 559 y la forma más así la forma más simple
+3:443 minutes, 44 secondsde hacerlo es el Random unders sampler que simplemente de forma aleatoria selecciona puntos y los elimina y se acabó no hace ningún análisis ni nada
+3:513 minutes, 51 secondspor el estilo es es no la forma el submuestreo ingenuo realmente es el más básico pero igual no se utiliza mucho
+3:593 minutes, 59 secondspero hay que mostrarles miren de forma aleatoria ha eliminado muestras por ejemplo y ahora todos tienen la misma
+4:064 minutes, 6 secondscantidad 81 81 81 si se dan cuenta no es recomendable con pocos datos pero con fines didácticos les estoy enseñando
+4:144 minutes, 14 secondscómo sería es bastante sencillo simplemente ustedes tienen un el la librería in learn no directamente
+4:234 minutes, 23 secondsUnder sampl Random Under sample y lo hacen no así de esta forma aplico genero mi mi muestra
+4:304 minutes, 30 secondsy luego le aplico un fit resample y ya tengo los datos train r train actualizados simplemente aquí con la
+4:374 minutes, 37 secondsfunción pl frecuencia que he creado arriba se puede mostrar miren có está la distribución por acá he quitado datos pero no de una
+4:464 minutes, 46 secondsforma inteligente que digamos me voy por acá abajo y voy a entrenar el modelo a ver cómo me queda Y tará ese es el
+4:544 minutes, 54 secondsmodelo Qué tal Qué opinan opiniones sobre el modelo qué tal quedó
+5:075 minutes, 7 secondsla cantidad de muestras en test por si acaso no se han actualizado siguen siendo la misma cantidad Qué opinan a ver qué pueden analizar ustedes por
+5:275 minutes, 27 secondsacá quos valiosos esos encontramos aquí Cómo le fue la clase
+5:375 minutes, 37 secondsdos Cómo le fue la clase uno Cómo le fue la clase cero ayudó o no ayudó a quitar muestras
+5:455 minutes, 45 secondsy equilibrarlas todas a 81 a ver opiniones por
+5:545 minutes, 54 secondsaquí cómo les fue
+6:026 minutes, 2 secondsel f1 es bajo no 73 47 en medio 67 67 y medio bastante
+6:136 minutes, 13 secondsbajo ayudó la clase un no miren a la clase un le ayudó un poquito porque aquí había nu aquía nu ahora sub 15 pero
+6:226 minutes, 22 secondsmiren lo que hizo la clase dos 1423 pero empeo empe miren miren como emp peró a
+6:316 minutes, 31 secondsla clase 2 73 88 80 la clase C se mantiene casi similar 69 79 73 no pero
+6:416 minutes, 41 secondsdebido a este error de acá también afectó en otra métrica acá entonces estimados y la bajó 73 lo
+6:506 minutes, 50 secondscual es algo más real que digamos ayudó Sí a la clase un pero no ayudó la clase dos la clase dos se fue para abajo
+6:576 minutes, 57 secondsvaloró bastante la clase dos y mejoró la clase uno y también y a la clase cero también la bajó un poquito porque le
+7:067 minutes, 6 secondsagregó error acá en este lado aquí entonces estimados de forma aleatoria ayudó un poquito pero manó en general
+7:157 minutes, 15 secondstodo por qué porque realmente miren si ustedes observan Acá está difícil encontrar una frontera de decisión Está
+7:227 minutes, 22 secondsbien difícil Mira encontrar esa frontera por aquí entonces Vamos a continuar por aquí abajo a ver observando por
+7:337 minutes, 33 secondsacá por aquí sub mosto tome links no tome links vamos a
+7:397 minutes, 39 secondsver cómo nos queda en este caso hay otra forma de hacer un muestreo un poquito más inteligente no directamente con un
+7:477 minutes, 47 secondsmodelo tipo tomic que para no entrar en mucho detalle ya lo voy a explicar un poquito más
+7:547 minutes, 54 secondsadelante tiene que ver con analizar pequeños puntos y sus vinanzas directamente ese es un modelo un poquito más estratégico no es tan aleatorio que
+8:038 minutes, 3 secondsdigamos y lo que Procura en general es evitar no evitar eliminar puntos que estén cerca de la frontera de
+8:128 minutes, 12 secondsdecisión Disculpen puntos que estén lejos lejos de la frontera de decisión trata de eliminar aquellos puntos que tienen cierta vecin cierto
+8:208 minutes, 20 secondserror entonces Esta es otra técnica por ejemplo de ya no están en la la teoría que digamos y observen cómo me queda al
+8:288 minutes, 28 secondsfinal miren 143 81 y
+8:348 minutes, 34 seconds523 Tom en este caso por ejemplo no ha seleccionado absolutamente nada se dan
+8:418 minutes, 41 secondscuenta por porque t es un algoritmo que analiza los puntos y no va a eliminar puntos que estén cerca de su frontera de
+8:488 minutes, 48 secondsdecisión disculpen que estén lejos de su frontera y la gran mayoría de puntos están bien separados el problema es aquí
+8:568 minutes, 56 secondsdentro en la FR decisión por lo tanto T se mantiene bastante similar entonces hacer el entrenamiento por acá es
+9:039 minutes, 3 secondstécnicamente el entrenamiento inicial vamos a llegar a 8% 8% por directamente entonces este
+9:129 minutes, 12 secondssuest por ejemplo no no me ayuda mucho que digamos directamente hay otros algoritmos también basado en técnicas de
+9:199 minutes, 19 secondsclasing centroid no que es como una especie de camin no que va agrupando puntos directamente por centroides que
+9:269 minutes, 26 secondsvan poco a poco convergiendo no en croes iniciales ya cuando veamos clustering voy a
+9:359 minutes, 35 secondsexplicarles camin con mayor detalle pero por el momento vamos a concentrarnos en que esto es una estrategia diferente y
+9:439 minutes, 43 secondsvamos a ver cómo nos queda con est estrateg directamente mir es un cler en centroid en este caso s se llegan a
+9:519 minutes, 51 secondseliminar los puntos y se llevan a llevar y se llevan a un 81 8181 este por ejemplo el cl si se dan
+9:599 minutes, 59 secondscuenta hay los puntos están proporcionados miren en distancia de cómo han sido eliminados si yo me voy por acá arriba en el sum en el aleatorio
+10:0810 minutes, 8 secondsmiren Cómo quedaba no quedaba era completamente aleatorio entras que aquí se nota un patrón de desarrollo de
+10:1610 minutes, 16 secondseliminación entonces voy a ejecutar a ver cómo quedan las cosas y si ustedes observan por acá me fue un poquito mejor
+10:2510 minutes, 25 secondsque en el en el aleatorio un poquito mejor ahora aquí es 98 aquí 100 aquí bajó el error pero aquí se mantiene el
+10:3410 minutes, 34 secondserror entonces si yo subo en general Miren la queas todavía ha subido un poquito
+10:4010 minutes, 40 seconds73 y el f1 score de la clase 0 75 de la clase 281 y la clase 1 41 Aquí también
+10:4810 minutes, 48 secondsen general ha mejorado bien el error Okay en general ha afectado la clase a la clase
+10:5610 minutes, 56 secondsdos Sí pero pero en menor medida la clase uno realmente la ha mejorado y a la clase dos a la clase cero si le ha
+11:0411 minutes, 4 secondsdado cierto error por acá directamente que ha afectado su performance Pero al menos Esto está mejor que al inicio realmente Solo que el problema es que no
+11:1311 minutes, 13 secondsgarantiza que el modelo generalice bien porque he bajado los puntos no tengo un datas de 500,000 puntos un millón de
+11:2011 minutes, 20 secondspuntos no donde este esta estrategia no afecte mucho a las a los datos realmente
+11:2811 minutes, 28 secondsentonces lo que se suele hacer es más utilizar técnicas de sobr muestreo creo que eso si lo han visto ustedes directamente y creo que todos conocen el
+11:3711 minutes, 37 secondsmétodos como t directamente entonces estimados Esto
+11:4811 minutes, 48 secondses lo que vamos concentrarnos más la mayoría aplica esto directamente en la práctica Porque no tenemos un millón de registros 2 millones de registros A
+11:5711 minutes, 57 secondsveces tenemos 1000000 registos 30,000 50,000 no y hacer una eliminación posiblemente nos lleve a reducir
+12:0512 minutes, 5 secondsbastante eso y en el caso que tengamos muchísimos datos sí podremos intentar ver esta estrategias de aquí de aquí
+12:1212 minutes, 12 secondsarriba Okay vamos por acá Entonces vamos a ver vamos con el sobr muestr Gen que es el más sencillo que hay simplemente
+12:2012 minutes, 20 secondsselecciono puntos y los duplico nada más de forma aleatoria selecciono puntos de las clases que tienen menor muestras y los duplico de forma aleatoria hasta llegar
+12:2912 minutes, 29 secondsa tener la misma cantidad de de puntos directamente y aquí está miren de forma aleatoria
+12:3612 minutes, 36 seconds0559 1 559 2 559 aumente de datos de forma aleatoria y ya está esta es la
+12:4412 minutes, 44 secondsforma más injo más sencilla de hacerlo vamos a ver si genera algún efecto no Bueno Este es el XT yts directamente se
+12:5212 minutes, 52 secondsmantiene la misma distribución mano mi entrenamiento y veamos cómo queda Qué tal Qué opinan
+12:5912 minutes, 59 secondsQué opinan estimados con con el sobr muestreo Qué opinan con el sobr muestreo ingenuo Cómo
+13:1113 minutes, 11 secondsquedó qué tal esto es la forma aleatoria simplemente Qué hago si tengo
+13:1913 minutes, 19 secondsesto simplemente voy a seleccionar puntos de forma aleatoria por acá y esos puntos simplemente los voy a
+13:2713 minutes, 27 secondsreplicar hasta llegar a igualar a las otras clases de forma aleatoria sin nada
+13:3413 minutes, 34 secondsmás Qué opinan de los resultados Cómo Cómo cree que quedaron bien mal mejor
+13:4013 minutes, 40 secondsquebre el submuestreo mejoró bastante no miren afectó a la clase dos Sí pero no
+13:5013 minutes, 50 secondsno tanto si se dan cuenta no le afectó tanto la clase la clase do todavía tiene una buena
+13:5813 minutes, 58 secondsperformance se dan cuenta Por qué Porque no le he quitado muestras 121 12 y 2 hay errores sí
+14:0614 minutes, 6 secondschiquitos pero los hay pero en general Miren la clase 2s tiene 89 de score 90 en rec 88 en precision Por qué Porque
+14:1414 minutes, 14 secondshay pocos errores con esta clase muy bien chévere estos son los errores de la precision y esto del
+14:2214 minutes, 22 secondsrecord ahora miren por acá la clase un al inicio era 9 y aquí eran 12 bueno 13 Ahora aquí aumentó un poquito sea no lo
+14:3114 minutes, 31 secondshizo tan bien pero a menos un poquito mejoró sea la clase un ha mejorado un poquito su rendimiento y esto se manifiesta en su
+14:4014 minutes, 40 secondsprisión rec 4352 y en general 47 un poquito lo
+14:4714 minutes, 47 secondsha mejorado el error pero todavía tiene confusiones de esta clase aquí y aquí no bastantes confusiones realmente todavía
+14:5514 minutes, 55 secondsse siguen confundiendo la clase un con la con la clase dos sigue confundiendo si se dan cuenta y al
+15:0215 minutes, 2 secondsrevés viceversa y la clase la clase cero bueno la clase 0 se mantiene bien miren
+15:0815 minutes, 8 seconds31 47 2 2 o sea 89 74 en general 81 la
+15:1415 minutes, 14 secondsque en general es 82 o sea miren un sobr muestreo de forma ingenua o sea
+15:2215 minutes, 22 secondscompletamente aleatorio me ha dado una performance mucho mejor que modelos anteriores que hacían
+15:3015 minutes, 30 secondsamp aquí viene No ya justamente el punto de desarrollo Esta es una forma bastante aleatoria pero no se toma en consideración puntos dentro de la
+15:3915 minutes, 39 secondsfrontera de decisión puede ser que de forma aleatoria haya incrementado puntitos que estaban en la frontera de decisión y eso no me ayuda mucho a lo
+15:4715 minutes, 47 secondsque sería tener una mejor performance en el diseño entonces aquí estimados vienen los modelos más avanzados como el famoso Smooth que la mayoría conoce no
+15:5515 minutes, 55 secondsdirectamente Aquí hay una explicación simple del smoo no técnica de de sobrem muestreo de minorías sintéticas se le llama es una técnica de sobrem estreo
+16:0416 minutes, 4 secondsque se presentó por primera vez en el año 2002 nueva ya no es tiene sus 21 años directamente y se basa en la idea de
+16:1316 minutes, 13 secondsgenerar nuevas muestras de la clase minoritaria mediante combinación lineal veamos este enfoque en detalle un poquito de teoría nada más se selecciona
+16:2116 minutes, 21 secondsuna instancia de clase minoritaria es decir me voy por acá tengo esta clase y
+16:2816 minutes, 28 secondstengo est tengo esta estas dos son las clases minoritarias las clases eh de
+16:3516 minutes, 35 secondsvamos a estas son las clases no que tienen menos menos datos directamente
+16:4316 minutes, 43 secondshablando tiene poquitos y se pueden escoger ciertas muestras llamadas xi no directamente por acá dice no como
+16:5216 minutes, 52 secondsmuestra raíz para nuevas muestras sintéticas Entonces yo puedo seleccionar algunos puntitos de forma aleatoria cómo raíz entonces si yo
+16:5916 minutes, 59 secondsregreso por acá puedo ir por aquí miren y para las clases que tienen poquitas muestras por ejemplo la clase los
+17:0717 minutes, 7 secondspuntitos negros puedo seleccionar este punto de aquí este punto de aquí o este punto de aquí como raíces a partir de los cuales se va a generar Data
+17:1517 minutes, 15 secondssintética eso es lo que voy a hacer por acá abo sigo por aquí y luego qué dice no se obtienen los
+17:2217 minutes, 22 secondsK vecinos más cercanos de X i n de los K no de los de los cada caso se eligen
+17:2917 minutes, 29 secondsaleatoriamente para calcular los nuevos casos por por interpolación se considera la diferencia entre x y y los vecinos seleccionados las muestras sintéticas se
+17:3717 minutes, 37 secondsgeneran mediante la siguiente Fórmula en pocas palabras vamos por acá sin entrar en mucho detalle imaginemos que yo
+17:4517 minutes, 45 secondsseleccioné este puntito de acá Este puntito de acá y este puntito de acá Entonces se busca sus puntos más
+17:5317 minutes, 53 secondspróximos no sus vecinos por ejemplo k ig a TR los tres puntos más próximos que pueden ser por ejemplo este señor este
+18:0118 minutes, 1 secondseñor y este señor aquí listo entonces aquí hay una vecindad qué voy a hacer de forma aleatoria según la fórmula voy a
+18:0818 minutes, 8 secondsgenerar nuevos puntos que estén por aquí eso es lo que hace se dan cuenta entonces genero estimados nuevos puntos Lo mismo hago por acá no selecciono de
+18:1618 minutes, 16 secondsforma aleatoria sus tres puntos más cercanos que serían estos de acá y aquí voy a generar nuevos puntitos Aquí también busco sus puntos más próximos
+18:2418 minutes, 24 secondsque serían que sería estos estos tres puntos de acá imaginemos y genero aquí dentro nuevos puntos es
+18:3218 minutes, 32 secondsTom Disculpen de forma simple y sencilla de explicar directamente bueno obviamente la fórmula para generar los
+18:4018 minutes, 40 secondspuntos está aquí no x sintético es igual xi más un G que es una una una alatura distribuida no esto es un poquito más estadístico pero en general es un
+18:4818 minutes, 48 secondsparámetro vamos a decir un Alfa que directamente lo que va a hacer es generar un puntito dentro de la vecindad Es decir Simplemente si yo selecciono la
+18:5718 minutes, 57 secondsacá y los vecinos son estos puntos de aquí de forma aleatoria mediante esa fórmula yo puedo obtener un punto sintético por acá un punto sintético por
+19:0519 minutes, 5 secondsacá y otro punto sintético por AC en general que representa puntos que están dentro del espacio de características se
+19:1219 minutes, 12 secondsacabó ya para para no complicar mucho la explicación listo eso es Entonces eso estimados ayuda a generar nuevos puntos
+19:2119 minutes, 21 secondsdirectamente y de una forma un poquito más especializada ese es el famoso cuál es el problema de alguien Alguien me puede decir cuál
+19:3019 minutes, 30 secondssería el problema de tc aquí Qué opinan cuál sería el problema de
+19:3619 minutes, 36 secondstc si me han entendido la idea general yo selecciono un puntito por acá analizo su vecindad y genero nuevos
+19:4519 minutes, 45 secondspuntos nuevos puntos Cuál sería la desventaja de atómica qué Creen ustedes quién se da cuenta Cuál sería la gran desventaja de
+19:5419 minutes, 54 secondseste algoritmo tc imaginemos un K ig
+20:0620 minutes, 6 seconds5 K ig 5 y yo selecciono este punto de acá la vecindad que sean estos puntos de aquí
+20:1320 minutes, 13 secondsno dentro de toda esta deidad voy a generar nuevos puntos ya eso acá sí porque me ha
+20:2120 minutes, 21 secondsgenerado puntos muy bien en el espacio que está lejos de la frontera de decisión Pero cuál sería su
+20:3120 minutes, 31 secondsdesventaja qué creen a ver se dan cuenta o no se dan cuenta si ustedes lo
+20:3820 minutes, 38 secondsinfieren ya van a ir más allá de lo que sería simplemente utilizar la librería por usarla Cuál sería la Grand
+20:4720 minutes, 47 secondsdesventaja de esto Qué pasa si yo selecciono este punto de aquí miren
+20:5820 minutes, 58 secondsqué creen que va a pasar si yo selecciono este puntito
+21:0621 minutes, 6 secondsMiren qué pasa estimado si yo selecciono miren este punto a
+21:1721 minutes, 17 secondsver qué pasaría en dónde van a aparecer los
+21:2221 minutes, 22 secondspuntos blancos nuevos acá Qué es
+21:3021 minutes, 30 secondseso eso ayudaría a mejorar los resultados o los empeoraría me
+21:3821 minutes, 38 secondsayuda o empeora qué creen empeora no muy
+21:4921 minutes, 49 secondsbien así es estimados empeora muy bien empeora empeora Esa es la desventaja de
+21:5821 minutes, 58 secondssi un punto está seleccionado dentro de la frontera de decisión si justo el punto que fue seleccionado es uno de los puntos que está en la frontera de
+22:0622 minutes, 6 secondsdecisión o que está como ler dentro del otro lado de la clases lo que va a hacer es generar puntos
+22:1222 minutes, 12 secondsmalos ese es el problema estimados de sm ese es el problema de funciona bien
+22:2122 minutes, 21 secondssi es que tenemos los puntos distribuidos y cuál es el problema que aquí hay uner punto está muy lejos de la FR
+22:2922 minutes, 29 secondsdecisión entonces moraleja si quieren aplicar smo primero
+22:3822 minutes, 38 secondseliminen oers reducen la probabilidad de que tengan este
+22:4522 minutes, 45 secondscaso se dan cuenta Por eso la teoría muy importante para entender cositas profesor estoy haciendo estoy
+22:5322 minutes, 53 secondsutilizando sm para balance pero los datos me salen peor es porque el TR no es porque los datos traen oers y el smo te ha seleccionado justo uner
+23:0223 minutes, 2 secondscomo punto de referencia y te malor todo porque te eseer lo multiplicó Entonces te empeoró el modelo ya hemos visto la
+23:1023 minutes, 10 secondsclase deers si ustedes recuerdan que hacen que el modelo se altere Muy bien Entonces vamos a probar Cómo nos quedó
+23:1723 minutes, 17 secondsaquí directamente ejecuto por la frecuencia voy a bajar un poquito aquí la zoomo mira aquí están los puntos que se
+23:2523 minutes, 25 secondshan generado con directamente se han incrementado más Ah Disculpen ahí no era este de aquí era
+23:3223 minutes, 32 secondsAhí está miren eso es lo que ha pasa con observen si se han incrementado los
+23:4123 minutes, 41 secondspuntos muy bien pero ustedes ya se pueden ir dando cuenta que miren por acá hay más bastantes puntos en la
+23:5023 minutes, 50 secondsfrontera de decisión vamos a ver cómo nos queda al final modelo no ejecuto por aquí Ah me llevo 559
+23:5923 minutes, 59 seconds59 Qué tal Qué opinan qué tal se comporta bien o mal
+24:0924 minutes, 9 seconds75 había 75 Miren qué tal afectó sí lo afectó pero no no es tan grave o que sí
+24:1724 minutes, 17 secondses grave no 21 y9 son 30 muestras se equivocó 30 muestras de de 135 por acá
+24:2424 minutes, 24 secondsAquí mejoró sí mejoró la clase un pero aquí le agregó más error a la clase C entonces si yo observo por aquí las
+24:3224 minutes, 32 secondsmétricas me voy a dar cuenta que la k sí bajó 75 aquí 83 44 73 y he afectado las
+24:4124 minutes, 41 secondsmetricas por acá comparemos esto 75 por acá 67 la f1 es 67 y si me voy en el
+24:5024 minutes, 50 secondsingenuo la la f1 era 72 miren estimados la f1
+24:5724 minutes, 57 secondsera 72 y aquí es la
+25:0325 minutes, 3 secondsf167 el Smooth fue peor ha sido peor que
+25:1025 minutes, 10 secondsun sobrem muestreo aleatorio que un Random Por
+25:1825 minutes, 18 secondsqué Porque el aleatorio selecciona puntos al azar entonces uno u otro puntito sí van a ser seleccionados como puntos de
+25:2625 minutes, 26 secondsreferencia Disculpen no Uno u otro puntito que son oers van a ser seleccionados pero el Smooth basta que
+25:3425 minutes, 34 secondsencuentre uner dos offers como puntos de referencia va a generar muchos puntos dentro del espacio dentro de la frontera de decisión y va a aumentar el error
+25:4225 minutes, 42 secondsentonces estimados eso es lo bonito de aquí no que sepan que sean capaces de entender
+25:4825 minutes, 48 secondsPor qué Smooth ha sido peor que un aleatorio s eso es lo bonito entonces no
+25:5725 minutes, 57 secondssiempre balance de datos con Smooth es la solución hay que tener cuidado con eso en este caso siempre es bueno probar
+26:0526 minutes, 5 secondssi van a hacer balance de datos con un modelo con estrategias prueben el ingeno el ingeno puede ser que les salga mucho
+26:1226 minutes, 12 secondsmejor que el smo mod no bueno probemos otra
+26:1926 minutes, 19 secondsestrategia mejor borderline sm una mejora que se le aplica directamente es justamente intentar evitar esas regiones
+26:2826 minutes, 28 secondsde peligro o fronteras de decisión Y entonces se mejora el smot con waterline waterline sm es una extensión que se
+26:3726 minutes, 37 secondscentra en la región de peligro el planteamiento es el siguiente se selecciona una instancia de clase minoritaria x como muestra raíz para
+26:4526 minutes, 45 secondsnuevas muestras sintéticas esto ya lo hemos visto en smo hasta ahí estamos todavía se tienen los M vecinos más cercanos de xi se calcula el número de
+26:5226 minutes, 52 secondsmuestras mayoritarias no entre los vecinos más cercanos de X ya esto ya lo vimos no no y aquí va a haber una
+26:5926 minutes, 59 secondscuestión no significa si el número de vecinos mayoritarios Es mayor que el de las muestras minoritarias la muestra se considera como peligro Qué significa eso no el número
+27:0927 minutes, 9 secondsvecino es menor que el número ya qué significa eso en pocas palabras para no entender tanto algoritmo bastante sencillo miren
+27:1827 minutes, 18 secondsQué pasa si yo selecciono este puntito de aquí no y digo K =
+27:2527 minutes, 25 seconds10 pero de esos k = a 10 siete vecinos son de la clase dos y este
+27:3227 minutes, 32 secondspunto es de la clase cer si este puntito p es de la clase cer y yo digo K igual a 10 pero siete
+27:4127 minutes, 41 secondsvecinos son de la clase 2s peligro así de simple pelig este punto está en medio de de
+27:4827 minutes, 48 secondspuntos de otra clase entonces Adiós este punto descartado eso es todo bord tratar de que lo Por ejemplo si yo
+27:5727 minutes, 57 secondsselecciono este punto de acá y K igual a 10 me voy a dar cuenta que de los 10 los 10 son de la misma clase
+28:0528 minutes, 5 secondsperfecto pero si yo selecciono este punto de acá me voy a dar cuenta que de los 10 siete son de la misma clase y tres
+28:1428 minutes, 14 secondsson de otra clase perfecto todavía estoy bien pero si yo selecciono este puntito por ejemplo que está por aquí Me Do
+28:2128 minutes, 21 secondscuenta que ocho de los 10 son de otras clases entonces peligro este punto no puede ser seleccionado como
+28:2928 minutes, 29 secondseso estimados es de forma general lo que hace para no meter tanta fórmula Pero eso significa no y acá peligro y tanta
+28:3828 minutes, 38 secondscosa Eso significa estimados Entonces borderline smoo es una mejora de para evitar ese problema
+28:4628 minutes, 46 secondsvamos a ver cómo nos funciona para este caso de uso y ahí está si se dan cuenta de forma visual ya
+28:5328 minutes, 53 secondsno tengo esa concentración que aquí en esta línea roja que me había salido en el caso anterior ya no aparece
+29:0229 minutes, 2 secondsMiren dónde está el miren se dan cuenta aquí tenía esa concentración de puntos blancos pero
+29:1029 minutes, 10 secondsahora ya no me aparece me aparece todavía un poquito s pero no tanto incluso aquí lo entrenado con sus parámetros por defecto no podemos
+29:1729 minutes, 17 secondsaumentar más todavía mir aquí le podemos aumentar el k k un
+29:2529 minutes, 25 secondsbajo un bajo cantidad de vecinos Cuántos vecinos quieren por efecto está cinco miren por efecto es cinco pero yo puedo
+29:3329 minutes, 33 secondsincrementar por ejemplo a seis o a siete no por ejemplo y entonces eso me
+29:4129 minutes, 41 secondsgarantiza que los vecinos que se analic par más punt pero vamos a dejarlo por por efecto C Que es su su valor su valor
+29:4929 minutes, 49 secondsAhí está K vale 5 Ya está entonces estimados directamente aplico y vamos a ver los
+29:5829 minutes, 58 secondsefectos no de este Border L ejecuto por acá y tarán miren observen el
+30:0630 minutes, 6 secondsefecto aquí mejoró No ahora es 116 antes era 105 en el Smooth tradicional 105 el
+30:1430 minutes, 14 secondsSmooth solo el borderline el borderline me ayudó directamente a llegar a 116 una
+30:2230 minutes, 22 secondsmejora mejora por AC pero todavía hay cierto error el de aquí ha mejorado 12 todavía hay cierto error por acá siete
+30:2930 minutes, 29 secondspor acá cuatro No aquí 34 2 6 y sus errores de ambos subo por aquí un poquito y en general miren tengo la 81
+30:3930 minutes, 39 secondspor 7076 052 088 mejoró sí ha mejorado estimados ha
+30:4630 minutes, 46 secondsmejorado un poquito Entonces el b l funciona mejor que el Smooth tradicional Entonces si van a utilizar un Smooth
+30:5330 minutes, 53 secondspreferible mejor utilicen b l smoo es mucho mejor les va ayudar vamos a incrementar a ver a 10 vecinos a ver qué
+31:0331 minutes, 3 secondspasa Ahí está no 10 vecinos directamente por AC así por acá vamos a ver si lo empe no se
+31:1231 minutes, 12 secondsmantiene 81 87 55 mir mejoró aquí 15 3 5 9 15 buena poquito pero está mucho mejor
+31:2231 minutes, 22 secondsun B que un clsico similar otras variantes puedan haber por acá otras
+31:2931 minutes, 29 secondsvariantes directamente el Smooth conic también miren es otro método bastante
+31:3531 minutes, 35 secondsutilizado el enlace no es es otro enlace bastante interesante es una técnica de
+31:4231 minutes, 42 secondsun muestreo que evita la pérdida de información el enfoque es el siguiente no para dos casos Si para cualquier x
+31:5031 minutes, 50 secondsvamos directamente a explicación Direct se van a eliminar instancias estimados que
+31:5831 minutes, 58 secondsbuen es prácticamente parecido cómo lo hago para simplificarlo directamente van a ver distanci nada más
+32:0532 minutes, 5 secondsestim distancias entre dos puntitos y ver si es que ellos pertenecen a clase diferent si no se elimina al que pertenece la clase mayoritaria Entonces
+32:1432 minutes, 14 secondsqué significa el son estos puntitos que ustedes Ven por acá estos pun se va analizando ustedes van
+32:2332 minutes, 23 secondsencontrando por acá ciertos puntitos de foror y dian con sus vecinos y ahora ustedes ven a ver dentro de estos
+32:3232 minutes, 32 secondspuntos este punto de aquí este cuadradito Cuántos vecinos tiene alrededor de su clase este puntito de
+32:4032 minutes, 40 secondsaquí Cuántos vecinos tiene alrededor de su propia clase aquel que tiene no más adiós se elimina Entonces al final esto
+32:4932 minutes, 49 secondsde aquí estimados una vez que ustedes seleccionan de forma esos puntitos que que han sido de acá eliminan simplemente
+32:5732 minutes, 57 secondsaquellos no que que que estaban en la en la clase incorrecta No en el espacio incorrecto y se quedan con lo de acá se quedan por AC eso es Tom cinks
+33:0533 minutes, 5 secondsdirectamente se hace un filtrado Entonces los puntitos que estaban por acá inicialmente chao chao chao no y
+33:1233 minutes, 12 secondslimpio un poquito más la base de datos de forma general para que se entienda no Entonces eso qué me ayuda Primero me
+33:2033 minutes, 20 secondsayuda a limpiar esos puntos que están Qué es entonces Smooth con tomic Primero me ayuda a limpiar esos puntitos que pueden representar blers no que están
+33:2933 minutes, 29 secondsmezclados dentro de los dentro de las clases segundo le aplico un tc
+33:3633 minutes, 36 secondsdirectamente combine es mjo por aquí y con eso miren eliminé bastantes puntitos que
+33:4533 minutes, 45 secondsestaban fuera de donde no deberían estar luego le aplico un tomic y con eso ejecuto por acá y en este caso por
+33:5433 minutes, 54 secondsejemplo tengo 78 es un poquito menos que el borde online creo que no sé si aquí también
+34:0134 minutes, 1 secondestá vamos a ver qu más hay por
+34:1334 minutes, 13 secondsAC no solamente noy directamente Pero de esta forma estimados lo que yo hago
+34:2134 minutes, 21 secondsdirectamente es también eliminar ciertos puntitos y al final 112 9 4 14 5 4 en general Este
+34:3034 minutes, 30 secondsmodelo ha funcionado bastante aceptable pero hasta el momento el Border ha funcionado mejor directamente sobre todo en estos puntos que tienen una frontera
+34:3834 minutes, 38 secondsde decisión con bastante error podríamos decirlo por acá muy bien eso bastante importante si
+34:4534 minutes, 45 secondses muy importante porque ayuda muchísimo a los datos y finalmente el otro modo el último enfoque que quisiera mostrarles
+34:5334 minutes, 53 secondsel día de hoy el famoso ad el enfoque no se centra en este problema la idea detrás de este enfoque es generar más
+35:0135 minutes, 1 secondmuestras minoritarias oversampling en áreas donde su densidad es menor Ese es
+35:0735 minutes, 7 secondsel caso de adas no el procedimiento es el siguiente no sea m no s el número de ejemplos de clases minoritarias que yo
+35:1635 minutes, 16 secondstengo M1 el número de ejemplos de clases mayoritarias y d de el umbral por el grado máximo tolerado un desequilibrio
+35:2335 minutes, 23 secondsno y Beta un parámetro para especificar un equilibrio deseado directamente no entonces según este enfoque los ej ya
+35:3235 minutes, 32 secondspara resumir Bueno aquí les he dejado un poquito matemático pero el resumen de esto sería lo siguiente no los ejemplos con mayor suposición de clases tienen el
+35:4035 minutes, 40 secondsmayor enfoque para empezar por lo tanto en problemas donde estos ejemplos de baja densidad pueden ser valores atípicos el enfoque adanin puede poner
+35:4935 minutes, 49 secondsdemasiada atención en estas áreas del espacio de características lo que puede resultar en un peor rendimiento del modelo puede ser útil eliminar los
+35:5635 minutes, 56 secondsvalores atípicos nuevamente no antes de aplicar el procedimiento de sobrem muestreo y esto podría ser una heurística Útil para usar de manera más
+36:0336 minutes, 3 secondsgeneral entonces estimados si se han dado cuenta Smooth y adanc son técnicas bastante parecidas Solo que lo que él
+36:1036 minutes, 10 secondshace es directamente Buscar esos puntos como se dice por acá muestras más donde hay más muestras minoritarias en un área
+36:1836 minutes, 18 secondsde densidad cuya densidad es menor entonces sio me voy por acá Bueno esta parte ya está balanceada Déjenme buscar
+36:2536 minutes, 25 secondsotra parte meor a ver por aquí la acá por aquí por ejemplo este creo
+36:3236 minutes, 32 secondsque es el es el original es el original Entonces miren simplemente lo que va a hacer en función de en función de un
+36:4136 minutes, 41 secondscálculo Esta es la clase por ejemplo que tiene muestras desbalanceadas más entonces a partir de aquí simplemente va a determinar en esta frontera
+36:4936 minutes, 49 secondsdirectamente Cuál es la densidad directamente Cuál es la cantidad de muestras que hay dentro de esa frontera de
+36:5836 minutes, 58 secondsotras muestras de otra clase no en función de un parámetro va a decidir si es que ahí hay que agregar Data sintética o no nada más Pero el problema
+37:0637 minutes, 6 secondsde también tiene que ver coners obers también afecta igualmente entonces estimados Ese es el punto que se
+37:1437 minutes, 14 secondspresenta por aquí y ese es el grado de desequilibrio no que se dividen no para ver cuántas
+37:2237 minutes, 22 secondsmuestras hay de cada clase en en esa área y luego se aplica también los Cab vino más cercanos y se hace un análisis igual
+37:3037 minutes, 30 secondsentonces también tiene un problema coners Entonces estimados miren por ejemplo Bueno aquí esta base de datos no tiene No tiene eliminación de lers
+37:3937 minutes, 39 secondsEntonces se puede luego aplicar una eliminación de lers para ver cómo queda Direct ejecuto por
+37:4537 minutes, 45 secondsaquí y adin en este caso Tiene los mismos problemas que sm por lo tanto ha caído
+37:5237 minutes, 52 seconds69 y también ha afectado la clase dos bastante peor todavía que entonces en esta competencia que hice
+38:0038 minutesganó smoo bueno Border borderline smoo estimados ha ganado en este caso pero ojo que no le
+38:0838 minutes, 8 secondsapliqué eliminación deers si ustedes aplican eliminación deers puede ser que los resultados de la competencia
+38:1638 minutes, 16 secondscambi no sé si tienen alguna consulta por aquí hasta este momento alguna consulta alguna duda s que son de
+38:2338 minutes, 23 secondsrepente ustedes conocían estas estrategias algunos quizás no por primera vez lo ven pero es son estrategias que se utilizan
+38:3238 minutes, 32 secondsbastante para tratamiento de datos desbalanceados Les comento sí es son estrategias muy
+38:4038 minutes, 40 secondsutilizadas sobre todo smoo y borderline smoo se utiliza muchísimo ahora bien cuando ustedes aplican eliminación de blers allí se tiene que analizar
+38:4838 minutes, 48 secondsnuevamente la performance muy bien consultas dudas que tengan por acá dudas consultas
+38:5938 minutes, 59 secondses todo un camino si se dan cuenta de aprendizaje que tenemos no es todo un camino directamente con python las librerías de python si me
+39:0839 minutes, 8 secondsayudan no tengo que implemente cada uno de estos algoritmos pero si es bueno entender un poquito interpretar Por qué funcionan
+39:1639 minutes, 16 secondsbien y por qué funcionan mal consultas dudas que tengan por aquí dudas
+39:2339 minutes, 23 secondsconsultas profesor esos algoritmos al final eh equilibran las clases no sea al final
+39:3139 minutes, 31 secondsle da la misma cantidad a cada clase no veo que todos hacen eso o no necesari aproxima aproxima las clases por ejemplo
+39:3939 minutes, 39 secondsaquí llegas 546 543 559 las aproxima pero no exactamente las lo que busca es
+39:4739 minutes, 47 secondsque tengan un Equilibrio es algunos llegan exactamente equilibrarlos las mismas muestras pero solamente lo de entrenamiento pero otros como que llegan
+39:5639 minutes, 56 secondsPR una diferencia de 10 12 muestras dependi Entonces est es un punto importante directamente Te comento es es
+40:0540 minutes, 5 secondsbueno explorar estas métricas estas técnicas y ver cuál de ellas me conviene más para para mi caso de
+40:1440 minutes, 14 secondsuso Habría que ir probando recomienda producción se pu el queu má
+40:2440 minutes, 24 secondspero Border caso porque losers como te has dado cuenta losers afectan atomic es
+40:3240 minutes, 32 secondsbueno sí pero fiero utilizar el borderline en este caso porque basta que se seleccione
+40:4040 minutes, 40 secondsuner eser te va a generar muestras sintéticas en el espacio de características de la otra clase y ahí si teó toda todo el
+40:4840 minutes, 48 secondsmodelo eso es lo que pasado aquí entonces hay que tratar siempre la Data como les menciono cada etapa del eda es
+40:5640 minutes, 56 secondsfundamental para que los procesos siguientes no sean afectados es es lo fundamental este
+41:0541 minutes, 5 secondsSamuel gracias Ya no te preocupes

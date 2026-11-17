@@ -1,0 +1,107 @@
+# Python para Ciencia de Datos - M2-2 - Tratamiento de Outliers
+# (título en el video: Python para Ciencia de Datos - Modulo 2 - Tratamiento Outliers)
+# Nota: el transcript termina alrededor del minuto 13:20 (posiblemente incompleto).
+
+0:022 seconds[Música]
+0:066 secondsMuy bien Entonces vamos a empezar vamos a ver normalmente Bueno cómo se trabaja importo las lier
+0:1414 secondspandas las clásicas y por aquí voy a leer un dataset llamado Boston este dataset Boston directamente lo estoy
+0:2222 secondscargando este código y tengo estas variables no índice de criminalidad la zona si que es Industrial etcétera no
+0:3131 secondsroom eh creo que esta es la cantidad de de habitaciones que hay si no me equivoco la edad no la antigüedad de esa
+0:3939 secondscasa etcétera etcétera es un dataset Boston parecido al de Mel que que ustedes han visto en el en el ejercicio
+0:4747 secondsque hemos hecho hoy día al inicio de la clase que también tiene variables directamente y el objetivo es predecir el precio de una casa no dat ser
+0:5555 secondsbastante sencillo pero ya me Pero la pregunta es habrán up lers o no habrán up lers dentro de est datas bueno para
+1:041 minute, 4 secondsempezar lo primero que ustedes tienen que recordar es que los off lers como lers como les dije no solamente son univariados también pueden ser
+1:121 minute, 12 secondsmultivariados pueden existir op layers en dimensiones superiores el caso está aquí en la imagen no si ustedes Ven por
+1:211 minute, 21 secondsejemplo la altura tengo una variable altura perfecto yo analizo con un boxplot diagrama de caja y tranquilamente no veo ningú layer la
+1:301 minute, 30 secondsforma más rápida de ver a nivel univariante of lers es con un diagrama de caja si algo se escapa no del bigote superior del bigote
+1:391 minute, 39 secondsinferior o no directamente o como decimos 1.5 el rago intercuartílico arriba o
+1:471 minute, 47 secondsabajo no del del cuartil del cuartil uno del cuartil tres entonces automáticamente de forma visual tenemos
+1:541 minute, 54 secondsun layer pero ese layer que ustedes van a ver es univariante a nivel unidimensional nada Entonces ustedes observan por acá a
+2:022 minutes, 2 secondsnivel unidimensional tanto la altura como el peso no tienen ningú ler está
+2:072 minutes, 7 secondsmuy bien pero el caso es aquí cuando yo cruzo dos variables por ejemplo peso con
+2:152 minutes, 15 secondsaltura y o sorpresa me doy cuenta que aquí y aquí aparecieron opers se dan cuenta entonces losers no solamente
+2:242 minutes, 24 secondsaparecen a nivel unidimensional sino también a nivel multidimensional El problema es que nosotros profe
+2:312 minutes, 31 secondsYo yo hasta hasta tres dimensiones lo puedo observar muy bien puedo graficar en tres dimensiones y observar como
+2:392 minutes, 39 secondsestá pero si tengo 20 variables o 30 variables más de tres dimensiones ya no pueden observar entonces ahí nos
+2:462 minutes, 46 secondsquedamos con un problema qué pasa en las dimensiones superiores habrán o no
+2:512 minutes, 51 secondshabr entonces un tema interesante
+2:582 minutes, 58 secondshay aparecen en a nivel unidimensional también aparece cuando hay cruces de
+3:043 minutes, 4 secondsvariables de de dos de TR de cu de 5 r a la n con todas las
+3:113 minutes, 11 secondsdimensiones el impacto de los valores atípicos esto Creo que ya es bastante clásico pero es bueno repasarlo Qué
+3:183 minutes, 18 secondssucede con los valores atípicos impactan directamente las métricas la más perjudicada como ustedes ya saben es la
+3:263 minutes, 26 secondsmedia la media la más perjudicada en el primer caso la media 545 Pero qué
+3:333 minutes, 33 secondspasa si yo agrego 300 al final Ese es uner gigante la media baja a 30 Disculpen sube a 30 la mediana más o
+3:423 minutes, 42 secondsmenos se mantiene igual No es que no es que la mediana también permanezca inalterable pero se afecta pero bien poquito nada más como en este caso la
+3:503 minutes, 50 secondsmoda sigue igual el número que más se repite la división estándar también debido a que yo Impact en la media y sabemos que la deviación estándar se
+3:583 minutes, 58 secondscalcula en función de la media Med obviamente la división estándar también es impactada directamente Entonces tenemos media y
+4:054 minutes, 5 secondsdivisión estándar directamente incrementados solamente uner me maló toda la distribución entonces hay que tratarlos
+4:144 minutes, 14 secondss hay que tratarlos directamente y correctamente Bueno una forma de cómo detectamos valores atípicos creo que ustedes ya lo saben bastante bien La
+4:234 minutes, 23 secondsforma más fácil es 1.5 por el rango intercar desde abajo hasta arriba en los
+4:304 minutes, 30 secondsbigotes tanto inferior bueno en el cuartil uno y cuartil dos Disculpen el cuartil uno y cuartil tres para ser más
+4:374 minutes, 37 secondsclaros pero eso como les digo o también la otra forma es que ustedes filtren todo lo que está fuera del persentil 5 y
+4:444 minutes, 44 seconds95 también Listo o los puntos de datos a tres o más desviaciones estándar de la medida que se consideran también atípicos los valores atípicos bivariados
+4:524 minutes, 52 secondsy multivariados generalmente se miden utilizando un índice de influencia o apalancamiento o la distancia Entonces a nivel de valores
+5:005 minutesatípicos ya se complica un poquito la cosa a nivel multivariado discul muy bien si yo quisiera por ejemplo analizar un poquito la base de datos Boston que
+5:085 minutes, 8 secondsya la tengo por acá y si llamo la función análisis numérico que ya la tenía en el colap anterior y ustedes
+5:155 minutes, 15 secondsobservan por acá primera cosa que voy a observar por aquí es que si hay variables que tienen lers
+5:215 minutes, 21 secondsdirectamente miren Aquí vamos por acá una que tengo vamos directamente por
+5:285 minutes, 28 secondsaquí miren por ejemplo esta lers directamente est B tenemos por AC
+5:355 minutes, 35 secondslers el Aquí también tenemos ciertos suppers en el stat entonces tengo como les dije
+5:445 minutes, 44 secondslers en ciertas variables en algunos poquitos algunos un poco más directamente no por acá Entonces siempre
+5:515 minutes, 51 secondsva a haber ciertos miren en este por ejemplo en esta variable RM creo que era
+5:585 minutes, 58 secondsroom Alo número de habitaciones si no me equivoco no número de pisos creo que es si no me equivoco
+6:056 minutes, 5 secondsentonces tengo tanto blers a nivel de arriba como el nivel de abajo creo que es número de habitaciones Total no recuerdo muy
+6:136 minutes, 13 secondsbien Entonces qué pasa Yo puedo hacer lo clásico que normalmente se hace es
+6:206 minutes, 20 secondseliminar con el rc no que es más clásico debido a que no tengo que encontrar ninguna ningún hiper parámetro
+6:306 minutes, 30 secondscomo en otros métodos directamente Yo calculo el rango intercuartílico que es el cuartil 3 menos el cuartil 1 y simplemente el límite superior es el
+6:386 minutes, 38 secondscuartil 3 + 1.5 veces el rang intercuartílico y el límite inferior es cuartil 1 - 1.5 veces el rango
+6:466 minutes, 46 secondsintercuartílico No aquí está la función si ustedes quieren ver este es el valor mínimo lo que está fuera o por debajo
+6:536 minutes, 53 secondsdel del cuartil un es un Player y lo que está sobre el cuartil 3 + 1.5 y QR es
+7:027 minutes, 2 secondstambién otro bler y el resto está dentro del comportamiento normal no de la variable dentro de su distribución eh
+7:107 minutes, 10 secondstípica Muy bien Entonces eso es lo que yo tengo por acá aquí por
+7:177 minutes, 17 secondsejemplo yo puedo aplicar si si ustedes observan por acá Este pequeño ejercicio es ese es por ejemplo cream No
+7:267 minutes, 26 secondscrm no tengo muchos por aquí yo puedo aplicar por ejemplo la eliminación aplico miren cuartil 1 cuartil cuartil 3
+7:357 minutes, 35 secondscalculo cuartil 3 calculo cuartil 1 calculo el r c filtro simplemente por
+7:427 minutes, 42 secondslos valores superiores y miren tengo todos los puntos que están sobre el cuartil 3 má 1.5 el cuartil por debajo
+7:527 minutes, 52 secondsno hay nada justamente no hay nada es lo que ustedes pueden observar aquí en la Gráfica no hay nada por acá mientras que
+7:597 minutes, 59 secondspor arriba Sí hay si ustedes observan muy bien ya este Este es un problema bastante clásico luego yo puedo ir y
+8:078 minutes, 7 secondseliminarlo directamente sus valores y ojo miren aquí aquí hay otro detalle que también muchos me preguntan aquí ya
+8:168 minutes, 16 secondstengo 80 tenía 80 no pero ahora bajó hasta 8 pun al profesor todavía hay muchos oers
+8:238 minutes, 23 secondsSí hay muchos todavía puntitos pero ya están más próximos aquí a este más 1.5
+8:318 minutes, 31 secondsRecuerden que es má 1.5 del QR má 1.5 por el rango intercuartílico
+8:408 minutes, 40 secondsEntonces estamos en algo más normal directamente hablando muy bien pero ahí viene
+8:488 minutes, 48 secondsjustamente también el otro punto únicamente he tratado una variable si yo quisiera tratar todas las
+8:558 minutes, 55 secondsvariables de forma dira de forma directa se puede automatizar no Simplemente aquí hay un código acá abajo donde yo lo hago
+9:039 minutes, 3 secondscon mucha tranquilidad simplemente hago dft MP que es una variable gener una
+9:109 minutes, 10 secondscopia y simplemente de todas las columnas yo extraigo su cuartil 25
+9:179 minutes, 17 secondscuartil 1 y el cuartil 3 que sería en este caso el percentil 25 y el 75 calculo QR de todo y simplemente
+9:259 minutes, 25 secondsfiltro directamente de todos así de directa ya está y con esto por
+9:339 minutes, 33 secondsejemplo arreglo automáticamente todas las variables Recuerden que es 1.5 sobre el iqr o 1.5 debajo por el iqr pero por
+9:439 minutes, 43 secondsdebajo y por acá ya se ha aplicado miren por ejemplo el indus quedó bastante limpio no otros todavía tienen ciertos
+9:519 minutes, 51 secondspuntitos pero están dentro de un margen aceptable como ustedes pueden ver por acá un puntito por aquí un puntito por
+9:579 minutes, 57 secondsacá RM por ejemplo ya quedó con muy pocos puntos que antes tenía más hacia arriba y más hacia abajo la edad bueno
+10:0410 minutes, 4 secondsla edad está bastante bien dis también está bastante bien hice un arreglo pero a nivel unidimensional ojo con ese
+10:1210 minutes, 12 secondsdetalle aquí también estoy dentro el límite permitido el St también quedaron algunos puntos pero dentro de un límite
+10:2010 minutes, 20 secondspermitido como ustedes pueden observar directamente miren las distribuciones algunos no tienen distribución normal otros parece pero tampoco son normales
+10:2910 minutes, 29 secondspero directamente me doy cuenta aquí de un punto muy importante he eliminado de
+10:3710 minutes, 37 secondsforma univariante todos los todos los losers Disculpen y mi dataset sea
+10:4510 minutes, 45 secondsreducido a 268 registros originalmente eran 440 vamos a ver
+10:5410 minutes, 54 seconds50% Exacto ese es un problema que justo quería tocar con ustedes ese es un problema a eso también quiero llegar
+11:0311 minutes, 3 secondsjustamente ahora originalmente son 506 registros DF Boston es el dataframe original y el dataframe donde Yo acabé
+11:1211 minutes, 12 secondscon todos los los los valores todos los valores atípicos del dataset de todas las variables directamente ha bajado el
+11:2011 minutes, 20 secondsdataset a 268 Bueno también el datas tiene poquitos registros en este caso pero es bastante no me he bajado
+11:2711 minutes, 27 secondsprácticamente el 50% por o algo de entre 40 y 50% y eso me está perjudicando porque
+11:3511 minutes, 35 secondsdirectamente pude haber comprometido otras variables al eliminarle casi el 40% de registros entonces y aquí viene lo peor
+11:4411 minutes, 44 secondsjustamente que les decía esto solamente es a nivel univariante y nada me garantiza que yo
+11:5111 minutes, 51 secondshaya generado al al eliminar esos registros nada me garantiza que yo haya
+11:5811 minutes, 58 secondsgenerado lers por culpa de eso en un nivel superior entonces estimados el la
+12:0612 minutes, 6 secondsforma que más clásica que conocemos a nivel univariante sí se puede hacer Sí pero uno me afecta el tamaño del dataset
+12:1412 minutes, 14 secondsy me puede comprometer las otras variables la distribución de las otras variables Me puede sesgar un poquito Entonces ese es un punto que hay que
+12:2112 minutes, 21 secondstomar en cuenta cuando eliminamos lers entonces profesor cómo hacemos No no es una tarea tan sencilla que digamos
+12:3012 minutes, 30 secondsse requieren de algoritmos superior de algoritmos un poquito más superiores para poder hacer este tratamiento y es allí y no solamente a la dimensión uno
+12:3912 minutes, 39 secondssino a la dimensión n Y es ahí donde viene una librería a salvarnos la vida Bueno los algoritmos que están existen
+12:4712 minutes, 47 secondsmuchos algoritmos que permiten solucionar este problema pero esos algoritmos bueno Están empaquetados por suerte en python en una librería llamado
+12:5412 minutes, 54 secondsPayo no sé si si la conocen No sé si conocían esta librería Pero esto lea nos va a ahorrar un dolor de cabeza terrible
+13:0213 minutes, 2 secondsPor qué Porque paqueta todos los algoritmos que tienen un mejor desempeño para eliminación Deer no solo a nivel
+13:1213 minutes, 12 secondsunidimensional sino a nivel multidimensional directamente y vamos a hablar un poquito de ellos el día de hoy para que ustedes lo conozcan directamente voy a hac un poco
+13:2013 minutes, 20 secondsmás técnico y un poco más teórico siempre para que ustedes conozcan directamente la

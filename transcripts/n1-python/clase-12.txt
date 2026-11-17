@@ -1,0 +1,195 @@
+# Python para Ciencia de Datos - M2-7 - Caso de uso Panorama de la vivienda (Alumnos)
+# (título en el video: Python para Ciencia de Datos - Modulo 2 - Caso de uso Panorama de la vivienda (Alumnos))
+
+0:022 seconds[Música]
+0:066 secondslayers no tratamiento de lers que también es otro tema bastante complejo Pero antes Quisiera hacer un pequeño ejercicio con ustedes para para reforzar
+0:1515 secondslo que hemos visto el día de hoy mi pregunta para todos ustedes es la siguiente no Quiénes tienen actualmente su colap
+0:2323 secondsactivo Quiénes son los que tienen su colap en estos momentos me gustaría preguntarles
+0:3232 secondsa ver Brando y Renzo tiene su colap perfecto alguien más tiene colap Okay perfecto pero si puedes
+0:3939 secondsejecutar Carlos el código correcto muy bien perfecto están
+0:4545 secondsacompañando la sesión con su colap sería la pregunta Más directa Okay perfecto muy bien perfecto no hay problema listo
+0:5555 secondsEntonces tenemos los siguientes tenemos Renzo tenemos a tenemos a Carlos
+1:021 minute, 2 secondsy Brand cu el resto estimados Cómo están el resto Qué tal el resto Cómo
+1:101 minute, 10 secondsvan el resto alguien más Está con su código en colap directamente
+1:191 minute, 19 secondsc C de los 15 c Eduardo Ren también ustedes están actualmente con su abierto
+1:271 minute, 27 secondscon el código porque vamos a hacer ejer el día de hoy ya entonces déjen apuntar por aquí sus nombres a ver está Brando
+1:361 minute, 36 secondsestá Brando está Renzo muy bien está Carlos perfecto Carlos avanto hay dos
+1:431 minute, 43 secondsCarlos aquí tenemos a Carlos avanto está Ian actualmente muy bien está Ian está
+1:511 minute, 51 secondsEdgardo perfecto ya hay 15 conectados 3 4 5 grupo de tres ya suficiente con los tres
+2:002 minutescon el código siempre está en Ela virtual en classroom siempre lo tenemos 1 2 3 4 5 5
+2:082 minutes, 8 secondspor 3 15 grupo 15 directamente hablando grupo de TR o grupo de dos de repente vamos a
+2:162 minutes, 16 secondsmeter uno más 15 grupos 15 grupo de 1 rápidamente ya voy a
+2:252 minutes, 25 secondsdividir en salitas a todos ustedes un integrante por grupo no voy a dividirlos
+2:342 minutes, 34 secondsen cinco salas abrando en una sala reno en otra Carlos en otra yardo en otra y el resto por favor se une a las salas
+2:412 minutes, 41 secondsporque vamos a hacer un ejercicio el día de hoy el ejerci repasar un poquito lo aprendido y para eso les he dejado aquí en el colab un caso de uso diferente
+2:502 minutes, 50 secondspanorama de la vivienda de Mel y van a utilizar un dataset que también es bastante famoso dataset directamente por
+2:582 minutes, 58 secondsaquí ya les dej un código base como en las librerías y cómo se va a cargar el dataset lo tenemos acá lo que quiero es que ustedes analicen el dataset y hagan
+3:073 minutes, 7 secondsuna comparación con los métodos de imputación para ver cómo les está quedando no y analicen un poquito la distribución de los datos cómo les queda en este caso y identifiquen si qué
+3:163 minutes, 16 secondsvariables de repente tienen un MC qué variables tienen un m un mar o un mnar eso es lo que ustedes van a hacer di por
+3:243 minutes, 24 secondseso les Acabo de dejar aquí este caso de uso para que es el ejercicio muy bien entonces cuánto tiempo necesitamos 15 minutos
+3:333 minutes, 33 secondssuficiente no 15 minutos como van a ser tres es rápido nada más analizar cómo están los valores nulos hacer el reporte de lo que ya hicimos y y luego de 15
+3:413 minutes, 41 secondsminutos yo 15 10 minutos yo los llamo y ustedes presentan lo que han encontrado sus hallazgos Y cómo ustedes interpretan los resultados en esta primera parte que
+3:493 minutes, 49 secondses imputación solamente de datos luego de luego vamos a pasar a tratamiento de Players y de recién allí luego de tratamiento de lers vamos a empezar a
+3:583 minutes, 58 secondsver cómo es que el método imputación escogido y como el método de no de relleno de Players impacta directamente
+4:064 minutes, 6 secondsen en la performance de un modelo no de un modelo H Bueno será sea de regresión o sea de clasificación un modelo
+4:134 minutes, 13 secondspredictivo en general lees que aquí consigas desplegar no directamente consigas desplegar y hacer el análisis directamente y veas cómo te
+4:214 minutes, 21 secondsqueda y cómo te queda la distribución de los datos con los métodos de imputación que estamos viendo todavía no esty no he tratado el tema sobre distribución de
+4:294 minutes, 29 secondsdatos y Cómo manejar esto porque eso todavía no no entro mucho El caso Pero lo importante es ver que esta distribución sea normal o no normal no
+4:384 minutes, 38 secondsse altere y no aparezcan esos picos que había pasado anteriormente no por algunos picos así con los métodos de mediana moda o la media eso más que todo
+4:484 minutes, 48 secondsYo quiero ver cómo cómo les va quedando entonces puedes ir avanzando técnicamente es utilizar las funciones que están arriba pero con este nuevo
+4:564 minutes, 56 secondsdataset identificar Qué tipo de datos los tienes en en tu caso
+5:065 minutes, 6 secondsListo ya okay Ahora sí Hola Qué tal cómo está Cómo les fue Hola hola a ver qué
+5:145 minutes, 14 secondstal cómo les fue Cómo les fue a ustedes este algún grupo voluntario que quiera
+5:225 minutes, 22 secondspresentar Cómo les fue qué es lo que Ob tuvieron directamente buenas noches
+5:325 minutes, 32 secondsfue con el archivo
+5:465 minutes, 46 secondscares compartir ha cualquiera de tres
+5:535 minutes, 53 seconds[Música]
+6:006 minutesya Prim
+6:086 minutes, 8 seconds[Música]
+6:316 minutes, 31 seconds57 5% de datos nulos
+6:416 minutes, 41 seconds[Música]
+6:496 minutes, 49 secondsbastante después está con con 33p
+6:596 minutes, 59 seconds29 perfecto Bale un poquito el zo creo que mucho subido Ahí está bien Ahí está perfecto
+7:087 minutes, 8 secondsya a ver cómo les quedaron las gráficas entonces bueno que por variable ya después vemos
+7:177 minutes, 17 secondsEsta gráfica es importante vemos que por ejemplo
+7:307 minutes, 30 secondses una
+7:317 minutes, 31 seconds[Música]
+7:327 minutes, 32 secondstipo si no me equivoco ya Perfecto es
+7:407 minutes, 40 secondscurioso distance prop dist tien una correlación de
+7:477 minutes, 47 secondsun está bastante interesante eso
+7:537 minutes, 53 secondsdirectamente con tien alguna correla
+7:597 minutes, 59 seconds0.8 creo 0.8 tienen también de correlación Entonces miren Ustedes han
+8:078 minutes, 7 secondsencontrado que no es que sea todo totalmente al azar si se dan cuenta parece que hay cierto patrón que se está
+8:168 minutes, 16 secondsrepitiendo en los datos faltantes hay cierto nivel de correción entonces parece y lo que se observa en la
+8:238 minutes, 23 secondsdistribución de valores perdidos realmente muestro por ejemplo r y que están juntitos coinciden bastante
+8:338 minutes, 33 secondscoinciden bastante realmente algunos casos no en algunos casos sí por es hacer una correlación 0.8 directamente
+8:398 minutes, 39 secondsregion name Dónde está region name con Ah que Ah ya un poquito ya se
+8:458 minutes, 45 secondsdistorsionó name con distance Dónde está distance distance tien una correlación de
+8:548 minutes, 54 secondsuno Lo raro es que sal una correlación de un pero no hay ningún valor faltante salvo que sean un valores bien poquitos
+9:019 minutes, 1 secondCuántos valores no los tienen en en reg y distance cuántos valores no los tienen
+9:089 minutes, 8 secondsno Ah poquitos uno nada un y uno por eso sale la correlación si se dan cuenta es un punto bastante interesante solamente
+9:179 minutes, 17 secondstienen un valor un valor nulo nada un valor nulo 0.005% por eso le sale una correlación
+9:269 minutes, 26 seconds100% porque tiene justo el mismo registro ya que estamos aquí observando esto como es solo un registro hasta que
+9:359 minutes, 35 secondstranquilamente lo pueden eliminar ese único registro no les afectarían nada realmente o lo podan imputar hasta con un mediana con moda no les va a afectar
+9:439 minutes, 43 secondsnada tranquilamente ese valor se puede imputar con el método que ustedes quieran y también tenemos
+9:539 minutes, 53 secondsEndo la media moda laana moda pero realmente no es así si te dasent si se dan cuenta si hay
+10:0210 minutes, 2 secondscierto nivel de correlación y esto puede deberse a muchos factores ya ya no entonces el problema de imputación ya no quedó tan simple como Ah tengo datos
+10:1110 minutes, 11 secondsfantes mediana mediana mediana o no sé algú can o algún otro modelo directo puedo utilizar un canter s me doy cuenta
+10:2010 minutes, 20 secondsque si Hay ciertos valores nulos tan pequeñitos que ahí si puedo colar una mediana una moda y no hay ningún problema o hasta puede eliminar el
+10:2710 minutes, 27 secondsregistro porque es un un registro nada más donde hay valores nulos y a qué se debe se debe ha se puede deber a muchos casos desde problema del Script
+10:3610 minutes, 36 secondshasta problemas no directamente de inserción de datos en la base muy bien muy bien entonces han conseguido
+10:4310 minutes, 43 secondsejecutar el archivo al menos ya tienen miren esa Data Por ejemplo yo no la he modificado es Data está así así tal y
+10:5210 minutes, 52 secondscual entonces lo que ustedes han estado han encontrado es algo real directamente muy bien muy bien much gracias a ustedes
+11:0011 minutessu grupo por Mostrarme tenido buenos hallazgos no sé el grupo otro grupo voluntario es fue el grupo de Renzo
+11:0811 minutes, 8 secondsArturo y María no quizás el grupo no sé de Abraham de Brando Luigi de abrah y Brando
+11:1711 minutes, 17 secondsholé talc similar a ver comparte pantalla
+11:2311 minutes, 23 secondsadelante sus colegas hasta este punto directamente luego ya cuando pasemos al al modelo predictivo ahí sí van a
+11:3211 minutes, 32 secondsencontrar diferencias dependiendo de lo que ustedes utilicen muy bien a ver qué encontraron en su
+11:4311 minutes, 43 secondscaso ya igual building Area tiene una un porcentaje de noo de 57 por y y build de
+11:5111 minutes, 51 seconds51 por. Disculpa estás Estás mostrando porque se ha quedado detenido a ver se
+11:5711 minutes, 57 secondsha quedado pausada la pantalla
+12:0912 minutes, 9 seconds[Música]
+12:1812 minutes, 18 secondsdirectamente Ah mostrando tu juego suele pasar
+12:2712 minutes, 27 seconds[Música]
+12:2912 minutes, 29 secondsAhí sí vamos a ver ahora sí a ver Baja un poquito ya ahora sí Ahora se ve perfecto igual No
+12:3712 minutes, 37 seconds5751 si realmente y no se pueden imputar pueden buscar estrategias AC
+12:4612 minutes, 46 secondsestaba viendo que building Area y como que tienen una relación de 0.5
+12:5412 minutes, 54 secondscon y 0.4 con latitud y longitud Exacto Entonces no sé si es que sería factible
+13:0213 minutes, 2 secondsver quizás una relación que hay existe entre las variables porque latitud y longitud solamente me faltan 18 por de valores
+13:1113 minutes, 11 secondsclaro estrategias no directamente si es que me obligaran por ejemplo a a utilizar esas variables tendría que ver
+13:1813 minutes, 18 secondsQué valores tienen latitud y longitud y ver Qué relación hay justo con esas variables Y quizá con eso ya haber un método de poder imputar si es que fuese
+13:2713 minutes, 27 secondstotalmente necesario Claro porque ahí ya como que estamos cada hay una cosa que es interesante no cada método que nosotros aplicamos trae
+13:3613 minutes, 36 secondserror entonces podemos Buscar estrategias sí no directamente se nos pueden eh venir a la cabeza muchísimas
+13:4313 minutes, 43 secondsestrategias podemos hasta revisar papers para ver cómo trabajan con imputaciones a alto alto grado como 57 por y siempre
+13:5113 minutes, 51 secondsvan a haber estrategias que podemos encontrar eso es bastante real solo que cada estrategia lleva error un error para toda la estrategia que estoy
+13:5913 minutes, 59 secondsaplicando y un error en la imputación directamente dicho Entonces ya estamos acumulando error y luego tenemos que analizar el impacto de ese error
+14:0714 minutes, 7 secondsrealmente en el modelo predictivo final de repente hasta sesamos directamente y ahí s tenemos un problema pero s hay
+14:1614 minutes, 16 secondsestrategias porque o sea en primera instancia y a primera vista no se imputar por el hecho de su porcentaje de nulidad Exacto es demasiado alto Ahora
+14:2514 minutes, 25 secondsnos queda revisar el Script no bueno como no tenemos en este caso no podemos revisarlo directamente claro ahora
+14:3114 minutes, 31 secondsconcil aria este porcentaje 33 por sea A mi
+14:3814 minutes, 38 secondsparecer sería muy riesgoso riesgoso tratar de imputar porque es 33 por de
+14:4414 minutes, 44 secondslos valores no 33 o o cómo puedo analizar o consideraría que sí es un correcto imputar 33 por hasta un 30 se
+14:5314 minutes, 53 secondspuede imputar es porque es como cuando tú aplicas un Machine learning 70 30 es pasable ahora también depende de la cantidad de registros Cuántos registros
+15:0115 minutes, 1 secondhay Arribita creo que dice más arriba canti
+15:0915 minutes, 9 seconds18396 registros tiene 18396 sí podremos intentarlo si va a tener un margen de
+15:1615 minutes, 16 secondserror Claro porque vamos a imputar 6000 que es casi un tercio de todo eso Exacto
+15:2315 minutes, 23 secondsun tercio más que un margen Eduardo es porque cuando ya tenemos un alto nivel
+15:3015 minutes, 30 secondsel método de imputación que apliquemos va a generar directamente un sesgo si utilizas una mediana una medio una moda
+15:3815 minutes, 38 secondsya estás Ya prácticamente sesgas justo lo que yo les mostraba que aparecía un pico no grandote claro le la
+15:4715 minutes, 47 secondssimulación Exacto Entonces ya aparece un pico gigantesco No si tú impas con media me lo grafic un poco pegado tuve tiempo
+15:5615 minutes, 56 secondspara ver eso pero acá abo son las gráficas normales sin embargo cuando ya lo imput aparecen totalmente
+16:0416 minutes, 4 secondslas los picos es can imputer creo no claro y lo he hecho con con vecinos cercanos claro Ah intenta con el otro
+16:1216 minutes, 12 secondscon inter imputer Entonces qué pasa este el primero es un can input que directamente analiza los vecinos en
+16:1916 minutes, 19 secondsfunción a eso hace la hace lo que sería la imputación y s puede generar picos también entonces uno de los modelos más
+16:2716 minutes, 27 secondsavanzados es utilizar un regresor un modelo de regresión Y tratar el problema como un problema de regresión este
+16:3516 minutes, 35 secondsEntonces si vamos a un problema de regresión usualmente qué se hace se hace un 7030 te comento se hace un 70 30
+16:4316 minutes, 43 secondsdirectamente ya no se recomienda un 6040 Entonces ya de forma empírica se ha demostrado que hasta un 7030 podemos
+16:5116 minutes, 51 secondssoportar cuando entrenamos un modelo de Machine learning ya cuando Por qué Porque todavía tenemos cierta imagen de datos para el entrenamiento y í hay
+17:0017 minutesmucha variabilidad no mucha caracterización de todas las muestras de todos los individuos que deberíamos tener y el otro 30% se utiliza para el
+17:0817 minutes, 8 secondstest Entonces ya empíricamente ya se ha demostrado realmente no incluso hay papers donde hacen los el uso puede buscar papers donde se
+17:1717 minutes, 17 secondsutiliza por ejemplo se hacen esquemas experimentales trabajan con un 90 10 80 20 no directamente y y se muestra o
+17:2717 minutes, 27 secondsincluso técnicas de Cross donde ya aplican false c fals 10 fals entonces utilizan nu 9 y un o o 41 no
+17:3717 minutes, 37 secondsdirectamente lo cual también se va a porcentaje porcentajes Entonces sí O sea hasta un 30% es bastante aceptable más
+17:4517 minutes, 45 secondsque eso ya es un poco riesgoso porque le estamos quitando datos Y esto no es algo nuevo justo que Comenta Eduardo no es
+17:5317 minutes, 53 secondsalgo nuevo porque en esto es un tema para imputación pero Les comento que incluso cuando queremos hacer aprendizaje
+18:0018 minutessupervisado hay datos a veces que no tienen etiqueta Entonces qué es lo que hacemos buscamos caracterizar entonces ahí se
+18:0818 minutes, 8 secondstrabajan los famosos autoencoders por ejemplo no se utilizan etapas de autoencoders por ejemplo datos que no
+18:1518 minutes, 15 secondstienen etiqueta que técnicamente serí valores vacíos Qué hago yo cojo por
+18:2118 minutes, 21 secondsejemplo o por ejemplo yo cojo los datos que si tienen etiqueta y les coloco como entrada y como salida entonces uno
+18:2918 minutes, 29 secondsentrena una red neuronal avanzada para que aprenda un vector representativo y ya los datos que no tienen salida simplemente se le coloca pasa por es
+18:3718 minutes, 37 secondsvector representativo y tiene una salida Nueva No y esa es la salida que yo utilizo más abajo entonces no sé si ustedes escucharon sobre eso es el
+18:4618 minutes, 46 secondsstudent teacher student le llamábamos se le llamaba ese tipo de modelos el teacher student donde yo le enseño a que aprende a caracterizar un modelo con a
+18:5418 minutes, 54 secondstravés de una encoder y luego el ese es el teacher y luego el student donde yo ya reconstruyo Entonces no son estrategias realmente
+19:0119 minutes, 1 secondnuevas o sea son estrategias que se aplican por ejemplo en visión computacional se ha aplicaba bastante y aquí también se ve pero es utilizado
+19:0919 minutes, 9 secondspara imputación entonces sí tiene su su porqué realmente este Eduardo un 70 30 hasta un 70 de de datos en el
+19:1719 minutes, 17 secondsentrenamiento ya me garantizarían cierta variabilidad ahora si yo tengo mucho menos datos ahí sí 70 30 ya me daría
+19:2519 minutes, 25 secondsproblemas tendría que subir un 80 20 en el caso de este ejemplo tenemos cuánto serán 18000 18000 verdad sí 18000
+19:3319 minutes, 33 secondsaproximadamente 18000 más o menos no 18396 18400 í redondeando sí se podría
+19:4019 minutes, 40 secondsdecir que es suficiente tendrías unos 6000 7000 y unos 13000 sí tranquilamente te
+19:4719 minutes, 47 secondsayudaría Pero obviamente si tenemos posibilidad de sesgo eso sí tampoco no es que los modelos sean perfectos también Hay posibilidad de error siempre
+19:5619 minutes, 56 secondshay un error en los modelos y en este modelo regresión que va a reconstruir con el otro porcentaje si hay sesgo por eso cuando ya tenemos un 50 50 ahí sí
+20:0520 minutes, 5 secondsestá difícil 50 ya es jugarse jugársela realmente y arriesgar mucho y si tenemos más de 50 peor todavía mejor no se
+20:1320 minutes, 13 secondsrecomienda y hay que retirar la variable muy bien buena pregunta que Hi Eduardo una consulta antes eh
+20:2220 minutes, 22 secondseh esta esta función donde se le pasa una variable objetivo una variable lo que hace es
+20:2920 minutes, 29 secondsrepresentar o cómo entendería este gráfico Ah ya ese es un truco que normalmente se utiliza por ejemplo
+20:3620 minutes, 36 secondsQuiero ver si realmente es un MC Quiero ver si realmente existe un
+20:4320 minutes, 43 secondsmar Una correlación entre dos eso pero ya desde la matriz de correlación de datos nulos ya sabes que hay una cierta
+20:5120 minutes, 51 secondscorrelación pero con de bajo si te gust lo puedes comprobar simplemente los índices están aquí si te das cuenta
+20:5920 minutes, 59 secondsaquí no puedo utizar de tu lado izquierdo está los índices desde el 1 hasta
+21:0521 minutes, 5 seconds18396 reg original Yi
+21:1421 minutes, 14 secondstod bien parejos 0.8 de correlación significa que si falta un
+21:2121 minutes, 21 secondsdato building hay un 8% probilidad
+21:2821 minutes, 28 secondsese dato Entonces qué pasa qué tal si tú mezclas los registros reorganiza los los registros porque ahora están ordenados
+21:3621 minutes, 36 secondspor índice Pero tú lo reorganiza y lo vuelves a graficar vas a ver que siempre por más que lo reorganicé esa
+21:4321 minutes, 43 secondscorrelación en bloques directamente entonces esa es una forma antigüita visual de como tú puedes verificar que realmente si hay cierto nivel de
+21:5221 minutes, 52 secondscorrelación que sí pasa porque a veces eh ent Y eso mi signo a diferenciar y
+22:0022 minutestambién te ayuda a verificar un mcar por ejemplo no sé vamos a ver aunque Aquí no hay ningú MC directamente todos tienen
+22:0922 minutes, 9 secondscorrelación y y al ojo se nota eso todos tienen MC no hay una variable l size hasta pareciera pero
+22:1822 minutes, 18 secondsparece que también tiene una correlación con las otras variables se nota claramente eso porque si hubiera
+22:2722 minutes, 27 secondsuna no tendría tanta correlación con nosotros se se notaría así no que tú me que tú chocolate as como se dice todos
+22:3422 minutes, 34 secondslos registros pero igual se mantiene siempre el mcar se mantiene se mantiene siempre es independiente como tú lo chocolate siempre se ve una distribución
+22:4222 minutes, 42 secondsasí completamente aleatoria en el mcar Pero bueno en este caso no no no se aprecia realmente entiendo y y esta
+22:5022 minutes, 50 secondsparte de acá eso es la cantidad de nulos no que se se están juntando si te das cuenta
+22:5622 minutes, 56 secondshay mayor correlación abajo a partir ese anchoa hay mayor
+23:0323 minutes, 3 secondsintersección mientras que arriba hay correlación pero más poquito lo que más entender es matriz de
+23:1123 minutes, 11 secondscorrelación arriba de datos netas mucho mejor y también con el dendograma que está abajo con por
+23:2023 minutes, 20 secondsejemp que tien 0. están juntos también también están juntos por ejemplo
+23:2823 minutes, 28 secondsqué más dice ahí bathroom bedroom do están juntos y eso se con car o sea por niveles de correlación como se van uniendo también te aparece esas gráficas
+23:3723 minutes, 37 secondsson bastante buenas para ustedes como analíticos de datos les permite analizar Cómo se relacionan las variables a nivel de datos nulos es todo un tema se han
+23:4623 minutes, 46 secondsdado cuenta un tema muy bien muy bien Eduardo cómo soy noard Disculpa quiso
+23:5523 minutes, 55 secondspreguntar levant la manito profesor ahí una pregunta esa matriz de
+24:0224 minutes, 2 secondscorrelación O sea si yo tengo una columna que tiene 9000 nulos y otra columna que también tiene 9000 nulos No
+24:1024 minutes, 10 secondsnecesariamente en los mismos registros me marcaría la correlación como uno no No necesariamente Ah si son los mismos
+24:1824 minutes, 18 secondsregistros sí O sea si si son el mismo índice sí te va un Pero si son 9000 registros pero de forma si fuese un MC
+24:2724 minutes, 27 secondsvan a coincidir cierto valor por ejemplo te puede salir una coincidencia de menos del 1% como en algunos casos que se he visto menos del 1% o sea menos del del
+24:3624 minutes, 36 seconds0.1 o sea una correlación bien baja te puede salir como tienes 18,000 registros en total 18 18 si es que es un disculpa
+24:4524 minutes, 45 secondssi es un mar un un mar te va a salir una de1 o muy próxima Pero si son completamente aleatorios te puede
+24:5224 minutes, 52 secondscoincidir en un 0 0.3 0.2 a veces dependiendo de la cantidad No si si tienes 20,000 registros 9000 9000 ahí
+25:0025 minutesbaja baja directamente entonces depende mucho de la cantidad de registros que tienes directamente ahí hay uno no menos de 1 0.8 menos menos de un bien bajito
+25:0825 minutes, 8 secondsno bien bajito el nivel de correlación esta matriz de correlación y y esta gráfica de acá me analizan
+25:1725 minutes, 17 secondsdirectamente relaciones entre nulos e índices sí aj entre nulos exactamente lo que va a hacer es ver si tú te das
+25:2525 minutes, 25 secondscuenta en el lado izquierdo este son así en la parte de las x están los índices sices un corte así te das cuenta
+25:3325 minutes, 33 secondsrápidamente de cómo está cómo está directamente distribuidos los datos Entonces ahí es donde t percibes
+25:4225 minutes, 42 secondsAh la Gráfica de abajo es neg que mostrado técnicamente la de arriba pero
+25:5025 minutes, 50 secondsgirada muy bien buenas consultas cons Entonces con eso reforzamos lo deción de
+25:5725 minutes, 57 secondsdatos foreign

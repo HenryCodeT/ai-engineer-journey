@@ -1,0 +1,113 @@
+# Python para Ciencia de Datos - M4-2 - Ejemplo
+# (título en el video: Python para Ciencia de Datos - Modulo 4 - Ejemplo)
+
+0:022 seconds[Música]
+0:066 secondsmuy bien Vamos a hacer un ejemplo Ahora sí voy a generar por aquí un dataset aquí generé un dataset con esta
+0:1515 secondsdistribución 0.2 0.1 y 0.7 para las clases y lo que estoy haciendo es técnicamente Reproducir esto de acá No
+0:2323 secondsaquí tengo técnicamente estoy reproduciendo este escenario C para no estar tan mal 694 202 y
+0:3232 seconds104 Entonces miren he reproducido el escenario c directamente por acá y cuando yo analizo acá Aquí he generado
+0:4141 secondsunas funciones de ayuda no plot frecuencia que me permite graficar directamente no Cuál es la frecuencia no de mis puntitos como ustedes están
+0:4949 secondsviendo por aquí eh vo generar unos colores no el ancho de un ancho de línea un figure size un scatter plot y los he
+0:5656 secondsseparado por por su clase directamente y por aquí hay una función llamada TR model que por defecto está utilizando un xg classifier
+1:051 minute, 5 secondsestoy dejando por aquí le estoy dando un entrenamiento y estoy haciendo un predit con los datos de Test que va a recibir voy a calcular curac para que ustedes se
+1:131 minute, 13 secondsden cuenta que esur efecto tiene luego un classification report una matriz de confusión y finalmente estoy
+1:221 minute, 22 secondsmostrando la matriz de confusión para que ustedes vean es el efecto general es es una fun son funciones de ayuda
+1:291 minute, 29 secondsEntonces si llamo a plot frecuencia previamente me doy cuenta que tengo un
+1:351 minute, 35 secondsdesbalance terrible no 202 imágenes Disculpen 202 muestras para la clase C 104 para la clase 1 y 694 para la clase
+1:441 minute, 44 seconds2s está bastante desbalanceado este este datos entonces me voy por acá y voy a dividir los datos en entrenamiento y
+1:521 minute, 52 secondspruebas directamente con un 80% para entrenar y un 20% para test no y aquí
+2:002 minutesgrafico las muestras que han quedado la clase 2s tiene 559 muestras la clase 0 160 y la clase 1 tiene 81 muestras como
+2:082 minutes, 8 secondsustedes observarán Por aquí muy bien es un problema de desbalance de datos y vamos a ver cómo me queda en un
+2:162 minutes, 16 secondsentrenamiento por defecto vamos a reproducir el primer escenario pero en este caso ya no utilizo una cbm voy a utilizar un clasificador un poco más
+2:232 minutes, 23 secondspotente que es un xus classifier utilizo classifier importo acur scp aunque esto de aquí ya
+2:322 minutes, 32 secondslo había importado arriba no era necesario llamarlo de nuevo y mando entrenar el modelo por
+2:392 minutes, 39 secondsacá los resultados para por acá d estaba Aquí no
+2:512 minutes, 51 secondsaquí frecuencia Aquí estaba entreno por defecto aquí no miren van entrenar por defecto y observen la salida miren la
+3:003 minutescacy me sale que es 84.5 por. si yo solamente me fias de la cacy me daría
+3:063 minutes, 6 secondscuenta que en en en en media de cada 100 de cada 100 muestras clasifica correctamente 85 no
+3:133 minutes, 13 secondsredondeando y diríamos que no está tan mal pero ojo esto es muy engañoso observemos las salidas
+3:213 minutes, 21 secondsinternas miren por acá observen por aquí es Ah estos son
+3:283 minutes, 28 secondslos datos de test hay 200 muestras hay 135 muestras para la clase 2 en pruebas
+3:353 minutes, 35 seconds23 muestras para la clase uno y 42 muestras para la clase Cero en pruebas y observemos por acá me dice que la k es
+3:443 minutes, 44 seconds0.84 lo cual me pareciese bastante bien pero observen este detalle Miren la clase
+3:503 minutes, 50 secondsuno la clase uno estimados tiene nueve o sea para solamente para que para que puedan entender esto Esta
+3:583 minutes, 58 secondsexperimentación lo que debe ser correctamente clasificado por clase tiene que ir en la diagonal observen esta diagonal aquí el
+4:074 minutes, 7 secondsresto es error sea falso positivo falso negativo eso lo vamos a ver luego solo céntrese en la diagonal en la diagonal
+4:154 minutes, 15 secondsun caso ideal Debería ser esto les voy graficando por acá para que hagan la comparación a los que todavía están entendiendo esta métrica todavía no
+4:234 minutes, 23 secondsquiero entrar en detalles en ella para no para no sobrecargar losos de no de conceptos pero el caso ideal Debería ser esto
+4:324 minutes, 32 secondsmiren si yo tengo a Dj borrar por acá borr Aquí se ve
+4:394 minutes, 39 secondsmejor miren si yo tengo 42 muestras para la clase cero aquí el caso ideal Debería ser
+4:464 minutes, 46 seconds42 si yo tengo 23 muestras para la clase un el clase el caso ideal Debería ser 23 y si tengo 135 muestras para la clase
+4:554 minutes, 55 secondsdos aquí debería tener 135 esto es una matriz el resto Debería ser cer
+5:035 minutes, 3 seconds00 eso estimados Debería ser el caso ideal para mí
+5:085 minutes, 8 secondsOkay no debería haber ningún error aquí directamente miren no debería ver qué es
+5:175 minutes, 17 secondslo que genera esto Cómo se calcula la qas en función de esta matriz Es simple ustedes suman la todos los de la
+5:245 minutes, 24 secondsdiagonal vamos a hacer algo facilito no la suma de la diagonal de la diagonal para que lo entiendan sin
+5:315 minutes, 31 secondsentrar en mucho detalle sobre la suma de la matriz total si ustedes Ven por acá 42 + 23 +
+5:405 minutes, 40 seconds135 es 200 200 y la suma total la suma total aquí estimados es 200 entonces 200
+5:485 minutes, 48 secondssobre 200 es 100 100% un caso ideal estimados Es que la k s valga 100% sin ningún error Si hay errores por acá
+5:565 minutes, 56 secondsmiren por en estos sectores de aquí que voy a marcar en azul Entonces estamos hablando de errores de falsos positivos
+6:056 minutes, 5 secondsy falsos negativos Pero eso lo vamos a ver luego la cuestión es que si hay datos dentro de estas zonas de color
+6:116 minutes, 11 secondsazul Es porque tenemos error no puede ser error tipo uno o error tipo dos eso lo vamos a hablar luego Pero hay error
+6:206 minutes, 20 secondsEntonces eso es lo ideal estimados que se acumulen las clasificaciones correctas por clase en la diagonal ahora
+6:276 minutes, 27 secondssi comparen esto con lo de acá qué es lo que pasó la clase 2 tiene 127
+6:356 minutes, 35 secondsmuestras bien clasificadas correctamente clasificadas
+6:436 minutes, 43 secondspero han habido errores y que se equivoca con otras clases y en general está bien mir este
+6:516 minutes, 51 seconds127 errores al final genera una precisión son otras mcas que vamos a haar luego per parae precisión de Bueno
+7:007 minuteses un record de 94 una precisión de 81 un f un score que es una media armónica de estos dos valores de aquí como había mencionado su colega de 91 por en
+7:097 minutes, 9 secondsgeneral lo cual es bastante bien o sea esta Este modelo Funciona muy bien para la clase dos demasiado bien pero miren
+7:177 minutes, 17 secondslo que está ocurriendo con la clase uno observen estimado los resultados de la clase un la clase uno no está nada bien que
+7:277 minutes, 27 secondsdigamos voy a borrar por acá como ya me entendieron la idea general miren vamos a la clase un por
+7:357 minutes, 35 secondsaquí Miren la clase un comoo está aquí debería estar en teoría 23 pero solamente hay nu incluso hay más error
+7:447 minutes, 44 secondsen otras clases Miren la clase 2 tiene mayor error tiene mayor asignaciones clasificaciones todo de acá es una
+7:527 minutes, 52 secondspredicción todo lo que está en esta columna estimados es predicción para la clase do entonces detrás de la clase uno
+8:008 minuteshan sido clasificadas como clase dos estamos hablando de ces aquí hay un ces está existiendo
+8:078 minutes, 7 secondscesb y eso dónde se ve se ve aquí en sus métricas miren precision 53 record 39
+8:148 minutes, 14 secondsmedia armónica 45 bastante bajo muy bajo estimados peor que que el azar está
+8:218 minutes, 21 secondsaquí peor que el azar bueno y la clase uno si está un poquito mejor la clase pero la clase Disculpen la clase C está mejor pero la clase uno Está terrible
+8:308 minutes, 30 secondsEntonces estimamos qué ha pasado sesgo el modelo está sesgado bastante sesgado pero profesor aquí dice 84 pero eso es
+8:388 minutes, 38 secondsun una métrica engañosa por si acaso es muy mentirosa esta métrica si ustedes observan otras métricas se van a dar
+8:468 minutes, 46 secondscuenta que sobre todo la f1 por eso les dije la f1 es una buena métrica para que ustedes vean datos desbalanceados 82 91
+8:548 minutes, 54 secondspero 45 aquí fatal en la clase y eso se corrobora observando la matriz de confusión aquí aquí está peor miren Aquí
+9:019 minutes, 1 secondestá mucho menor y aquí está mucho mayor hay error realmente hay bastante error Entonces esto significa que los datos
+9:109 minutes, 10 secondstal y como están no pueden ser utilizados porque si no este modelo va a salir sesgado y la mayoría de veces va a decir la mayoría de veces va a confundir
+9:199 minutes, 19 secondsla clase uno con la clase dos casi siempre va a confundir estas dos clases Bueno la clase uno con la clase dos casi siempre la va a
+9:279 minutes, 27 secondsconfundir sí alguna consulta alguna duda por aquí dudas consultas que tengan todo eso Sale miren de un
+9:369 minutes, 36 secondsanálisis de esta matriz directamente alguna duda alguna consulta que tengan por aquí
+9:439 minutes, 43 secondsdirectamente Entonces no hay que fiarnos mucho de esto no hay que fiarnos mucho porque si
+9:519 minutes, 51 secondsno nos engaña profesor un modelo real habría que
+9:599 minutes, 59 secondsrevisar que esas métricas estén bastante cercanas no O cómo Cuál es la recomendación Depende depende aquí ya
+10:0710 minutes, 7 secondsaquí ya entramos en algo un poquito más avanzado depende porque aquí hay que analizar bastante una matriz de confusión y entenderla este
+10:1510 minutes, 15 secondsSamuel porque la f1 es a ti te interesa reducir en general todo este error si el error que está por acá o se el error que
+10:2410 minutes, 24 secondsestá por acá si quiere el el f1 en general busca de reducir el error el error tipo uno y
+10:3210 minutes, 32 secondstipo dos vamos a decirlo de esta forma Busca que tú sí o sí te concentres en tener una correcta clasificación por clases por ejemplo Entonces si a mí me
+10:4210 minutes, 42 secondsinteresa bastante reducir el error y que los tres las tres clases tengan un rendimiento similar Pues acá chévere la
+10:4910 minutes, 49 secondsf1 es la indicada pero de repente hay otros conceptos que dicen por ejemplo estoy en un proyecto de salud y me y
+10:5810 minutes, 58 secondstengo dos clases por ejemplo clase cero y clase un y me interesa Y por ejemplo la clase cero es por ejemplo
+11:0611 minutes, 6 secondseh sin enfermedad sin la enfermedad y la clase un es con enfermedad por
+11:1211 minutes, 12 secondsejemplo entonces me interesa no me interesa Por ejemplo mucho que se
+11:1911 minutes, 19 secondsequivoque por acá o sea me interesa que la clase que sí tiene la enfermedad sea correctamente clasificada o sea me interesa que lo de acá por ejemplo si
+11:2811 minutes, 28 secondsaquí hay 50 y Acá hay 50 me interesa que en el modelo se esto de aquí sea lo más
+11:3411 minutes, 34 secondspróximo posible a 50 no por ejemplo 48 porque porque eso es peligroso porque son sistemas médicos por ejemplo en
+11:4311 minutes, 43 secondssistemas médicos me interesa bastante este lado de acá y y Qué pasa si me dice que me dice por ejemplo Ah no Disculpen
+11:5211 minutes, 52 secondses al revés sistema médico me interesa que no me que no me dé este reporte que no me diga sin enfermedad que me O sea
+12:0012 minutesme puede decir tú tienes tal enfermedad perfecto Pero eso se puede luego descartar hacer una segunda opinión y
+12:0712 minutes, 7 secondsdescartar Pero qué pasa si a ti te dicen que tú tienes una enfermedad entonces tú dices okay No tengo nada y te vas pero realmente
+12:1612 minutes, 16 secondstuviste entonces aquí entra una métrica llamada recall Por ejemplo que que dice directamente
+12:2512 minutes, 25 secondsconcéntrate más en esta clase de aquí sea reduce el error que está de este lado concéntrate acá que la mayoría cae
+12:3512 minutes, 35 secondsaquí lo de acá se puede equivocar sí voye ha error aquí pero reducc lo de acá reduco de acá por Entonces eso va a
+12:4412 minutes, 44 secondsdepender muchísimo del tipo de proyecto que ustedes están haciendo y de la métrica que ustedes escojan por ejemplo si para mí la métrica aquí más
+12:5212 minutes, 52 secondsimportante fuese la f1 Entonces yo me fijo en estos resultados donde me interesa tanto los errores de este lado
+12:5912 minutes, 59 secondscomo de este lado si para mí me me interesa bastante la precisión me concentro nada más en este lado y los
+13:0713 minutes, 7 secondserrores están por acá en precisión bueno acá y acá directamente Entonces eso lo vamos a ver luego no no se estén
+13:1413 minutes, 14 secondspreocupando eso eso es algo que Lu a ver directamente qué métrica me
+13:2113 minutes, 21 secondsme qué métrica me conviene utilizar okay Y ojo previo a eso tenemos que tratar el
+13:2913 minutes, 29 secondsdesbalance si es que mi datas por efecto está desbalanceado no me queda otra que la f1 estas dos métricas los puedo
+13:3713 minutes, 37 secondsutilizar Sí pero asegurando que no haya mucho desbalance en los datos mucha desproporción Entonces como estoy en un
+13:4413 minutes, 44 secondsdataset con datos desbalanceados preferir la f1 Pero si yo tengo un dataset que no está tan desbalanceado hay una proporción de muestras por
+13:5213 minutes, 52 secondsejemplo como como este d estaba el caso inicial Uy ya lo snde est aquí
+14:0614 minutes, 6 secondsquo creo que bor aquí por ejemplo si yo tengo una proporción más o menos como esta como
+14:1514 minutes, 15 secondseste caso 336 por aquí imagos 300 Por aquí 290 Entonces yo me puedo concentrar en
+14:2414 minutes, 24 secondsotras métricas un poquito mejor más específicas pero si mi dat puedo acompañar f1 para que me acompañe sí
+14:3214 minutes, 32 secondsEntonces es todo un tema es un tema y decisión dependiendo de la finalidad del modelo con tranquilidad No se estén
+14:4014 minutes, 40 secondspreocupando mucho por el momento ya luego lo van a entender todo

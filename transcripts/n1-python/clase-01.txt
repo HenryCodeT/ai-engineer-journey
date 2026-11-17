@@ -1,0 +1,104 @@
+Transcript
+
+Search transcript
+Search transcript
+
+0:022 seconds[Música]
+0:066 secondslisto entonces estimados empecemos con la sesión muy bien Vamos a empezar con hablando del análisis exploratorio de
+0:1313 secondsdatos que es un punto importantísimo en todo lo que tiene que ver No con el desarrollo de un modelo
+0:2121 secondsque puede ser a nivel descriptivo o ya inferencial no directamente hablando entonces qué puntos podemos ver por acá
+0:3030 secondspartimos todos desde este punto desde la carga de los datos o de la información algunos de ustedes ya me han comentado
+0:3838 secondsrealmente que ya han trabajado con datos algunos han trabajado en lo que es la parte de la base de datos Entonces ya
+0:4646 secondsconocen No aquí un punto que sí les recomendaría a todos ustedes sobre todo los que están iniciando es que muy aparte de lo que van a ver del análisis
+0:5555 secondsexpor de datos también tengan cierta base cierto conocimiento aquí al menos sobre sql no que es muy importante que
+1:021 minute, 2 secondsse ponga un poquito sobre sobre modelado de base de datos es muy importante realmente sí
+1:111 minute, 11 secondsArturo sí profesor acá yo quería darles un un poquito Como dijo mi compañero que estamos para apoyarnos con los nuevos
+1:201 minute, 20 secondschicos los que están empezando compañeros como dice el profesor sql es o sea sql es como que
+1:301 minute, 30 secondstodo lo que tenemos que hacer porque muchas veces el tratamiento de base de datos se puede hacer en python pero les
+1:371 minute, 37 secondsaseguro de que sql es una maravilla a la hora de trabajar con información yo les digo que trabajo con 3 millones a veces
+1:441 minute, 44 secondscon 6 millones de datos y sq lo procesa pero en 2 minutos o sea es muy importante que lo conozcan Así que tengan en cuenta
+1:531 minute, 53 secondseso así es ch Muchas gracias muchas gracias compañero realment
+2:002 minutesan aquí en este punto s shar Así es o sea manejen su sql sobre todo Les
+2:072 minutes, 7 secondscomento Yo trabajé antes de Iniciar mi doctorado luego que regresé de la carrera igual Yo trabajé un año en empresa desarrollamos lo que ser lo que
+2:162 minutes, 16 secondsera un rp un sistema rp integrado para para toda empresa entonces ahí por ejemplo Durante un año full sql me
+2:232 minutes, 23 secondsasignaron estar en la en esa época todavía no había mucho lo que es el backend frend directamente todavía
+2:302 minutes, 30 secondstodavía era una era software el software el software web todavía estaba iniciando todavía era software de escritorio
+2:372 minutes, 37 secondsentonces Había otro tipo de paradigma de de desarrollo de software entonces en mi caso por ejemplo yo me concentraba bastante en la parte de sql y también me
+2:462 minutes, 46 secondsconcentraba bastante en la parte de las interfaces de usuario y realmente lo que su colega es dice cierto a veces los
+2:532 minutes, 53 secondssistemas se ponían lentos directamente Porque muchos dejaban de lado lo que podían hacer con sql desde el gestor de de base de datos Les comento y toda la
+3:023 minutes, 2 secondscarga le daban al lenguaje de al lenguaje de programación al código o sea ellos querían que la consulta le devuelva todo crudo y luego todo el
+3:103 minutes, 10 secondsprocesamiento lo mandaban a No ya a la parte del código en las otras capas en las otras capas de proceso Entonces eso
+3:183 minutes, 18 secondsgeneraba que que el código se vua un poquito lento Entonces cómo lo optimizamos muy a parte de de código más rápido paralización etcétera multihilos
+3:263 minutes, 26 secondslo que hacíamos es ir a sql y ver procesos que en sí eran sencillos pero que le daban carga no al sistema simplemente hacerlos a nivel sql nada
+3:353 minutes, 35 secondsmás no teníamos funciones teníamos procedimientos almacenados y eso bajaba un poquito la carrega entonces había una especie de de mejor en el rendimiento
+3:443 minutes, 44 secondsLes comento y es muy importante y aquí va a ocurrir lo mismo comento hay cosas que a veces ustedes las pueden hacer cuando ustedes trabajen como analíticos
+3:533 minutes, 53 secondsde datos dependiendo del tamaño o nivel de la empresa a ustedes puede ser que hasta les asignen trabajar directamente con la base de datos y extraer toda la
+4:014 minutes, 1 secondinformación desde el repositorio o si ya la empresa es un poquito más grande y hay diferentes niveles de cargos Entonces ustedes ya les van a facilitar
+4:094 minutes, 9 secondsun Script para que hagan simplemente la consulta Entonces ustedes pueden tener la opción de editar el Script directamente o optimizar el Script que
+4:184 minutes, 18 secondsestá va a estar en sql para extraer la Data o directamente si ustedes son los que manejan ya ustedes programan directamente todo lo que desean entonces
+4:264 minutes, 26 secondsmanejar es Es bueno Es bueno Y es muy importante Entonces ya Les comento es muy importante lo viví realmente no lo
+4:354 minutes, 35 secondsviví en la época cuando programaba mi lenguaje se y ojo que hay un punto Aquí muy importante Les comento el sql es el
+4:434 minutes, 43 secondslenguaje general Pero ya cuando hablamos de sistemas gestores de base de datos sql server Oracle ya son ya ell manejan
+4:504 minutes, 50 secondssu propia sintaxis sus propios lenguajes y le agregan algunas cositas a más directamente muy bien entonces todos
+4:584 minutes, 58 secondspartimos desde lo que es la de datos Ese es el punto de inicio directamente Les
+5:055 minutes, 5 secondscomento Okay estimados Este es un punto de inicio arrancamos desde acá Aquí como les dije tenemos dos opciones o nos
+5:135 minutes, 13 secondsasignan a nosotros trabajar entonces ustedes tienen que crearles el Script o directamente ustedes les dan un Script que solamente tienen que ejecutar y
+5:205 minutes, 20 secondscargar la Data o directamente a ustedes no les dan nada también puede haber una tercera opción a ustedes le entregan simplemente los requerimientos Yo quiero Necesito esta información esta
+5:285 minutes, 28 secondsinformación y el analítico no y el encargado de la base de datos se encarga el ingeniero de datos se encarga de hacerles toda la extracción y les
+5:365 minutes, 36 secondsentrega un un documento Excel un csv o algún otro formato para que ustedes lo procesen entonces estimados todo todo va
+5:445 minutes, 44 secondsa ir desde aquí des este punto entonces aprender ese ql por AC es muy importante
+5:525 minutes, 52 secondsrealmente Okay entonces dicho y hecho este punto Comencemos por acá ya Entonces pasamos a la primera fase listo
+6:006 minutesme conecté a me conecté a sql o de alguna u otra manera ya conseguí la base de datos Y ya la tengo lista para
+6:086 minutes, 8 secondstrabajar ahora viene el siguiente punto una vez que tenemos la Data esta Data realmente ustedes pueden
+6:186 minutes, 18 secondsdecidir hasta dónde quieren llegar con ella o llegan hasta aquí en este punto
+6:256 minutes, 25 secondsdonde tenemos más que todo un proceso no de analítica descriptiva directamente hablando todo análisis descriptivo de
+6:326 minutes, 32 secondsdatos nada más o yo puedo tener la opción de seguir y hacer un proceso ya
+6:396 minutes, 39 secondsde modelado inferencial entonces aquí ya viene la parte no del modelado modelado inferencial un modelo predictivo la
+6:466 minutes, 46 secondsgeneración de un modelo predictivo aplicando lo que es mach directamente entonces hay toda una fase
+6:546 minutes, 54 secondscomo ustedes pueden observar todo un proceso que tenemos que seguir analizando y Les comento que dependiendo de la
+7:027 minutes, 2 secondsnaturaleza de los datos este proceso va a ser un poquito más tranquilo más fácil o va a ser un poco más trabajoso sobre
+7:107 minutes, 10 secondstodo en esta etapa esa etapa es la la que me da más trabajo realmente Les comento ahora tengo bastantes alumnos
+7:187 minutes, 18 secondsque están haciendo sus tesis por ejemplo con modelos predictivos aplicándolo en Casos de uso real reales en caías con
+7:267 minutes, 26 secondsdatos de empresas y realmente Les comento que el punto de trabajo lo fuerte está ahí donde está esa Flecha
+7:347 minutes, 34 secondsroja Aquí está lo fuerte hacer todo este análisis previo para el modelado predictivo pero no digo que esto de aquí
+7:417 minutes, 41 secondstambién sea fácil aquí tampoco aquí hay que tomar bastantes en cuenta bastantes cuestiones bastantes puntos que no se
+7:507 minutes, 50 secondstrata sol Como dijo su compañero Bueno hay librerías no que hacen bastantes cosas pero hay que entender lo que hacemos para poder interpretar los
+7:587 minutes, 58 secondsresultados si no luego tenem los problemas entonces todo es un proceso y qué es lo que une a a este proceso si yo
+8:068 minutes, 6 secondsquiero pasar de la etapa no del análisis descriptivo mi dashboard dasb mi despliegue lo que une es el punto se que
+8:148 minutes, 14 secondses la ingeniería de características fature engineering este punto es lo que nos une aquí donde ustedes van a ver
+8:218 minutes, 21 secondsbalance de datos selección de variables reducción de dimensionalidad técnicas de encoding técnicas de escalamiento
+8:298 minutes, 29 secondsetcétera aquí es donde ustedes van a ver entonces estimados este punto que ustedes están observando aquí es que es lo que va a unir ambos
+8:378 minutes, 37 secondsdirectamente muy bien Es es un punto importante no sé si hasta aquí Tienen alguna consulta de repente sus colegas quieren agregar algo creo que ya
+8:468 minutes, 46 secondsentramos todos en contexto ahora creo que está un poquito más claro todo el proceso igual tengo que explicarlo paso por paso pero es bueno sobre todo para
+8:548 minutes, 54 secondslos que están recién iniciando que entiendan que hay todo un proceso má directamente todo claro verdad Muy bien todo claro como sabe entonces hay dos
+9:039 minutes, 3 secondspuntos de llegada o llego a todo un análisis descriptivo con un dashboard de despliegue o yo luego procedo para
+9:119 minutes, 11 secondsgenerar un modelo predictivo pero a través del paso se que va a ser ingeniería de características donde voy a tener que seguir transformando mi dato
+9:199 minutes, 19 secondslisto muy bien Ahora qué es lo que hay aquí no porque este se leda realment esto se leeda el análisis prator de
+9:279 minutes, 27 secondsdatos qué es lo que hay aquí bueno tenemos que aprender un poquito a entender nuestras variables directamente no voy a centrarme mucho ya en los
+9:359 minutes, 35 secondsprocesos estadísticos porque ustedes ya lo vieron y dependiendo también del estudio que ustedes hacen cuando ustedes quieren hacer el estudio de ciertas variables aquí va a entrar más no la
+9:449 minutes, 44 secondsparte full estadística pero en este caso yo lo que quiero es definir una variable objetivo salvo que esté con temas de
+9:539 minutes, 53 secondsclasing que ya es otro asunto muy aparte Pero eso lo van a ver en Machine learning Por el momento no no hay que complicarnos mucho la vida muy bien
+10:0110 minutes, 1 secondentonces yo lo que voy a tener aquí es cierta información y vamos a asumir que yo apunto siempre a llegar a un modelo
+10:0810 minutes, 8 secondspredictivo vamos con esa Asunción que yo quiero llegar hasta acá Entonces el primer paso estimados es comenzar a analizar nuestros datos como
+10:1710 minutes, 17 secondsles dije yo estoy por acá va a haber un análisis obviamente donde voy a tener que analizar y ver qué tipo de variables
+10:2510 minutes, 25 secondsposeo que son por ejemplo numéricas qué variables son del tipo categóricas Direct amente y luego y luego voy a tener que ver que estudiar Cómo se están
+10:3310 minutes, 33 secondscomportando esas variables este categóricas y esas numéricas Ahí es donde viene el análisis exploratorio puedo hacer análisis por ejemplo de
+10:4210 minutes, 42 secondsdistribución Qué tipo de distribución tienen las variables numéricas puedo contabilizar no Cómo está la distribución de categorías de tipo de categoría por por
+10:5110 minutes, 51 secondscada variable tipo categórica etc etcétera etcétera entonces puedo ver y si yo tengo una variable objetivo puedo hacer un análisis bivariante con un
+10:5910 minutes, 59 secondscruce entre variables para ver si es que existe cierta diferencia o si es que existe cierta variable que va a aportar
+11:0611 minutes, 6 secondsuna diferenciación Al momento de hacer mi modelo predictivo vamos a ver todo eso directamente Pero dentro de todo eso
+11:1411 minutes, 14 secondsestimados hay dos puntos que son bien clave y bien cruciales para que ustedes los trabajen bien El primero es el paso
+11:2211 minutes, 22 secondscuatro detección de datos faltantes o datos perdidos y luego es el paso cinco detección deers esto dos pasos son los
+11:3011 minutes, 30 secondsmás cruciales aquí los que tenemos que analizar el resto es más tranquilo de hacer pero estos dos pasos son los que
+11:3711 minutes, 37 secondsmás nos da trabajo directamente muy ap parte de todo el resto entonces estimados el objetivo no va a ser
+11:4511 minutes, 45 secondsconcentrarnos en El Paso cuatro paso 5 y luego incluimos ya todo el paso 1 2 y TR y posteriormente vamos a pasar al paso seis donde está la ingeniería de
+11:5311 minutes, 53 secondscaracterísticas y todo el contenido que resta Y de esa forma estarán preparados para venir y ver el curso de Machine learning que es el siguiente
+12:0212 minutes, 2 secondsdirectamente con los modelos entrenados y ver los efectos que genera cada uno de los pasos que yo hice aquí Les comento
+12:1012 minutes, 10 secondslo que ustedes hagan por acá la estrategia que ustedes apliquen aquí repercute directamente en el rendimiento
+12:1812 minutes, 18 secondsdel modelo que ustedes van a trabajar les voy comentando repercute directamente afecta el rendimiento puedo tener por aquí
+12:2612 minutes, 26 secondsestrategia a o estrategia B Les comento Y eso puede generar de repente que aquí tenga 90 de performance o 95 de
+12:3412 minutes, 34 secondsperformance Les comento entonces todo eso en el curso de Machine learning ustedes van a saber cómo trabajarlo a
+12:4212 minutes, 42 secondstravés de un de un proceso correcto para que puedan definir No qué es lo que me ayudó Qué es lo que no me ayudó y
+12:5012 minutes, 50 secondstambién todo va a depender estimados de la base de datos que ustedes
+12:5612 minutes, 56 seconds[Música]
+12:5812 minutes, 58 secondsutilicen i

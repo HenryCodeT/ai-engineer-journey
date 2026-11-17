@@ -1,0 +1,147 @@
+# Python para Ciencia de Datos - M2-3 - Outliers en R
+# (título en el video: Python para Ciencia de Datos - Modulo 2 - Outliers en R)
+# Nota: pese al título, el contenido es la continuación de la clase 07 en Python (librería PyOD).
+
+0:022 seconds[Música]
+0:066 secondsmuy bien cuando ya hayers a múltiples dimensiones o poras del destino Elim de forma dimensional puedo haber
+0:1414 secondsgenerado a nivel mion Entonces qué Les recomiendo hacer un tratamiento también dejarlo en manos de
+0:2222 secondsun algoritmo tipo macher O sea al final estos casos tanto de análisis
+0:3232 secondsdeers valores valores este faltantes como el caso de oers al final se reducen
+0:3939 secondstambién a ser resueltos con tareas que tienen que ver con modelos de Machine de aprendizaje automátic o algoritmos de
+0:4646 secondsclasificación en este caso Entonces por ejemplo cómo es que funciona p funciona a través de algoritmos de clasificación
+0:5454 secondsde forma general para que ustedes lo entiend lo que va a hacer esta librería antes esa librería se hacía manualmente pero ahora ya está todo encapsulado eso
+1:031 minute, 3 secondses lo bueno lo que va a hacer es algoritmo de clasificación binaria es decir cada punto cada registro porque
+1:111 minute, 11 secondsRecuerden que ustedes tienen que cada registro que ustedes tienen en su dataset es un punto Solo que un punto en una dimensión n si tienen 20 variables
+1:191 minute, 19 secondses un punto en la dimensión 20 no r la 20 entonces lo que van a hacer es que cada punto se ha clasificado en Dos
+1:251 minute, 25 secondsclases en la clase in layer y la clase eso es lo que va a hacer estos algoritmos que dan solución al problema
+1:351 minute, 35 secondsvamos a tratar el problema de datos atípicos como un problema de clasificación binaria detectar in layers y up layers directamente có hay
+1:431 minute, 43 secondsdiferentes algoritmos diferentes formas de hacerlo y normalmente eran algoritmos así separados pero ahora todas están
+1:511 minute, 51 secondsencapsuladas aquí en p bueno la gran mayoría de ellas y que funciona muy bien en la práctica pero también dependiendo de cómo funciona el algoritmo ustedes
+1:591 minute, 59 secondsvan a tener que ver el impacto tienen que ver que eh Cuál algoritmo funciona mejor o genera un mejor desempeño para
+2:072 minutes, 7 secondssus para su caso de uso porque no no va a funcionar siempre el mismo algoritmo okay Entonces tenemos esta clasificación
+2:152 minutes, 15 secondsin layer yers por acá muy bien si quieren leer un poquito más sobre esta librería no y los agos que contiene un poquito la explicación está aquí el
+2:232 minutes, 23 secondsenlace directamente hacen clic aquí y se les va a abrir la documentación directamente de de p p y todos los
+2:332 minutes, 33 secondsalgoritmos que utilizan son bastantes sus algoritmos noer detection por ejemplo basado mir modelo de aprendizaje
+2:412 minutes, 41 secondsagregar aprendizaje No supervisado semis supervisado y supervisado ya tenemos bastantes Y tenemos los famosos iners versus layers directamente También
+2:512 minutes, 51 secondstenemos son algoritmos que se entrenan incluso a ver ya se actualizó esta esta está bastante bonita muy bien
+3:003 minutesejemplo TR se puede entrenar también SW es otro algoritmo ejemplos directamente hay
+3:083 minutes, 8 secondsmucha información de cómo ustedes pueden utilizarla pero Vamos regresando directamente aquí a la documentación Para que vean un poquito losos que tiene
+3:163 minutes, 16 secondsen este caso entre los losismos más famosos que tiene justamente son knn es decir analiza vindos y los vesinos que
+3:253 minutes, 25 secondsestán más próximos a cierto punto son considerados iners directamente y puntitos más alejados que están muy aislados muy lejanos Son son
+3:343 minutes, 34 secondscategorizados como opers K por ejemplo es un algoritmo bastante básico pero poderoso Les comento
+3:403 minutes, 40 secondsno Y tiene tres tipos de de distancia distancia de vecino más como la puntación de valor atípico el promedio
+3:473 minutes, 47 secondsde todos los vecinos por grupo y la mediana de distancia de cada vecinos como la puntación de valor atípico no y tiene muchos algoritmos tiene knn tiene
+3:563 minutes, 56 secondsabod tiene otros ahora bien esta librería no es una librería que sea propia de python hay
+4:044 minutes, 4 secondsque instalarla Entonces ustedes pueden decir inst p Y de forma rápida se les va a instalar la librería ya está instalada
+4:134 minutes, 13 secondsdirectamente y cómo funciona profesor bueno para empezar voy a hacer una copia del dataframe 2 que es mi dataframe que
+4:204 minutes, 20 secondstengo hasta el momento Aquí está mir retiro la columna inl porque esta
+4:274 minutes, 27 secondscolumna es mi var objetivo y ya tengo por acá no 506 filas por 13 columnas directamente la forma de utilizarlo es
+4:354 minutes, 35 secondsbastante sencilla miren no es complicada Aquí está from models knn import knn en este caso
+4:434 minutes, 43 secondsestoy llamando uno de todos los algoritmos que tiene que es un K importo pes por aquí y simplemente lo que le voy a decir lo siguiente en la línea 3
+4:524 minutes, 52 secondsgenero una instancia Porque estos programación orientado objetos una instancia de este modelo knn y aquí hay una variable que es muy importante
+5:015 minutes, 1 secondcontamination igual a 0.2 Qué significa este contamination este es muy importante para ustedes como
+5:085 minutes, 8 secondsles dije vieron el caso inicial eliminé el 40% de los datos Y eso que me faltó analizar a nivel multivariante Cuántos
+5:165 minutes, 16 secondsdatos voy a eliminar Entonces qué es lo que sucede acá estimados ustedes le dicen no compromete al a lo mucho el 20%
+5:255 minutes, 25 secondsde la base de datos no elimines más que eso de acuerdo y elimínate los op layers
+5:325 minutes, 32 secondsque son los más perjudiciales los que están más alejados de todo el grupo de puntos los que te van a dar más error
+5:405 minutes, 40 secondsrecuerd la Gráfica inicial los puntos alejados hacían que toda la Gráfica de regresión se vaya hacia arriba Entonces para yo le digo compromete hasta el 20%
+5:495 minutes, 49 secondsde puntos pero elimíname los puntos que en teoría están más lejos de la de el espacio de características de los
+5:565 minutes, 56 secondspuntos entonces con este 0.2 ustedes le di dicen eso puede ser que haya poc que haya pocos offers por lo tanto les
+6:046 minutes, 4 secondseliminaría solamente el 10% pero el máximo el tope es el 20% de casos de de datos Entonces eso es lo que yo digo acá
+6:136 minutes, 13 secondselimíname hasta el 20% como máximo de dataset no comprometas más elimina los más importantes si todos losers suman
+6:216 minutes, 21 secondsmenos del 20% ya los elimina todos luego simplemente llamo fit clf pun fit dft tmp Aplícale eso
+6:306 minutes, 30 secondsy Listo Ya está como knn es un algoritmo iterativo nada más que analiza por vecinos lo hace bastante rápido no se va a demorar mucho realmente aunque también
+6:386 minutes, 38 secondsdepende del tamaño del dat y listo miren Ya lo hice entonces cf fit y una vez que yo tengo d fmp luego le mando a hacer un
+6:486 minutes, 48 secondspredi a d fmp y aquí el pred tiene las predicciones qué puntos son lers qué
+6:556 minutes, 55 secondspuntos son iners directamente aquí cuando le digo por fmp ig 0 la clase iner por eemplo hay
+7:047 minutes, 4 seconds417 puntos que me han quedado y cuántos puntos son obers entonces simplemente clase un 89 puntos han sido considerados
+7:127 minutes, 12 secondscomo obers que comprometen el 20% de dat de forma multidimensional entonces me quedé con
+7:207 minutes, 20 secondsun 80% de datos nada más Pero eliminé los los puntos que estaban mucho más alejados según el algoritmo del
+7:287 minutes, 28 secondscomportamiento normal mal de no de mis puntos sí chicos Disculpe profor una consulta el ese algoritmo Lo
+7:377 minutes, 37 secondsque usa es univariado o o hace la combinación de dos no es multivariado es o sea cada se trabaja con los puntos en
+7:477 minutes, 47 secondsla dimensión original puntos en la dimensión rl n si tú si si tu base de datos tiene 20
+7:547 minutes, 54 secondscolumnas cada registro es un punto en la dimensión 20 entonces los trabaja ya ya un vector cada es un vector es un punto
+8:028 minutes, 2 secondsen el espacio en el espacio directamente entonces ahí aplica creo que es un tensor que TR con tensores que no los
+8:118 minutes, 11 secondstensores son los tensores son un tipo el tipo de dato es para los tensores son para mandarlos a
+8:198 minutes, 19 secondsGP es es otra cosa son vectores de características es un punto nada más en el espacio un punto que puede estar en
+8:258 minutes, 25 secondsdimensión un dimensión do dimensión tensor es es otro concepto que tiene que ver con más que todo con py no tensor
+8:348 minutes, 34 secondsque trabajan con ese concepto para mandarlo a la gpu Muy bien Entonces miren perfecto 4
+8:418 minutes, 41 seconds17 por 13 pero ojo cada algoritmo tiene un comportamiento diferente Okay cada
+8:498 minutes, 49 secondsalgoritmo un punto dependiendo del algoritmo puede ser categorizado como in layer como layer no siempre va a ser el
+8:568 minutes, 56 secondsmismo punto No siempre va a quedar como in layer o como layer depende del algoritmo aquí se lo muestro aquí se los
+9:049 minutes, 4 secondsmuestro por ejemplo que hay otro otro ejempo ya para finalizar la clase miren aquí tengo un puntos generado de forma
+9:129 minutes, 12 secondsasí aleatoria no de forma eh sintética un puntos sintéticos pero ustedes pueden
+9:189 minutes, 18 secondsver que hay layers Y layers entonces por ejemplo yo puedo generar dos en un diccionario puedo decir Quiero el abod
+9:279 minutes, 27 secondsque es un modelo y quiero el knn que es otro algoritmo Y le doy la misma fracción de contaminación por ejemplo comprométete el 10% del dat Okay
+9:369 minutes, 36 secondsentonces yo mando por acá a ejecutar este este Script no este Codigo para muchos detalles lo que más me importa es
+9:449 minutes, 44 secondsque ustedes vean la salida y el comportamiento de cada algoritmo eso más que todo me importa aquí miren
+9:509 minutes, 50 secondseler por ejemplo ha detectado 19 puntos el AB d y el otro deado 11 y observen la salida miren por ejemplo este de aquí es
+10:0010 minutesel abod y este de aquí un poquito más y este de aquí es el knn como les dije dependiendo de cada algoritmo un punto
+10:0910 minutes, 9 secondspuede ser considerado in layer y otro up layer aquí do in layer son los blancos y los negros son losers se dan cuenta
+10:1810 minutes, 18 secondsentonces cada algoritmo tiene un comportamiento diferente aquí por ejemplo vamos a ver por acá miren
+10:2510 minutes, 25 secondseh En este caso Creo que tod creo que todos coinciden no no parece que todos coinciden pareciese que todos pero miren en este caso la forma de cómo ha hecho
+10:3410 minutes, 34 secondslas agrupaciones en los cada algoritmo es diferente CN trabaja generando grupos por vecindad AB por ejemplo tiene otro
+10:4310 minutes, 43 secondscomportamiento Entonces los puntos cambian donde se ve mejor es acá Aquí hay un dataset diferente ustedes pueden observar por
+10:5210 minutes, 52 secondsacá miren este tipo de de cruce de dos variables por ejemplo en entonces aquí
+10:5910 minutes, 59 secondses donde se ve realmente el desempeño de los algoritmos creo que están las salidas aquí están voy voy a hacer un poquito más pequeña la Gráfica para que lo vean
+11:0811 minutes, 8 secondsmiren por ejemplo este es el abod en esa gráfica por ejemplo ustedes pueden observar que Hay ciertos puntos como
+11:1511 minutes, 15 secondseste estos puntitos de acá que son up lers y por acá miren hay otros puntitos voy a marcar con otro con color verde
+11:2211 minutes, 22 secondspor acá miren hay otros puntitos que sí son up layer y también otros que son in layers directamente pero por ejemplo otro algoritmo que no utilicé arriba el
+11:3111 minutes, 31 secondscbl of miren cómo trabaja si se dan cuenta miren este grupo de puntos Ahora sí lo marco con rojo este grupo de
+11:3911 minutes, 39 secondspuntos de acá si ustedes observan anteriormente eran in layers pero ahora dependiendo del algoritmo se han vuelto
+11:4611 minutes, 46 secondsPlayers observen esa región se dan cuenta entonces dependiendo del algoritmo que se utilice ciertos puntos van a ser
+11:5511 minutes, 55 secondscategorizados como iners y otros como Players pero todos comprometidos Endo cierto porcentaje del dataset entonces cada algoritmo tiene su
+12:0312 minutes, 3 secondsforma de funcionar y su forma de trabajar y y Esto va a impactar directamente en su dataset entonces
+12:1112 minutes, 11 secondstambién cuando ustedes escojan un método de imputación escojan un método un método para eliminación deers
+12:2012 minutes, 20 secondscomprometiendo cierto porcentaje del dataset el rendimiento del modelo predictivo sea para rión clasificación o
+12:2712 minutes, 27 secondsclasing va a variar Entonces ustedes tienen que hacer ahí un estudio todo un protocolo de experimentación para ver cuál sería Cuáles serían los mejores
+12:3512 minutes, 35 secondsmétodos las mejores estrategias para que su modelo funcione mejor entonces esa es la la lección del
+12:4212 minutes, 42 secondsdía directamente el tratamiento lers no es algo sencillo como digo no es nada sencillo
+12:5112 minutes, 51 secondspero hay que entender cu gráfica Disculpa samel la inicial profe me quedé ahí muy rápido pasó
+13:0013 minutesAh entiendo que usó dos algoritmos no para eliminación deers dos un algoritmo a un algoritmo B y es es una comparación
+13:0713 minutes, 7 secondsdel resultado de ambas correcto Exacto correcto Así es así es nada más o sea los blancos son iners y los negros son
+13:1613 minutes, 16 secondsopers en este caso Pero si te das cuenta la región sombreada el la naranja que sería o la región
+13:2413 minutes, 24 secondssombreada sería eh son las regiones o agrupaciones que ha ido generando cada algoritmo dependiendo de cómo funciona
+13:3213 minutes, 32 secondsdirectamente el knn debido a que es un knn directamente y comienza a agrupar por grupos te genera una región grandota
+13:3913 minutes, 39 secondssi te das cuenta pero el abod no el abod por ejemplo te ha generado tres tres regiones y es muy globular que digamos
+13:4713 minutes, 47 secondspor ejemplo acá te genera una región y toda esta región Gigante se ha expandido Mientras que el knn es un poquito más más regular ahí se pue decir que el knn
+13:5613 minutes, 56 secondses más preciso para esos datos Porque como jto no no tenemos que verlo en el
+14:0314 minutes, 3 secondsrendimiento del modelo al final Exacto al final aquí no podemos saber nada Igual pasa con estas gráficas aquí cada
+14:1114 minutes, 11 secondsalgoritmo por ejemplo mira este algoritmo te dice que hay un layer Sí pero el acá te dice que hay más lers y el acá te dice que hay lers similares
+14:2014 minutes, 20 secondspero que todos están para un lado y acá te dice que todos están distribuidos hacia arriba y hacia abajo por ejemplo estos puntitos de acá también te dice que son lers
+14:2914 minutes, 29 secondsentonces depend mucho del algoritmo en esa línea ha algún tipo de algoritmo o función o método que me
+14:3814 minutes, 38 secondspermita medir de todos lo que yo puedo usar de todos los métodos que puedo usar me diga Oy este probablemente sea mejor
+14:4614 minutes, 46 secondscomo hay para otras cosas por ejemplo y no tener que llegar el final no O esperar hasta el final tú lo que tienes que hacer es lo que lo que hay es una
+14:5414 minutes, 54 secondslibrería que te encapsula todo se llama pipeline se llama pipeline colocas en un pipeline
+15:0315 minutes, 3 secondstodo todos los métodos los usas todos cada un tiene su resultad pero te va a demorar horas directamente Entonces se
+15:1015 minutes, 10 secondsrecomienda hacer esto con pipeline se recomienda hacerlo pero por partes primero analizas por partes y te quedas
+15:1815 minutes, 18 secondscon un Porque si tú lo colocas todo es es un Cross Cross Jo es una multiplicación de
+15:2515 minutes, 25 secondstodoa c algoritmos aquí 5 aquí 5 por 5 25 parámetros de búsqueda más todo lo demás
+15:3215 minutes, 32 secondste sale Pero y más más 10000 registros que tenga de datos te sale para más de un día
+15:3915 minutes, 39 secondsentren me conviene ir al final mejor no ir al resultado uno por uno hacer por partes Normalmente se hace por partes tú
+15:4715 minutes, 47 secondsprimero haces un entrenamiento para definir Cuál sería la mejor estrategia sin nada de calibración de parámetros directamente Cuál es la mejor estrategia
+15:5515 minutes, 55 secondsque imp el modelo que todo eso lo haces con los datos de entrenamiento lo haces todo primero cuál el mejor método de
+16:0416 minutes, 4 secondsimputación el mejor método de detección de que impacten el rendimiento identificas esos dos y a esos dos lo V vas a meter recién en el pipeline
+16:1116 minutes, 11 secondsdirectamente Luego pasamos Cuál es el mejor método de encoding también podemos identificarlo y y los mejores que que encontremos lo colocamos en el cód en el
+16:2016 minutes, 20 secondspipeline y ahora sí la parte de los modelos Qué modelos son mejores ahí si eso lo puedes programar en el pipeline directamente con los anteriores que ya
+16:2816 minutes, 28 secondstenes definidos y ahí como que te bajas un poquito el tiempo de entrenamiento porque si no te demora días porque es un Cross es
+16:3616 minutes, 36 secondsterrible y sobre todo cuando trabajas con los modelos más avanzados que que son labm y xg bueno especialmente la gbm que le gana
+16:4516 minutes, 45 secondsxg te demoras un montón calibrando parámetros Y eso que todavía no ves estos modelos entonces pero vamos a ver por
+16:5316 minutes, 53 secondspartes No te preocupes por partes ahora ahora no les puedo decir Qué modelo es mejor porque eso tenemos que verlo va a depender mucho de nuestros de nuestros
+17:0117 minutes, 1 seconddatos que al final cada registro es un puntito Y cómo está distribuido su espacio de características entonces va a depender mucho de eso del modelo
+17:0917 minutes, 9 secondslisto Gracias gracias este a todos listo el material lo tienen acá el día viernes hacemos un
+17:1617 minutes, 16 secondsejercicio comparando el rendimiento de estos modelos para un caso de uso eso sería todo por el día de hoy Muchas gracias por haber estado aquí en clase
+17:2517 minutes, 25 seconds[Música]
+17:3017 minutes, 30 secondsque ti que parce calor entendía que son los que se va
+17:3817 minutes, 38 secondsquedar blanquitos que blancos son que se van quedar son los blancos
+17:4517 minutes, 45 secondsporque hay dos clases clase y clase Claro que est cas
+17:5217 minutes, 52 secondsdentro rojo ro este en cl usted ha hablado de pipeline
+18:0018 minutesno que prueba diferentes modelos de una eso ese proceso se hace de manera local o es en la nube este proceso no el
+18:0918 minutes, 9 secondsproceso de usted habla de una librería llamado pipeline que digamos hace local o sea normalmente cuando tú quieres hacer un despliegue y los datos
+18:1818 minutes, 18 secondstienen preprocesamiento tú te puedes hacer con el pipeline o sea metes todo en el pipeline Y ese pipeline es lo que tú te llevas al despliegue quies Ah
+18:2618 minutes, 26 secondsclaro en mi computadora normal en todo lo que están haciendo aquí lo pueden hacer en local o se no necesario que ha en la nube te instal nada más las
+18:3418 minutes, 34 secondslibrerías y pipeline también es otra librería es tenía esa duda Ya Muchas gracias
+18:4118 minutes, 41 secondsahora si ustedes tienen muchísimos datos verdad me olvid ya voy a cerrar con esto pero eso lo vamos a verch hay un puedo utizar polars no sé
+18:5018 minutes, 50 secondssi utilizan alguno de ustedes polars que es es un pandas pero con esteroides directamente no sé si han
+18:5718 minutes, 57 secondsutilizado recomiendo que uen si tienen muchísima
+19:0419 minutes, 4 secondsData es así rapidísimo

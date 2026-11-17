@@ -1,0 +1,64 @@
+# ── Python ─────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# ── Entornos virtuales ─────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Tests y calidad ────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ── Jupyter ────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Datos (se generan con `make datos`) ────────────
+data/raw/
+data/processed/
+*.parquet
+
+# ── Modelos y artefactos de entrenamiento (N2, N3, cursos) ──
+models/
+checkpoints/
+*.pkl
+*.joblib
+*.h5
+*.keras
+*.pt
+*.pth
+*.onnx
+*.safetensors
+mlruns/
+wandb/
+lightning_logs/
+runs/
+
+# ── LLMs / RAG (cursos 2–4) ────────────────────────
+chroma_db/
+.chroma/
+*.faiss
+vectorstore/
+.cache/
+
+# ── Secretos (API keys de OpenAI, Anthropic, etc.) ─
+.env
+.env.*
+!.env.example
+
+# ── Claude Code (config personal local) ────────────
+.claude/settings.local.json
+
+# ── Editores y sistema operativo ───────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

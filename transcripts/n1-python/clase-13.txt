@@ -1,0 +1,178 @@
+# Python para Ciencia de Datos - M3-1 - Metodo de selección de Variables
+# (título en el video: Python para Ciencia de Datos - Modulo 3 - Metodo de seleccion de Variables)
+
+0:022 seconds[Música]
+0:066 secondsOkay de qué va Entonces estimados el método de selección de variables ocurre lo siguiente no yo tengo mis datos en una
+0:1515 secondsdimensionalidad r la n Por ejemp qué significa esto como ya ustedes vieron imagínense que est es una muestra un
+0:2323 secondsEntonces yo tengo una columna a una columna B una columna c una columna d al final estimados cada una de estas columnas me representa una dimensión de
+0:3232 secondseste vector de características porque ya les dije que esto de aquí al final M1 es un puntito No mi muestra se representa como un punto en el espacio de
+0:4040 secondscaracterísticas Entonces tenemos que ver perfectamente bien este funcionamiento no cómo es que esto funciona realmente
+0:4848 secondsen la práctica hay que analizar bastante bien este punto y directamente qué es lo que ocurre ocurre lo que habíamos estado
+0:5656 secondsconversando con sus colegas no a veces ocurre que la dimension es tan elevada que el modelo estimado se vuelve
+1:031 minute, 3 secondscomplejo tener una dimensión bastante elevada genera que el modelo sea más difícil entrenar o sea sea difícil para que el modelo converja
+1:111 minute, 11 secondsy encuentre un si estamos en tareas de regresión encuentre un modelo de ajuste no de puntos si estamos en una tarea de
+1:191 minute, 19 secondsseparación encuentre un modelo no de separación de puntos entonces Mientras más alta la dimensión más difícil estimados es que
+1:281 minute, 28 secondsconsigamos ajustar los puntos a un hiperplano o separar los puntos directamente no con a través de un
+1:341 minute, 34 secondshiperplano Entonces estos esto de aquí genera que se busquen maneras realmente estimados de ver cómo yo puedo
+1:431 minute, 43 secondshacer para evitar este problema y aquí es donde viene el famoso tema de reducción de dimensionalidad o selección
+1:501 minute, 50 secondsde variables Mejor dicho No no es lo mismo vamos con lo que es selección de características relevantes o selección
+1:571 minute, 57 secondsde variables más predominantes a partir de ahí nace estimados este tema selección de variables de acuerdo a partir de aquí
+2:072 minutes, 7 secondseste tema que es muy pero muy importante muy bien Por qué Porque cuando uno
+2:132 minutes, 13 secondstrabaja y cuando uno se pone a analizar nuestra información nos vamos a dar cuenta que
+2:212 minutes, 21 secondsrealmente yo tengo r la n pero no necesariamente estim las n variables aportan to información
+2:302 minutes, 30 secondsnecesaria puede ser que de repente de estas n variables solamente cuatro o cinco sean las que más aportan la
+2:392 minutes, 39 secondsinformación para poder caracterizar a mi variable objetivo y sea para clasificación o sea para
+2:472 minutes, 47 secondsregresión entonces puede ser que realmente no necesites trabajar con las 20 variables un punto muy
+2:532 minutes, 53 secondsimportante no en estos casos Aquí está es poder trabajar
+3:013 minutes, 1 seconddirectamente ya y con no con todas las 20 variables imaginemos que yo tengo un r la 20 sino trabajar con un r de
+3:083 minutes, 8 secondsrepente a la 8 un r a la 10 si ustedes se dan cuenta Entonces eso me da más facilidad y me permite Me permite por
+3:173 minutes, 17 secondsejemplo tener un modelo menos complejo y por lo tanto que generalice un poquito más un poquito mejor realmente Entonces
+3:263 minutes, 26 secondsvamos iniciando con ello directamente por acá muy bien para empezar voy a
+3:323 minutes, 32 secondsimportar todas lasas que necesito eh Voy a instalar algunas librerías que están por
+3:403 minutes, 40 secondsacá unito creo que estoy abriendo el archivo equivocado este disculp Este era el
+3:493 minutes, 49 secondsarchivo de acuerdo y este directamente No aquí justo había hecho los hecho los
+3:573 minutes, 57 secondspuntos ya Y entonces voy a vamos a ver muchas razones realmente uno ustedes
+4:044 minutes, 4 secondsnecesitan mejorar la precisión del modelo con el que van a trabajar reducir el sobreajuste y permitir que el algoritmo de aprendizaje
+4:124 minutes, 12 secondsentrene mucho más rápido y obviamente como les dije reduzca su complejidad hace un modelo más fácil para poder
+4:194 minutes, 19 secondsinterpretarlo y voy a importar por aquí las librerías que necesito pandas
+4:274 minutes, 27 secondsSplit rier regresor logístico por si acaso y una AC score no directamente entonces
+4:344 minutes, 34 secondsimporto por acá mis librerías y a continuación voy a cargar mi modelito Solo que el modelo yo lo tengo en mi
+4:414 minutes, 41 secondsgithub para que no haya problemas Bueno el dataset Disculpen lo tengo en mi gif voy
+4:484 minutes, 48 secondsa voy a abrirlo de aquí aquí tengo varios datasets y vamos a trabajar con un dataset bastante
+4:564 minutes, 56 secondsbonito cuya fuente original está en kw no escogí este dataset que está bastante interesante Voy a
+5:025 minutes, 2 secondsescoger voy abrir este dataset de acá para poder trabajarlo control c voy a actualizar
+5:115 minutes, 11 secondsaquí y ya está ya tengo el datos De qué trata el caso de uso Les explico un poquito para que entren en contexto no
+5:185 minutes, 18 secondsel el dataset es acerca de una empresa no que está iniciando su compañía de dispositivos móviles y ellos lo que
+5:265 minutes, 26 secondsquieren hacer no es por ejemplo competir con compañía grandes por ejemplo Apple Samsung etcétera no entonces lo que
+5:345 minutes, 34 secondsellos están pretendiendo en general es estimar los precios de sus dispositivos móviles No pero en función de ciertas
+5:435 minutes, 43 secondscaracterísticas no como la la memoria r la memoria RAM que posee la memoria interna de almacenamiento la el
+5:505 minutes, 50 secondsprocesador que posee etcétera etcétera no ciertas particularidades ahora bien por el momento ellos no están estimando
+5:585 minutes, 58 secondsdirectamente no van a estimar directamente Les comento lo que viene a ser el precio en
+6:056 minutes, 5 secondsSí sio ellos han decidido categorizar por niveles No si no me equivoco tienen cuatro niveles de precio 0 1 dos y 3
+6:136 minutes, 13 secondstienen cuatro niveles de precio Ah No te preocupes este Eduardo no es necesario
+6:206 minutes, 20 secondsque ya coloquen este enlace es directo tú lo ejecutas nada más y el archivo se baja le he copiado directamente de mi
+6:296 minutes, 29 secondssolamente ejecutas este Abre abre el colap que está en classroom simplemente ejecutas esta celda y esto lo va a leer directamente de mi no es necesario que
+6:376 minutes, 37 secondslo que lo estés bajando ya ya esto de acá se actualiza de forma automática sí no vas a tener ningún problema muy bien
+6:456 minutes, 45 secondsentonces no vo a tener ningún problem a un archivo local Ah ya lo actualicé vuelve a abrirlo nuevamente Eduardo por
+6:536 minutes, 53 secondsfavor actualízalo acá Así como estoy haciendo y te va a aparecer lo acabo de actualizar ahora
+7:007 minutesa ver Sigue apareciendo o ya no ya no debería aparecer porque esto se actualiza en vivo no todas las
+7:087 minutes, 8 secondsmodificaciones que yo le hago a este archivo ustedes deberían tenerlo sin ningún problema A ver me confirmas
+7:187 minutes, 18 secondsEduardo a ver sí Ah perfecto muy bien Sí muy bien todas las actualizaciones que yo haga se
+7:277 minutes, 27 secondsvan se van a grabar así que no se estén preocupando por eso muy bien entonces estimados de eso trata la empresa quiere ver no cómo categorizar sus productos no
+7:367 minutes, 36 secondssus dispositivos móviles en función función de cuatro niveles de precio no empezando con el nivel cero nivel 1 nivel do y nivel 3 y tienen
+7:457 minutes, 45 secondsmuchos muchos parámetros muchas variables No desde no el el poder de la batería no í es pantalla azul no lo que
+7:537 minutes, 53 secondses velocidad de reloj no si es un si es un dispositivo con doble Dual doble chip memoria interna etcétera etcétera número
+8:028 minutes, 2 secondsnúcleos que es de su procesador entonces estimados con todo esto de aquí ellos definen un Rango de precios como ustedes
+8:118 minutes, 11 secondspueden observar por acá vamos a ver cómo nos va muy bien Entonces ejecuto por acá Aquí escribo data.to info y me doy
+8:208 minutes, 20 secondscuenta bueno para este caso de uso que no tengo muchos problemas con variables tipo categóricas al parecer tengo todas
+8:278 minutes, 27 secondslas variables numéricas en este caso entonces y no hay ningún valor nulo Entonces en este caso no me voy a concentrar mucho en los datos de
+8:348 minutes, 34 secondsimputación de datos tampoco no vamos a ver Players ya hemos visto varios ejemplos ustedes si gustan luego pueden ir mejorando los resultados
+8:428 minutes, 42 secondsdirectamente y pueden agregarle más cosas lo que hemos estado viendo no durante las clases Lo importante es siempre cambiar de de dataset para que
+8:518 minutes, 51 secondsustedes vean un poco más la variabilidad muy bien entonces tengo 20 variables y la variable 20 Bueno tengo 21 variables
+8:598 minutes, 59 secondsrealmente no porque comienz en cero y acabo en 20 pero pero realmente la última variable Este es mi y no Rango de
+9:079 minutes, 7 secondsprecio y lo de acá son mi x mis predictores vamos Empezando por este punto principal mi x y mi y muy bien
+9:169 minutes, 16 secondscontinuemos por acá entonces Bueno vamos a trabajar sin escalar los datos vamos a concentrarnos
+9:239 minutes, 23 secondsnada más en las variables que tenemos para ver cómo cómo nos va directamente Entonces por acá no le he colocado el escalador ustedes también ya lo pueden
+9:329 minutes, 32 secondsutilizar hemos visto esta parte vamos a analizar un poquito cómo nos van los resultados ya entonces imaginemos que de
+9:389 minutes, 38 secondsX yo le extraigo el rango de precio que justamente es mi predictor Entonces no lo necesito para x y en y extraigo el
+9:469 minutes, 46 secondsrango de precios luego a continuación tengo el nombre de las columnas y finalmente hago una división de datos en
+9:539 minutes, 53 secondstrain y test para esta ocasión esto estoy utilizando el 20 por para
+10:0010 minutesentrenamiento una un stratify igual a y para que para decirle que no sea tan aleatorio este TR split sino que trate
+10:1010 minutes, 10 secondsde forma proporcionada de extraer de cada categoría cierta cantidad de muestras y no dejarlo tan aleatorio de acuerdo eso es lo que les estoy diciendo
+10:1710 minutes, 17 secondsaquí estimados con el stratify Para que no haya ningún problema de acuerdo una aclaración sería así miren
+10:3210 minutes, 32 secondsimaginemos que yo tengo por ejemplo esta cantidad de muestras clase cer clase 1 clase dos y
+10:3910 minutes, 39 secondsclase 3 para que entiendan entonces lo que estoy haciendo con un 30 split si yo no le colocara este
+10:4710 minutes, 47 secondsstratify simplemente de forma aleatoria estimados en clasificación se puede
+10:5510 minutes, 55 secondshacer este Carlos porque tú tienes muestras de diferente tipo es un poquito más complicado porque tú no tienes una variable tipo continua
+11:0311 minutes, 3 secondseste Carlos disculpa no tienes una variable discreta o categórica dicho
+11:1011 minutes, 10 secondsentonces muy bien entonces en este caso como es una tarea de clasificación porque tengo cuatro niveles nivel 0 1 2
+11:1711 minutes, 17 secondsy 3 si yo no le coloco esto también va a ser la división pero las proporciones en las que va a extraer los datos no va a
+11:2611 minutes, 26 secondsser las mismas acero solamente para aced por acá mucho más miren por acá muchísimo más y por aquí un poquito más
+11:3311 minutes, 33 secondslo hace de forma aleatoria pero si yo quiero tener proporciones equivalentes entonces utilizo el stratify el stratify
+11:4111 minutes, 41 secondsY entonces de esa forma va me va a extraer porciones equivalentes de todo un poquito pero de forma equivalente de esa
+11:4911 minutes, 49 secondsforma garantizo que siempre hay muestras de todas las clases aquí no Y de forma proporcionada al datas a la cantidad de
+11:5711 minutes, 57 secondsdatos que yo tengo Entonces eso es lo que hice por acá con stratify y Random State ig a 1 para que ustedes puedan replicar los resultados en sus
+12:0612 minutes, 6 secondscomputadores Listo ya hice la división de los datos aquí enp unic y ustedes se van a dar
+12:1312 minutes, 13 secondscuenta que directamente por acá ya está ahora sí
+12:2012 minutes, 20 secondsmejor Dónde me quedé acá No aquí ustedes ven que tengo cuatro categorías y ejecuto voy a ejecutar un modelo pero le
+12:2912 minutes, 29 secondsvoy a agregar más cositas Este es un modelo Random Forest es un clasificador por defecto ustedes pueden si gustan cambiar el clasificador no hay problema
+12:3712 minutes, 37 secondspero este así como está no he calibrado nada de hiperparámetros todavía entonces voy a hacer una calibración de
+12:4412 minutes, 44 secondshiperparámetros un poquito mejor de forma directa brusca ya en Machine learning vamos a ver un poquito más
+12:5212 minutes, 52 secondsdetallado esta parte voy a decirle Por ejemplo no quiero que tampoco los árboles internos se queden
+13:0013 minutesmuy se queden muy muy ajustados y que estos árboles crezcan Sin Control entonces voy a colocar una profundidad
+13:0713 minutes, 7 secondsmáxima de 10 voy a decirle que en la cantidad de hojas Max F la cantidad de hojas máximas
+13:1613 minutes, 16 secondsque sea por ejemplo que haya como máximo 20 muestras por hoja para que no se quede tan tan
+13:2613 minutes, 26 secondsabierto este prama y listo miren entonces qué es lo que estoy haciendo aquí estimados estoy haciendo un entrenamiento Me faltó aquí
+13:3313 minutes, 33 secondscolocar entrenando por defecto miren con todas las variables
+13:4013 minutes, 40 secondslas variables de mi modelo no no necesito hacer transformaciones porque todas las variables son numéricas no y tampoco me estoy concentrando mucho en
+13:4813 minutes, 48 secondslas partes de transformación y encoding de las numéricas no bueno escalamiento directamente estoy trabajando con con lo
+13:5613 minutes, 56 secondsque tengo ya todos están en formato numérico entonces solamente me quiero concentrar en el efecto que se genera no con con todas las variables o con una
+14:0414 minutes, 4 secondscantidad seleccionada de variables Okay profundidad máxima 5co máximo de nodos hoja 20 para que entiendan esto un
+14:1314 minutes, 13 secondspoquito les puedo explicar de forma rápida eh un Random Forest classifier es un es
+14:2314 minutes, 23 secondsun modelo que internamente trabaja con muchos árboles de decisión Este es un esto ya es algo muy diferente a un
+14:3114 minutes, 31 secondsmodelo un modelo un modelo tipo vallesano por ejemplo Navy Valles los árboles por ejemplo trabajan
+14:4014 minutes, 40 secondscon una forma bastante curiosa no ellos van a trabajar mediante reglas de asociación entre las variables yo tengo
+14:4814 minutes, 48 secondspor acá mi tablita y y con esta tablita estimados yo puedo generar e puedo
+14:5414 minutes, 54 secondsanalizar cada variable no x1 x2 X3 y por ejemplo para generar un arbolito de decisión yo puedo ir analizando y
+15:0215 minutes, 2 secondsgenerando puntos de corte directamente luego lo vamos a ver con más detalle no se preocup pero en general Este es un un
+15:1015 minutes, 10 secondsárbol de decisión un solo árbol de decisión vamos a colocarle en inglés no Uno mi arbolito uno ya está y lo que qué
+15:1915 minutes, 19 secondses lo que ocurre aquí estimados un solo árbol un árbol de decisión
+15:2715 minutes, 27 secondssolo no es muy fiable que digamos y además los árboles de decisión su problema es que ellos tienden a ser a
+15:3515 minutes, 35 secondssobreajuste rápido ellos caen rápidamente en lo que es sobreajuste entonces por eso hay que podarlos
+15:4415 minutes, 44 secondsdirectamente hay un concepto dentro de los árboles que se llama la profundidad no que que tiene que ver con el crecimiento hacia abajo del árbol Por
+15:5315 minutes, 53 secondsejemplo si ustedes ven hay dos niveles aquí entonces Esta es la profundidad dos yo estoy diciendo que el árbol que cada
+16:0016 minutesárbol que genere tiene máximo una profundidad de cinco Entonces estos árboles pueden que pueden crecer hasta una profundidad de cinco no 1 2 3 cu 5
+16:1116 minutes, 11 secondsno hasta cinco de profundidad máxima no pueden crecer más si ustedes no hacen la poda y control este árbol entonces este
+16:2016 minutes, 20 secondsárbol crece así de forma desproporcionada y se llega a un sobreajuste hay muchas cuestiones que calibrar Solamente les estoy explicando
+16:2816 minutes, 28 secondsalgo Bastante básico para que más o menos tengan una idea de lo que estoy haciendo por AC y Qué significa máximo
+16:3416 minutes, 34 secondsde nodos hoja estos últimos nodos este de acá Este de acá y este de acá no
+16:4116 minutes, 41 secondsCuántos nodos hojas puede tener como máximo el árbol un nodo hoja es aquel punto que ya no que ya no ya no crece
+16:4916 minutes, 49 secondsmás donde finaliza Miren el árbol si se dan cuenta de aquí ya no sale nada aquí tampoco de aquí tampoco miren y de aquí
+16:5716 minutes, 57 secondstampoco no sale nada Entonces le digo máximo tienes que tener 20 nodos hoja y crecer al mucho hasta 20 hay más y par parámetros si pero lo vamos a ver en el
+17:0617 minutes, 6 secondscurso de Machine learning con más cal así que no se preocupe lo hago es una poda bastante básica sencilla no
+17:1317 minutes, 13 secondsrudimentaria pero con fines didácticos vamos a utilizar qué aplico entreno con
+17:1917 minutes, 19 secondsx entreno aquí entreno mi clasificador luego hag una predicción y solamente voy a basarme en laas nada más
+17:2817 minutes, 28 secondshay muchas más métricas y luego hay que entender cada métrica pero en este caso voy a utilizar la métrica que es la cacy Qué significa la cacy es una métrica
+17:3717 minutes, 37 secondsbastante sencilla de entender de cada 100 muestras cuántas se han eh se han clasificado correctamente no por ejemplo
+17:4617 minutes, 46 seconds80 se clasificaron Entonces cuál es la q 80 sobre 100 80% Eso es todo Es decir si yo tengo por
+17:5517 minutes, 55 secondsacá triángulos y por acá tengo x aquí debe haber un error no por ejemplo directamente aquí hay más triángulos
+18:0418 minutes, 4 secondsmiren más triángulos por acá Aquí hay un triangulito más aquí x x x x por ejemplo no entonces estimados este punto de
+18:1218 minutes, 12 secondsseparación dice que de este lado están las x y de este lado están los triángulos pero me doy cuenta que tengo un error por acá y un error por acá Es
+18:2018 minutes, 20 secondsdecir de a ver aquí 1 2 3 4 5 6 7 8 9 10 11 12 de 12 puntos he clasificado
+18:2918 minutes, 29 secondscorrectamente 10 no porque hay dos errores el de aquí y el aquí entonces 10 de 12 no ustedes sacan su métrica por
+18:3818 minutes, 38 secondsacá directamente si se dan cuenta entonces eso es la queur así de todo el total del total de muestras Cuántas
+18:4618 minutes, 46 secondsclasifique correctamente una métrica bastante sencilla no que a veces hay que tener cuidado con ella cuando trabajemos con datos desbalanceados Pero eso lo
+18:5418 minutes, 54 secondsvamos a ver luego muy bien entonces estimados haciendo todo este entrenamiento básico llegó a a una curac de 83
+19:0219 minutes, 2 secondspor. Qué significa de cada 100 se equivoca clasificando 17 verdad y 83 lo clasifica correctamente sean de la clase
+19:1019 minutes, 10 secondsuno sean de la clase dos en este caso no se olviden que yo tengo cuatro clases ojo con ese detalle tengo tengo cuatro
+19:1819 minutes, 18 secondsclases por acá vamos a ver vamos a arreglar un poquito más por aquí a ver vamos a ver por acá vamos a hacer una
+19:2519 minutes, 25 secondsvamos a a llamar a a vamos a importar otras liberas para graficar la matriz de
+19:3519 minutes, 35 secondsconfusión adelante un poquito
+19:4619 minutes, 46 secondsdirectamente punx si no me equivoco
+19:5319 minutes, 53 secondsimport vamos a ver si está confusion Matrix ahí está Matrix por
+20:0020 minutesaquí y conf Matrix display A ver vamos a
+20:0720 minutes, 7 secondsprobar
+20:0920 minutes, 9 seconds[Música]
+20:1420 minutes, 14 secondsest y est y aquí hay una métrica muy bonita llamada conf Matrix vamos a
+20:2020 minutes, 20 secondsprobarla vamos a ver qué es lo que tiene que reir por defecto vamos
+20:2920 minutes, 29 secondsaquí si no me equivoco recibe esto PR llal directamente no ejecuto por
+20:3720 minutes, 37 secondsacá voy a hacer un algo Bastante rudimentario nada más y listo No todavía no la graficamos no la arreglamos pero
+20:4520 minutes, 45 secondsal menos ya veo miren lo siguiente Estas son las muestras correctamente clasificadas estimados por clase luego no se preocupen mucho por
+20:5420 minutes, 54 secondsentenderlo todavía ya machin lo van a ver con calma entonces miren estimados Esa es la clase cero clase un clase dos
+21:0221 minutes, 2 secondsy clase tres hay errores sí Miren la diagonal estimados es lo es lo que indica el correcto la correcta
+21:1121 minutes, 11 secondsclasificación de de las clases aquí miren hay un error de 14 14 errores AC hay un error de dos aquí 22 aquí un 9 un
+21:2021 minutes, 20 seconds14 Entonces sí tenemos estimados ciertos errores No dentro de
+21:2521 minutes, 25 secondsesto dentro de de esta primera forma de entrenar est es una forma también
+21:3321 minutes, 33 secondsrudimentaria entonces no no no le voy a exigir que haga mucho pero bueno llegué a 83 lo cual es bastante Bueno
+21:4121 minutes, 41 secondsrealmente a ver entonces a partir de aquí inicio muy bien si este fue mi
+21:4821 minutes, 48 secondsprimer mi primer resultado será que yo lo puedo mejorar O no lo puedo mejorar Entonces vamos a ver si es que
+21:5721 minutes, 57 secondslo puedo o no lo puedo mejorar directamente entonces primera parte Cómo
+22:0922 minutes, 9 secondshago para seleccionar actualmente Déjenme escribir por acá mejor para no estar
+22:1822 minutes, 18 secondsborrando por acá en este
+22:2522 minutes, 25 secondspunto tengo tengo un r a la 20
+22:3722 minutes, 37 secondsno en este punto estimados tengo un r la 20 directamente colocar por acá código
+22:4322 minutes, 43 secondslátex eneng un r 20 no directamente eso es lo que tenemos estimados por acá un r
+22:5022 minutes, 50 secondsla 20 es decir ahí está ahí está Ahora sí en este
+22:5922 minutes, 59 secondspunto estimados estamos en un r la 20 es decir cada vector cada muestra tiene una dimensión de 20 y esos estimados
+23:0723 minutes, 7 secondses hace que el modelo se vuelva un poquito más complejo directamente vamos a seguir
+23:1523 minutes, 15 secondsprobando a ver cómo nos queda directamente en este caso

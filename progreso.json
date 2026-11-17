@@ -1,0 +1,17 @@
+{
+  "clases": {
+    "nivelacion/n1-python-data-science/m1-eda-faltantes/clase-01-eda": {
+      "intentos": 1,
+      "mejor_nota": 100.0,
+      "historial": [
+        {
+          "fecha": "2026-11-08T00:29:00",
+          "nota": 100.0
+        }
+      ],
+      "ultima_nota": 100.0,
+      "aprobada": true,
+      "tests_fallidos": []
+    }
+  }
+}

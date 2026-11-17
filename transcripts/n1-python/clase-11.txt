@@ -1,0 +1,286 @@
+# Python para Ciencia de Datos - M2-6 - Caso de uso Panorama de la vivienda Parte 2 (Docente)
+# (título en el video: Python para Ciencia de Datos - Modulo 2 - Caso de uso Panorama de la vivienda parte 2 (Docente))
+
+0:022 seconds[Música]
+0:066 secondsya el primer punto Aquí hay una aclaración Que les quería hacer directamente no la parte de de lo que es
+0:1313 secondsimputación de datos y la parte que es reción de lers aquí hay más que siempre hay una conversación en cuándo hacerla
+0:2121 secondsjustamente cuándo hacerlo antes de dividir o o después de dividir los datos justamente y más o menos justo
+0:3030 secondsestaba aquí en una duda no en bueno Muchos muchos dicen que dependiendo de la enorme cantidad de datos que tenemos
+0:3838 secondsuno puede hacerlo Después tranquilamente pero en mi caso Yo diría que a veces
+0:4545 secondsconviene antes no hacer técnicas de imputación técnicas de lo que sería
+0:5252 secondsremoción deers yo Considero que este proceso debería hacerse mucho antes de hacer la división no algunos lo hacen no
+1:011 minute, 1 secondsuelen hacerlo Después Por eso tenemos el fit y el fit transform y el transf no directamente Solo que aquí hay una cosa
+1:081 minute, 8 secondscuriosa no esta imputación realmente debería hacerse a la Data total Total no a la Data no a la Data ya particionada y
+1:181 minute, 18 secondsunos y tres puntos fundamentales en los cuales yo sí me estoy basando y lo estoy colocando justo por acá mientras ustedes estaban haciendo el ejercicio me puse a
+1:261 minute, 26 secondspensar justamente esta recomendación no en mi caso yo Considero que deberíamos hacerlo antes no pero no sé si quizás
+1:341 minute, 34 secondsalguno de ustedes ha leído no por ahí o ha revisado algún libro o ha escuchado algún profesor decirles que lo hagan
+1:411 minute, 41 secondsdespués hay como una especie de debate pero en mi caso yo más que todo me inclino un poquito para para antes Les
+1:491 minute, 49 secondscomento no por tres puntos no preservar integridad de datos de prueba evitar la fuga de datos Y luego para tener un
+1:561 minute, 56 secondsmejor control de proceso directamente Porque si yo aplico una imputación de datos con los datos de entrenamiento lo
+2:042 minutes, 4 secondscual también dependiendo del método que yo aplique voy a aprender ciertas cuestiones no ciertos hiperparámetros no
+2:132 minutes, 13 secondsdirectamente pero estoy reduciendo no estoy reduciendo lo que sería la muestra comento por acá si esto
+2:212 minutes, 21 secondses todo si esto imaginemos toda la población que yo manejo imaginemos de forma ideal y yo me pongo a input dar
+2:302 minutes, 30 secondscon esta parte que sería un 80% puedo dejar de lado ciertas cuestiones No
+2:362 minutes, 36 secondsahora bien no eh un argumento fuerte es que por ejemplo en teoría cuando L hao A la división los puntos que están aquí
+2:452 minutes, 45 secondsSon puntos característicos relevantes de toda esta población no y los que quedan también son puntos característicos relevantes lo que en menor cantidad
+2:522 minutes, 52 secondsentonces un un una corriente que defiende la imputación luego es se basa en este hecho no ahora ahora si nos
+3:003 minutesvamos a cuestión de datos creo que va a depender muchas veces de la cantidad de datos que tengamos Entonces yo
+3:083 minutes, 8 secondspreferiría recomendar hacer la imputación Incluso el tratamiento de blers antes de dividir el Data
+3:153 minutes, 15 secondsdirectamente no pero es la opinión bueno eso más que todo según mi experiencia no según más o menos lo que he visto pero
+3:243 minutes, 24 secondsen el caso cuando uno tiene demasiada Data muchísima Data en no afecta realmente realmente como que
+3:333 minutes, 33 secondsel performance se mantiene sea sí lo he visto cuando hay poca Data puede ser que í realmente veamos un efecto entre hacer
+3:403 minutes, 40 secondsestos dos métodos imputación de datos y tratamiento de layers luego entonces voy a dejarlo de una vez que esto mejor se
+3:503 minutes, 50 secondshaga antes no de la división de entrenamiento y pruebas es muy diferente a otros métodos que sí deberían hacerse siempre después por ejemplo el
+3:583 minutes, 58 secondsescalamiento Eso sí debería hacerse después de de entrenar eso ya es De
+4:054 minutes, 5 secondshecho no la reducción de dimensionalidad sobre todo si van a aplicar pca también debería hacerse después eso
+4:134 minutes, 13 secondssí no hay debate directamente pero lo que sería imputación de datos y tratamiento deers
+4:224 minutes, 22 secondscreo que lo podemos hacer directamente no entonces Bueno Este es un escenario un que lo voy a mantener ahí de ejemplo
+4:304 minutes, 30 secondspero vamos directamente por acá muy bien entonces cómo empiezo vamos con un escenario un poquito más avanzado
+4:384 minutes, 38 secondsa ver por acá tenía mi DF No si no me equivoco el dat original vamos a ver punto info para ver cuáles son las
+4:474 minutes, 47 secondscolumnas que se manejan aquí están las columnas no todas las columnas y
+4:544 minutes, 54 secondsdirectamente mi columna objetivo es esta la número cu price Este es mi mi vara el objetivo mi precio y el resto son
+5:035 minutes, 3 secondsvariables con fines directos lo que voy a hacer es lo siguiente no voy por acá control c control B tengo voy a generar
+5:125 minutes, 12 secondsun df2 en este caso bueno p ya lo instalé por aquí Arribita lo voy a dejar este cigo por acá para que ustedes lo
+5:185 minutes, 18 secondsvean igual ya lo tengo instalado y lo que voy a proceder es hacer lo siguiente no voy a decir df2 es igual a df2 Drop
+5:275 minutes, 27 secondsno Primero quiero mantener separado mi x de mi Y entonces
+5:345 minutes, 34 secondsvoy a poner aquí grande x y aquí voy a poner grande mi y quiero mantenerlos separados no quiero tenerlos todos
+5:415 minutes, 41 secondsjuntos directamente aunque yo sé que en este caso price el precio indirectamente no está siendo afectado No
+5:495 minutes, 49 secondsrealmente Entonces vamos vamos vamos con lo siguiente primero vamos a hacer un
+5:555 minutes, 55 secondsprimer punto voy a generar uname 2 buo d f2 simplemente voy a a decir lo
+6:056 minutes, 5 secondssiguiente es igual a dataframe punto Select de types primero el tratamiento de variables tipo numéricas lo Disculpen
+6:146 minutes, 14 secondseste categor lo vamos a dejar para después ya lo vamos a ver el Entonces en este momento me estoy
+6:236 minutes, 23 secondsquedando simplemente con todas las variables que son tipo numéricas por el momento y aquí
+6:306 minutes, 30 secondstodavía se mantiene mi variable objetivo price muy bien sé que mi variable objetivo price por
+6:376 minutes, 37 secondsejemplo no tiene valores nulos directamente y en realidad esta variable objetivo no debería tener nulos si hay
+6:456 minutes, 45 secondsnulos entonces ahí tenemos un problema porque tendríamos que imputar la var objetivo lo cual ya es otro dolor de
+6:526 minutes, 52 secondscabeza pero en este caso no hay problema que yo mande imputar directamente esto o en todo caso puedo dec
+7:007 minutessepararla para evitar ciertas cuestiones no ciertas cuestiones por allí entonces
+7:077 minutes, 7 secondspor acá y ahora recién allí en lo que les estoy mostrando miren en este punto puedo decir Quiero
+7:157 minutes, 15 secondsquitar la imputación vamos a quitarlo vamos a dejarlo separado entonces me voy por acá y ya bajo ese contexto ahora
+7:237 minutes, 23 secondsrecién puedo decir x por acá y por acá puedo decir listo no listo y ahora sí puedo
+7:317 minutes, 31 secondshacer lo que había hecho abajo sego por acá está ahí está ahora sí puedo decir
+7:407 minutes, 40 secondslo siguiente no muy bien quiero separar PR ahora sí no hay ningún problema ya observé muy bien todo bien entonces x Es
+7:487 minutes, 48 secondssimplemente DF Drop price y y simplemente es DF
+7:567 minutes, 56 secondsprice por aquí y listo no tengo mi x no con todo
+8:038 minutes, 3 secondsno con todo lo que es columna numérica y tengo mi y que es directamente son mi var perfecto listo no quiero que
+8:138 minutes, 13 secondsintervenga y para nada y por suerte no tengo que imputar entonces estoy muy bien aquí y aquí estoy muy bien los datos nulos solamente se mantienen en
+8:218 minutes, 21 secondslas variables eh en vares independientes que en teoría deben ser independientes no o en los predictores y a continuación
+8:308 minutes, 30 secondshagamos el primer paso que es la imputación justamente Entonces voy por acá arriba control c control B primer paso
+8:388 minutes, 38 secondsdefinimos el inputadornment
+8:538 minutes, 53 secondsle voy a pasar x para que sea mi Data frame con que voy a imputar
+9:019 minutes, 1 secondejecuto por acá esperamos un poquito porque esto s demora
+9:129 minutes, 12 secondsdem esta parte ya la puedo borrando porque ya la tenemos control c por acá y mientras se va ejecutando Yo ya
+9:219 minutes, 21 secondsvoy pasando al siguiente paso que sería eliminar opers no directamente Ya dice mi amputación de datos no tengo un valor
+9:299 minutes, 29 secondsfaltante tengo 18396 registros Con 12 columnas Y si yo
+9:369 minutes, 36 secondsquiero por acá solamente para garantizar vo hacer un print de
+9:439 minutes, 43 secondsX de esta forma ha un PR segundito x por ejemplo por
+9:539 minutes, 53 secondsacá voy a imprimir el tamaño de X Y los
+10:0110 minutes, 1 secondpuntitos pun hasta aquí los tamaños estimados coinciden no debía ser debía serlo
+10:1010 minutes, 10 secondsaparte para que esto no no sea me lo pongo por acá listo entonces luego de
+10:1710 minutes, 17 secondsest luego de ejecut estas líneas me va a aparecer un print de cuánto es el tamaño de los datos imputados Y cuál es el
+10:2610 minutes, 26 secondstamaño de los datos de de y estos tamaños deberían coincidir porque no estoy ni agregando ni quitando filas lo único que estoy haciendo es completando
+10:3410 minutes, 34 secondsdatos nulos entonces aquí vamos mando de nuevo porque aquí un
+10:4310 minutes, 43 secondsproblema ahí está entonces los tamaños deben coincidir como tengo
+10:5210 minutes, 52 secondsdividido estimados x y y por favor no se olviden de que estos tamaños coincidan sí o sí
+11:0011 minutesacaba entr para que pueda ejecutar estaa de Ya está mir si ustedes observan tengo
+11:0911 minutes, 9 secondslos mismos tamaños y la imputación no elimina nada ahora el siguiente paso delicado es la eliminación de losers
+11:1611 minutes, 16 secondsporque aquí si van a filtrados entonces me voy por acá y en este
+11:2411 minutes, 24 secondscaso c control B voy a importar
+11:3111 minutes, 31 secondsde el método knn por ejemplo listo lo siguiente voy a generar recuerdan es ese
+11:3911 minutes, 39 secondsclasificador pero yo le voy a llamar aquí el vamos a
+11:4811 minutes, 48 secondsRem voy método método deción deers
+11:5511 minutes, 55 secondsya n y como les hab indicado voy a dejar un grado 0.1 Listo Ya está ya tengo por acá el método
+12:0312 minutes, 3 secondsvoy a dejarlo comentado Este es el método y lo de aquí estimados Bueno Este no es el método y
+12:1112 minutes, 11 secondspor aquí ya es la creación del objeto creación del objeto del objeto indicando el grado de
+12:2112 minutes, 21 secondscontaminación de contam listo y a continuación qu hago al
+12:2812 minutes, 28 secondsser simplemente voy decir
+12:4312 minutes, 43 seconds[Música]
+12:4512 minutes, 45 secondsRem y ya for automática sez ya tengo
+12:5912 minutes, 59 secondsya lo borra o tenemos que guardar en otra en otra variable No todavía no lo borra todavía no lo
+13:0813 minutes, 8 secondsborra todavía no lo está borrando simplemente estamos generando aquí el el valor aquí lo único que estamos haciendo
+13:1613 minutes, 16 secondses ajustarlo entrenándoles la instancia Este es un objeto del tipo kn knn que es un
+13:2313 minutes, 23 secondsalgoritmo pero no confundir este knn con el knn mach de knn que trabaja remoción de Players
+13:3113 minutes, 31 secondsaquí ya lo tenemos y lo que he hecho es analizar todo mi dataframe pero no elimina nada cuándo elimina en este
+13:4113 minutes, 41 secondspunto en este punto primero lo que va a serc aquí ya analizó mira aquí
+13:5113 minutes, 51 secondsvamos ya analizó el dataset no bueno este Debería ser debería
+13:5913 minutes, 59 secondsllamado xim realmente no aquí se me fue Disculpen este Debería ser xim pero no hay
+14:0614 minutes, 6 secondsproblema Entonces vamos por partes aquí ya analizó el dataset y aquí va a
+14:1414 minutes, 14 secondsobtener o va a llamar a las etiquetas que ha hecho por
+14:2014 minutes, 20 secondsregistro etiquetas etiquetas de cada fila para que quede claro porque Recuerden que ha generado una clase
+14:2914 minutes, 29 secondsición entreer e iner entonces Esas predicciones están aquí en qué
+14:3714 minutes, 37 secondssigue simplemente ahora s le voy a colocar su nombre correcto se debería llamarse
+14:4414 minutes, 44 secondsxro va a ser igual a estoy con el DF de imputación pero
+14:5114 minutes, 51 secondsquiero aquellos donde y sea igual a cer nada más porque Recuerden que hay dos clases aquí ejecuto por acá
+15:0715 minutes, 7 secondsdirectamente Disculpen un poquito por el ruido de fondo por
+15:1715 minutes, 17 secondsfavor profesor el son los son los sea son los índices que vas a eliminar y
+15:2515 minutes, 25 secondsautomáticamente eso lo aplicas a tu a tu Data ex Exacto Aquí recién hago el filtrado
+15:3315 minutes, 33 secondsaquí se hace el filtrado Aquí recién Aquí hacemos el filtrado si
+15:3915 minutes, 39 secondste das cuenta Solo que aquí hab un detal hay un detal
+15:4915 minutes, 49 secondsCarlos se primer toda mi Data Aquí tengo las
+15:5615 minutes, 56 secondspredicciones mi Data y vamos a ver Mira le dije que comprometa hasta un 10% del datas No aquí se hace filtrado aquí le
+16:0516 minutes, 5 secondsestoy diciendo Dame los iners por ejemplo no entonces el datas tenía
+16:1016 minutes, 10 seconds18396 registros Ahora abaja xro tiene
+16:1716 minutes, 17 seconds16842 registros entonces Carlos Si ha habido ese filtrado recién aquí yo tengo mi x
+16:2616 minutes, 26 secondscon los datos este filtrados directamente
+16:3416 minutes, 34 secondspero ahora hay que darle otra cosa
+16:4216 minutes, 42 secondsxar entonces Simplemente porque los registros son
+16:5016 minutes, 50 secondsiguales en este punto si te das cuenta los tamaños coinci Enton aquí lo que tengo es voy por AC escribo
+16:5916 minutes, 59 secondsjepret tengo los índices tengo los valores tengo los índices con sus valores tengo 18396 registros acá Esto
+17:0917 minutes, 9 secondsvale Estos son 18396 registros pero con valores que son 00 y algunos valores por acá son unos directamente eso es lo que
+17:1817 minutes, 18 secondstengo por acá en el Je para que ustedes lo entiendan más a fondo Entonces eso aquí no eso es lo que voy a hacer
+17:2817 minutes, 28 secondsaquí no voy a filtrar mi x r y mi y r Entonces euto por acá y listo no tengo x rw y y r
+17:3817 minutes, 38 secondsfiltrados en este punto ya puedo decir que he eliminado los of lers y me mantuve con los índices de los datos que estaban por acá y que estaban por acá
+17:4617 minutes, 46 secondspero ahora Hay un problema xr no es un dataframe si se dan cuenta miren xr es es una
+17:5617 minutes, 56 secondsmatriz si si yo escribo por acá hierro
+18:0418 minutes, 4 secondsobservan hierro es todavía una serie una serie
+18:1018 minutes, 10 secondstipo Data no Entonces eso para evitar eso ahí lo que puedo hacer es mandar a
+18:1918 minutes, 19 secondsxro por acá por acá
+18:2718 minutes, 27 secondsdirectamente lo que puedo hacer es directamente a xr convertirlo en un dataframe no volverlo dataframe
+18:3518 minutes, 35 secondssimplemente pd dataframe le mando el xr que Tena por aquí Arribita esto lo puedo hac incluso afuera porque hasta este
+18:4318 minutes, 43 secondspunto segundito H este punto Esto está normal o sea esto Esto no afecta nada
+18:5118 minutes, 51 secondsdesempeño de este quítalo de acá lo dejo Ahí igual esto ya lo ejecuté y xr lo voy volver un
+18:5918 minutes, 59 secondsdatame para que no haya ningún problema Exacto hace la igual así es Eduardo hace exactamente la igualdad en
+19:0819 minutes, 8 secondsningún momento he colocado a y simplemente estoy haciendo todo el tratamiento de blers con x Bueno aquí deí
+19:1619 minutes, 16 secondscolocarle colocarle x aquí se me fue ya mi culpa voy a dejar por acá para que
+19:2319 minutes, 23 secondsustedes lo tenga aquí ya se fue mi culpa directamente no ya está x imputado Este
+19:3219 minutes, 32 secondses el x imputado y en ningún momento he tocado a y y aquí lo mismo aquí y simplemente va a ser un filtrado porque
+19:4019 minutes, 40 secondslos índices coinciden perfectamente listo entonces tengo xr por acá pd pun dataframe le mando el xr
+19:4819 minutes, 48 secondsy las columnas tienen que ser las columnas de mi x no porque mi x sigue siendo un dataframe y se mantiene y la cantidad de
+19:5619 minutes, 56 secondscolumnas no se ha reducido solamente lo que he hecho es reducir filas entonces las columnas deberían ser las mismas y no debería salir ningún problema aquí lo
+20:0520 minutes, 5 secondscual es correcto ya está miren si se dan cuenta
+20:1320 minutes, 13 secondsno las columnas coinciden perfectamente porque a x no le he quitado columnas solamente lo que he hecho es quitarle registros en este
+20:2220 minutes, 22 secondspunto Entonces esto ya es una explicación a más alto nivel para que ustedes en el
+20:2820 minutes, 28 secondscódigo primero divido en x y y quitando price y con fines didácticos me elimino
+20:3620 minutes, 36 secondslos variables objetivos porque ellas tienen otro tratamiento y en y me quedo con la variable objetivo que es precio a continuación mi primer paso es aplicar
+20:4420 minutes, 44 secondsel método imputado que yo desee Y en este caso un k imputer y aquí la salida va a ser mi x inut mi X imputado en este
+20:5320 minutes, 53 secondscaso la imputación no elimina nada de registros ni tampoco elimina columnas sino que simplemente rellena valores nulos por lo tanto los tamaños coinciden
+21:0021 minutesperfectamente y cuando hago imputación de datos hasta este punto lo único que hago
+21:0721 minutes, 7 secondses analizar el dataset para y para y genero aquí una clasificación en C y un
+21:1521 minutes, 15 secondsen in layer y clasifica en in layers
+21:2221 minutes, 22 secondsyers para que no se olviden clasif en estos dos entre in yers listo y luego de
+21:3021 minutes, 30 secondseso recién está haciendo por acá estimados el Je con todos los datos imputados y Aquí
+21:3721 minutes, 37 secondsrecién tengo esos puntitos esos índices esas predicciones Yo acá es donde yo voy
+21:4521 minutes, 45 secondsa hacer Voy a ha filtrado voy a hacer la reducción sí Samuel
+21:5421 minutes, 54 secondsDisculpa Disculpa samel se te escucha con mucho eco disculpa no escribo Aquí sí sí por favor meó un poquito
+22:0322 minutes, 3 secondseh A ver escribe por favor sí porque se escucha con bastante eco y no no no no se puede no se puede
+22:1122 minutes, 11 secondsescp para entenderte Exacto lo hace por todo no lo
+22:1822 minutes, 18 secondshace por registro realmente no por variable lo hace por registro ojo ya te entendí no lo hace por
+22:2522 minutes, 25 secondsfila por fila por registro no lo hace por variable lo hace por registro porque una fila es un vector recuerdan que yo
+22:3322 minutes, 33 secondsles dije la clase pasada es un vector de características en rn entonces cada fila cada uno de estos registros
+22:4122 minutes, 41 secondsque ustedes Ven aquí abajo es un punto todo esto es un punto basta que uno de estos de aquí se
+22:5122 minutes, 51 secondsaltere y automáticamente se sale en la dimensión original que tiene eso es lo bonito de p les hace un tratamiento por
+23:0023 minutespuntos entonces lo que obtienes aquí Este jepret es por fila no es por columna no es por variable Sí sí Samuel
+23:0923 minutes, 9 secondsme entendiste la idea lo hace por lo hace por fila no lo hace por variable porque él trabaja cada fila como un todo como si fuese no un punto en el
+23:1823 minutes, 18 secondsespacio eso Samuel Así es eso así es correcto muy bien así es exactamente
+23:2623 minutes, 26 secondssegún la distancia bueno según el algoritmo realmente knn trabaja con distancias directamente Entonces en este caso es correcto Así es muy bien Samuel
+23:3523 minutes, 35 secondsperfecto Muy bien Entonces hasta este punto estimados ya que estamos por partes perfecto muy bien entonces por eso les estoy explicando es chiquito el
+23:4423 minutes, 44 secondscódigo sí pero hay que entenderlo y analizarlo parte por parte no directamente muy bien entonces estimados con esto ya tengo mi xro voy a hacer
+23:5423 minutes, 54 secondspunto col por aquí punto info para que se vea mejor y ahí está no room
+24:0324 minutes, 3 secondsdistance directamente ya perfecto y tamb puedo escribir por
+24:1124 minutes, 11 secondsAC aquí caso una serie tiene
+24:1824 minutes, 18 seconds16842 registros Aquí también tiene 16842 registros todo coincide
+24:2824 minutes, 28 secondslisto Ahora sí continuamos continuamos por acá elimino todo lo de aquí de acá y ahora si vamos al
+24:3624 minutes, 36 secondsentrenamiento vamos al
+24:5024 minutes, 50 secondsentrenamiento tercer paso entrenamiento Ahora sí hagamos el proceso
+24:5724 minutes, 57 secondsexperimental Entonces qué es lo que necesito hacer recién aquí el x r y el y r Por qué le puse r por Rem flyers
+25:0725 minutes, 7 secondsrecién aquí los voy a separar en en TR test Solo que aquí va a ir xr y aquí va
+25:1325 minutes, 13 secondsa ir hierro directamente ya está listo y esto me genera mi xtrain mi XT mi y mi
+25:2025 minutes, 20 secondsyts no con un tr6 de 0.8 y un t6 de 0.20 un
+25:2725 minutes, 27 secondsrandom directamente por acá y el error en este caso bueno va a ser definido por a score dataset le voy a
+25:3625 minutes, 36 secondsmandar datos de entrenamiento mi datos de prueba mi yin y mi yts listo y vamos
+25:4325 minutes, 43 secondsa ver cuánto me queda el error en este caso y ahí está Miren el error que obtenido es 21000 no 215,0
+25:5325 minutes, 53 seconds762.39 este es el error miren estimados que obtuve con el modelo con el knn input para imputar y con knn
+26:0326 minutes, 3 secondspara eliminar offers ya está Este es un escenario ahora voy a volver al escenario un y lo voy a mantener como el caso
+26:1026 minutes, 10 secondsanterior voy a ir por acá voy a hacer un x y directamente es el escenario esta
+26:1926 minutes, 19 secondsfunción que se queda por acá esta la voy a quitar aquí hay nada más ya Perfecto entonces voy escenario
+26:2726 minutes, 27 secondsun acá y voy a seguir con con el utad mediano no hay problema No hay problema por acá divido
+26:3626 minutes, 36 secondstambién exactamente tal y como lo hice anteriormente Sí este Arturo Disculpa buenas noches me queda en duda
+26:4726 minutes, 47 secondsalgo la imputación de datos aparte dees datos para imputar losos Tenemos
+26:5526 minutes, 55 secondsque tener alguna otra consideración y se pueden o no se pueden imputar aparte de imputar datos y
+27:0427 minutes, 4 secondseliminar blers te refieres a es uro no O sea aparte de cuando cuando queremos est enseñando Tenemos que tener cierta
+27:1227 minutes, 12 secondscantidad de 7% por ejemplo no es es Tenemos que tener otras
+27:2027 minutes, 20 secondsconsideraciones adicionales para poder o solamente tenemos que fijarnos en la cantidad de datos que existen
+27:2927 minutes, 29 secondsya primero a ver un punto importante que también dicen es
+27:3727 minutes, 37 secondscomo ya a ver muy bien Vamos con la consulta de Eduardo vamos una buena pregunta vamos con suga
+27:4527 minutes, 45 secondshaba hecho la pregunta disculp hablando micro
+27:5127 minutes, 51 secondsArturo ya a ver primer punto que tenemos que considerar creo que ahora lo estamos analizando más detalle es bastante bueno primer punto a considerar
+28:0028 minuteslos los datos nulos se tiene que ver el porcentaje como si superan
+28:0928 minutes, 9 seconds30% ya es muy difícil y hay que ver que pasó todo es al final vimos todos los
+28:1628 minutes, 16 secondsescenarios y no se pudo corregir el 30% o más bueno hasta el 30% como que se puede por por una descubrimiento
+28:2528 minutes, 25 secondsexperimental bastante fuerte de que si más o menos tiene cierto margen de de cómo se de obtener datos aproximados no
+28:3328 minutes, 33 secondsa Los Reales pero igual siempre hay error entonces la primera consideración es ver ese porcentaje si tú tienes un 50 un 60 por bueno en este caso en este
+28:4128 minutes, 41 secondsejercicio no eliminé esas variables por si acaso n has eliminado has imputado igual entonces Eh hay que eliminar esas variables y ya
+28:5028 minutes, 50 secondsno Y si como dijo uno de sus colegas la vez pasada y si me fuerzan a utilizar la variable tendríamos que ver estrategias pero ya a sabiendo que tenemos sesgo en
+29:0029 minutesel modelo entonces esa es la primera consideración que hay que tener otra consideración en este punto si vas a
+29:0829 minutes, 8 secondsusar por ejemplo una imputación por mediana y los datos no tienen una distribución normal también ahí tienes un problema eso creo que no lo mencioné
+29:1629 minutes, 16 secondspor ejemplo en un dataset pasado creo que tenemos los datos estaban así no distribuido de esta forma
+29:2429 minutes, 24 secondsincluso por ejemplo esos datos no tiene ninguna aproximación a ninguna aproximación a
+29:3129 minutes, 31 secondsuna normal entonces Ni la ningún método paramétrico te va a funcionar ahí directamente o sea por más que imputes con una mediana te va va te va a
+29:3929 minutes, 39 secondsaparecer un pico no directamente hablando í también tenemos un problema Entonces qué suelen hacer algunos por
+29:4629 minutes, 46 secondsejemplo lo suelen llevar justo con el método que les había mencionado la sesión pasada su colega hac una transformación para aproximar la
+29:5429 minutes, 54 secondsvariable a una mediana pero eso ya es convertir la variable directamente entonces hay entonces igual no el método
+30:0130 minutes, 1 secondde la mediana va a generar errores Entonces qué se hace Buscar métodos que no dependan directamente de que la distribución de un dato sea normal o no
+30:1030 minutes, 10 secondsnormal y entre esos están el famoso can input o it putter a los que ya no les interesa Por ejemplo directamente
+30:1830 minutes, 18 secondsmanejar esa el tipo de distribución porque ya son métodos que no no estadísticos y o incluso el Ita input si
+30:2630 minutes, 26 secondsustedes lo aplican con un regres que no es estadístico por un regresor tipo árbol de decisión como que yo utilicé la sesión pasada entonces como que tener
+30:3630 minutes, 36 secondscomo que podemos obviar El tratar de convertir o de adaptar una variable que no es normal a una distribución normal o
+30:4430 minutes, 44 secondspodríamos también intentarlo y ver cómo nos quedan los resultados entonces esos son otros son los puntos que más fuertes que hay que considerar directamente por
+30:5330 minutes, 53 secondseso en la práctica bueno incluso sus colegas mencionaron profesor Yo usoen inut no yo utilizo correcto porque ahí si no necesitan
+31:0031 minutesforzar la variable no dependen de la normalidad de la de la variable directamente Eso es lo bueno en este punto y en la práctica da buenos
+31:0931 minutes, 9 secondsresultados Les comento Sí y Debería ser menor al 30% este Samuel directamente deía ser menor al
+31:1731 minutes, 17 seconds30% profesor Buenas noches una consulta usted nos comentó de una de una parte de es Power Transformer
+31:2631 minutes, 26 secondsCuándo se aplica Por qué se dio la O sea yo escuchado información v y otro cuándo se usa ya Ya eso lo aplicas por ejemplo
+31:3431 minutes, 34 secondscuando tú vas a hacer reducción de dimensionalidad y quieres utilizarte por ejemplo pca el
+31:4331 minutes, 43 secondspca funciona con datos que tien con variables que tienen numéricas que tienen aproximación tipo
+31:5031 minutes, 50 secondsnormal por ejemplo entonces ahí tienes que aplicarlo en Power una transformación tipo Box Co y la otra no recuerdo exactamente cuál era no no
+31:5931 minutes, 59 secondsdirectamente pero ahí por ejemp tienes que hacer Sí o sí la transformación entonces también vuelta profe Pero mis datos no son normales si yo le hago una
+32:0732 minutes, 7 secondstransformación lo estoy forzando Entonces qué puedo hacer por más que haga la transformación se aproximan a una normal pero no no tien normalidad
+32:1432 minutes, 14 secondsEntonces qué hago método alternativo tsne tsne tsne no necesita que la sea normal pero igual le hago una una
+32:2332 minutes, 23 secondsaproximación para que funcione mucho mejor el tcn y da buenos resultados en la en la práctica tcn funciona mucho
+32:2932 minutes, 29 secondsmejor que psa les comento entonces bueno en la mayoría de casos no siempre no siempre pero en la mayoría de casos sí
+32:3732 minutes, 37 secondsprofesor pero yo tengo este usted usted mencionó un algoritmo que lo llevaba a la nor repetir cuál era para tenerlo ya
+32:4632 minutes, 46 secondsera el de si no me equivoco el box bueno no son algoritmos es son métodos son métodos transformación de variables
+32:5332 minutes, 53 secondsdirectamente no son métodos ya B en estadísticos es Es más conocido y el otro no recuerdo ya me olvid el nombre
+33:0233 minutes, 2 secondsdeloro tengo la punta lengua Bueno pero si me acuerdo de Li que es Power Transformer Como dijo su colega Aquí está el método pero boxc por ejemplo
+33:1133 minutes, 11 secondsASUME que los valores tienen que estar positivos Mientras que el método alternativo asumía negativos lo Tena lo
+33:1933 minutes, 19 secondstenía aquí en la mente pero me olv en serio el nombre pero son dos métodos est ustedes encuentran Power transform
+33:2833 minutes, 28 secondsse me olvidó disculp ya entonces por ejemplo cuando hago la transformación profe cuando el método que voy a utilizar para hacer mi clasificador por
+33:3533 minutes, 35 secondsejemplo requiere que las variables sean normales entonces ahí necesito transformar los datos Sí o sí y aproximar losos a una normal sí en este
+33:4333 minutes, 43 secondscaso no en este caso canter no necesita que los datos sean normales va a buscar relaciones entre entre los puntos perfecto un punto a
+33:5133 minutes, 51 secondsfavor No interactive input si utilizan en interactive input un regreso logístico obviamente necesitan normalidad pero si utilizan por ejemplo
+34:0034 minutesun xg regresor o un lgbm regresor o un extrat regresor que fue el que u en clase Entonces no necesitan llevarlo
+34:0934 minutes, 9 secondstanto a la normalidad los datos trabajarlos es un buen punto a favor entonces sigan haciendo una
+34:1734 minutes, 17 secondsexperimentación en este caso continuan esados haciendo esta experimentación ya Ah déjen acabar esta parte ya para
+34:2334 minutes, 23 secondsfinalizar la sesión del día de hoy a ver xy sig igualito aquí estoy colocando una
+34:3034 minutes, 30 secondsmediana nada más por acá X3 r eh A ver X in ya este de acá Está bien este de aquí
+34:3734 minutes, 37 secondsya lo quito porque y vo Y en este caso no elimino nada de Players me quedo ahí nada más con xim directamente y continuamos por acá
+34:4634 minutes, 46 secondsentonces todo este salto de acá simplemente me lo voy a pasar buen este acá s lo voy a copiar por aquí control
+34:5334 minutes, 53 secondsc dejar por acá abajito control c control B aquí está no debería haber ningún error
+35:0235 minutes, 2 secondsaquí aquí también ejecuto esto ya está miren coincide todo perfectamente no voy a hacer ninguna
+35:0935 minutes, 9 secondseliminación deers ya estn datos completados pero voy a dejar Ah losers y me voy a ir directamente al entrenamiento noen voy a convertir a
+35:1735 minutes, 17 secondsData frame que vamos a ver por aquí Arribita ya está
+35:2435 minutes, 24 secondsbueno Aquí voy a compartir este xim dataframe y está lo
+35:3335 minutes, 33 secondsconvierto y me voy por acá directamente y Man entrenarlo de frente solamente me
+35:4035 minutes, 40 secondsfalta mandar a entrenar Ah ahorita lo probamos dej por acá probamos quiero dejar el escenario por defecto nada
+35:4835 minutes, 48 secondsmás aquí está ahí está hacer paso entrenamiento este escenario por efecto
+35:5535 minutes, 55 secondscon x y y por acá Qué pasó por aquí
+36:0236 minutes, 2 secondsAh Disculpen aquí se me fue como no imput me Me olvidé
+36:0936 minutes, 9 seconds[Música]
+36:1236 minutes, 12 secondsde aquí el y es igual no vamos por AC y es igual a
+36:2136 minutes, 21 secondsy este caso porque no no ningún valor
+36:2836 minutes, 28 secondsy ya está aquí está Miren mi error 235 423 por aquí estaba 215000 miren bajó el
+36:3636 minutes, 36 secondserror bastante Y ustedes estimados pueden Probar con más escenarios si quieren el simplemente bajemos por
+36:4636 minutes, 46 secondsacá por aquí si quiero un escenario por ejemplo Quiero el abod no Aquí vamos a
+36:5336 minutes, 53 secondsimportar el abod directamente ustes recuerda
+37:0137 minutes, 1 secondsimplemente que importarlo nada más c voy dejar por AC simplement
+37:1037 minutes, 10 secondscontr aquí AC arriba
+37:1737 minutes, 17 secondsmod nada más y aquí escribo ya escribo AB y con eso ya tenemos lación de datos
+37:2637 minutes, 26 secondsdirectamente y vamos a mantenerlo Sí ya está aquí está y aquí
+37:3537 minutes, 35 secondslo dejo la dejo como abod nada más por acá directamente simplemente es cambiar aquí el import dejar bod se va a
+37:4237 minutes, 42 secondsmantener la predicción voyar por acá Aquí 25762 no
+37:5137 minutes, 51 seconds23542 funcionó peor en este caso si se dan cuenta y así pueden ir cambiando entonces estimados esta Va a ser tarea para todos ustedes el día de hoy por
+38:0038 minutesfavor prueben estos escenarios s se utizan en un caso de Us real se utilizan más estos métodos en la
+38:0838 minutes, 8 secondspráctica se utiliz difícil que veas una eliminación Deer solamente con el tienes que
+38:1738 minutes, 17 secondsutilizarlo estimados vamos a finalizar aquí la sesión del día de hoy directamente y ya nos estamos viendo la próxima sesión para continuar voy a
+38:2538 minutes, 25 secondspreparar vamos a ver lo que es tratamiento de variables categóricas y lo vamos a incluir Dentro de este laboratorio mejorándolo y mejorándolo cada vez más
+38:3438 minutes, 34 secondsllegamos a Machine learning y seguimos mejorando todo de acá listo sigan practicando sigan practicando eso sería todo por el día de

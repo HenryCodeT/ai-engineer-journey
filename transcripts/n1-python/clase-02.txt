@@ -1,0 +1,59 @@
+# Python para Ciencia de Datos - Modulo 1 - Estrategias para datos faltantes
+
+0:022 seconds[Música]
+0:066 secondsahora estrategias para datos faltantes muy bien imaginemos que revisé el Script y está todo bien perfecto chévere no
+0:1313 secondsOkay el Script Está bien entonces faltan datos por algo realmente faltó datos por alguna cuestión que fue sin querer
+0:2222 secondsentonces vamos a ver qué ha pasado muy bien directamente Les comento Hay que ser un poquito teóricos en este punto siempre es bueno entenderlo sobre todo a nivel a nivel descriptivo porque
+0:3131 secondsentender un poquito la naturaleza de los datos faltantes les puede ayudar a ustedes también a hacer reportes a nivel descriptivo ojo con este detalle incluso
+0:3939 secondssaber qué tipo de datos faltante tienen ya les ayuda a comprender hasta puede ser síntoma de que algo está pasando en
+0:4646 secondsel sistema entonces hay tres tipos Les comento por acá hay tres tipos MC mar
+0:5353 secondsmar y m le decimos aquí directamente son tres de datos faltantes que existen
+1:021 minute, 2 secondsvamos a verlo un ejemplo rápidamente para que lo entiendan MC noen rand datos que faltan al azar
+1:101 minute, 10 secondstraducción directa tien muchos menos valores nulos que otros tipos de ausencia y no tienen correlación con otras variables
+1:171 minute, 17 secondsdirectamente el problema MC estimados es el problema donde los datos simplemente
+1:231 minute, 23 secondsfaltan de forma aleatoria no existe correlación dato que falta en la variable a con alguna otra variable Y si
+1:321 minute, 32 secondsustedes por más que analizan no van a encontrar que existe cierta tendencia es decir son datos completamente aleatorios que faltaron estos datos estimados que
+1:411 minute, 41 secondsfaltan tipo mcar son los que ustedes pueden imputar con métodos paramétricos con
+1:481 minute, 48 secondsmétodos estadísticos porque son datos que faltan completamente al azar Okay los Mc los pueden imputar con la
+1:561 minute, 56 secondsmediana Aunque tampoco no es tan bueno imputar con la medana realmente pero podrían aplicarlo ahí y va a depender mucho también de Qué cantidad de datos
+2:042 minutes, 4 secondstienen faltantes ojo con ese detalle Si tienen una pequeña cantidad la Med una amputación com mediana en esa variable no les va a afectar mucho si tienen
+2:132 minutes, 13 secondspocos datos faltantes muy bien ya entonces los métodos paramétricos ustedes si los podrían aplicar como imputación en en
+2:212 minutes, 21 secondslas variables tipo MC o o traducido en las columnas que tienen que tienen MC
+2:302 minutes, 30 secondsdatos que faltan completamente al azar Ustedes sí pueden imputar losos directamente con esos métodos paramétricos pero lo contrario ocurre
+2:382 minutes, 38 secondscon los problemas que son tipo mar y mnar ahí sí hay cosas que hay que tomar
+2:442 minutes, 44 secondsen cuenta directamente qué pasa con el Mr Bueno vamos repasando me había olvidado explicarles El ejemplo si
+2:522 minutes, 52 secondsustedes observan por acá El ejemplo en el MC en este lado de aquí van a darse cuenta que los datos que faltan Este es el el original es el valor
+3:003 minutesreal no tienen una tendencia una agrupación nada ellos faltan completamente al azar y se acaban así así de simple faltan completamente a
+3:093 minutes, 9 secondsla muy bien pero hay otro caso que es el el mar no un caso que es más amplio del
+3:173 minutes, 17 secondsMC aunque los datos que faltan pueden parecer aleatorios a primera vista la aleatoriedad ocurre solo en grupos
+3:243 minutes, 24 secondsespecíficos de datos el número de valores nulos puede variar no por ejemplo observen ustedes ahora la
+3:313 minutes, 31 secondscolumna del mar que está por acá pueden encontrar alguna relación dónde es que faltan es esos
+3:393 minutes, 39 secondsdatos mar pueden encontrar
+3:513 minutes, 51 secondsalgo Les explico un poquito el contexto de este ejemplo no El ejemplo dice que se quiere analizar si es que existe un
+4:004 minutesun si es que el iq no el coeficiente el coeficiente intelectual de un trabajador de una u otra forma se correlaciona con
+4:084 minutes, 8 secondssu score con un score o rating de perform o desempeño en el trabajo entonces ustedes observan por
+4:164 minutes, 16 secondsaquí se van a dar cuenta de algo interesante se van a dar cuenta que en el caso del M los datos fallan cuando el
+4:244 minutes, 24 secondsiq es bajo cuando un iq está entre 91 hay datos
+4:324 minutes, 32 secondsfaltantes Entonces qué pasó aquí esto no es completamente aleatorio se dan cuenta Exacto con iq
+4:414 minutes, 41 secondsmenores a 92 faltan los datos Y si posiblemente sigo extrayendo más y más Data todos los que tengan un iq menor a 92 va a tener datos
+4:494 minutes, 49 secondsfaltantes Qué pasó Aquí aquí esto ya no es completamente el azar algo ha ocurrido Quién tiene la
+4:574 minutes, 57 secondsculpa no lo sabemos el Script o o el mismo registro en la base de datos no lo sabemos Entonces tenemos que verlo
+5:055 minutes, 5 secondstenemos que analizar pero al menos Esto es algo que importa bastante Y esto como resultado a
+5:125 minutes, 12 secondsnivel de análisis exploratorio tienen que reportarlo es muy importante algo está pasando esto les ayuda a corregir
+5:195 minutes, 19 secondsel Script o a verificar que la forma en como están registrando los datos tiene cierto sesgo si se dan cuenta entonces
+5:295 minutes, 29 secondsayuda bastante miren solamente con identificar esto ya podemos encontrar ciertas cositas y el mnar no directamente el mnar es un caso ya muy
+5:385 minutes, 38 secondsespecial no sabemos Por qué ocurre O sea hay datos faltantes Sí pero no entendemos el Por qué directamente no
+5:465 minutes, 46 secondsno hay una relación con las otras no es completamente al azar pero no vemos que hay una relación directamente con las características por ejemplo faltan aquí
+5:555 minutes, 55 secondsdatos pero en unq bajo pero por aquí también faltan datos con un iq más elevado entonces parece que no hay una
+6:036 minutes, 3 secondsrelación directa con el iq que falten datos falta por algo por qué esto de aquí son factores ya externos que están
+6:126 minutes, 12 secondsafectando puede llevar un estudio sí puede llevar un estudio posteriormente revisa incluso puede llevar hasta hasta que se revise la base de datos se vea qu
+6:196 minutes, 19 secondses lo que está pasando ahí o se analiza el scrip a veces es problema de Script no a veces no a veces problema mismo de
+6:276 minutes, 27 secondscómo se registran los datos a a veces Incluso el sistema está bien pero la forma de registrar está malento y todo esto de aquí sirve sirve
+6:356 minutes, 35 secondscomo reporte Entonces ustedes que ustedes encuentren esto les va a ayudar bastante muy bien esa es toda la parte
+6:426 minutes, 42 secondsteórica que me gustaba me ha gustado compartir con ustedes un poquito no sé si si hasta aquí Tienen alguna consulta
+6:496 minutes, 49 secondsgráficos de la parte inferior Ah te refieres a estos chiquitos Ah eso sí tiene que ver con relaciones con relaciones de datos directamente y un x
+6:586 minutes, 58 secondsun y un r no entre variables más que todo tratado de explicarlo de esta forma exacto y trato más que todo de
+7:057 minutes, 5 secondsexplicar de esta forma para ser más directos no completamente al azar no x falta falta un x falta un Z directamente
+7:137 minutes, 13 secondsno pero Aquí no aquí por ejemplo hay una relación entre estos dos porlo puede haber una relación y aquí no entendemos por qué algo está pasando directamente
+7:217 minutes, 21 secondsen esta falta de datos directamente con el ejemplo creo que se explica un poquito mejor no para que para no entrar
+7:287 minutes, 28 secondsmás en cuestiones de puntos y curso de de datos

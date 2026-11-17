@@ -1,0 +1,50 @@
+# Python para Ciencia de Datos - M1-3 - Métodos de imputación
+# (título en el video: Python para Ciencia de Datos - Modulo 1 - Datos faltantes y metodos de imputacion)
+
+0:022 seconds[Música]
+0:066 secondslisto iniciamos entonces con la cuestión de datos faltantes y métodos de imputación cuando hablamos de datos faltantes vamos a relacionarlo con
+0:1414 secondsmétodo de imputación de datos Porque son las estrategias que vamos a aplicar para poder completar lo que nos falta muy
+0:2222 secondsbien Ahora ahora bien si nos vamos a ver el tema de datos faltantes no es un tema
+0:3131 secondsnuevo Así es un tema bastante antiguo realmente incluso existe desde que aparecieron los
+0:4141 secondssoftware los sistemas de almacenamiento los primeros gestores incluso cuando amos en archivos no recuerdo cuando estaba en la universidad Me enseñaban a
+0:4949 secondsguardar información en archivos txt Entonces no a través de alguna estrategia tipo áb Entonces ya existían
+0:5757 secondsa veces datos faltantes directamente entonces hay una cosa que ustedes tienen que entender bastante bien en este punto
+1:031 minute, 3 secondsLes comento por acá y esto también es experiencia no que uno va ganando los
+1:091 minute, 9 secondsdatos faltantes ocurren o por errores de programación que ya netamente tien que ver con el sistema en sí o por datos que
+1:181 minute, 18 secondsno han sido reportados por clientes esos por ejemplo son los principales a veces a veces por ejemplo un cliente un adulto
+1:261 minute, 26 secondsmayor no maneja muy bien redes sociales correo electrónico entonces é no digita correo electrónico ya tenemos un un hueco por ahí no o por ejemplo un número
+1:361 minute, 36 secondsde teléfono tampoco lo sabe digitar o hay cierta información que no les gusta proveer Entonces directamente los clientes no quieren dar
+1:431 minute, 43 secondscierta información entonces eso ya genera un vacío un valor no por efecto un cero Le podremos decir un valor en blanco Eso ya por ejemplo se va
+1:521 minute, 52 secondsalmacenando no O por errores directamente de programación que no se validó bien cierta cuestión ahora estos errores de acá Les
+2:022 minutes, 2 secondscomento tal vez no se vean mucho a nivel del sistema Pero cuando uno comienza a hacer datos no analítica de datos es ahí
+2:082 minutes, 8 secondsdonde observa lo lo tedioso que es no porque nos aparece una nueva categoría por ejemplo estábamos haciendo varias
+2:172 minutes, 17 secondsveces ha pasado uno está haciendo un análisis de datos comienza a verificar los valores nulos y le sale ti tengo una variable categórica con cinco categorías
+2:262 minutes, 26 secondspero me apece una sexta la categoría la categoría sexta que dice blanco vacío no reporto enorme entonces realmente allí
+2:352 minutes, 35 secondsSe está perdiendo información no hay cóm saber exactamente el comportamiento de esa variable sea categórica sea numérica
+2:422 minutes, 42 secondsdirectamente bueno en este caso en la variable categórica no hay como como comprender realmente su comportamiento
+2:482 minutes, 48 secondsdebido a la a propio problema dentro del sistema que fue por error de programación o por un dato que no reportaron y se quedó en blanco en la
+2:572 minutes, 57 secondsbase de datos o a veces por el manejo inapropiado donde se se ahora un punto
+3:063 minutes, 6 secondsimportante si esto ocurre hay que ver cómo darle tratamiento No porque si ustedes no lo manejan de forma buena les
+3:133 minutes, 13 secondsva a aparecer esta palabrita que no sé si ya la escucharon la palabrita sesgo esta palabrita siempre va a salir por ahí no sesgo sesgo va a producir sesgos
+3:233 minutes, 23 secondsen el modelo generado y por lo tanto conclusiones engañosas lo cual es correcto y muchos modelos no de aprendizaje no er en conjunto de datos
+3:303 minutes, 30 secondscon valores en falta lo cual es correcto y así puede limitar la generalización del modelo entrenado punto importante
+3:383 minutes, 38 secondsuna cuestión muy importante que ustedes ya lo van a ver en Machine learning un modelo Tiene que ser generalizable es decir hay que entrenarlo con datos que representan el
+3:473 minutes, 47 secondscomportamiento normal de mi información y hay que quitarle valores atípicos
+3:543 minutes, 54 secondsdirectamente entonces un punto bastante bueno para afrontar no sé si H aquí Tienen alguna consulta
+4:024 minutes, 2 secondsalguna duda directamente dudas consultas o les ha pasado sobre todo a
+4:114 minutes, 11 secondssus colegas que ya están trabajando por acá cómo les ha ido con los datos nulos
+4:204 minutes, 20 secondsdirectamente dolor de cabeza dice Kelvin no sabes qué hacer a veces te vas
+4:294 minutes, 29 secondsle le le quieres gritar al al que al que ha hecho A veces es por culpa del a veces por error de programación en el
+4:354 minutes, 35 secondsScript estás estás sufriendo y luego si no sabes s por eso chicos hay que saber sql porque mira llega un punto que te
+4:444 minutes, 44 secondsfrustras porque no sabes qué pasó A ver dame el Script Pásame el Script de no de cómo estás sacando la información no
+4:514 minutes, 51 secondspero aquí has hecho una cosa rara No hecho una cosa Porque por ejemplo en vez de un Inner join hiz un left join que son cosas diferentes
+5:005 minutesNo aquí aquí era un no era un ya measte la base de datos me sacaste nulo
+5:065 minutes, 6 secondsentonces Exacto a veces Ren has hecho y entonces Ustedes han pasado todo un
+5:165 minutes, 16 secondsdía con dolor de cabeza y la culpa era del Entonces por chicos recomendación un poquito
+5:235 minutes, 23 secondsaprender tampoco les pido que sean especialistas en sq pero sepan entender el código sq se puedan comprender lo que pasa
+5:305 minutes, 30 secondsporque ustedes mismos se pueden dar cuenta qué es lo que yo le pedí Y si yo le pedí estas cuestiones Cómo es que yo lo llego a generar Ah entonces Está bien
+5:385 minutes, 38 secondsentonces chicos los que están todavía en la universidad si todavía no llevan su curso de de base de datos o si ya lo están llevando saquen el provecho sa que
+5:465 minutes, 46 secondsle provecho Es muy importante ustedes se van a dar cuenta de repente í el scp fue el culpable y no fue nada todo lo que hicieron estaba bien pero elp era el
+5:545 minutes, 54 secondsculpable dolor de cabeza dolor de cabeza muy bien ahí no de las join Y eso que hay consulta de consulta es tremendo
+6:036 minutes, 3 secondstremendo muy bien
+6:076 minutes, 7 seconds[Música]

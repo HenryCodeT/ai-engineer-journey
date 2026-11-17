@@ -1,0 +1,267 @@
+# Python para Ciencia de Datos - M3-5 - Reducción de la dimensionalidad
+# (título en el video: Python para Ciencia de Datos - Modulo 3 - Reduccion de la dimensionalidad)
+
+0:022 seconds[Música]
+0:066 secondsentonces estimados a menudo la selección de características y la racción de dimensionalidad dimensionalidad se agrupan no como aquí en este artículo si
+0:1414 secondsbien ambos métodos se utilizan para reducir la cantidad de características en un conjunto de datos existe una diferencia importante Ya la selección de
+0:2424 secondscaracterísticas Es simplemente seleccionar y excluir características dadas sin cambiarlas es decir con
+0:3030 secondsvariance TR h con analizando el nivel de correlación analizando lo que sería el nivel de importancia con Select from
+0:3838 secondsmodel Al haber entrenado primero con un modelo ustedes analizan el grado de importancia Pero al final ustedes saben Con qué variable se quedan la variable un la variable dos la variable
+0:4747 seconds3 ustedes saben estimados Con qué variables están quedándose con tranquilidad conocen las variables así como lo hice por acá
+0:5555 secondsarriba No aquí están las variables son las mismas variables con las que tengo pero ordenadas en grado de importancia
+1:031 minute, 3 secondspero Aquí no aquí la risión de dimensionalidad implica transformar las características en una dimensión más
+1:101 minute, 10 secondsbaja Ese es el punto de acuerdo en una dimensión mucho más baja y esto
+1:191 minute, 19 secondsno el método más famoso por ejemplo puede ser pca y sus componentes principales Recuerden que cada dimensión tiene un componente pero no todos son
+1:281 minute, 28 secondsprincipales tiene su su su autor autovector y autovalor entonces estimados tenemos pca
+1:361 minute, 36 secondsmétodo que vamos a estudiar más a detalle cuando veos no clustering porque ahí en clustering yo no tengo Y entonces
+1:441 minute, 44 secondsNormalmente se utiliza un pca un tc para verificar los valores como quedan qué es lo que hace pca de forma
+1:521 minute, 52 secondsgeneral sin entrar en tantos detalles para que ustedes lo conozcan PC estimados Busca una proyección
+1:591 minute, 59 secondsCómo se proyectan los puntos de tal forma que yo conservo la mejor
+2:072 minutes, 7 secondsinformación de acuerdo ese es un punto valioso un ejemplo para que entiendan de forma general el algoritmo pca y no nos
+2:162 minutes, 16 secondscomplicamos mucho sin entrar en mucha cuestión matemática qué es lo que hace
+2:252 minutes, 25 secondspsa imaginemos que aquí hay personas imaginemos que aquí tenemos una foto con
+2:332 minutes, 33 secondsamigos Hemos salido noem hemos ido a tomar un café con unos amigos por acá nos hemos paseado y decidimos tomarnos
+2:412 minutes, 41 secondsuna foto para para el recuerdo realmente lo que estamos haciendo estimados miren esto Esto es el mundo
+2:512 minutes, 51 secondsreal nuestro mundo real es en tres dimensiones por ejemplo observen por acá Esa es la intuición detrás de un psa
+3:013 minutes, 1 secondreal nosotros miren estamos en un espacio de tres dimensiones y nosotros nos tomamos una foto ent viene por acá la
+3:093 minutes, 9 secondscamarita la camarita la posicionamos más o menos por acá y toma una foto frontal AC la camarita listo qué es lo que
+3:183 minutes, 18 secondsobtengo obtengo estimados una foto directamente obtengo lo de acá tengo lo de acá vamos a ver si se
+3:263 minutes, 26 secondspuede copiar creo que sí vamos a ver si se puede hacer una copia
+3:343 minutes, 34 secondspor esto Ah no se puede copiar no no permite copiar esto de acá
+3:433 minutes, 43 secondsno no me permite copiar mis dibujitos no hay problema Entonces miren estimados esto de aquí cuando ustedes están en el
+3:513 minutes, 51 secondsmundo real y si toman una foto obtienen lo de acá a ver borrarlo de acá ya
+3:583 minutes, 58 secondsestá s lo de aquí eh Ya Entonces ustedes estimados toman esto una foto y aquí
+4:064 minutes, 6 secondssalen los tres salimos los tres de nuevo de forma frontal qué es lo que ha pasado una foto
+4:154 minutes, 15 secondsestimados está en dos dimensiones entonces imaginan que este
+4:224 minutes, 22 secondses su amigo a su amigo b y su amigo C A B y
+4:284 minutes, 28 secondsC generado en una foto es una proyección de un espacio tridimensional en un
+4:364 minutes, 36 secondsespacio bidimensional 2D una pregunta para todos ustedes podrían reconocer a sus colegas si toman una foto sí verdad una foto frontal
+4:454 minutes, 45 secondsustedes reconocen a sus colegas Qué opinan si ustedes se toman una foto pueden reconocer a sus colegas
+4:544 minutes, 54 secondsno Por qué pueden reconocer a sus colegas esa viene por qué lo reconocen
+5:015 minutes, 1 secondporque vemos sus caras profesor porque ven sus caras ven sus rostros Entonces qué es lo que pasado esa foto ha sido
+5:095 minutes, 9 secondstomada de forma frontal y en una proyección de tres dimensiones a dos dimensiones ha conservado la información suficiente para que ustedes sean capaz
+5:175 minutes, 17 secondsde reconocerlos pueden apreciar las características faciales de sus colegas Pero qué pasa si la cámara en vez de
+5:255 minutes, 25 secondsestar de este lado yo la pongo aquí y tomo la foto Este es el mismo escenario Pero yo tomo la foto acá Cómo
+5:335 minutes, 33 secondsva a quedar la foto la foto va a quedar algo así miren uno por acá de perfil su oreja no la
+5:415 minutes, 41 secondsnariz aquí el brazo otro por acá Aquí sí y otro por acá no de
+5:485 minutes, 48 secondsperfil también estoy en la misma proyección de dos dimensiones Pero qué está pasando aquí será fácil también aquí estimados
+5:575 minutes, 57 secondsreconocer a sus amigos o ya no o disminuye un poquito la o se demora más en reconocerlos esta es una proyección a
+6:066 minutes, 6 secondsBueno una proyección x1 Esta es una proyección x2 es más fácil o más difícil
+6:136 minutes, 13 secondssi ustedes toman la foto de forma lateral ya no se vuelve tan fácil verdad es una foto
+6:216 minutes, 21 secondslateral entonces la facilidad para que ustedes reconozcan a sus amigos disminuye
+6:296 minutes, 29 secondsPor qué Porque hay obstrucción hay superposición ustedes solamente tienen una parte del rostro
+6:376 minutes, 37 secondslateral nada más les va a tomar tiempo reconocerlo sí pero al final logran Pero por qué se han demorado aquí un segundo
+6:446 minutes, 44 secondsy ya reconozco Quiénes son aquí me demoro más porque es la misma proyección
+6:516 minutes, 51 secondsdos dimensiones pero no es no es el ángulo correcto y Y peor Qué pasaría si la cámara yo la pongo por aquí y tomo
+7:007 minutesuna foto de espaldas entonces la foto que yo tenga también va a estar en dos dimensiones
+7:097 minutes, 9 secondspero sus colegas van a estar de espaldas ya no van a estar sus rostros entonces ahí Qué pasa ya no es
+7:167 minutes, 16 secondstan fácil tampoco ustedes van a demorar mucho más en reconocer a sus colegas si se dan cuenta
+7:237 minutes, 23 secondsExacto pierden información están las foto todas las fotos Están en dos dimensiones
+7:317 minutes, 31 secondspero dependiendo del ángulo de donde ustedes adquieren la imagen se pierde información o se mantiene más
+7:387 minutes, 38 secondsinformación la foto frontal permite perfectamente que ustedes reconozcan a sus colegas En un segundo la foto lateral se devan un poquito más y la
+7:467 minutes, 46 secondsfoto ya de la parte trasera ahí demora muchísimo más ustedes tienen que fijarse en los rasgos no en en la Pos en la
+7:547 minutes, 54 secondspostura de sus de sus compañeros lo van a reconocer si porque pero van a demorar más entonces estimados lo mismo ocurre
+8:048 minutes, 4 secondsen reducción de dimensionalidad Y ese es la base del pcan si en general Buscar una dimensión menor donde
+8:138 minutes, 13 secondspero no cualquier dimensión esa es dimensión x1 x2 X3 Buscar una dimensión
+8:208 minutes, 20 secondsmenor pero donde los puntos se proyecten conservando la mayor información posible aquí se conserva el 90 por de
+8:268 minutes, 26 secondsinformación o el 99% de información bajo de 3D a 2D Sí pero en esta
+8:338 minutes, 33 secondsproyección en este ángulo de cámara en esta posición de cámara tengo un 99 95 por de información entonces Es bien
+8:428 minutes, 42 secondsfácil para mí reconocer a mis colegas aquí por ejemplo mantengo un 60 por de información Porque todavía puedo ver sus
+8:498 minutes, 49 secondsrostros pero de forma lateral pero aquí solamente conservo un 40% de información y me es más complejo reconocerlos Entonces lo mismo pasa con
+8:588 minutes, 58 secondsPC es estimado es la intuición de este de ese algoritmo sin entrar en nada matemático por el momento uno proyectar
+9:059 minutes, 5 secondsen una dimensión más baja y dos pero la que la proyección sea conservando la la mayor información posible de los datos
+9:159 minutes, 15 secondspara evitar que en esta en este nivel de proyección perdamos la información y no podemos
+9:229 minutes, 22 secondsreconocer cuá entonces esa es la intuición detrás de un psa Espero que me hayan entendido un poquito mejor
+9:299 minutes, 29 secondssin entrar por cuestiones matemáticas y profesor cómo encuentro ya con pca y ahí vienen los autovectores y los autovalores directamente pero todavía no hablemos de
+9:389 minutes, 38 secondsello todo a un momento Entonces estimados Cómo hago eso cómo garantizo Ahí viene el algoritmo pca que es el más
+9:459 minutes, 45 secondsfamoso de todos Voy por aquí y si lo quiero utilizar simplemente desde
+9:519 minutes, 51 secondseser punto decomposition importo pca qué es lo que hago yo tengo dos
+9:589 minutes, 58 secondsopciones yo le puedo decir cuántos componentes quiero conservar ejecuto por acá le digo no A
+10:0710 minutes, 7 secondsver quiero e Quiero quiero mantener los tres componentes o sea los componentes
+10:1410 minutes, 14 secondsprincipales bueno tienen que ver con los autovectores y autovalores pero vamos a decir lo siguiente Cuántas dimensiones quiero proyectar Okay quiero proyectar
+10:2310 minutes, 23 secondstodo en tres dimensiones directamente no quiero conservar los las tres dimensiones o los tres componentes que conservan la mayor cantidad de
+10:3010 minutes, 30 secondsinformación Okay perfecto Cuánta información conservan No lo sé esto Bueno luego lo podemos analizar Sí pero
+10:3910 minutes, 39 secondsmenos imaginemos que esto puede puedo conservar el 80 pueden conservar el 90 por de información no eso lo podemos ver
+10:4610 minutes, 46 secondsluego lo que importa ahorita es que yo le puedo decir necesito que me digas Cuáles son los tres componentes principales Cuál cuál es la proyección
+10:5410 minutes, 54 secondsen 3D no en tres dimensiones mejor donde yo puedo conservar la mayor cantidad de información Okay voy a
+11:0311 minutes, 3 secondspasárselo por aquí a continuación vamos a hacer una transformación p punto fit Transfer de los puntos y listo aquí
+11:1011 minutes, 10 secondstengo proyectados los datos pero ya no son estimados los mismos puntos No es que aquí voy a tener el mismo nombre de columnas aquí todo la dimensión 20 se
+11:2011 minutes, 20 secondsbajó a una dimensión 3 en un nuevo espacio de características donde cada eje está definido por un componente Okay
+11:2711 minutes, 27 secondscada componente aquí genera un nuevo un eje para mi nueva dimensión Entonces los puntos ya no son los mismos muy bien
+11:3511 minutes, 35 secondsentonces el tamaño de extrain antes aquí el nivel de explicaba que tengo por acá
+11:4211 minutes, 42 secondsescre cada componente y luego no el valor del componente ejecuto por
+11:4911 minutes, 49 secondsacá no y aquí miren por ejemplo la primera componente Explica el 67 por de la información luego el 16 y luego el
+11:5711 minutes, 57 seconds10% sumo todo y tengo toda la explicaba Total no 67 + 16 no serían 67
+12:0612 minutes, 6 seconds77 83 93 más o menos alrededor 93 de
+12:1512 minutes, 15 secondsexplicabo Entonces estos tres componentes que escogí me explican en general un 93 por toda la información
+12:2212 minutes, 22 secondsmuy bien entonces de 2000 tengo 20 y ahora estimados mis puntos están proyectados en TR dimensiones voy por
+12:3112 minutes, 31 secondsacá y aplico xvid TR pca transform x valid y por acá nuevamente
+12:4012 minutes, 40 secondsvoy a ejecutar con bu estas configuraciones por defecto que he dejado para que el modelo tampoco se
+12:4712 minutes, 47 secondssesue bastante ejecuto por
+12:5512 minutes, 55 secondsaquí y ahí está miren este mar con este con tres componentes miren en este nivel
+13:0213 minutes, 2 secondstengo un grado de 0.90 75 de explicaba aquí en Random Forest llegaba a
+13:1013 minutes, 10 seconds0.87 75 ahora con pca para este caso ojo para este caso no siempre no siempre puede
+13:1713 minutes, 17 secondsser para este caso llegué a 0.975 es decir tengo de un r a la
+13:2613 minutes, 26 seconds20 bajé un r a la 10 conservando las mismas variables de
+13:3313 minutes, 33 seconds0.83 bajé a una dimensión 10 subí a 0.87 y ahora he bajado a un r prima
+13:4013 minutes, 40 secondsvamos a decirle 3 a 0.975 aument en un 10% no bueno men 10%
+13:5113 minutes, 51 secondsaumentó en un 3% bueno Ah si vemos desde acá sí no Entonces miren estimados he ido mejorando
+14:0114 minutes, 1 secondrealmente los 20 puntos proyectados en en un nuevo espacio r prima de tres dimensiones donde cada componente es una
+14:0914 minutes, 9 secondsdimensión nueva con una explicaba más o menos del 90 y tantos por c creo que 93 por llega a hacer que mi score suba 0.90
+14:1914 minutes, 19 seconds75 listo acá no chévere muy bien eso estimados es pca y esas son las
+14:2714 minutes, 27 secondsestrategias que ustedes pueden utilizar para reducir la dimensionalidad obviamente Samuel una consulta aquí veo
+14:3414 minutes, 34 secondsque al x valid TR también le aplica el pca no tal cual como lo aplicó en el X3 arriba claro Hay que aplicarlo x
+14:4414 minutes, 44 secondspero que nos explicó hace un momento hace lo mismo porque creo que no no actualiz archivo hace Aquí
+14:5214 minutes, 52 secondsestá x el X es más sencillo porque simplemente el transfer lo que hace es quitarle las variables que no necesita
+15:0015 minutesque se queda con las mismas cl ahí estás homologando el X TR con el X valin para que tengan o sea para que apliques ambos
+15:0715 minutes, 7 secondsmétodos en ambas en ambas bases se pu Exacto aquí lo que hace Sí así es Samuel aquí lo que hace
+15:1615 minutes, 16 secondsen selección de variables simplemente decirle Okay filtrate el transform lo que tece aquí sel te dice quítale estas variables y quédate con estas Ah
+15:2315 minutes, 23 secondsperfecto Cuáles son las que voy a quitarle estas de acá listo aquí lo que s dices aquí lo que sí hace es
+15:3115 minutes, 31 secondsaprenderte los autovectores y las componentes aquí entonces este pca config transfer si te aprende los
+15:3715 minutes, 37 secondsautovectores las nuevas dimensiones bueno en un ambiente ya con Data real o
+15:4415 minutes, 44 secondssea una vez haber entrenado y validado el modelo tendría que a la Data real también pasarle otra vez el pca para que
+15:5215 minutes, 52 secondsse homologue Exacto Tienes que pasarlo tienes que hacer todo el preprocesamiento que se te debe hacer
+16:0016 minutestodo el procesamiento que tú has escogido desde Bueno desde imputación desde
+16:0816 minutes, 8 secondsdesde transformación de variables todo el procesamiento que tú le has aplicado a la Data real tienes que pasarlo por
+16:1516 minutes, 15 secondsacá no no puedes simplemente la Data cruda como está mandar al modelo porque si no te sale Cualquier cosa de resultado Elo porque todo eso es un
+16:2416 minutes, 24 secondspreprocesamiento que se ha realizado Aunque la imputación no disculpa la imputación me equivocando imputación es algo que se hace los datos asumiendo que
+16:3116 minutes, 31 secondsno hay ningún valor nulo no en tu caso cuando tú coloques un registro ya tienes que garantizar que no haya ningún dato faltante no
+16:3916 minutes, 39 secondsdirectamente y tampoco quitarle losers losers es más de entrenamiento entrenamiento Disculpa se me había ido ahí pero lo que si tienes que hacer es
+16:4816 minutes, 48 secondsson las transformaciones las transformaciones a la columna las transformaciones el escalamiento que que tú has aplicado por acá tienes que
+16:5616 minutes, 56 secondshacerlo si le has aplicado método de selección de características Tú ya tienes definidas Cuáles son las variables seleccionadas Perfecto
+17:0317 minutes, 3 secondsentonces tienes que sacarle las variables no que no que no van o si has aplicado pca multiplicarlo aplicar el
+17:1217 minutes, 12 secondstransfer que está por aquí técnicamente lo que tú vas a hacer con tu Data de entrada es lo que tú haces con el valid directamente aquí no Entonces por
+17:2017 minutes, 20 secondsejemplo apenas tienes un registro de entrada aplicas Aquí el transform la transformación en el caso tengas un pca
+17:2917 minutes, 29 secondsy ya luego mandas a tu modelo Bueno ya irías directamente Aquí nada más aplicas esto ya no entrenas porque el modelo ya está entrenado Y de frente un PR no Y ya
+17:3717 minutes, 37 secondstienes tu salida Si no lo aplicas el preprocesamiento inicial vas a tener problemas muy bien
+17:4617 minutes, 46 seconds0.975 bastante bien y por acá por ejemplo la otra opción es que yo diga no quiero no sé cuántas Cuánta información
+17:5417 minutes, 54 secondsme conservan las componentes pero yo le digo quiero que por lo menos me conserves el 90 de información por ejemplo Okay perfecto entonces PS te va
+18:0318 minutes, 3 secondsa buscar todas las componentes que en conjunto llegan a 90 o más de conservación de información entonces
+18:0918 minutes, 9 secondspca.fit transf pca2 ejecuto por acá y para mi buena suerte también son tres componentes No porque las tres
+18:1818 minutes, 18 secondssumaban 93 en este caso y se Sí ahí en la parte cuando dice e
+18:2618 minutes, 26 secondsconservación se refiere a que que elimina los registros o las columnas o a qué se refiere cuando dice conservación la conservación de
+18:3418 minutes, 34 secondsinformación Recuerda que cada componente te conserva cierta cierta información sobre de explicabo
+18:4118 minutes, 41 secondsobjetivo mira aquí por ejemplo la componente 1 te conserva el 67 de información la componente 2s 16 y la
+18:5018 minutes, 50 secondscomponente 3 un 11 redondi por ejemplo Entonces yo digo quiero que me seleccion los componentes que en general
+18:5918 minutes, 59 secondsme considera un 90 de la información en este caso si tú sumas lo de acá te sale más o menos 93 a ver 67
+19:0719 minutes, 7 secondssí no 67 83 6 7 + 6 12 Sí más o menos un 9 y
+19:1519 minutes, 15 secondstantos por te conservan entonces aquí cuando le dije por lo menos el 90 por de información te va va a coincidir que
+19:2319 minutes, 23 secondstenemos tres tres componentes principales y como ya conocemos esas tres componentes al final me va salir Lo
+19:2919 minutes, 29 secondsmismo 9 75 listo es es un buen punto a ver creo que acá tenía un Codigo a Ten
+19:3719 minutes, 37 secondsun segundito donde se pueden graficar donde se puede graficar esta Esto del pc un momentito por acá creo que tiene un
+19:4619 minutes, 46 secondscodito bien bonito que se que permitía graficarlo para que ustedes lo
+19:5219 minutes, 52 secondsvean segú déjame buscarlo para que lo podamos ver en tres dimensiones como queda
+20:0020 minutesDónde está Dónde está
+20:0920 minutes, 9 secondsestáa código estoy buscándolo un segundo creo que era este
+20:1720 minutes, 17 secondscódigo justamente aquí tengo un código que permite graficarlo bastante bien
+20:3020 minutes, 30 secondsaquí creo que está ya ya encontré djame tengo que instalar una Lia un
+20:3820 minutes, 38 secondsmomentito por favor Estoy buscando aquí un Codigo ya está creo que con eso
+20:5120 minutes, 51 secondsqueda creo que con esto queda ya está perfecto
+20:5820 minutes, 58 secondsa ver ahora lo voy a probar si todo debería salir bien aquí si todo sale bien entonces no hay
+21:0821 minutes, 8 secondsproblema ya aquí tengo que pasarle como dat de entrada mi xtrain mi extrain que está por
+21:1721 minutes, 17 secondsacá por acá directamente y mi que debería estar por
+21:2521 minutes, 25 secondsaquí un segundito miin y mi J que debería estar por acá a ver vamos a ver si me
+21:3821 minutes, 38 secondssale ya aquí está ya miren por ejemplo Aquí
+21:4821 minutes, 48 secondsestá este de aquí aquí está miren por ejemplo aquí le un Codigo que justo encontré le dice cler son cl vamos a ver
+21:5821 minutes, 58 secondsPC space miren he agregado una función bueno Esto de acá no se ve muy bien que digamos pero por ejemplo miren he agregado una
+22:0622 minutes, 6 secondstransformación no esto de aquí ya lo hemos visto 90 75 por no he instalar una librería prins no prs que me permite eh
+22:1622 minutes, 16 secondsque me permite e ejecutar y generar una funcion cita mira que hay una función que permite graficar el pca no es una
+22:2422 minutes, 24 secondsfuncion bastante bonita entonces simplemente ustedes ya van a por acá no get pca 3D le mandamos el xin train que
+22:3222 minutes, 32 secondsya tenemos por aquí me va a dar los y me va a dar un Data frame con las componentes directamente proyectado los puntos y por acá un plot
+22:4222 minutes, 42 secondspc ejecuto por aquí y aquí está estimados los puntos proyectados directamente
+22:5022 minutes, 50 secondsclasificados si se dan cuenta me perm lugar Cómo están las
+23:0023 minutescomponentes divididas mir como los puntos se están separando en el espacio realmente directamente parece que
+23:0823 minutes, 8 secondsestuvieran mezclados pero tendríamos que ver cómo es que los árboles trabajan para hacer esta separación directamente bastante es bastante buena
+23:1623 minutes, 16 secondsrealment Estas son las tres componentes que Mane Tengo cuatro clases clase 0 1 2 y 3
+23:2323 minutes, 23 secondsdirectamente Habría que ver cómo hace la separación el modelo de los puntos porque queda bastante bien el espacio
+23:3123 minutes, 31 secondspueden utilizar esta esta función Ya se las dejado por acá para que lo vean pueden utilizar esta función Para que vean más o menos Cómo quedan las las
+23:3823 minutes, 38 secondsseparaciones directamente directamente Aquí está no la variabilidad de cada uno
+23:4723 minutes, 47 secondseh Dónde está 1. aquí creo que faltó hacer algo AC get PC 3D
+23:5723 minutes, 57 secondsX3 bastante ch esta proyección Ah déjen ver creo que esto no sé si este función pca déjen ver por acá pca 3D A ver vamos
+24:0724 minutes, 7 secondsa ver sí s le aplica el pca compon 3 nciones TR Sí sí lo aplica reescalar input si sí lo hace si le hace
+24:1524 minutes, 15 secondsla transformación la devuelve por acá Así lo hace si la devuelve por acá porque si no yo tranquilamente le puedo
+24:2324 minutes, 23 secondspasar por aquí el pca 3D vamos a ver si pas de aquí voy a hacer lo
+24:3024 minutes, 30 secondssiguiente Creo que es control MZ No creo que Elim colum que
+24:4124 minutes, 41 secondsya vamos a ver creo que sin querer los cambios déjen ver por
+24:5024 minutes, 50 secondsacá creo que elimine este código ya está
+24:5824 minutes, 58 secondsun segundito por acá creo que sin quer elimin la
+25:0925 minutes, 9 secondsfunción si ya está listo aquí era instalar
+25:1725 minutes, 17 secondsinst Bueno ya lo tengo instalado Entonces no hay ningún problema aquí simplemente era para llamar a la función que está por acá
+25:3525 minutes, 35 secondssi se mantuvo aquí simplemente era para mandar
+25:4325 minutes, 43 secondsLlamar la función era ex y aquí debería salir Aquí vamos a
+25:5125 minutes, 51 secondshacer una jugada necesita Ah necesa función para que me las
+25:5925 minutes, 59 secondssalidas pca 3D tit pca 3D DF pca 3D vamos a ver si le puedo mandar el xr que
+26:0826 minutes, 8 secondsya está por aquí arriba x3r Vamos a por acá
+26:1626 minutes, 16 secondseuto vamos a ver si me da una diferencia Ah okay ya tiene que segir el mismo formato pero s le aplica el PC No
+26:2526 minutes, 25 secondsse preocupen list esados Entonces miren esta funci de es la que me permite proyectar los puntos no directamente si se dan cuenta
+26:3426 minutes, 34 secondsun modelo de reación lineal no me iba a resolber el problema solamente un un modelo un poquito más avanzado se me iba a poder
+26:4126 minutes, 41 secondsayudar a observar por Cuando est los puntos dispersos Sería bueno también poder graficar los puntos de corte no directamente por acá están las
+26:4926 minutes, 49 secondscomponentes l está muy bien Se lo dejo para que ustedes lo puedan observar por aquí es bastante interesante no esto de
+26:5626 minutes, 56 secondsAcá hay otras proyecciones como tsne que también pueden usar Solo que tc es bastante Lento no directamente Entonces
+27:0527 minutes, 5 secondslo voy a dejar aquí como ejercicio ejercicio a ver
+27:1427 minutes, 14 secondsexplorar tsne y ver si hay
+27:2227 minutes, 22 secondsdiferencias a ver un ejercicio rapidito
+27:3427 minutes, 34 secondslisto hay que expar t y veamos hay algunas diferencias está si no me equivoco
+27:4527 minutes, 45 secondstc debería estar aquí no está aquí entonces debería estar
+27:5627 minutes, 56 secondsen otro lado que tenemos tiempo Buscar
+28:0828 minutes, 8 secondst si no composition Debería ser una librería
+28:2328 minutes, 23 secondspropia estar por acá no creo que sea una No creo que que esté tan mal ya ya lo
+28:3328 minutes, 33 secondsencontré pero se aquí directamente no
+28:4228 minutes, 42 secondscreo no creo que de muchos problemas por
+28:5028 minutes, 50 secondsacá ya está a ver creo que es el por aquí Aquí está el tcn estimados es otro
+28:5928 minutes, 59 secondstipo de proyección Solo que la diferencia es que tsne no requiere que los datos tengan distribución normal vamos a ver por
+29:0829 minutes, 8 secondsacá Ah pero aquí le había colocado un x por
+29:2229 minutes, 22 secondsejemplo voy a colocar Quiero tres componentes nada más Solo que el tcn estimados al no al
+29:3029 minutes, 30 secondsno requerir transformación lineal deora es un poquito más lento que el
+29:3829 minutes, 38 secondspca Entonces tcn se toma su tiempo Realmente
+29:5929 minutes, 59 secondsYa está ya acabó transf y simplemente seguimos con AC está tengo que
+30:0730 minutes, 7 secondstransformar también y luego hacer el entrenamiento control c por acá
+30:1530 minutes, 15 secondsabajo aquí sería tc transform x valid classifier 15 x vamos
+30:2430 minutes, 24 secondsa probar cómo nos queda
+30:3130 minutes, 31 secondsvamos Ob attribute vamos a Qué
+30:4730 minutes, 47 secondspasó rápidamente
+31:1331 minutes, 13 secondsver mi Plaka
+31:3531 minutes, 35 secondss deí agarrar esto de
+31:4831 minutes, 48 secondsacá ya está Qué raro esperamos un segundito no me está
+31:5831 minutes, 58 secondsagarrando por acá me tengo que ver a esta parte porque no no está queriendo agarrar
+32:2332 minutes, 23 secondsdirectamente vamos un segundito Aquí está este transform no está
+32:3132 minutes, 31 secondsqueriendo aplicar a mi aquí se le aplica vamos a ver hay por
+32:3932 minutes, 39 secondsacá punto solamente tiene transform nada
+32:5232 minutes, 52 secondsmás no creo que quier hacer ya vamos a tener que ver qué pasa aquí
+33:0233 minutes, 2 secondsporque debería tener un transfo aquí así sin ningún
+33:0933 minutes, 9 secondsproblema Okay ya esto de aquí lo voy a ver para para ver qué ha pasado porque esto debería salir sin problema el fit transfer si se lo he hecho perfectamente
+33:1733 minutes, 17 secondsy aquí tengo x3r aquí no le puedo colocar un fit transfer porque si no estaría aprendiendo las componentes con los datos de validación Y eso no sería
+33:2633 minutes, 26 secondscorrecto Y eso no sería realmente correcto Entonces tenemos que ver qué es lo que está pasando por ahí directamente para ver qu es lo que qué es lo que ha
+33:3433 minutes, 34 secondspasado aquí en este caso directamente estimados entonces Dj voy a corregir esto y ya se les estoy
+33:4133 minutes, 41 secondspasando y aquí vemos cómo queda curis score Qué raro que no est saliendo Solo
+33:4833 minutes, 48 secondsque sea un error de una error de actualización vamos a ver por aquí
+34:0734 minutes, 7 secondsvamos ver que ha pasado por acá
+34:2834 minutes, 28 secondsvamos a ver por AC Qué pasó x space
+34:4534 minutes, 45 secondsya Okay me dice que me dice que simplemente aplique
+34:5234 minutes, 52 secondstransform directamente Solo que no va a ser es el
+35:0535 minutes, 5 secondscaso aquí tenemos el fit creo que es el fit nada
+35:1835 minutes, 18 secondsmás nada más directamente transforma vamos a ver si sale el resultado
+35:3135 minutes, 31 secondsya aquí lo voy a ver estimados y les aviso Cuál es la solución porque aquí debería haber un transform aquí estoy aprendiendo se está entrenando el modelo
+35:3935 minutes, 39 secondsy aquí perfecto tengo el xtr pero aquí no le puedo colocar F transform porque de lo contrario estaría aprendiendo con el x valid y por eso Aquí voy a tener
+35:4735 minutes, 47 secondsproblemas en predicción sí ver ahora lo corrijo voy a ver la versión la versión actualizada de esta librería y les y ya
+35:5435 minutes, 54 secondsles estoy comunicando por el grupo de WhatsApp Muy bien Entonces eso sería más que todo lo del día de hoy lo que quería enseñarles Entonces no se olviden que
+36:0236 minutes, 2 secondshay muchas formas de como ustedes pueden hacer la reducción de dimensionalidad en este caso
+36:0936 minutes, 9 secondsdirectamente el método un método bastante sencillo pero útil como ustedes han
+36:1636 minutes, 16 secondsvisto es por ejemplo el método de la varianza que sirve también para datos para
+36:2436 minutes, 24 secondsaprendizaje No supervisado otro método también tiene que ver con características altamente correlacionadas hay otro también basado si no me equivoco en eh en una prueba de
+36:3336 minutes, 33 secondshipótesis directamente pero meido a al método más famoso no que es basado en la importancia que realmente es lo que importa Porque aquí por ejemplo ustedes
+36:4236 minutes, 42 secondspueden utilizar cualquier modelo que puede ser un regreso logístico o un modelo basado en en árboles de decisión
+36:4936 minutes, 49 secondsmás avanzado entrenar no previamente Y obtener Cuáles serían las mejores características y en función de eso
+36:5836 minutes, 58 secondsustedes no seleccionar seleccionarlas y aplicar su entrenamiento o pueden aplicar reducción de dimensionalidad pero bajo el criterio que los datos
+37:0637 minutes, 6 secondsestán proyectados en un nuevo espacio y eso hay que arreglarlo Okay estimados eso sería entonces todo por el día de hoy el tcn voy a ver qué es lo que ha
+37:1437 minutes, 14 secondspasado debería también funcionar el tcn sin ningún problema ya voy a ver qué es lo que pasado Sí una consulta hay un método que
+37:2337 minutes, 23 secondses el de El de correlación creo que no que explicó más está por arriba en ese caso elimina ambas variables
+37:3137 minutes, 31 secondscorrelacionadas o solo una de ellas se elimina una de ellas nada más ustedes buscan cuál quieren
+37:4037 minutes, 40 secondseliminar una que haya superado el 0.40 de correlación directamente por
+37:4837 minutes, 48 secondsAC vamos a ver está por ejemplo vamos a verun creo que aquí elimina ambas esperen
+37:5737 minutes, 57 secondsaquí por ejemplo están las columnas que se eliminan por ejemplo son PC pxw SV y 3g creo que elimina amb si no me
+38:0438 minutes, 4 secondsequivoco aquí Este ejemplo por acá pero le pone ese umbral de 0.4 No sí PC y tc la se está eliminando a el umbral 0.4
+38:1338 minutes, 13 secondsporque el color corresponde al nivel de correlación que hay no que está por acá más o menos 0.6 entonces con un 0.4 aquellas variables que tienen una
+38:2038 minutes, 20 secondscorrelación elevada se elimina Solo que no Debería ser así realmente no Debería ser directamente así lo que podía hacer
+38:2738 minutes, 27 secondses una una mejora simplemente escoger escoger simplemente por filas o por columnas nada más para que no se
+38:3438 minutes, 34 secondsminimen las dos

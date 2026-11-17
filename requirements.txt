@@ -1,0 +1,15 @@
+# Curso 01 · Python para Ciencia de Datos
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+seaborn>=0.13
+scipy>=1.11
+scikit-learn>=1.4
+imbalanced-learn>=0.12   # módulo 4 (SMOTE)
+mlxtend>=0.23            # clase 25 (Market Basket)
+# Notebooks y evaluación
+jupyterlab>=4.0
+nbclient>=0.10
+nbformat>=5.9
+ipykernel>=6.29
+pytest>=8.0

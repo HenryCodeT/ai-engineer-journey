@@ -1,0 +1,150 @@
+# Python para Ciencia de Datos - M3-2 - Eliminación de Variables con Baja Varianza
+# (título en el video: Python para Ciencia de Datos - Modulo 3 - Eliminacion de Variables con Baja Varianza)
+
+0:066 secondsy vamos a hacer la primera la primera forma de Cómo reducir la dimensionalidad a ver eliminación de
+0:1515 secondsvariables con baja varianza una primera forma de bastante simple y sencilla es utilizar la eliminación de variables que
+0:2323 secondstienen una varianza bastante baja ustedes ya llevaron el curso de estadística verdad Qué es la varianza a ver qué me dice Quién me dicen en
+0:3131 secondspalabras sencillas Cómo ustedes entienden lo que es la varianza alguien Recuerda la definición de la varianza qué tan dispersos están las muestras
+0:3939 secondsmientras mayor varianza más alejados los datos mientras menor sea más cercanos están los datos muy bien cuán dispersos están los datos perfecto muy
+0:4848 secondsbien muy
+0:4949 seconds[Música]
+0:5050 secondsbien perfecto eso es estimado la varianza para los que todavía no no recuerdan Qué es la varianza no
+0:5858 secondsdirectamente si no van a entender este método es algo sencillo miren Les
+1:061 minute, 6 secondscomento yo tengo por acá imaginemos un punto medio de acuerdo mir
+1:131 minute, 13 secondsYo por acá tengo un método medio un punto medio Ahí está este punto imaginemos que
+1:211 minute, 21 secondses el punto de balance en esto Ahí está es un punto de equilibrio estimados entonces por eso la varianza se va pasa
+1:301 minute, 30 secondsen la media por acá puedo tener por ejemplo no sé un -5 y por acá puedo tener por ejemplo un
+1:371 minute, 37 seconds5 no esta es la media directamente entonces si yo quisiera obtener la diferencia entre esto de acá mi punto
+1:451 minute, 45 secondsmedio técnicamente es el cero directamente no -5 + 5 no es cer0 directamente es el punto medio Solo que
+1:541 minute, 54 secondsla varian indica como bien dijeron sus compañeros qué tan dispersos están los puntos con respecto a su valor
+2:012 minutes, 1 seconden este caso miren los puntos están así y la variancia es una métrica que me indica justamente la dispersión miren
+2:092 minutes, 9 seconds-10 y 10 Si yo analizas la diferencia entre
+2:162 minutes, 16 secondsgrupos mediante la media podría obtener este caso miren este Rango de valores va entre -5
+2:262 minutes, 26 secondsy 5 no y su media cer este Rango de valores va entre -10 y y su media por ejemplo es cer la media por sí sola no
+2:332 minutes, 33 secondsme puede explicar mucho directamente no me puede decir si este es un escenario de valores a y este son escenario de valores B la media en sí no me puede
+2:422 minutes, 42 secondsexplicar estimado Realmente si es que hay una diferencia entre a y b ustedes de forma visual lo hacen lo
+2:492 minutes, 49 secondspueden observar sí no aquí los valores están entre -5 y 5 y aquí entre -10 y 10 pero con la no pero utilizando la media
+2:582 minutes, 58 secondsla media es cer en ambos casos Entonces se requiere de otra métrica de algún otro dato que si me diga que entre
+3:053 minutes, 5 secondsa y b hay una diferencia No y esa es la famosa varianza directamente Cómo se define recuerdan
+3:143 minutes, 14 secondsrecuerdan Cómo se define la varianza simplemente saco la diferencia entre
+3:253 minutes, 25 secondsesto 0 - 5 elev cuadrado qué más a ver
+3:323 minutes, 32 secondsrecuerdan recuerdan simplemente se sacan las diferencias se suman al cuadrado y se dividen sobre sobre qué sobre la cantidad de
+3:413 minutes, 41 secondspuntos que hay en este caso hay dos puntitos y se obtiene una métrica llamada la varianza entonces la varianza recién es
+3:503 minutes, 50 secondsla única métrica que me puede decir que tan lejos están los puntos que me puede decir que el escenario a es diferente del escenario B porque los puntos aquí
+3:583 minutes, 58 secondsestán más cerc y por aquí están más dispersos y eso profesor qué tiene que ver con selección de variables pues bastante
+4:074 minutes, 7 secondssencillo observemos por acá un caso que yo les que yo les dé imagos imaginemos que tengo la variable x1 x2 X3 y aquí
+4:174 minutes, 17 secondsestá y por ejemplo no clase 0 clase 1 y clase 2s Bueno vamos a
+4:254 minutes, 25 secondssimplificarlo vamos vamos por partes x un a ver dónde está aquí
+4:344 minutes, 34 secondsestá vamos a ver observen por acá x1 vale 2 otro
+4:424 minutes, 42 secondscolorcito x1 vale 2 vale 10 vale 3 vale
+4:484 minutes, 48 seconds15 miren x2 vale 1 2 1 1 X3 vale 100
+4:584 minutes, 58 secondsmiren 50 130
+5:045 minutes, 4 seconds45 observen por acá no y y vale clase C
+5:105 minutes, 10 secondsclase 1 miren clase C y clase 1 por ejemplo observen este ejemplo sencillo
+5:185 minutes, 18 secondsde cómo se selecciona pregunta qué variable o qué variables ustedes crean que sean relevantes para explicar Y de
+5:265 minutes, 26 secondsforma visual qué variables ustedes observan por acá que sean
+5:335 minutes, 33 secondsinteresantes que generen una cierta explicaba de forma visual cuál creen que sean variables fuertes y cuáles creen
+5:415 minutes, 41 secondsque sean variables débiles directamente observen el
+5:485 minutes, 48 secondsejempo Eduardo dice x1 y X3 el resto que opina
+5:575 minutes, 57 secondsestimados por qué Por qué son fuertes si se dan cuenta Qué
+6:036 minutes, 3 secondshan encontrado aquí de forma visual qu han encontrado de forma visual si se dan
+6:116 minutes, 11 secondscuenta cosa curiosa no miren los datos de X los valores de
+6:206 minutes, 20 secondsx1 para la clase cer son dos o tres los valores de X3 para la clase
+6:306 minutes, 30 secondscero son valores que van entre 100 130 los valores que van para la clase un
+6:386 minutes, 38 secondsen x1 son 10 y 15 Entonces ustedes se dan cuenta que aquí hay una diferencia verdad el rango de valores de
+6:476 minutes, 47 secondsx1 para clase 0 de Y es más pequeño y el rango de valores para la clase un en x1
+6:556 minutes, 55 secondses más grande lo mismo ocurre en X3 entonces estimados si ustedes an esta gráfica una gráfica de esta
+7:037 minutes, 3 secondsforma un diagrama de cajas Por ejemplo si ustedes hicieran estimados un diagrama de cajas y
+7:127 minutes, 12 secondsbigotes se darían cuenta de una de la variable x1 Esta es la variable x1 pero
+7:207 minutes, 20 secondsdividida en lo por Y entonces esto sería c Bueno a ver est sería al revés no esto sería un por ejemplo Lo hice al revés
+7:287 minutes, 28 secondspero no hay problema y esto sería cero se en cuenta estimados que los puntos los valores para de x1 para la
+7:387 minutes, 38 secondsclase uno están mucho más arriba Miren la mediana Cae por acá mientras que la mediana no para la clase para la clase
+7:477 minutes, 47 secondscero cae mucho más abajo entonces estimados hay una más mayor dispersión de puntos acá y eso se
+7:557 minutes, 55 secondsrefleja con un Box flot ustedes grafican hacen un cruce entre x1 con y generan dos block dos diagramas de
+8:058 minutes, 5 secondscaja filtrados por clase y encuentran esto de aquí este hallazgo me indica que
+8:128 minutes, 12 secondsrealmente que es una Varela relevante sin hacer muchas cosas más ustedes pueden encontrar cierta variable relevante Entonces miren Esto es lo
+8:208 minutes, 20 secondsbonito de acá si ustedes hacen X3 van a encontrar algo parecido Entonces al haber mayor
+8:278 minutes, 27 secondsdispersión en los datos miren al estar más dispersos debido a
+8:348 minutes, 34 secondsque a que miren no a que cada una no a que cada clase tiene valores en en un
+8:428 minutes, 42 secondsRango diferente genera que la varianza sea más elevada entonces en general yo puedo
+8:518 minutes, 51 secondsdecir x1 tiene una varianza elevada se dan cuenta Eso estimados es el objetivo
+8:578 minutes, 57 secondsde aquí y qué pasaría con x2 con x2 ocurre todo lo
+9:069 minutes, 6 secondscontrario si ustedes observas en la variable x2 se darían cuenta que está Sí x2 su diagrama de
+9:189 minutes, 18 secondscaja este es x2 se daran cuenta estimamos que los puntos están muy próximos y por lo tanto las medianas
+9:279 minutes, 27 secondsprácticamente están casi en el mismo valor entonces estimados eso encontrarían ustedes aquí en x2 y por lo
+9:359 minutes, 35 secondstanto aquí la varianza de los punto Sería más baja habría hay varianza Sí pero una varianza más
+9:429 minutes, 42 secondsbaja Entonces ese es el objetivo por acá No ese justamente es el objetivo que les quera explicar no directamente en este
+9:519 minutes, 51 secondsmodelo este módulo es un eso por qué Les explico por qué me tomo mi tiempo con esto porque el método de de selección de
+9:599 minutes, 59 secondsvariables a través de la varianza es un método bastante interesante se aplica incluso hasta en técnicas de
+10:0610 minutes, 6 secondsclustering se aplican en técnicas de clustering y también técnicas de clasificación o sea pueden aplicarlo en ambos bueno en ambos
+10:1510 minutes, 15 secondsrealmente en clasing cuando yo no conozco la etiqueta y por qué Porque el método basado en Baja varianza no
+10:2210 minutes, 22 secondsdepende de la variable objetivo simplemente ustedes analizan la columna de cada columna de forma pendiente y aquellas que no cumplen
+10:3110 minutes, 31 secondscierto umbral de varianza son eliminados eso es lo bonito entonces estimados Ese es el primer método sencillo pero a veces
+10:4010 minutes, 40 secondsfunciona bastante bien directamente
+10:4810 minutes, 48 secondsdir no realmente es con la varianza este ardo porque contrario la desviación estándar es la si no me equivoco es la raíz
+10:5610 minutes, 56 secondscuadrada varian entonces lo único lo que harías es bajarle los valores o sea acotar más entonces sacas una rz
+11:0311 minutes, 3 secondscuadrada algo y lo y haces que se aproxime más los valores mientras que con la varianza tú perfectamente puedes tener valores más más grandes puedes
+11:1311 minutes, 13 secondsencontrar una mayor diferencia entre las salidas eso lo vamos a ver por aquí miren por ejemplo vamos a probar por acá
+11:2211 minutes, 22 secondsAquí tengo mi método de la varianza mi varianza aquí está la varianza y por
+11:3111 minutes, 31 secondsdefecto miren le estoy colocando un umbral de 0.5 miren por defecto nada más cómo se hace fromer feature selection de
+11:4011 minutes, 40 secondsforma técnica import variance threshold genero un objeto llamado bt del tipo var le digo vamos a a filtrar
+11:4911 minutes, 49 secondstodas las variables cuya varianza va a estar en el límite de 0.5 y con esto de aquí le aplico una
+11:5811 minutes, 58 secondstransformación a los datos de entrenamiento nada más y tengo extrain TR filtrados transformados Y si ustedes observan en
+12:0612 minutes, 6 secondseste caso de uso los registros de 20 dimensiones he bajado a 13 pero profesor y este y este 0.5 será
+12:1612 minutes, 16 secondssiempre No necesariamente tenemos que analizarlo entonces tengo que analizar cuál sería el mejor umbral directamente
+12:2312 minutes, 23 secondsaquí lo he colocado por defecto Cómo se hace un truquito es este nada más miren definen valores diferentes de
+12:3112 minutes, 31 secondsumbral por ejemplo estoy definiendo umbrales desde c hasta 2s contando 0.1 en 0.1 y simplemente voy a probar var
+12:4112 minutes, 41 secondscon todos esos umbrales y Quiero ver cómo se van seleccionando las variables con respecto al umbral que yo he pasado
+12:4812 minutes, 48 secondsejecuto por acá y miren por aquí có me queda Ob esta gráfica Y aquí están en este lado están
+12:5612 minutes, 56 secondslos umbrales Y aquí están las variables que serían seleccion en función del umbral que yo escojo cuando el umbral es cero pasan todas las variables si se dan
+13:0513 minutes, 5 secondscuenta todas las variables son seleccionadas las 20 que yo tengo inicialmente Pero conforme yo Voy subiendo el umbral comienzan a bajar
+13:1313 minutes, 13 secondsmiren con un umbral de 0.25 bajo a 18
+13:1913 minutes, 19 secondsvariables con un umbral miren de 0.5 me quedo con 13 variables Y eso justo es lo
+13:2813 minutes, 28 secondsque ha ocurrido acá aquí arriba cuando le puse 0.5 en el umbral obtuve aquí una salida de tres
+13:3513 minutes, 35 secondsestimados esto se parece bastante al método de codo comento y si sigo bajando el si sigo subiendo el umbral por
+13:4213 minutes, 42 secondsejemplo a partir de un umbral de 0.75 me quedo con 12 variables y luego ya no interesa el
+13:5013 minutes, 50 secondstamaño del umbral ya no interesa siempre se mantiene en 12 directamente entonces buenas noches
+13:5913 minutes, 59 secondsSí disculpe por ejemplo yo me dado cuenta que cuando cuando así selecciono variables añado o elimino O sea si bien
+14:0714 minutes, 7 secondscierto habrá algún costo que por ejemplo Eh puede hacer que en una rón el el rado suba
+14:1614 minutes, 16 secondso quitándo esas de un otro modo hay una una correlación entre ellas que no se lo puede ver y si hace que nuestro que que
+14:2514 minutes, 25 secondsnuestro recad caiga es posible eso o o ya con o ya con con la con este
+14:3314 minutes, 33 secondsmétodo no este método es bastante este método es bastante sencillo te comento este Carlos
+14:4214 minutes, 42 secondsdirectamente analiza las variables de forma independiente es decir no analiza si es que hay una correlación entre varias variables lo único que va a decir
+14:4914 minutes, 49 secondses Okay esta variable no tiene no tiene mucha varianza Entonces vamos a
+14:5614 minutes, 56 secondseliminarla esta pero no necesariamente estoy eliminando vares correlacionadas directamente para eso necesitaría
+15:0515 minutes, 5 secondsinvolucrar a dentro del experimento pero aquí involucre nada
+15:1315 minutes, 13 secondsClaro que visto r cuadrado tiende tiende caer cuando cuando a pesar
+15:2115 minutes, 21 secondsde que yo lo veo que no afecta mucho pero me he dado cuenta que cuando ya lo llevo a lo real otra manera hace que mi
+15:2915 minutes, 29 secondsque mi overfit mi que sea eh No no se vaya muy lejos a pesar que esa variable
+15:3715 minutes, 37 secondsincluso con la lógica no influye ya muy bien A pesar que no influye por
+15:4515 minutes, 45 secondslógica es baja pero de una otra manera al momento que la real
+15:5415 minutes, 54 secondsayuda ya muy bien Carlos aquí lo que tenemos que ver es la explicaba ojo con ese detalle aquí no se puede ver Esto justamente va a ser el
+16:0316 minutes, 3 secondssiguiente caso que les voy a explicar a continuación bien la que me dice Carlos correcto no profesor yo bajé le bajé miren lo bueno bueno lo le quité
+16:1216 minutes, 12 secondsvariables que estoy viendo que no aportan mucho pero igual bajado mi r cuadrado es porque ustedes al final cuando
+16:1816 minutes, 18 secondsfiltran por allí pierden explicaba porque todas las variables en conjunto aportan explicaba para y puede
+16:2816 minutes, 28 secondshaber algunas que no directamente se va Pero puede haber una que se aporta aunque sea un cierto margen de explicaba Entonces eso hace que se pierda
+16:3616 minutes, 36 secondsinformación y por lo tanto su performance va a caer Pero qué tanto cae con respecto entonces aquí viene no Qué
+16:4316 minutes, 43 secondstanto Yo pierdo de performance de desempeño con relación no a la complejidad del
+16:5216 minutes, 52 secondsmodelo nosotros comprometemos complejidad del modelo con respecto a su desempeño
+16:5916 minutes, 59 secondsMientras más complejo es el modelo el desempeño es mucho mejor Pero si yo le quito variables obviamente estoy
+17:0617 minutes, 6 secondsquitando información y por lo tanto eh la complejidad disminuye pero el desempeño también cae no directamente
+17:1317 minutes, 13 secondsentonces aquí hay que ver eso realmente no complejidad del modelo con respecto al desempeño es un punto muy importante entonces este método de varianza lo que
+17:2217 minutes, 22 secondsme está diciendo simplemente es que hay variables que no tienen mucha que no tienen mucha variabilidad no en en sus valores y si yo estoy trabajando en un
+17:3117 minutes, 31 secondsproblema de clasificación se necesita cierta variabilidad pero ojo de forma independiente Porque si se
+17:3917 minutes, 39 secondshan dado cuenta solamente tengo aquí a x es de forma independiente puede ser que de repente esa Abel en conjunto con otra sí aporten
+17:4717 minutes, 47 secondsexplicaba si se dan cuenta entonces también es es un punto muy importante que hay que analizar directamente no Bueno vamos a ver en este caso cuánto
+17:5517 minutes, 55 secondsnos queda en este caso por por ejemplo miren las 13 variables son estas battery Power
+18:0218 minutes, 2 secondscl Speed FC memoria interna no la potencia no del del dispositivo número de núcleos etcétera etcétera es es un
+18:1118 minutes, 11 secondsmétodo que no tiene nada que ver con las con lo que sería estimados en este caso la var y no la toma en
+18:2018 minutes, 20 secondscuenta ejecuto tengo 13 dimensiones aquí hago el filtro directamente miren tengo
+18:2718 minutes, 27 secondsel filtro de tod de todos los eh los datos en este caso
+18:3418 minutes, 34 secondsacá x y por aquí luego aplico mi
+18:4218 minutes, 42 secondsentrenamiento Okay no hay problema y miren cuánto obtengo 0.90 905 Ah pero me
+18:4918 minutes, 49 secondsfaltó darle la misma configuración Disculpen esta configuración la vamos a mantener para para ser equitativos me
+18:5818 minutes, 58 secondsvoy por acá pego por
+19:0419 minutes, 4 secondsaquí y por ejemplo llego a 0.84 75 he llegado a 0.84 75 estimados si
+19:1319 minutes, 13 secondsustedes se dan cuenta ha mejorado el modelo sí miren en este caso la performance ha mejorado subí de subí si
+19:2119 minutes, 21 secondsno me equivoco de 0.83 en un r la 20 hasta un 0.84 75 no
+19:2919 minutes, 29 secondsEntonces qué ha pasado de un r a la 20 miren en este caso he ido a un r la 13 y de
+19:3919 minutes, 39 seconds0.83 me fui a un 0.84 75 entonces he mejorado miren he
+19:4719 minutes, 47 secondsmejorado el modelo es menos complejo pero clasifica mejor

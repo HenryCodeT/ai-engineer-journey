@@ -1,0 +1,129 @@
+# Python para Ciencia de Datos - M2-5 - Caso de uso Panorama de la vivienda (Docente)
+# (título en el video: Python para Ciencia de Datos - Modulo 2 - Caso de uso Panorama de la vivienda (Docente))
+
+0:022 seconds[Música]
+0:066 secondsel caso de uso del día de hoy ese el vamos va a ser con el mismo dataset que ustedes ya han visto la sesión pasada
+0:1414 secondscuando les hice que hagan la práctica de lo que sería métodos de imputación de datos Y ustedes reportaron resultados bastante interesantes Pues muy bien
+0:2121 secondsVamos a seguir trabajando con es datas aquí el día de hoy y muy bien entonces esta parte ya ustedes la saben tengo que
+0:2828 secondsimportar toda librerías necesarias pandas
+0:3535 secondsluego solo que ahora voy a importar unas subrutinas diferentes voy a llamar librerías para
+0:4444 secondsentonces por aquí por ejemplo tengo split
+0:5151 secondsclassifier clasificador por aquí confusion matri confusion mat
+0:5959 secondsdisplay por ejemplo y un acuras score directamente para poder observar esto muy bien Enton aunque esto de aquí creo que no lo vamos a utilizar porque esta
+1:071 minute, 7 secondses una tarea de regresión entonces estimados miren directamente por acá están importando las librerías necesarias para
+1:141 minute, 14 secondsmaching mach menaje de máquina y ahora lo que voy a hacer es leer el dataset que ustedes ya habían visto por acá muy
+1:221 minute, 22 secondsbien y como Ustedes sabrán hay valores nulos por aquí miren hay valores nulos directamente dentro dentro del dataset que ustedes ya saben que existe no por
+1:301 minute, 30 secondsacá por acá incluso ustedes hicieron un análisis mejor no bastante Bueno entonces el objetivo del día de hoy es
+1:381 minute, 38 secondsque ustedes a este dataset le apliquen ya los dos procesos primero la imputación de los datos seguido de lo
+1:451 minute, 45 secondsque es la eliminación de outliers con en un máximo de 10% de contaminación Ese es el primer objetivo del día de hoy el
+1:521 minute, 52 secondsobjetivo es esto no que ustedes desarrollen Esta bueno la parte uno imputación de datos ya lo hicieron la sesión pasada Entonces el día de hoy
+2:002 minutesvamos a agregar un método de eliminación de Players a un 10% y a continuación lo que vamos a hacer es un código de
+2:072 minutes, 7 secondsentrenamiento directamente de acuerdo vamos a hacer un vamos a hacer un pequeño código de entrenamiento es una tarea de regresión debido a que el dataset es un dataset sobre no precios
+2:162 minutes, 16 secondsde una vivienda en función de diferentes variables que yo tengo aquí para para hacer la predicción no me voy a concentrar mucho en el análisis no de
+2:242 minutes, 24 secondssupuestos ni análisis tampoco diferentes vamos a concentrarnos únicamente en en una métrica y ver cómo es que esta
+2:312 minutes, 31 secondsmétrica es afectada por la estrategia que nosotros utilicemos Entonces un ejemplo aplican imputación de datos sabemos que existen varias formas desde
+2:382 minutes, 38 secondsuna imputación por una mediana que es lo más básico pero también tienen que tener cuidado porque no siempre se puede imputar mediante una mediana También
+2:462 minutes, 46 secondspuen tenemos los métodos más más avanzados como el can input o el iterative input no directamente y por
+2:542 minutes, 54 secondsacá tenemos la eliminación deers directamente van a aplicarlo con p y como ustedes recordarán hay bastantes
+3:013 minutes, 1 secondalgoritmos entonces utilicen los el knn que es famoso no y alg y otros tres más que ustedes consideren convenientes como
+3:083 minutes, 8 secondsTiene bastantes les voy a pedir que escojan cuatro algoritmos directamente para que ustedes puedan trabajar los dejo a su a su libre criterio
+3:173 minutes, 17 secondsdirectamente ahora ahora bien qué es lo que van a hacer Okay imaginemos que aquí en este punto ya va a estar todo el
+3:243 minutes, 24 secondscódigo todo el método de amputación y todo el método de eliminación quiero que ustedes generen generen escenarios distintos voy a
+3:323 minutes, 32 secondspedirles que ustedes generen cinco escenarios voy voy a ayudarles a generar el primer escenario Para que vean cuál serir la dinámica escenario uno vamos a
+3:393 minutes, 39 secondshacer primero de una forma manual para que ustedes lo hagan y ya luego pasamos a automatizar esto un poquito mejor escenario uno DF es mi Data frame no y
+3:483 minutes, 48 secondses igual a DF price la var objetivo en este dataset es el precio no de la vivienda y x mis predictores voy a meter
+3:563 minutes, 56 secondsun poco el zoom para que lo vean mejor es todo lo demás el resto de variables pero eliminando la variable precio no
+4:044 minutes, 4 secondslisto y me voy a encargar de trabajar solamente con las variables numéricas todavía no nos vamos a centrar en el
+4:114 minutes, 11 secondstratamiento de de variables tipo óptico porque aquí tenemos bastantes si ustedes se dan cuenta tenemos método no ser dat
+4:184 minutes, 18 secondsno tenemos la fecha tenemos consil Area no tenemos entre otros modelos directamente Okay no voy a concentrarme todavía en eso incluso hay dos columnas
+4:274 minutes, 27 secondsque deberían irse porque sabemos que sus valores faltantes son demasiados Entonces eso es lo que ustedes tienen que realizar yo voy con un escenario uno
+4:354 minutes, 35 secondseste escenario uno que les voy a explicar por acá este escenario no es un escenario indirecto No es un escenario básico en qué sentido en que lo que voy
+4:434 minutes, 43 secondsa hacer directamente es esta parte no y igual a DF price voy a filtrar mir en el precio y x va a ser simplemente dataframe quitándole la vari objetivo
+4:524 minutes, 52 secondsque es precio y quitándole todos los tipos de datos que son óptimos para qued Únicamente con datos numéricos por el momento Entonces es Este es mi escenario
+5:005 minutesbásico todos ustedes también pueden partirles de acá a continuación voy a hacer un proceso bastante simple les voy a explicar aquí que es dividir los datos
+5:085 minutes, 8 secondssimplemente en entrenamiento y test nada más como les digo es un Machine super básico sin nivel nivel uno obviamente sé
+5:175 minutes, 17 secondsque hay más cosas que hacer pero todavía no quiero concentrarme en eso quiero que ustedes nada más vean y se concentren en un efecto no general entonces por acá
+5:255 minutes, 25 secondstengo x no tengo y y voy a hacer la división de estos datos en un proces en un factor de 80 20 no 80 20 y un Random
+5:345 minutes, 34 secondsState de cer por favor mantengan esta configuración para que los resultados sean sean similares en mi caso y todos
+5:415 minutes, 41 secondstengamos lo mismo entonces x y TR si 0.8 t si 020 y Random State 0 Esta es la
+5:515 minutes, 51 secondsparte base muy bien entonces yo me voy por acá directamente y les voy a explicar el siguiente código no una vez
+5:595 minutes, 59 secondsque yo hago Esta división entonces Esta división de entrenamiento la podemos dejar en la parte de arriba contr control x est Esta división de entrenamiento no tiene nada que ver con
+6:076 minutes, 7 secondsningún escenario Esto es lo mismo lo que va a cambiar es el método de amputación Entonces lo dejo por aquí Arribita me
+6:156 minutes, 15 secondsvoy por acá y Les explico por cones didácticos Voy a escoger un regresor el
+6:216 minutes, 21 secondsRandom for regreso no un regresor un regresor lineal o no tipo lazo no vamos a trabajar directamente con un rand
+6:306 minutes, 30 secondsForest regresor un regresor basado en árboles de decisión que genera reglas de asociación pero en este caso un Random
+6:376 minutes, 37 secondsfor indica que voy a trabajar con múltiples árboles de decisión y en este caso en esta oportunidad lo que voy a hacer vamos voy a cambiar por acá las
+6:466 minutes, 46 secondsconfiguraciones voy a colocar que por defecto nosotros vamos a trabajar con un número de de árboles igual a 50 luego
+6:546 minutes, 54 secondsles voy a explicar esto con mayor detalle no se preocupen este de aquí es el número de árboles cada árbol va hacer una una predicción y cada árbol tiene un
+7:047 minutes, 4 secondserror al final se va a promediar todos los errores y se obtiene un error final que es lo que nos da el modelo Random
+7:117 minutes, 11 secondsState igual a c y una profundidad máxima del árbol de seis para evitar que se sobreajuste demasiado y
+7:187 minutes, 18 secondstambién a a tener un poquito el overfitting no vamos a dejar solamente este estas configuraciones básicas esto
+7:267 minutes, 26 secondsobviamente ya les voy adelantando lo que está por acá se llaman hiperparámetros y hay que calibrarlos y los
+7:347 minutes, 34 secondshiperparámetros estimados no son iguales para los algoritmos en el caso de un r Forest regreso bueno tiene muchísimo más
+7:417 minutes, 41 secondsparámetros no hiperparámetros Disculpen pero por el momento me estoy concentrando en estos dos buen r también se podría hacer que es un hiper
+7:497 minutes, 49 secondsparámetro semill a continuación est esto de aquí es una función llamada score dataset no Def no score dataset
+7:577 minutes, 57 secondsdirectamente es una función base la van a tener directamente que recibe los valores de entrenamiento de X los
+8:048 minutes, 4 secondsvalores de prueba de X no el y entrenamiento y el y de pruebas directamente qué es lo que va a hacer va
+8:128 minutes, 12 secondsa entrenar no con ex train luego vamos a hacer una predicción y vamos a retornar el min absolute error no es lo que yo
+8:198 minutes, 19 secondsquiero que retorne voy a trabajar con esta métrica my que es una métrica de error que me va a decir que tan ajustados están los puntos con con
+8:288 minutes, 28 secondsrespecto al modelo Que tanto se ajustan los puntos no al modelito generado por acá Aunque este no es un modelo lineal Pero la idea más o menos es sería no Que
+8:378 minutes, 37 secondstanto se ajustan los puntitos ya luego vamos a hablar de eso con mayor detalle muy bien entonces estimados esta función también es una función
+8:468 minutes, 46 secondseh una función única no va a cambiar para nada lo voy a dejar por aquí Arribita lo voy a ejecutar Entonces qué
+8:538 minutes, 53 secondses lo que va a cambiar en un escenario básico el imputados por partes
+9:009 minutesB primer punto primero definimos el
+9:079 minutes, 7 secondsutad acerdo en este caso en este escenario básico voy a utilizar lo más
+9:139 minutes, 13 secondssimple no un simple input una imputación bien
+9:209 minutes, 20 secondssimplecov aunque simple inut no lo hemos visto directamente entonces lo que pero voy a utilizar la estrategia de la
+9:289 minutes, 28 secondsmediana Entonces defino el computadora y por acá genero lo siguiente miren my input el
+9:379 minutes, 37 secondscomputador que quiero trabajar en este caso es simple input qué es lo que va a hacer va a rellenar los valores faltantes con un valor así simple pero
+9:469 minutes, 46 secondsojo no se olviden que previamente en imputación de datos y eliminación deers ustedes tienen que hacer esto Siempre
+9:559 minutes, 55 secondsacá mi primer paso es definimos el inador no una vez que yo lo tengo definido vamos a ver vamos al segundo
+10:0210 minutes, 2 secondscaso al segundo paso el segundo paso estimados va a ser segundo paso primer paso es definir el imput definimos el
+10:1010 minutes, 10 secondsimpad el segundo paso eliminamos muy bien como tengo mi utad acá lo que voy a hacer es aplicar una transformación
+10:1810 minutes, 18 secondsdirecta Bueno yo en este código le he colocado así de frente pero lo que puedo hacer es esto de aquí sacarlo para que
+10:2510 minutes, 25 secondsustedes lo vean por partes entonces voy a colocar x baj train y baj datos de
+10:3210 minutes, 32 secondsentrenamiento imputados es igual a myter no fit transform directamente no Ah y
+10:4010 minutes, 40 secondsotra cosa estimados por defecto cuando yo no coloco ninguna estrategia aquí con este impad simple se agrega por ejemplo
+10:4810 minutes, 48 secondsla mediana pero aquí lo voy a dejar más claro para que ustedes lo vean Estoy haciendo algo Bastante simple nada más ustedes van a tener que Probar con los
+10:5610 minutes, 56 secondsimputes más avanzados Solamente les estoy mostrando Cómo estaría la estructura en este caso defino
+11:0311 minutes, 3 secondselador genero el objeto del impad y aplico la transformación en los datos listo y luego que hago eso a los datos
+11:1111 minutes, 11 secondsde prueba también tengo que imputar test Aquí está bajo imputados
+11:1911 minutes, 19 secondspero aquí viene el detalle estimados fit transf es para que ustedes aprendan
+11:2511 minutes, 25 secondslos hiper parámetros no de los datos de entrenamiento y para
+11:3211 minutes, 32 secondsque yo luego los aplique a lo que sería los datos de Test ya no puedo utilizar fit transf si no voy a utilizar
+11:4111 minutes, 41 secondsestimados solamente transform Entonces no se olviden transform se
+11:4911 minutes, 49 secondsaplica solo en datos de entrenamiento Okay y Transfer en datos
+11:5611 minutes, 56 secondsde pruebas no se olviden de este Este detalle que es muy importante para todos ustedes Okay en datos de entrenamiento y
+12:0412 minutes, 4 secondsen datos de prueba y el segundo paso va a ser eliminar offers pero en este caso yo no voy a eliminar lers por ser un
+12:1112 minutes, 11 secondsmétodo básico voy a entrenar miren simplemente me pasé por alto losers en este escenario escenario se pasan por
+12:1912 minutes, 19 secondsalto los suppliers y vamos a ver qué efecto tiene en el modelo al final y ahora sí recién voy a hacer mi entrenamiento directamente por y para
+12:2712 minutes, 27 secondseso voy a llamar la función sc dataset con todo esto control c Entonces por
+12:3312 minutes, 33 secondsaquí voy a colocar no el error obtenido va a ser igual a llamar la función sc dataset con los datos de entrenamiento
+12:4112 minutes, 41 secondsimputados ig en este caso aquí debería aplicar estimado la estrategia de la estrategia
+12:4812 minutes, 48 secondsdeción deers pero en este caso los datos no van a ser igual a los mismos van a
+12:5612 minutes, 56 secondsser exactamente los mismos me pasé por alto simplemente la la parte de bler por simplement porque simplemente Quiero ver
+13:0513 minutes, 5 secondscon los datos originales el aquí el objetivo es que ustedes sí apliquen un unos cuatro métodos por lo menos y veamos el efecto no el efecto en el
+13:1313 minutes, 13 secondsmodelo listo aquí está no el error va a ser igual a llamar a la función scop dataset que entrena con un Random Forest
+13:2113 minutes, 21 secondsregresor no directamente saca la predicción y luego calcula el error ese error va a estar por acá y luego lo voy a imprimir por aquí no no absolute error
+13:3013 minutes, 30 secondsvamos a de el escenario en este caso es la mediana vamos mediana es por acá y directamente aquí imprimo aquí imprimo
+13:3913 minutes, 39 secondsel error Entonces lo puedo imprimir en uno solo imprimir directamente en uno solo F por
+13:4613 minutes, 46 secondsacá cierro y voy a escribir por ejemplo error ya está estoy imprimiendo el error
+13:5613 minutes, 56 secondslisto estimados entonces con esto por ejemplo he generado mi escenario uno fal ejecutar por acá ejecut aquí el
+14:0514 minutes, 5 secondsescenario básico por acá a ver qué
+14:1314 minutes, 13 secondspasó datos de prueba a ver meut Ah okay Me faltó esto
+14:2114 minutes, 21 secondsdisculp ya está hago la copia y Man entrenar y listo estimado vamos a ver
+14:3014 minutes, 30 secondspas por Aquí
+14:4314 minutes, 43 secondsxti
+14:5214 minutes, 52 secondsya listo y en este caso en esteo tul en esta primera parte lo que
+15:0015 minuteshice simplemente fue aplicar un impad básico como la mediana me pasé por alto todo lo que es el análisis directamente
+15:0815 minutes, 8 secondsde qué tipo de qué tipo de valor perdido tengo si es un MC si es un mar Mar unar me lo pasé por
+15:1915 minutes, 19 secondsalto directamente y de imputar todo con la mediana a continuación la parte de
+15:2715 minutes, 27 secondssimplemente también no lo es un escenario bien básico pero el objetivo es que ustedes si lo hagan y
+15:3415 minutes, 34 secondsfinalmente van a tener ustedes x con remoción deers y x con remoción deers
+15:4015 minutes, 40 secondsdirectamente y finalmente finalmente estimados vamos a pasar a realizar el
+15:4715 minutes, 47 secondsentrenamiento en este caso listo Entonces ese es un escenario que es generado el error aquí es este el error
+15:5615 minutes, 56 secondsuno me gustaría que ustedes ahora en la parte no de análisis de players en este en este
+16:0216 minutes, 2 secondscaso y me digan cuánto se afectó el my si es que el mi absolute error ha subido
+16:1016 minutes, 10 secondso ha disminuido con Qué técnica de imputación pueden
+16:1716 minutes, 17 secondsutilizar si gustan utilicen por ejemplo el knn imputer pueden utilizar también
+16:2516 minutes, 25 secondsel imputer luego por acá el knn para eliminar Players o algún otro alternativo sí

@@ -1,0 +1,203 @@
+# Python para Ciencia de Datos - M4-1 - Metodo de desbalance de datos
+# (título en el video: Python para Ciencia de Datos - Modulo 4 - Metodo de desbalance de datos)
+
+0:022 seconds[Música]
+0:066 secondsmétodos de balance de datos vamos a ver Okay entonces estimados yo ya estoy por aquí miren Ya estoy en este punto Ya
+0:1414 secondspasé por todo un proceso eda y ya estamos a las puertas de Ingresar a lo que sería Machine learning el modelo inferencial de Machine learning aquí
+0:2323 secondstambién hay que ver varias cosas pero ya estamos próximos a ingresar por aquí ahora Estamos estancados en paso seis no
+0:3131 secondshemos visto selección de variables hemos visto selección de variables hemos visto también por
+0:3939 secondsejemplo técnicas de de escalamiento scaling también transform transformación de
+0:4646 secondsvariables y el día de hoy vamos a ver una explorar técnicas para balance de datos no directamente vamos a enfocarnos
+0:5555 secondsen las primeras técnicas que tiene que ver con los datos no bas en los datos más que todo ya cuando estemos en Machine learning vamos a explorar
+1:031 minute, 3 secondsalgunas técnicas alternativas para el para el balance de dato Como por ejemplo dar pesos ponderados a cada clase aplicar algoritmos algoritmos de
+1:121 minute, 12 secondsboosting etcétera etcétera eso lo vamos a ver más adelante en Machine learning directamente pero vamos con las técnicas clásicas que también es bueno conocerlas
+1:191 minute, 19 secondsporque muchas veces funcionan realmente entonces empecemos por aquí no De qué trata Realmente el desbalance de
+1:271 minute, 27 secondsdatos no hay alunos puntos que serían necesario a tomar en cuenta para hablar directamente de desbalance de datos el
+1:351 minute, 35 secondsprimer punto que es bastante importante es que uno nunca hay que usar los datos de Test en la experimentación jamás Okay
+1:431 minute, 43 secondsEse es el primer punto que vale la pena aclarar cuando ustedes l van a entrar a Machine learning los datos de Test no pueden ser utilizados para el balance de
+1:521 minute, 52 secondsdatos los datos de Test tienen que quedar aparte no separados dónde aplican el balance de datos Data augmentation etcétera en los datos de entrenamiento
+2:012 minutes, 1 secondya Ese es el punto principal esados no se olviden de eso datos de entrenamiento siguiente resampling se
+2:102 minutes, 10 secondsaplica a los datos de entrenamiento se acompaña con Cross validation el resampling también no el cambio de los datos todo con Cross validation que
+2:182 minutes, 18 secondsluego vamos a verlo vamos a ver est estrategia directamente en el curso de Machine lear nunca nunca usar accuracy con datos
+2:262 minutes, 26 secondsdesbalanceados esto es clave no Qué es la accuracy es la métrica que había dicho no solamente para para recordar la quiero decir simplemente es el total de
+2:352 minutes, 35 secondsdatos bien clasificados sobre el del total por ejemplo 80 imágenes de 100 han sido
+2:432 minutes, 43 secondscorrectamente clasificadas por lo tanto me AC 0.8 Eso es todo Cuántas imágenes fueron correctamente clasificadas del total
+2:512 minutes, 51 secondsindependiente de la clase eso es más que todo la curac Solo que la cac es una métrica Peligrosa en el caso de balance de datos y vamos a
+3:003 minutesanalizarlo el día de hoy Muy bien Entonces vamos a empezar por aquí el primer punto importante no para aclarar
+3:093 minutes, 9 secondses lo siguiente eh vamos a importar ciertas librerías que me van a ayudar bastante para poder hacer ciertos
+3:163 minutes, 16 secondsciertas experimentaciones y observar los efectos de las técnicas de balance de datos en la información que yo voy a tener
+3:323 minutes, 32 secondsOk entonces vamos Empezando por aquí a ver como primer punto voy a ejecutar esta
+3:393 minutes, 39 secondslíne voy importar displ Y algo
+3:493 minutes, 49 secondsde mod selection voy importar 30 split para hacer una separación de los datos por y ahora me gustaría consultarles a
+3:583 minutes, 58 secondsustedes si han tratado con desbalance de datos Qué saben sobre el desbalance de datos o qué sabemos nosotros sobre desbalance de datos algien me puede
+4:074 minutes, 7 secondsdecir Qué sabemos sobre ello Por qué es crucial realmente este tratamiento me gustaría escucharlos a ustedes qué
+4:154 minutes, 15 secondsopinan al respecto Qué opinan estimados ustedes al
+4:234 minutes, 23 secondsrespecto ya sabemos que el balance de datos Hay que hacerlo Pero por qué es importante ver este problema o este tema
+4:334 minutes, 33 secondsa ver Me gustaría escucharlos de repente alguno de ustedes ya ha tratado con este tipo de problema Qué efecto genera desbalance de
+4:444 minutes, 44 secondsdatos desbalance de datos no es un tema bastante grande realmente es todo todao
+4:534 minutes, 53 secondsuna sesión gigante no hablar de esto Pero por qué Qué es lo que está ocurriendo directamente alguno de ustedes ha tenido una
+5:025 minutes, 2 secondsexperiencia con desbalance de datos no s Brando bran Edgardo Eduardo I Milagros René Samuel o
+5:145 minutes, 14 secondsshar el modelo bastante Pero por qué es lo que está ocurriendo les voy a explicar de una forma bastante
+5:215 minutes, 21 secondsinteresante antes de pasar al ejercicio lo que ocurre es lo siguiente de repente algunos ya lo saben pero es bueno siempre repasar
+5:305 minutes, 30 secondslo que ocurre es lo siguiente miren imaginemos que este es mi espacio solamente tengo x eje x
+5:395 minutes, 39 secondsx y luego ustedes van a ver el efecto qué es lo que pasa Nosotros tenemos imaginemos una clase a y una clase B
+5:475 minutes, 47 secondsmuestras de clase a y muestras de clase b De acuerdo sí es un comportamiento normal
+5:565 minutes, 56 secondsjustamente en el sectores bancario y finanzas Entonces vamos a decir que los clientes a son representados por un triangulito y los clientes B son
+6:036 minutes, 3 secondsrepresentados por un cuadradito no muy bien aquí está no tenemos dos clases clase a y clase B clase a triángulo
+6:116 minutes, 11 secondsclase B cuadrado Entonces qué pasa estimados ustedes ya saben directamente que esto
+6:176 minutes, 17 secondses un punto cada muestra perteneciente a b a los cuadrados es un vector de características que puede estar en una
+6:256 minutes, 25 secondsdimensión r a la n que ya lo sabemos Entonces qué es lo qué ocurre estimados En general todos las muestras
+6:336 minutes, 33 secondsde B deberían tener un comportamiento similar no caracterizaciones similares Entonces yo podría tener muchos cuadraditos así pero en general son
+6:436 minutes, 43 secondscuadraditos existe variabilidad realmente no todos son exactamente iguales tengo miren cuadradito por acá cuadradito sí pero son al final
+6:516 minutes, 51 secondscuadraditos y lo mismo va a pasar con a miren yo tengo por aquí un triangulito otro triangulito chiquito otro por acá tengo un así
+7:007 minutestengo uno por ejemplo así miren tengo uno así tengo otro así si se dan cuenta hay mucha variabilidad Pero puede
+7:097 minutes, 9 secondsocurrir un caso por ejemplo como el de acá miren este de aquí puede confundirse un poquito con algunos algunos ejemplos
+7:177 minutes, 17 secondso elementos que pertenecen a b lo mismo podría pasar por acá si yo tengo por ejemplo un triangulito así un poquito así este podría confundirse un poquito
+7:247 minutes, 24 secondscon las muestras de aquí y viceversa no también lo de acá se podría de repente te confundir un poquito con las muestras
+7:317 minutes, 31 secondsdel a entonces tengo cierta confusión Entonces tenos qué es lo que pasa aquí
+7:387 minutes, 38 secondsesto se va a proyectar por ejemplo lo vamos a proyectar en este espacio xy y qué es lo que ocurre al final yo por acá
+7:477 minutes, 47 secondstengo mis mis triangulitos de a mir vamos voy a colocarlos por acá tengo mis triangulitos de por aquí
+7:547 minutes, 54 secondssi ustedes se dan cuenta ahí están y también tengo mis cuadraditos de
+8:048 minutes, 4 secondsB están por acá no así ustedes se dan cuenta Ahí están mir mis cuadraditos de
+8:148 minutes, 14 secondsB listo Entonces qué es lo que pasa estimados Qué es lo que está pasando
+8:218 minutes, 21 secondsustedes podrán observar aquí dos cosas primero que hay una frontera de decisión
+8:288 minutes, 28 secondsmiren observen hay una frontera de decisión si ustedes son observadores se van a dar
+8:368 minutes, 36 secondscuenta que en esta frontera de decisión colocarlo as frontera de
+8:448 minutes, 44 secondsdecisión en esta frisón estimados está un error bastante elevado hay mucha confusión debido a que Hay ciertos
+8:538 minutes, 53 secondspuntos que que son muy similares no Entonces esta frontera de decisión es un problema para mí yo yo no sé No yo no sé
+9:009 minutescómo hacer para distinguir los puntos acá pero también me doy cuenta por ejemplo que los puntos que están mucho más alejados hacia arriba de la frontera
+9:089 minutes, 8 secondsde decisión están mejor caracterizando si yo tengo un punto por acá mucho más arriba es más fácil decir que es la
+9:159 minutes, 15 secondsclase a Y si yo tengo un puntito Más abajo es mucho más fácil para mí decir que tengo un punto de la clase B Pero
+9:239 minutes, 23 secondspor qué No justamente por qué es que yo puedo decir eso es porque tengo varios puntos tengo muchos puntos y por acá
+9:329 minutes, 32 secondstambién yo tengo muchos puntos tengo muchos puntos no cuadraditos y bueno obviamente aquí
+9:399 minutes, 39 secondstambién hay algunos errores directamente entonces estimados Este es un problema que se va a presentar siempre Y eso que solamente estoy en dos
+9:479 minutes, 47 secondsdimensiones nada más en multidimensional es peor la frontera de decisión para definir a partir de dónde tengo una clase a Y a partir donde tengo una clase
+9:549 minutes, 54 secondsB es mucho más difícil encontrar Y entonces qué tiene que ver eso con el de datos pues simple estimados todos los
+10:0210 minutes, 2 secondspuntos en conjunto miren en conjunto tienen
+10:1110 minutes, 11 secondsesto aquí está ahí está qué es esto Cómo se llama Estos espacios donde se van a
+10:1910 minutes, 19 secondsaparecer debido a la variabilidad los puntos están dispersos Pero dentro de cierto espacio Este es el famoso espacio de
+10:2810 minutes, 28 secondscaracterísticas espacio de características estimados espacio de características de la clase b y por acá arriba está el
+10:3610 minutes, 36 secondsespacio de características espacio de características miren de la clase a si ustedes se dan cuenta aquí está y obviamente hay una frontera de decisión
+10:4410 minutes, 44 secondsaquí que es la que me está dando problemas pero como yo tengo bastantes muestras de ambas clases tranquilamente
+10:5110 minutes, 51 secondspuedo decir no puedo saber en qué momento una clase a es fuertemente clasificada y en qué momento una clase a no va a estar tan fuertemente
+10:5910 minutes, 59 secondsclasificada debido a que cae aquí en la frontera muy bien qué tiene que ver esto con el desbalance estimados aquí se ve bien porque tengo una una cantidad
+11:0811 minutes, 8 secondsequilibrada de puntos y bien distribuidos pero qué pasaría si yo no tengo muchos puntos de alguna
+11:1511 minutes, 15 secondsclase qué pasaría entonces ahí viene el problema cuando yo no tengo Qué pasa si no tengo muchos puntos no si no
+11:2511 minutes, 25 secondstengo muchos puntos y mientras más complejo es el problema peor Mientras más dimensión yo tengo es peor si no
+11:3211 minutes, 32 secondstengo muchos muchos si no tengo muchas muestras no si no tengo muchas muestras por ejemplo de a o de B Cómo va a quedar
+11:4111 minutes, 41 secondseste espacio de características ese es el problema estimados y ese problema es generado por el desbalance de datos
+11:4911 minutes, 49 secondsEntonces vamos hacia abajo ahora sí borro todo la de acá y ya con eso dicho Aquí hay código de ejemplo ejecuto por
+11:5711 minutes, 57 secondsaquí y Y observemos estos gráficos que van a generarse por acá Ahí está miren vamos con con cuatro escenarios
+12:0612 minutes, 6 secondsescenario a escenario B escenario c y escenario d vamos a analizar estos escenarios en función a lo que les he
+12:1312 minutes, 13 secondsdicho miren tengo tres clases aquí peor todavía ni siquiera son dos aquí se ven las cantidades la clase cer tiene 13
+12:2312 minutes, 23 secondsmuestras la clase un tiene 15 y la clase dos tiene 97 do muestras
+12:3012 minutes, 30 secondsal no haber un una equidad no una distribución parecida de muestras el efecto que ocurre es el que ustedes
+12:3712 minutes, 37 secondsestán viendo aquí en el escenario miren prácticamente todos los puntos no de la clase dos que son los puntos amarillos
+12:4412 minutes, 44 secondsestán superponiéndose a los puntos de la clase uno y la clase cero si se dan cuenta enormemente Y qué es lo que ocurre Qué
+12:5312 minutes, 53 secondsefecto genera la pregunta es el modelo va a poder encontrar un límite de decisión para separar las tres clases Qué opinan ustedes por el escenario va
+13:0113 minutes, 1 secondnada más será que es fácil distinguir para el modelo Aquí bueno en este caso se está entrenando con una sbc no super vector
+13:1013 minutes, 10 secondsclassifier no verdad Muy bien ese es el problema en el caso anterior que yo les he diseñado ocurre que tengo muestras
+13:1713 minutes, 17 secondssimilares entonces Aquí el problema es que el modelo no sabe dónde está el límite aquí Aquí Cuál es la frontera de
+13:2513 minutes, 25 secondsdecisión aquí aquí el modelo no tiene o sea un modelo de machill no va a ser magia no sabe dónde está la frontera de decisión Entonces al final él dice Okay
+13:3413 minutes, 34 secondscomo no sé el modelo se comienza a sesgar y dice Okay todos estos puntos es el espacio de características la clase
+13:4113 minutes, 41 secondsdos se acabó y lo que está por acá es son otros espacios Entonces qué ha pasado el
+13:4713 minutes, 47 secondsmodelo se ha sesgado sesgo el modelo está sobreajuste que es la clase dos pero por qué ocurre
+13:5613 minutes, 56 secondsesto porque no tengo puntos no tengo suficientes puntos para poder realizar estimados justamente un entrenamiento
+14:0314 minutes, 3 secondsadecuado va ocurrir con la sbc con sbm va ocurrir con cualquier otro clasificador la cantidad de puntos al
+14:1014 minutes, 10 secondsfinal son tratados por el clasificador como si fuesen oers directamente o como si fuesen parte de la misma clase y es
+14:1914 minutes, 19 secondses un efecto terrible vamos al escenario B que está por aquí vamos al escenario en el escenario B ya la clase dos tiene
+14:2914 minutes, 29 seconds132 muestras la clase un tiene 55 y la clase C tiene 13 muestras si se dan cuenta he subido un poquito más de
+14:3714 minutes, 37 secondspuntos para la clase uno subió de 15 la pasé a 55 no Y la clase dos bueno no todavía tiene bastante alrededor de 900
+14:4614 minutes, 46 secondsy la clase cero todavía tiene tres veos el efecto que ocurre en el escenario B si se dan cuenta los el los puntitos
+14:5314 minutes, 53 secondsTodavía están más o menos distribuidos pero todav todavía no es tanto miren entonces espacios de características todavía se están superponiendo bastante
+15:0215 minutes, 2 secondssobre todo de la clase dos y por aquí tengo suerte de tener algunos puntitos no extras Entonces el el modelo como no
+15:1115 minutes, 11 secondsconsigue todavía definir muy bien el espacio de características va a asumir que esta sería la frontera de decisión y bueno miren aquí me quedó un puntito
+15:1915 minutes, 19 secondspara acá un puntito para acá pero si ustedes se dan cuenta completamente errado entonces Pero al menos este escenario B Es un poquito mejor que
+15:2815 minutes, 28 secondsescenario todavía está mal pero no tanto como el de aquí entonces uno aquí puede darse cuenta cómo es que se genera este efecto miren
+15:3615 minutes, 36 secondsdirectamente solo por tener un desbalance de datos si yo sigo subiendo voy a subir por acá vamos a un escenario mío sigo
+15:4515 minutes, 45 secondscon el escenario c en el escenario c a la clase dos Yo le digo que tiene 694 muestras la clase cer tiene 202 muestras
+15:5415 minutes, 54 secondsy la clase 1 tiene 104 muestras por ejemp por acá 94 202 y 104 todavía Hay un desbalance
+16:0216 minutes, 2 secondspero ya con estos puntitos si ustedes se dan cuenta yo ya puedo observar una mejor distribución En los puntos todavía no está tan bien pero ya algo es algo no
+16:1016 minutes, 10 secondsEntonces con esto estimados yo directamente aplico un modelo de entrenamiento y me doy cuenta que el modelo Ahora sí consigue distinguir un
+16:1916 minutes, 19 secondspoco mejor los puntos y generar una frontera de decisión que es la de acá esta es la frontera de decisión que genera ya está un poco mejor va a haber
+16:2616 minutes, 26 secondserror sí Pero al menos las fronteras de decisión Ya quedaron mejor determinadas por qué Porque estos puntos de acá que son los que están más alejados son los
+16:3416 minutes, 34 secondsque son los que dan mayor prioridad y ayudan a definir al modelo Cuáles son los espacios de características y en
+16:4216 minutes, 42 secondsgeneral aquí va a salir el el punto de de frontera de decisión lo que yo les decía y esto de aquí se se ve mucho
+16:4916 minutes, 49 secondsmejor si ustedes observan el escenario D en este escenario por ejemplo ya tengo muestras bastante equilibradas 336 334 y
+16:5716 minutes, 57 seconds330 entonces la frontera de decisión queda mucho mejor centrada miren hay error sí va a haber error
+17:0517 minutes, 5 secondssiempre hay error pero si se dan cuenta este es el espacio de la clase eh Esa es
+17:1317 minutes, 13 secondsla clase dos clase dos Esa es la clase si no me equivoco 33 clase C y clase 1 si ustedes
+17:2017 minutes, 20 secondsobservan ya es mejor directamente tengo una mejor distribución la frontera de decisión ya ya se posicionó mucho mejor
+17:2917 minutes, 29 secondsy obviamente hay error no la probabilidad de que un punto pertenezca a una clase va a bajar Mientras más cerca está de la frontera de decisión pero mientras más lejana está la
+17:3817 minutes, 38 secondsprobabilidad de que pertenezca a una clase aumenta muchísimo más por ejemplo este punto una probabilidad de casi el 100% de que es de la clase un este punto
+17:4617 minutes, 46 secondsde aquí una probabilidad de casi 100% de que es la clase cero y lo mismo con estos puntos de acá los que están aquí Mientras más se aproximan a la frontera
+17:5417 minutes, 54 secondsde decisión tienen una probabilidad más baja si se dan cuenta Pero al menos el modelo está mejor
+18:0318 minutes, 3 secondsentrenado entonces estimados eso es el efecto que se genera cuando tengo base de datos desbalanceadas Al final este es
+18:1118 minutes, 11 secondseste sería el caso d sería el caso inicial que yo les presenté cuando tengo puntos similares y pero la frontera de decisión es el problema pero eso ya se
+18:1918 minutes, 19 secondshabla luego en mailer lo importante es que quiero que ustedes vean el efecto que se genera el sesgo que nace por tener datos
+18:2618 minutes, 26 secondsdesequilibrados sí Hasta aquí alguna consulta alguna pregunta que tengan muy bien su colega Eduardo el
+18:3418 minutes, 34 secondssector bancario correcto por ejemplo clientes morosos o clientes que cancelan tarjeta de crédito siempre van a ver
+18:4118 minutes, 41 secondsdataset que por defecto son desbalanceados entonces hay que ver cómo generar un balance muy bien Hasta aquí alguna
+18:5018 minutes, 50 secondsconsulta alguna duda que tengan profesor una consulta Cómo entiende la frontera
+18:5718 minutes, 57 secondsdecisión entiende usted ya la frontera de sesión es un punto que me dice aquí está
+19:0419 minutes, 4 secondsmir bueno de forma visual vamos a vamos a interpretarla de forma sencilla Esta es una frontera de decisión es la que me
+19:1219 minutes, 12 secondsdice exactamente cuál sería los límites de los espacios de característica de cada clase en este caso imaginemos que est es clase a clase b y clase C
+19:2019 minutes, 20 secondsEntonces esta es la frontera decisión la que a partir de donde el clasificador va a saber que comienza el espacio de
+19:2919 minutes, 29 secondscaracterísticas de la clase C A partir por aquí está espacio de características de la clase a y por acá el espacio de características de la clase b y mientras
+19:3719 minutes, 37 secondsun punto está más profundo más dentro la probabilidad de que ese punto pertenezca a un a estas respectivas
+19:4519 minutes, 45 secondsclases es mucho más elevada ojo con ese detalle pero mientras un punto está más próximo a la frontera de decisión la
+19:5319 minutes, 53 secondsprobabilidad baja ese ese es otro punto y justamente Es lo que siempre ocurre los modelos realmente no por eso se dice
+20:0020 minutesque los modelos no son 100% perfectos ahí ahí lo que hace ha graficado esas tres clases y No
+20:0720 minutes, 7 secondsnecesariamente tienen que ser recto no porque como eso está en un espacio podrían ser líneas curvas No claro es que es es un ejemplo didáctico digamos
+20:1720 minutes, 17 secondsclamente ni siquiera vamos a poder visualizar eso porque porque estamos en en un r la n no O sea podría ser que sea
+20:2520 minutes, 25 secondscurvas no sea unas curvas que entre uno y otro modelo ent y otra clase pueden ser curvas
+20:3220 minutes, 32 secondspueden ser este sectores definidos dependiendo de lo que utilicemos utilizamos árbol de decisión si utilizamos por
+20:4120 minutes, 41 secondsejemplo árbol de decisión o Random foros trabajan B en árboles que dividen
+20:4720 minutes, 47 secondsel espacio en regiones directamente por mediante reglas de asociación entonces No necesariamente van a ser curvas en general son hiperplanos hiperplanos
+20:5620 minutes, 56 secondslineales o no lineales podríamos decir y y ahí lo que se busca es que ese punto esté en el medio no o más o menos en el
+21:0321 minutes, 3 secondsen el medio de los de las clases que que vayas a considerar No necesariamente puede estar en el medio ojo con ese detalle depende mucho de cómo están
+21:1121 minutes, 11 secondsdistribuidos los puntos pero en general hay un hay un punto que se llama si ustedes observan Acá el cero
+21:1921 minutes, 19 secondsestá centrado por qué Porque los datos han sido escalados o normalizados podríamos decir el trasp pero ya sabemos que era
+21:2721 minutes, 27 secondslo mismo y llevados al punto central cero Entonces al final esto es un espacio de características donde podríamos decir que sí no lo que está
+21:3421 minutes, 34 secondsdiciendo tu punto en este caso tu origen tu punto de decisión si está en cero pero no No necesariamente la frontera de decisión
+21:4321 minutes, 43 secondsva a estar acá por ejemplo si observas aquí la frontera de decisión no está exactamente en el medio hay una medida para decir
+21:5221 minutes, 52 secondsmira yo tengo mis mis datos y imaginemos que las clases estén desbalanceadas y hay una medida que me permita decir ya
+22:0022 minutesvoy a aceptar eh este desbalance no de acuerdo a un número o algo así existen métricas que te puedan ayudar por
+22:0922 minutes, 9 secondsejemplo hay métricas por ejemplo si tú haces clasificación eem existe una métrica llamada la f1 que
+22:1622 minutes, 16 secondses una media armónica de dos métricas no precision y recall te comento esa métrica te te va a bueno para eso
+22:2422 minutes, 24 secondstendría que explicarles lo que es falsos positivos falsos negativos y Qué es precisión Qué es rec que tiene que ver con la predicciónes para que me
+22:3122 minutes, 31 secondspuedan entender pero ya eso vamos a verlo no se preocupen pero en general la f1 por ejemplo es una métrica que te podría ayudar directamente tú puedes entrenar y analizar tus resultados en
+22:4022 minutes, 40 secondsfunción de esta métrica que como como te mencioné es una media armónica de precision y recall para clasificación
+22:4722 minutes, 47 secondssobre todo entonces no es que haya algo que directamente te diga está bien o sea hay que hacer experimentaciones hay que hacer
+22:5422 minutes, 54 secondsexperimentaciones realmente y ver cómo se acomodan nuestros puntos Bueno Este es un caso bastante didáctico pero en general nuestros puntos están en un r a
+23:0223 minutes, 2 secondsla n como te menciono entonces No podemos visualizarlos Pero lo que yo sí
+23:0923 minutes, 9 secondssé es que los puntos en el espacio pueden estar bueno este espacio de aquí pueden estar proyectados por acá
+23:1923 minutes, 19 secondsy otros pueden estar proyectados por acá Ah y otra y también hay otra cosa no no siempre un modelo lineal va a ser el que lo separe como tú mencionas puede ser un
+23:2823 minutes, 28 secondsmodo no lineal los puntos pueden estar en de esta forma No por ejemplo los puntos pueden ser
+23:3523 minutes, 35 secondsasí y por aquí pueden estar las x no por ejemplo y los triángulos por acá entonces hay transformaciones que se le
+23:4323 minutes, 43 secondshace el espacio directamente que resuelve que por ejemplo todo lo de acá es una clase y todo lo que está por acá es otra clase con la famosa dona esto
+23:5223 minutes, 52 secondspor ejemplo es una transformación que se hace tipo gusana con un car gusano si es que utilizamos una si es que utilizamos
+23:5923 minutes, 59 secondsuna sbm por ejemplo entonces la frontera de decisión directamente aquí se se tendría es un hiperplano por ejemplo que
+24:0724 minutes, 7 secondscorta una una gusana no por la mitad directamente y donde todos los puntos quedan por acá abajo y los otros
+24:1524 minutes, 15 secondspuntos por acá arriba o por la mitad o por algún nivel de corte que ya mismo que ya depende mucho del modelo que tú
+24:2224 minutes, 22 secondsestás entrenando te comento Sí entonces no neamente es un puntito así como el que estamos viendo no esto más que todo
+24:2924 minutes, 29 secondsdidáctico y por ejemplo si tú utilizas utilizaras redes neuronales eso es peor ahí la el el espacio se deforma
+24:3724 minutes, 37 secondscompletamente no y puedes generar eh deformación del espacio de tal forma que los puntos s sean separables
+24:4524 minutes, 45 secondsdirectamente es es un tema bastante bonito realmente entenderlo Samuel creo que había consultado Pero vamos viéndolo por
+24:5324 minutes, 53 secondspartes de acuerdo el principal problema aquí es el siguiente Okay no te preocupes am el principal problema aquí es el siguiente no que si tengo menos
+25:0225 minutes, 2 secondspuntos de de de alguna clase de las otras clases la clase que que tenga más muestras va a predominar y el modelo va
+25:0925 minutes, 9 secondsa asumir que todo el espacio caracter que todo el espacio de características le pertenece solamente a esa clase y el resto de puntos Lamentablemente
+25:1825 minutes, 18 secondsPerdieron su su espacio de características no se pudo determinar Entonces ese es el problema aquí realmente no el problema y tenemos
+25:2725 minutes, 27 secondsque ver cómo hacer eso Cómo tratarlos y Bueno hay muchos métodos desde desde
+25:3425 minutes, 34 secondsutilizando modelos este ensambladores etcétera Ah aquí Di un ejemplo miren por ejemplo miren en el primer caso por qué la q es
+25:4325 minutes, 43 secondsmala ya que había colocado por acá miren aquí tenía 972 15 y
+25:5025 minutes, 50 seconds13 si se dan cuenta prácticamente todos los puntos han sido clasificados como clase clase miren si ustedes observan
+25:5925 minutes, 59 secondsaquí el límite de decisión prácticamente todos los puntos han sido clasificados como clase clase dos
+26:0526 minutes, 5 secondstodos o digamos que un puntito se quedó por acá o unos cuantos se quedaron por el otro lado entonces si yo bajo
+26:1526 minutes, 15 secondsmiren solamente digamos que estos 15 puntos fueron correctamente hubo un error acá miren 972 puntos han sido
+26:2426 minutes, 24 secondscorrectamente clasificados de una clase si yo en función de esto solamente calculo la acuras que es el total de puntos correctamente clasificados sobre
+26:3226 minutes, 32 secondsel total solamente con decir esto tengo 97 miren de acuras una una métrica bastante
+26:3926 minutes, 39 secondselevada lo cual es incorrecto porque yo sé que también la cl los puntos de la clase uno y la clase en la clase cero
+26:4726 minutes, 47 secondshan sido mal clasificados Todos aquí todos son clase dos todos pero los que realmente han sido
+26:5426 minutes, 54 secondsbien clasificados son solamente 972 puntos entonces la kos
+27:1627 minutes, 16 seconds0.9722 como referencia

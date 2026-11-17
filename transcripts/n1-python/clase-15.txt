@@ -1,0 +1,33 @@
+# Python para Ciencia de Datos - M3-3 - Eliminar características altamente correlacionadas
+# (título en el video: Python para Ciencia de Datos - Modulo 3 - Eliminar Caracteristicas altamente correlacionadas)
+
+0:022 seconds[Música]
+0:066 secondsmuy bien Este es otro caso eliminación otro caso por ejemplo que muchos aplican a veces eliminación de características
+0:1313 secondsaltamente correlacionadas Pero esto no lo recomiendo mucho realmente no lo recomiendo mucho porque la correlación
+0:2121 secondsestimados es cuando ustedes buscan una explicaba tipo lineal Si ejecuto por acá solamente para que lo vean
+0:3030 secondsno tengo mi Data 2 mi price extraigo el nivel de correlación que hay entre variables por ejemplo observen por acá si ustedes se
+0:3939 secondsdan cuenta hay variables que están altamente correlacionadas que son estas miren tengo est Bueno est es lo mismo la parte de arriba es igual a la
+0:4646 secondsparte de abajo AC Acá hay correlación estas cuatro variables Solo que la correlación entre
+0:5555 secondsvariables puede indicar dos cosas que sean colineales s pero No indica que realmente hay una causalidad
+1:031 minute, 3 secondsaquí y además esto es una correlación lineal que se está analizando directamente entonces Este modelo o sea
+1:111 minute, 11 secondshacer una eliminación de variables en base a la matriz de correlación no la recomiendo realmente mucho en la práctica de estrumento aquí por ejemplo tenemos un aquí por ejemplo Estoy
+1:191 minute, 19 secondshaciendo unas unos filtros directamente para quedarme con ciertas con ciertos datos con las columnas en función de
+1:281 minute, 28 secondsesto elimino las columnas que tienen mayor de 0.4 de correlación porque justamente
+1:351 minute, 35 secondsesto coincide miren con el valor de umbral que está por acá y una vez que lo hago van entr mi
+1:441 minute, 44 secondsmodelito faltar las faltaron Aquí estos margen porque si no el modelo sesgado y por eso bota
+1:521 minute, 52 secondsresultados elevadísimos por AC esto
+2:022 minutes, 2 secondsno vamos a ver con el X trin muy bien buena pregunta ahorita lo vamos a ver Mira por
+2:102 minutes, 10 secondsejemplo aquí en este caso eliminé las columnas mayor a 0.4 y he llegado a 0.84 75 directamente bastante similar al
+2:192 minutes, 19 secondsresultado de aquí arriba Vamos a ver por acá
+2:302 minutes, 30 secondsAquí ya está bien l prácticamente lo mismo pero no lo recomiendo directamente que lo hagan así porque a veces falla Les comento a veces falla muy bien en
+2:382 minutes, 38 secondseste caso he llegado a 0.84 75 muy similar y su colega me dice siempre lo aplican el X trin o podría aplicar el X
+2:452 minutes, 45 secondstambién en este caso Ya esta parte de selección de características Hay que hacerlo con el X TR de acuerdo porque en
+2:542 minutes, 54 secondsgeneral el el xtrain directamente ya tiene información característica de
+3:033 minutes, 3 secondsno de de su de su muestra de su población en este caso en este punto ya está separado los datos de train y los datos de Test ya están separados
+3:123 minutes, 12 secondsestimados toda la experimentación porque esto de aquí es experimentación es Buscar Cuál método de correlación es más adecuado tiene que hacerse con este dato
+3:213 minutes, 21 secondsy luego eso tiene que generalizarse aquí en la dato de prueba Sí aquí en este caso sí hay que hacerlo con los datos de
+3:273 minutes, 27 secondsde TR por es estoy separando justamente No aquí arriba y eso no lo podemos hacer con todo porque si no también podemos
+3:353 minutes, 35 secondssgar el modelo directamente ya tenía que generalizar mi modelo en este punto dónde me había
+3:423 minutes, 42 secondsquedado me había quedado por acá ya en este punto por ejemplo llegué
+3:473 minutes, 47 secondsa 0.84 75 muy bien subido me mantengo en la performance es bastante
+3:563 minutes, 56 secondssimilar a la performance que yo tenía por acá en el en el classifier que era 08485

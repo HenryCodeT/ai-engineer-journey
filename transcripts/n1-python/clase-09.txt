@@ -1,0 +1,800 @@
+# Python para Ciencia de Datos - M2-4 - Codificación de Variables
+# (título en el video: Python para Ciencia de Datos - Modulo 2 - Codificacion de Variables)
+
+0:022 seconds[Música]
+0:066 secondscon el aprendizaje vamos a ver el día de hoy un tema bastante importante que es la codificación de variables otro tema
+0:1313 secondseh muy importante para ustedes directamente y vamos a comenzar ya que
+0:1919 secondsestamos por aquí todos en esta parte aquí justamente Tengo abierto no
+0:2626 secondsel y vamos a comenzar viendo el tema con un ejercicio no caso de uso directamente muy bien entonces he
+0:3636 secondspreparado un colap donde tenemos ciertas cuestiones no ciertas librerías que nos van a servir entre ellas tenemos a lo
+0:4343 secondsque es pandas no lampai molit por aquí luego para hacer ciertas gráficas y estoy importando dos tipos de
+0:5151 secondscodificadores bastante importantes miren en los datos tenemos el el power Transformer para aplicar algunas transformaciones que ayuden a que los
+1:001 minutedatos se vuelvan no directamente o que los datos numéricos tengan cierta conversión al tipo normal
+1:101 minute, 10 secondspero no siempre ocurre eso por si acaso les comentando y luego tenemos un ordinal encoder no que directamente le
+1:161 minute, 16 secondsda le da simplemente una a a una variable tipo categor le da simplemente un valor numérico y estoy importando
+1:261 minute, 26 secondsimportando bueno por aquí pipeline para ver librerías por el momento y
+1:351 minute, 35 secondsfinalmente vamos a ver en acción ciertas cuestiones de codificación Pero antes de eso si me gustaría hacer un pequeño preámbulo paréntesis para explicarles un
+1:441 minute, 44 secondspoquito la importancia de la codificación de datos entonces Déjenme por acá agregar esto para que se vea en blanco Muy bien
+1:531 minute, 53 secondsEntonces vamos a empezar es es muy importante un
+2:002 minutespreámbulo codificación de variables primer punto codificación de
+2:092 minutes, 9 secondsvariables y vamos a ver otro punto muy importante aparte de aplicar la codificación vamos a ver también lo que
+2:182 minutes, 18 secondses escalamiento escalamiento que también es un punto bastante importante no
+2:252 minutes, 25 secondscodificación de variables y escalamiento muy bien pregunta para los para todos los que están aquí No
+2:332 minutes, 33 secondsjustamente para nuestros colegas Qué entendemos por codificación a ver alguien los que ya están trabajando o
+2:412 minutes, 41 secondshan trabajado con estas tecnologías qué entienden ustedes por codificación de una variable qué es lo que sucede
+2:482 minutes, 48 secondsrealmente recuerdan Por qué codificamos Y por qué
+2:572 minutes, 57 secondsescalamos variables a ver alguien que me pueda decir por aquí a ver opiniones
+3:043 minutes, 4 secondsideas Por qué por qué hacemos esto no sé Arturo
+3:113 minutes, 11 secondsBrando Eduardo Eduardo Ian Wii Samuel Sharon qué creen por qué estamos
+3:183 minutes, 18 secondscodificando variables a ver qué opinan
+3:333 minutes, 33 secondsa ver qué opinan a ver alguna idea muy bien Vamos
+3:453 minutes, 45 secondsa escuchar lo que dicen sus colegas es para que lo lean los algoritmos Sí muy bien pero por qué
+3:563 minutes, 56 secondsserá variables categóricas portivas son difíciles de trabajar no dice Brando
+4:014 minutes, 1 secondOkay Por qué muy bien Vamos a a ver este no vamos a ver esto de aquí justamente
+4:104 minutes, 10 secondsel día de hoy muy bien sus colegas dicen dos cosas importantes e interesantes no primero
+4:184 minutes, 18 secondsporque la variable por precisión muy bien Vamos a entenderlos desde un punto de vista bastante
+4:264 minutes, 26 secondsinteresante miren el objetivo de nosotros luego es pasar al curso de Machine learning generar un
+4:344 minutes, 34 secondsmodelo predictivo sea para regresión para clasificación o para clase directamente hablando Entonces nosotros tenemos que tener esto bien claro para
+4:424 minutes, 42 secondspoder realizarlo directamente Entonces vamos por
+4:504 minutes, 50 secondsacá a ver ustedes tienen lo que es un dataframe Les comento ustedes tienen un
+4:584 minutes, 58 secondsdataframe plata forma donde hay filas las famosas filas
+5:065 minutes, 6 secondsy las famosas columnas que están por aquí Les comento un poquito no filas y
+5:135 minutes, 13 secondscolumnas muy bien entonces podemos entender creo que en luego de pasar por por ya H esta esas alturas del curso
+5:215 minutes, 21 secondsustedes ya entienden perfectamente que lo que tenemos por acá son nuestras famosas variables no esto creo que ya se
+5:295 minutes, 29 secondsentiende completamente son nuestras variables muy bien como son nuestras variables y tengo filas y tengo columnas
+5:385 minutes, 38 secondsYo sé que cada una de estas filas me representa una muestra esto es una muestra una muestra una
+5:485 minutes, 48 secondsobservación listo tengo mis variables tengo mi muestra Entonces al final esta muestra
+5:565 minutes, 56 secondsestimados esta muestra cada una de estas muestras porque aquí hay una una muestra otra otra y otra y otra al final estas
+6:036 minutes, 3 secondsmuestras Les comento se van a yo las puedo proyectar aquí miren vamos a una proyección espacio por
+6:126 minutes, 12 secondsaquí estas muestras estimados se pueden proyectar como puntos al final tengo un espacio de r a la n al final cada una de
+6:216 minutes, 21 secondsestas muestras representa un puntito miren un puntito por acá un puntito por acá algo así y
+6:306 minutes, 30 secondsasí entonces tengo este primer estea primera primer principio directamente Luego si yo me voy por
+6:396 minutes, 39 secondsacá imaginemos que sigo clasificando sigo graficando las muestras imaginemos que por acá tengo más
+6:486 minutes, 48 secondsmuestras por ejemplo listo Qué pasa entonces con esta con
+6:566 minutes, 56 secondsesta representación espacial en estos momentos estimados Yo tengo dos clases Vamos vamos vamos con
+7:067 minutes, 6 secondsesta no asumiendo imaginemos que tengo dos dos categorías Dos clases de puntos tengo aquellas muestras que que están
+7:157 minutes, 15 secondsrepresentando los puntos verdes y tengo aquellas muestras que están representando los puntos rojos Les comento muy bien como ustedes observan
+7:247 minutes, 24 secondsal final cada muestra es un puntito en el espacio de r n y aquí viene lo interesante directamente primer
+7:337 minutes, 33 secondspunto si Existen dos clases Entonces por definición aquellas muestras que pertenecen a los puntos rojos deben
+7:407 minutes, 40 secondsestar distribuidos exactamente en un espacio propio no el Este es un espacio
+7:507 minutes, 50 secondsel famoso espacio de características entonces en teoría todos estos puntitos estimados Les comento todos estos puntitos
+7:587 minutes, 58 secondsdeberían estar en el mismo espacio de características no en teoría les digo noj ojo con ese detalle porque realmente en la práctica
+8:078 minutes, 7 secondsEstos espacios Mientras más crece el rn están bastante intersectados y le idea es ver cómo separarlos entonces aquí hay
+8:148 minutes, 14 secondsdos cosas muy importantes que tengo que tomar en cuenta primero si les estoy diciendo que al final cada muestra es un
+8:228 minutes, 22 secondspunto significa que es un que este punto está representado por sus coordenadas no
+8:298 minutes, 29 secondsx1 x2 no x la n significa que al final todo este punto es numérico para
+8:388 minutes, 38 secondsempezar Okay miren todo este punto es numérico en Pero como ustedes me han dicho tenemos variables categóricas Y
+8:468 minutes, 46 secondstenemos tenemos variables numéricas no directamente entonces viene una tarea de preprocesamiento
+8:548 minutes, 54 secondsal final estimados estas variables categóricas tienen que ser representadas a través través de un punto No entonces
+9:029 minutes, 2 secondsellas son convertidas son codificadas Esa es la respuesta tenemos que codificar sí o sí las vares las
+9:099 minutes, 9 secondsvariables categóricas porque tienen que tener al final valor numérico una representación tipo numérica Y qué hago profesor con las variables numéricas las
+9:189 minutes, 18 secondsvariables numéricas ya están en el formato numérico Entonces cuál es el problema de las variables numéricas el
+9:249 minutes, 24 secondsproblema estimados es el nivel de escala en el que están los puntos de cada
+9:329 minutes, 32 secondsvariable numérica un ejemplo aquí yo puedo tener en esta columna valores de 200
+9:399 minutes, 39 seconds100 500 miren 300 por acá otro 100 y por
+9:459 minutes, 45 secondsacá 1 0 2 2.3 1.1 y por acá puedo puedo tener por
+9:549 minutes, 54 secondsejemplo 10 a la 10 a la 5 10 a la 3 10 a la 4 10 a la 6 se dan
+10:0310 minutes, 3 secondscuenta entonces el nivel de escala en el que se encuentra cada variable numérica también afecta directamente a la
+10:1210 minutes, 12 secondsdistribución de estos puntos entonces primer paso no se olviden las variables categóricas tienen que ser codificadas y
+10:2010 minutes, 20 secondssegundo paso las variables numéricas tienen que ser estandarizadas es decir llevadas a un nivel de escala similar
+10:2810 minutes, 28 secondspara que esto no afecte la representación de estos puntos en el espacio de características Esa es la respuesta estimados directamente por eso
+10:3710 minutes, 37 secondsjustamente quiero hablar hoy día de de codificación y escalamiento de las variables es un paso muy fundamental
+10:4510 minutes, 45 secondsindirectamente alguna consulta hasta aquí alguna duda consultas que
+10:5210 minutes, 52 secondstengan dudas consultas que tengan pueden usar el audio pueden escribir en el chat no hay ningún problema
+11:0311 minutes, 3 secondsa ver por acá Okay muy bien entonces si ya entendieron este punto pasemos a lo
+11:1311 minutes, 13 secondssiguiente muy bien hagamos un ejemplo cómo hago yo ese proceso de escalamiento
+11:2211 minutes, 22 secondsAh entendí Sí también aquí siempre ocurren varias confusiones no Bueno ya
+11:2911 minutes, 29 secondsuno toma el escalamiento ya que mencionó por acá su colega Eduardo algunos dicen
+11:3611 minutes, 36 secondsvamos a normalizar los datos no vamos a normalizar los puntos en realidad el término correcto
+11:4311 minutes, 43 secondssería escalar los puntos estimados realmente porque nosotros realmente practicamos lo que es el escalamiento no aplicamos normalización de datos Cuál es
+11:5211 minutes, 52 secondsla diferencia profesor la diferencia es simple columna a columna B y columna
+12:0112 minutes, 1 secondc Okay aquí están las muestras muestra uno muestra
+12:1012 minutes, 10 secondsdos muestra tres muestra cuatro muestra cco muy bien Qué es el
+12:1812 minutes, 18 secondsescalamiento el escalamiento estimados garantiza ya que pregunté garantiza que ustedes no afectan Cómo están
+12:2612 minutes, 26 secondsdistribuidas las variables no afecta la la variable no
+12:3312 minutes, 33 secondsafecta la distribución sea normal o no de la variable es decir no afecta su
+12:4212 minutes, 42 secondscomportamiento y se hace por columna o con ojo con ese detalle de
+12:5012 minutes, 50 secondsacuerdo el el escalamiento estimado se hace así por columna aplico una técnica de escalamiento y tengo a escalado
+12:5712 minutes, 57 secondsaplico una técnica de escalamiento tengo B escalado no y ojo que se aplican variables numéricas nada más aplico una técnica de escalamiento y
+13:0513 minutes, 5 secondstengo c escalado listo se acabó se acabó el problema estimados Muy bien Entonces qué es
+13:1413 minutes, 14 secondsnormalizar normalizar Es que yo no trabajo con las variables Yo trabajo con los puntos es decir yo trabajo con yo
+13:2213 minutes, 22 secondsdefino que esto es un todo y aplico una técnica de normalización por fila
+13:2913 minutes, 29 secondsla más clásica no B sobre módulo de B normalización l1
+13:3713 minutes, 37 secondssi no Norma L2 se acuerda entonces directamente divido divido el punto
+13:4613 minutes, 46 secondssobre sobre su valor no dependiendo la norma do directamente entonces la normalización qué es lo que hace afecta
+13:5413 minutes, 54 secondsal punto estoy normalizando el punto No estoy Entonces si ustedes aplican una
+14:0114 minutes, 1 secondnormalización por punto o por filas esto se
+14:0914 minutes, 9 secondsafecta la distribución de la variable Okay se afecta la distribución estimados de la
+14:1714 minutes, 17 secondsvariable porque lo está haciendo por filas no por columnas ese la gran
+14:2314 minutes, 23 secondsdiferencia que hay técnicamente lo pero ya lo tomamos nosotros bastante como
+14:3114 minutes, 31 secondssinónimo no a pesar de que no es lo mismo pero lo solemos tomar como un sinónimo
+14:4514 minutes, 45 secondsdirectamente ya estimados a ver qué pregunta por acá
+14:5114 minutes, 51 secondsSamuel En qué caso debo normalizar Ah ya en qué clo En qué caso debo usar
+15:0215 minutes, 2 secondsnormalización vamos a Muy bien buen a consulta lo que está haciendo su colega por acá en qué caso debo
+15:0915 minutes, 9 secondsnormalizar Ya mira a ver en qué caso lo utilizamos directamente se utiliza bastante cuando ustedes trabajan por
+15:1815 minutes, 18 secondsejemplo con a ver dónde lo vemos más déjame borrar por acá eso lo vemos por
+15:2615 minutes, 26 secondsejemplo en en Deep learning modelos avanzados nosotros tenemos dentro de los modelos convolucionales por ejemplo un
+15:3315 minutes, 33 secondsproceso llamado B normalization normalización por lotes directamente no nosotros tenemos de esta forma y es porque nosotros no
+15:4215 minutes, 42 secondstenemos datos estructurados por eemplo tenemos datos no estructurados Así es así es
+15:4915 minutes, 49 secondsEntonces ustedes lo pueden hacer por ejemplo cuando quieren
+15:5715 minutes, 57 secondsimaginemos A ver vamos a ver había un ejemplo que tenía por acá no lo tengo por aquí directamente pero vamos a ver
+16:0516 minutes, 5 secondscuando ustedes realmente lo que les importa es el punto o sea es que los puntos estén normalizados exactamente de
+16:1316 minutes, 13 secondsforma independiente no les interesa mucho el estudio en sí de las variables ese sería lo más principal yo puedo
+16:2016 minutes, 20 secondstener directamente esa normalización en puntos Incluso se utiliza bastante en modelos de regresión no sé si ustedes
+16:2716 minutes, 27 secondshan visto directamente no tenemos en modelos de risión ahí lo vamos a ver con más calma por ejemplo lao y Rich que son
+16:3616 minutes, 36 secondsmodelos por ejemplo que aplican normalización uno aplica la l1 y otro aplica L2 directamente creo que lo Hi al revés
+16:4516 minutes, 45 secondseste es l1 este es L2 entonces ahí por ejemplo ellos aplican enación y para qué lo utilizan para que
+16:5316 minutes, 53 secondsel modelo converja mejor para disminuir problemas por ejemplo deers amente porque yo estoy ap aplicando toda la la
+17:0217 minutes, 2 secondstransformación a mi punto Entonces quito la dependencia de las variables por eso pero si yo aplico
+17:0917 minutes, 9 secondsla l no y dependiendo de cada tipo de normalización estimados ocurren cosas ocurren transformaciones en los
+17:1817 minutes, 18 secondspuntos bueno o relajamientos en la función de coste por ejemplo directamente aquí en la función de coste
+17:2717 minutes, 27 secondsQué hace por ejemplo que mi modelo Por ejemplo si la función de coste sería as no el
+17:3617 minutes, 36 secondserror luego Les explico con más detall tengo mi función de coste por
+17:4417 minutes, 44 secondsaquí y lo que genero estimados con la función de coste es dos cosas
+17:5417 minutes, 54 secondsprimero primero puedo tener que
+18:0018 minutesque las variables que son no estoy ha lo que puedo hacer uno es que las es seleccionar variables no exactamente se
+18:0918 minutes, 9 secondsaplica selección de variables sino que lo que se hace realmente que variables que son que no cumplen con la
+18:1718 minutes, 17 secondsindependencia por acá lo voy a colocar vares que no cumplen con la independencia no independientes independientes hace que estas vares no
+18:2618 minutes, 26 secondsindependientes pierdan lo que sería peso pierden peso es decir les hace que
+18:3418 minutes, 34 secondsno que no afecte mucho al modelo y eso lo genera la normalización por ejemplo ahora también se puede hacer que
+18:4118 minutes, 41 secondsa través de normalización opers oers
+18:4718 minutes, 47 secondsestimados también sean eliminados directamente gracias a la normalización entonces hay estas grandes
+18:5618 minutes, 56 secondsventajas estimados directamente en la práctica cuando ustedes trabajan con datos más
+19:0319 minutes, 3 secondsnormalizados ver por
+19:1419 minutes, 14 secondsaquí imes para que ustedes observen por aquí aquí debería ha un ejempl para que
+19:2319 minutes, 23 secondsustedes lo vean ustedes lo vean
+19:3519 minutes, 35 secondsdirectamente Aquí está mir estos son los modelos que les decía No aquí por ejemplo tenemos normal e1
+19:4319 minutes, 43 secondsnormal E2 y y la mezcla de ambos que directamente en general afecta al modelo no ellos más repercuten directamente en
+19:5119 minutes, 51 secondsel modelo y y gracias a ellos se genera como les mencionaba la eliminación de bueno primero una
+19:5919 minutes, 59 secondsmás que una selección de variables lo que hace es bajarle aquellas variables que son por e que son colineales técnicamente tengo ahí una
+20:0720 minutes, 7 secondsredundancia de variables les baja la prioridad y también el otro modelito lo que hace es directamente hacer que
+20:1420 minutes, 14 secondslosers pierdan pierdan lo que es influencia en un modelo general incluso aquí dice no line regression to Reach
+20:2120 minutes, 21 secondsregation lazo y elastic net que es la mezcla de los dos por ejemplo entonces bast mucho utilizan esta normalización
+20:3020 minutes, 30 secondsya les voy a explicar directamente no ya cuando veamos Machine learning para entender un poquito esos conceptos y ustedes puedan puedan puedan poder
+20:3820 minutes, 38 secondsentenderlo mejor con un caso de uso muy bien pero en general no se olviden de este no se olviden de esto de acuerdo
+20:4820 minutes, 48 secondsnormalización por fila y por columna aplicamos escalamiento y eso no solamente se repiten lo que ustedes
+20:5620 minutes, 56 secondshacen También nosotros lo aplicamos también en visión computacional por ejemplo que es mi área no sé si ustedes han desarrollado estos modelos también
+21:0421 minutes, 4 secondses bastante importante Por qué yo tengo por ejemplo una imagen esta imagen está entre 0 y
+21:1121 minutes, 11 seconds255 sus valores siempre mantienen esto directamente aquí ya no tengo el concepto de columnas Entonces qué es lo
+21:1921 minutes, 19 secondsque hacemos aplicamos el famoso método cada píxel que compone una imagen tiene un valor de
+21:2721 minutes, 27 secondsintensidad entre C y 255 entonces yo aplico lo mismo por ejemplo Bueno aunque esta es una técnica de escalamiento pero
+21:3321 minutes, 33 secondsnosotros le decimos normalización no x- 125 por ejemplo
+21:4121 minutes, 41 seconds128 Divo sobre 255 por ejemplo es Es una forma por ejemplo de escalar los datos en visión computacional también se aplica otros también lo que hacen es por
+21:5021 minutes, 50 secondsejemplo extraen la media de los puntos también la media de este canal est por ejemplo de todo esto su
+22:0022 minutesmedia menos la media y luego lo dividen sobre la divición estándar de los de los valores de píxeles porque al final
+22:0822 minutes, 8 secondsestimados esto de aquí esta imagen se puede representar a través de una matriz de intensidad de
+22:1622 minutes, 16 secondsvalores no en tres canales rgb directamente entonces uno también aplica este tipo de
+22:2422 minutes, 24 secondsde de transformación directamente no escalamiento pero ya internamente también se puede
+22:3122 minutes, 31 secondsaplicar algunas técnicas por ejemplo de normalización que también lo hacen por ejemplo en Deep learning que ya es un
+22:3922 minutes, 39 secondsconcepto un poquito más complejo pero yo tengo la definición de lo que son mapas de características muchos mapas de
+22:4622 minutes, 46 secondscaracterísticas en bueno en redes convolucionales y se aplica la normalización por baches no para obtener
+22:5322 minutes, 53 secondsde todos los para obtener de todos los mapas de características un valor no un único valor y dividirlo sobre su Norma
+23:0223 minutes, 2 secondsl1 o L2 y de esta forma relajar estos no estos valores estos pesos pero son conceptos más ya más teóricos realmente
+23:1223 minutes, 12 secondspero a la larga hacen que el modelo converja muchísimo mejor no eso sería el objetivo ya para para cerrar
+23:1923 minutes, 19 secondsdirectamente este tema y en general mejora la interpretación la interpretación de no de los coeficientes
+23:2623 minutes, 26 secondsde de un modelo podríamos decirlo los hiperparámetros que uno está aprendiendo muy bien Ahora sí
+23:3323 minutes, 33 secondscontinuamos con la clase Gracias por las preguntas es bastante bueno que ustedes hagan las consultas directamente muy bien entonces en
+23:4323 minutes, 43 secondsgeneral cuando tengamos variables tipo variables tipo estructuradas es decir yo conozco las yo conozco las
+23:5123 minutes, 51 secondscolumnas s cómo se llaman podemos tranquilamente aplicar lo que son técnicas de escalamiento
+23:5823 minutes, 58 secondslo que sería la distribución de mi variable Muy bien Entonces vamos por acá ya habría agregado por aquí unas cuantas
+24:0724 minutes, 7 secondscolumnas Entonces vamos a ver cómo se aplica cierta normalización bueno primero vamos a hacer el encoding de
+24:1524 minutes, 15 secondsvariables aquí tengo un dataset no con información de datos por ejemplo edad
+24:2224 minutes, 22 secondstrabajo no estado civil nivel educación de F que es una columna que aparece por acá la variable y que está al final mi
+24:3024 minutes, 30 secondsvariable y directamente meses duración campaña con esta base de datos que es bastante
+24:3624 minutes, 36 secondsinteresante por aquí no leo la cabecera y veo que tengo bastante registr No tengo variables tanto numéricas como
+24:4424 minutes, 44 secondstipo categóricas hao un descrive y mis variables numéricas son todas las de
+24:5124 minutes, 51 secondsaquí y tengo por ejemplo una variable de días Por ejemplo hasta con valores negativos directamente
+24:5924 minutes, 59 secondsdesde -1 hasta 875 por ejemplo y lo primero que voy a hacer es analizar
+25:0625 minutes, 6 secondsestas variables un poquito antes de pasar al método de codificación Entonces voy por acá y ya
+25:1425 minutes, 14 secondsya que estoy en este punto tengo variables una forma de seleccionar de forma automática mis variables numéricas Es simplemente con dataframe no DF
+25:2325 minutes, 23 secondsSelect types incluyo los que son numéricos punto columns para tener los el nombre de los variables
+25:3025 minutes, 30 secondsnuméricas y por acá incluyo para categórica excluyo todo lo que es numérico y me quedo con el complemento ejecuto por aquí y tengo miren edad
+25:4025 minutes, 40 secondsbalance day duration no campaña days prenos de días previos etcétera entonces aquí son variables
+25:4825 minutes, 48 secondstipo numéricas y por acá tengo estimado lo que serían las variables tipo categóricas incluyendo la variable y
+25:5725 minutes, 57 secondsdirectamente muy bien entonces y me voy por aquí abajo un primer análisis
+26:0626 minutes, 6 secondsmiren si nosotros queremos hacer análisis rápidos en python existen subrutinas que nos permiten hacer esto
+26:1326 minutes, 13 secondsUna de ellas por ejemplo es pivot Table js no sé si conocen esta librería es una
+26:2026 minutes, 20 secondslibrería bastante famosa que me permite hacer tablas pivotes de forma bastante rápida es como si
+26:2926 minutes, 29 secondsestuviera en un Excel directamente en python y ya no tenemos que estar programando todos los cursos de variables directamente Entonces por
+26:3626 minutes, 36 secondsejemplo aquí tenemos la tabla les puede servir también hay otro que es p también hay varias estimados
+26:4626 minutes, 46 secondspor ejemplo también está pantas pantas también es otra que es bastante conocida que también les puede permitir estimados hacer ese despliegue
+26:5526 minutes, 55 secondsdirectamente vamos a probar las dos para ver qu tal noseda vamos por aquí un poquito de
+27:0427 minutes, 4 secondsanálisis vamos a ver si que requerimiento ext También
+27:1727 minutes, 17 secondstenemos vamos a veramente
+27:2427 minutes, 24 secondss Aparentemente to por acá supuestamente Aquí nada más es el
+27:3227 minutes, 32 secondscódigo no bueno mientras instala por aquí abajo aquí arriba tengo mi
+27:4027 minutes, 40 secondspiv pivs me permite hacer cru de variables de forma bastante efectiva por ejemp
+27:4827 minutes, 48 secondstengo la var voy colocar aquí mi de forma rápida simplement arrastrando
+27:5327 minutes, 53 secondsmi que tengo 39000 muestras quec no 5289 registros que dicen Yes O sea sí de un
+28:0228 minutes, 2 secondstotal de 45 211 muestras rápidamente Esto me ayuda a ver que la base de datos está
+28:0928 minutes, 9 secondsdesbalanceada así de frente no desbalance de datos Direct si lo quiero expresar Como
+28:1628 minutes, 16 secondssi fuese un barchart por
+28:2328 minutes, 23 secondsaquí horizontal barch Ahí está mir puedo tener este barchart directamente que me permite observar Cómo está la
+28:3128 minutes, 31 secondsdistribución de los datos observen por acá barchart eh un barch
+28:3928 minutes, 39 secondsnormal cantidad de Yes cantidad de no es bastante interactivo muy bonito realmente este librería vamos a probar aquí abajo cómo
+28:4928 minutes, 49 secondsqueda display varias cosas que tien tienen que configurar pandas pandas funciona
+28:5528 minutes, 55 secondsbastante bien en en modul local pero igual no hay problema voy a dejarlo por aquí por el
+29:0329 minutes, 3 secondsmomento y vamos a utilizar este p js directamente y por acá estimados ustedes pueden ver que pueden hacer cruces por
+29:1229 minutes, 12 secondsejemplo Quiero ver el nivel de Educación listo filtrado Direct filtrado por la var y o al revés no
+29:2129 minutes, 21 secondsmiren miren este es lo que tiene la clase la categoría Yes y la categoría no clase Sí clase no los de la clase no por
+29:2929 minutes, 29 secondsejemplo tienen 6260 registros y vamos a aplicar est de una vez para explicar el
+29:3529 minutes, 35 secondsanálisis multivariante no observen por aquí este punto es bast bastante bueno
+29:4229 minutes, 42 secondsbastante interesante si ustedes observan la clase no la clase no tiene por ejemplo estudi
+29:5129 minutes, 51 secondsde primaria 6260 registros secundaria 200000 11000 de
+30:0030 minutester y desconocido 1605 registros que no han dado su información vamos
+30:0830 minutes, 8 secondsa si hay una vamos a ver
+30:1830 minutes, 18 secondspor aage de quitar AC vamos a contar las
+30:2830 minutes, 28 secondscantidades nada muy bien si quiero hacer esto más más complejo por ejemplo puedo quitar y por puedo colocar por aquí y y
+30:3630 minutes, 36 secondspuedo agregarle por ejemplo cruce de dos variables por ejemplo quiero hacer un
+30:4330 minutes, 43 secondscruce de la variable por ejemplo vamos a ver días no días por acá y vamos a ver
+30:5130 minutes, 51 secondscon la variable y a ver qué ocurre directamente tengo hasta 31 días
+30:5930 minutes, 59 secondsdirectamente con la clase Sí y la clase no entonces esa librería les va a permitir a ustedes
+31:0831 minutes, 8 secondsdirectamente este de aquí es un mejor d está ahí está mejor Aunque hay muchas
+31:1731 minutes, 17 secondsvariables por ejemplo faltaría un poquito normalizar esto si lo coloco
+31:2431 minutes, 24 secondspor marital por ejemplo ahí sale total registro single married divorciados y
+31:3231 minutes, 32 secondssus diferencias si quiero hacer más cosas más avanzadas hasta puedo colocar por acá a ver education por aquí y se
+31:4231 minutes, 42 secondspuede dividir en nivel de Educación entonces estimados esta librería por ejemplo evita que ustedes estén construyendo todo con código pandas ya
+31:5131 minutes, 51 secondsles ahorra bastante tiempo obviamente hay gráficas mucho más avanzadas que si se podrían hacer Pero al menos con este Lia ustedes pueden entender rápidamente
+32:0032 minutesCómo están sus variables Y qué comportamiento tien sí Entonces es es una buena opción Realmente si así es
+32:0932 minutes, 9 secondsSamuel parece un exel está bastante bueno ustedes lo pueden enlazar sin problemas pandas también es bueno solamente que hay que configurarlo un
+32:1632 minutes, 16 secondspoquito para que se que funcion col pero igual lo que hace pandas lo hace este Table js sin ningún problema lo hace
+32:2532 minutes, 25 secondsbastante bien realmente en la práctica muy bien bien jueguen con ello jueguen con esto les pueden salir análisis bastante divertidos y bastante
+32:3332 minutes, 33 secondsinteresantes Hay muchísimo realment que hacer por acá también hay average mediana no
+32:4132 minutes, 41 secondssuma suma conal como fracción etcétera etcétera listo entonces este punto Ah y ojo que
+32:5132 minutes, 51 secondsaquí yo he creado un despliegue dentro de mi colap Pero si ustedes observan aquí es una html realmente lo que se le
+32:5932 minutes, 59 secondsgenera miren este de aquí ustedes lo pueden descargar este html Descargar por ejemplo miren aquí se y le he llamado
+33:0733 minutes, 7 secondspivot Table js por defecto y ya se descargó creo sí Ya se descargó entonces este js ustedes lo
+33:1533 minutes, 15 secondspueden descargar y lo abren como página html y lo tienen aparte o sea se les puede cerrar el colap todo pero ya tienen este js hecho simplemente aquí lo
+33:2433 minutes, 24 secondsanalizan nada emente ustedes lo analizan en ecuación primaria pueden pueden tener hasta mapas
+33:3333 minutes, 33 secondsde calor no etcétera etcétera ya depende de ustedes como quieran trabajarlo es
+33:4033 minutes, 40 secondsbastante Bueno realmente Les explico lo que yo recomendaría es que siempre hagan un análisis con respecto al varer objetivo por ejemplo Aquí tengo
+33:4833 minutes, 48 secondsy la cantidad de muestras en y clase no y clase Yes y por ejemplo Quiero ver si es que alguna variable por aquí tiene
+33:5633 minutes, 56 secondsalguna influencia A ver vamos a ver con por ejemplo
+34:0034 minutes[Música]
+34:0334 minutes, 3 secondsduración duración es una variable numérica y estoy pidiendo un barch mejor as esta duración Aquí está por la
+34:1134 minutes, 11 secondsduración es bastante grande directamente vamos a ver si lo podemos vamos a ver si lo podemos
+34:2034 minutes, 20 secondsmejorar
+34:3134 minutes, 31 secondsvamos a colocar dur directamente entonces tiene muchísima información que cruzar por AC incluso
+34:3934 minutes, 39 secondspuedo cruzarlo con edad aquí y sale bastantes cuestiones mu
+34:4634 minutes, 46 secondsbien entonces les dejo que exploren aquí pueden Probar con otra base de datos tambén funciona realmente es muy
+34:5434 minutes, 54 secondsbuena esta librera y no es pesada si se dan bante analiza los datos muy bien y ahora por aquí tengo
+35:0335 minutes, 3 secondsuna una función que hacer análisis de variables categóricas un poquito más rápido est es un código customizado por
+35:1135 minutes, 11 secondsejemplo y con esta funcion lo que hago es simplemente generar con c una gráfica que me muestre porcentajes así como la
+35:1835 minutes, 18 secondsque ustedes están viendo a continuación y esta gráfica técnicamente ha hecho lo que yo les he mostrado de
+35:2535 minutes, 25 secondsforma aquí directamente ha hecho curso entre ciertas variables y me está mostrando
+35:3335 minutes, 33 secondsCómo están las distribuciones de los datos Pero técnicamente estas gráficas ustedes las pueden construir con con
+35:3935 minutes, 39 secondsesto con pivot Table js sin problemas muy bien qué más puedo hacer por
+35:4735 minutes, 47 secondsacá el análisis numérico por ejemplo esta función ya que estoy por aquí directamente Tengo varias diferentes
+35:5635 minutes, 56 secondsvariables tengo variable edad por acá tengo la var miren su distribución Cómo está la variable edad tengo por ejemplo
+36:0536 minutes, 5 secondsbalance directamente como esta distribución de balance miren tengo muchísimos suppliers por aquí día por
+36:1336 minutes, 13 secondsejemplo miren todos los suppliers que yo tengo de día No aquí no hay ningún uper por suerte duración Tiene bastantes sulier si
+36:2236 minutes, 22 secondsustedes se dan cuenta la distribución está por este lado tengo campaña nada también miren Camp también está por aquí
+36:3036 minutes, 30 secondstengo no número de días días eso creo que es promedio de días creo que de retraso si no me equivoco tengo
+36:3736 minutes, 37 secondsbastantes valores que tienen por ejemplo frecuencia cero observen por aquí y tengo algunos valores que superan el
+36:4536 minutes, 45 secondscero tengo valores previos etcétera etcétera entonces una vez que yo hago mi primer análisis de mis
+36:5336 minutes, 53 secondsvariables el primer paso es imputar cosa que ya hicimos amos valores nulos Igual
+37:0037 minutesacá No hay valores nulos El segundo paso sería la eliminación de lers lo cual Por el momento no se ha
+37:0737 minutes, 7 secondsrealizado pero previamente a a laut pero
+37:1837 minutes, 18 seconds[Música]
+37:2637 minutes, 26 secondssaltándose de repente ya lo conocen pero igual es bueno que todos lo sepan no primero voy a llamar a una subrutina que les había dicho que me facilita
+37:3437 minutes, 34 secondsmuchísimo la vida se llama pipeline no from pipeline import pipeline y Qué es
+37:4237 minutes, 42 secondspipeline es una subrutina que me permite encapsular muchos procesos en un solo en en una sola vamos a ver en un
+37:5037 minutes, 50 secondssolo módulo módulo u objeto de una clase aquí puedo importar encapsular muchas cuestiones
+37:5837 minutes, 58 secondsmuchos procesos que me van a ayudar bastante enes después pued des importo Transformer para aplicar la
+38:0738 minutes, 7 secondstransformación de columnas y por aquí voy importar en por aquí arriba hab importado otras
+38:1538 minutes, 15 secondslibrerías había importado voy copiar para que quede todo
+38:2338 minutes, 23 secondsbien l importo transform y ord encer solo para no
+38:3138 minutes, 31 secondsolvidarse por trans Transformer me
+38:3838 minutes, 38 secondspermite español para rápido aplica una transformación de potencia y tiene dos
+38:4538 minutes, 45 secondscosas La transformada de box y la transformada de Johnson que hab consult sule acordaba de la ot y la diferencia
+38:5438 minutes, 54 secondsesx ap entradas positivas mientras que yo Johnson admite tanto positivos como negativos directamente y una ventaja
+39:0439 minutes, 4 secondsdirectamente una ventaja es que ustedes simplemente generan el objeto y simplemente le aplican el no el fit No
+39:1239 minutes, 12 secondsnada más y con eso ya está muy bu y también tenemos el Fed transfer por acá directamente muy bien
+39:2139 minutes, 21 secondsme regreso a mi código y también tengo el ordinal encoder que es otro tipo de transformación entonces Cómo hago para
+39:2839 minutes, 28 secondsseleccionar directamente vamos a ver un caso con tres ejemplos para que ustedes lo entiendan voy a explicarles paso por paso Voy a aplicar un poquito de zoom y
+39:3739 minutes, 37 secondsvamos primero por AC Para empezar yo tengo dos opciones o primero me voy y selecciono por defecto
+39:4439 minutes, 44 secondstodas las variables simplemente con aquí incluye
+39:5339 minutes, 53 secondsnúmeros dur ya lo tengo punto colum y me quedo con esto o si no ustedes en este nivel
+40:0340 minutes, 3 secondspueden hacer manualmente Esta división en este punto cuando ustedes ya estén haciendo cosas avanzadas van a preferir
+40:1040 minutes, 10 secondshacer esto por qué Porque cuando ustedes hacen un análisis más profundo a su dataset ustedes pueden tener varias
+40:1840 minutes, 18 secondscosas aquí es bueno agregar un texto no en este punto es preferible
+40:2840 minutes, 28 secondshacer la separación de variables de forma manual es un poquito preferible no le digo que siempre se
+40:3740 minutes, 37 secondsdeba hacer porque ya sabemos Qué tipo de variables numéricas
+40:4540 minutes, 45 secondsYa sabemos qué variables numéricas por ejemplo numéricas son por ejemplo
+40:5340 minutes, 53 secondseh tienen distribución normal bueno fal prueba de normalidad pero ustedes tranquilamente
+41:0041 minutespueden hacer una prueba de normalidad Entonces ya sabemos que variables numéricas tienen distribución normal y cuáles
+41:0941 minutes, 9 secondsno entonces si yo voy a hacer una transformación me conviene solamente hacer esta transformación a las que no tienen distribución normal por ejemplo a
+41:1741 minutes, 17 secondsellas no no les voy a hacer la transformación muy bien Qué más no hay variables por ejemplo hay variables
+41:2441 minutes, 24 secondscategóricas vamos a colocar por aquí como como si esto fuesen puntitos no para que se vea
+41:3541 minutes, 35 secondsmejor hay variables por ejemplo categóricas hay variables vargar la
+41:4241 minutes, 42 secondsredundancia con muchas categorías y no nos
+41:5041 minutes, 50 secondsconviene un tipo un tipo específico en código por
+41:5841 minutes, 58 secondsejemplo mientras que para otras variables sí nos
+42:0842 minutes, 8 secondsconviene por ejemplo entonces hagamos un ejemplo rápido no Entonces yo quiero hacer lo
+42:1642 minutes, 16 secondssiguiente Okay tengo default housing long Job marital por ejemplo imaginemos que estas variables no tienen muchas
+42:2442 minutes, 24 secondscategorías ojo imaginemos que por ejemplo education si tiene muchas categorías cómo lo sé
+42:3342 minutes, 33 secondstendría que regresar por aquí y vi mi pivot Table js no que lo tengo por acá descargado está Table
+42:4242 minutes, 42 secondsjs Aquí está vamos a analizar vamos a hacer un análisis directamente a ver veamos las categorías default Cómo va
+42:5142 minutes, 51 secondscon default a ver default aquí está A ver default es No y yes solamente tengo dos categorías si no
+43:0043 minutes44396 y 815 que di solamente tengo dos categorías perfecto una variable a la que le puedo
+43:0843 minutes, 8 secondsaplicar miren tranquilamente un encoder de acuerdo puedo aplicar
+43:1743 minutes, 17 secondsun H encoder pued aplicar con mucha tranquilidad vamos a vering vamos
+43:2843 minutes, 28 secondspor aquí estudio housing teng No perfecto vamos por
+43:3643 minutes, 36 secondsaquí perfecto solamente tengo y mar vamos por aquí está y
+43:4543 minutes, 45 secondstiene tiene bastant miren 1 2 3 4 5 6 7
+43:4943 minutes, 49 seconds8 9 10 11 12 tiene bast No si mantener
+43:5743 minutes, 57 secondsestado civil no me voy por acá Ahí está Y tiene tres perfecto tiene tres muy
+44:0444 minutes, 4 secondsbien Yo no me conviene miren realmente aplicar un hod encoder me va a generar muchas clases me va a generar muchas
+44:1244 minutes, 12 secondscategorías y me va a generar 1 a ver 1 2 3 4 5 6 7 8 9 10 11 categorías no 12
+44:2144 minutes, 21 secondsporque la última es cero me vo a generar 12 categorías estimados directamente como va do categorías Entonces no me
+44:3044 minutes, 30 secondsconviene por Entonces lo voy a colocar voy a sacar por aquí yo y lo voy a colocar por AC
+44:3844 minutes, 38 secondsAh me conviene más darle no me va a generar disculp me va a generar dimensiones estaba confundiendo
+44:4644 minutes, 46 secondsahora ya vamos a ver este de aquí position en
+44:5744 minutes, 57 secondsya está y finalmente por aquí el power Transformer Y en este caso por defecto Power transform
+45:0645 minutes, 6 secondsseo aplica Box a método por efecto aplica Jo Johnson es
+45:1545 minutes, 15 secondsdecir valores positivas y negativas y Johnson por efecto vamos a dejarlo así mir para que ustedes observen Entonces
+45:2345 minutes, 23 secondsustedes van a hacer un análisis en este punto de todas sus variables Ok y a estas Por ejemplo que no tienen
+45:3045 minutes, 30 secondsmuchas categorías ap encoder Qué es un
+45:3945 minutes, 39 secondsencoder es este tipo para los que primera vez que escuchan esto es esto de aquí
+45:4845 minutes, 48 secondsAC esto es qué es lo que hace yo tengo por ejemplo equipo a
+45:5745 minutes, 57 secondsequipo b y tengo equipo CJ abrir esta imagen para que ustedes lo vean abrir imagen una pestaña nueva y lo
+46:0546 minutes, 5 secondsvean por acá Qué hace la codificación es bastante sencilla de
+46:1246 minutes, 12 secondsentender Team tiene tres categorías categoría A B y C entonces simplemente
+46:1946 minutes, 19 secondspor cada categoría se genera estimados un nuevo una nueva se genera una nueva variable
+46:2746 minutes, 27 secondsAunque eso aunque aquí hay un error este de aquí es el D realmente este de aquí es
+46:3446 minutes, 34 secondselcer mantiene por defecto simplemente el número de categorías si aquí hay n men 1 porque a la categoría a a la
+46:4346 minutes, 43 secondstercera categoría le da 00 valor de efecto vamos a ver aquí esta imagen está
+46:5046 minutes, 50 secondsestá equivocado aquí creo que va a salir correcto
+46:5846 minutes, 58 seconds[Música]
+47:0447 minutes, 4 secondsAquí está el
+47:1647 minutes, 16 seconds10000 y aquía por AC que
+47:2547 minutes, 25 secondsdigamos vamos a ver por aquí aquí
+47:3447 minutes, 34 secondsestá trf TR features Main call
+47:4047 minutes, 40 secondsme por ejemplo 00 no ahí está desde
+47:4647 minutes, 46 seconds[Música]
+47:4847 minutes, 48 secondsF vamos por aquí la diferencia aunque no sé si se va abrir imagen pero me
+47:5447 minutes, 54 secondsconviene ver laagen
+48:0548 minutes, 5 secondsaquí aquí por ejemplo miren yo tengo tengo
+48:1248 minutes, 12 secondstengo tengo Yes no y May tengo tres clases y tengo May
+48:2348 minutes, 23 secondsNo aquí tengo por ejemplo tres codificaciones diferentes Pero hay
+48:3048 minutes, 30 secondsotra que es el dami el dami si genera estimados por aquí de
+48:4048 minutes, 40 secondsacá vamos a ver el D genera por Hay una que genera que puesto por acá creo que
+48:4748 minutes, 47 secondsaquí se nota el D estimados miren genera por efecto una una categoría 00 si ustedes Ven por efecto Entonces por cada
+48:5448 minutes, 54 secondsuna me sale n-1 si tengo tres categorías al final tengo n men columnas eso es lo bonito de
+49:0249 minutes, 2 secondsacá buen escuch Bueno disculpe por interrumpir
+49:1049 minutes, 10 secondsPor ejemplo estadísticamente yo soy estadístico me dijeron que es mejor aplicar el D pero
+49:1849 minutes, 18 secondstambién o sea cuando estaba la universidad desp terminé todo
+49:2549 minutes, 25 secondsescuch Cuál es la O sea Cuándo conviene uno y cuánd conviene otro solamente utilizamos el wat hen
+49:3449 minutes, 34 secondscode la verdad sabes qué esto está relacionado mucho Te comento ya que por
+49:4049 minutes, 40 secondsacá la verdad yo preferiría no usar ninguna de las dos salvo que tenga pocas categorías cuando es dos no má cuando es
+49:5049 minutes, 50 secondsdos dos o tres ni One Hot ni dami porque a lo mucho es la diferencia es una categoría
+49:5749 minutes, 57 secondspero yo los utilizaría Sí o sí tuviese pocas categorías Pero por qué porque esto tiene que ver con la dimensionalidad
+50:0550 minutes, 5 secondsfinal imaginemos quee imagina 10 variables Pero estas 10
+50:1350 minutes, 13 secondscuatro son categóricas y y las cuatro tienen cuatro
+50:2050 minutes, 20 secondscategorías expe mucho lo picas te quedaría r se que son tus categorías
+50:2850 minutes, 28 secondsnuméricas más 4 * 4 16 verdad más 16 categorías nuevas si aplicaras el no si
+50:3750 minutes, 37 secondsno si no + 12 simp implicar encoder Entonces te subes de un r a la 10 a un r a la
+50:4450 minutes, 44 seconds18 si te das cuenta en el mejor de los casos y en el peor a a un r a la 22 no en todos los casos y realmente a
+50:5450 minutes, 54 secondsmí no me conviene Ni uno ni otro en en serio Por qué Porque existe un problema dentro del modelos que tiene que ver con
+51:0251 minutes, 2 secondsla alta dimensionalidad la maldición de la alta dimensionalidad y creo que nosotros lo conos con
+51:0951 minutes, 9 secondsmultipolaridad o hay otro más pero sí sí lo he viste esto a nivel numérico Exacto
+51:1651 minutes, 16 secondsel problema la dimensión de la al dimensionalidad si un modelo ya para dividir de puntos en un r cuadrado y un
+51:2251 minutes, 22 secondsr la 3 se demora y ya tiene cierto sesgo imagínate un r 18 es peor
+51:2951 minutes, 29 secondstodavía es bastante peor Por más que tú luego apliques m selección de variables eso igual ya aplicaste un encoding ya
+51:3751 minutes, 37 secondstransformaste entonces qué me conviene no son los únicos métodos que existen directamente hay bastantes métodos encod
+51:4551 minutes, 45 secondsde variables categóricas porque realmente el one encoder y el y el o el dami cualquiera de los dos no son al
+51:5351 minutes, 53 secondsmenos yo particularmente no quisiera utilizarlos porque me van a dar problemas sobre todo con datos complejos si los datos son
+52:0252 minutes, 2 secondscomplejos ahí sí tengo problemas si los datos no fuesen tan complejos tranquilo no funciona un modelo entonces hay otros
+52:1152 minutes, 11 secondstipos de codificación por ejemplo por ejemplo la binaria que es la que más me gustaría usar la que suelo usar a veces la
+52:1952 minutes, 19 secondsbinaria me es más más tranquila lo lo que lo único que necesitamos es lo siguiente tú neces ficas una forma de de
+52:2852 minutes, 28 secondscodificar tú necesitas esto nada más Qué es un encoding al final de una variable categórica
+52:3452 minutes, 34 secondses una categoría es representar esta variable djar por
+52:4152 minutes, 41 secondsacá de presentar esta variable Mira de tal forma que las categorías A B
+52:4952 minutes, 49 secondsy C uno que no existe nivel de relevancia entre ellas no porque tú me dices profesor un un un lel encoder
+52:5852 minutes, 58 secondsclase 1 1 se acabó sig con una columna pero el modelo pude interpretar que la clase C pesa más que la clase a y clase
+53:0453 minutes, 4 secondsB entonces por ahí no hay modelos hay veces donde por ejemplo esto no afecta porque si ha habido casos donde utizado
+53:1253 minutes, 12 secondsun una codificación numérica y no me ha afectado para nada el rendimiento del modelo Pero hay otros casos donde sí te
+53:2053 minutes, 20 secondsafecta entonces lo que se busca es una codificación de lases categóricas de tal forma que se mantenga la independencia entre esta est esta nueva representación
+53:2953 minutes, 29 secondsPor algo se le llama encoding entonces One cod encoder es perfecto pero por el problema es que te genera mucha dimensionalidad y si tienes en un
+53:3753 minutes, 37 secondsdataset muchas variables categóricas Por más que tengas dos o tres ya te aumentó la dimensionalidad el dami también
+53:4353 minutes, 43 secondsigualito no entonces hay una que es más sutil que es la binaria directamente porque la binaria es log Dn nada más
+53:5253 minutes, 52 secondssimplemente tu cuenta seminario Por ejemplo si tú tienes por ejemplo ocho categorías en una
+54:0054 minutesvariable cuánto V Cuánto es el logaritmo de 8 en base 2 3 a lo mucho Tú generas tres nuevas
+54:0654 minutes, 6 secondscolumnas con un One encoding generas una generas oo columnas nuevas y con un dam
+54:1454 minutes, 14 secondsgenera siete columnas si te das cuenta entonces prefiero generar una representación
+54:1954 minutes, 19 secondslogarítmica simplemente t cuentas no ah te das cuenta 0 1 Entonces por ejemplo
+54:2954 minutes, 29 secondsesa representación a mí me gusta usarla más porque al final lo que tú tienes que garantizar es que los puntos simplemente bueno las categorías en el espacio no no
+54:3754 minutes, 37 secondsse intercepten mientras con una codificación binaria es más tranquilo directamente y no solo esa hay muchas otras formas de codificar realmente te
+54:4554 minutes, 45 secondscom entonces no es la única pero es Gracias listo Carlos Gracias se dan
+54:5454 minutes, 54 secondscuenta entonces es un punto que hay que tomar en consideración y por eso justo estamos aquí viendo les quiero enseñar estos
+55:0155 minutes, 1 secondpasos Ok entonces imaginemos que estas dos las voy a utilizar con encoder y luego voy a utizar aquí mi famoso
+55:1055 minutes, 10 secondspositional encoder directamente está por aquí
+55:1855 minutes, 18 secondsaher por AC directamente si ustedes quieren ver qué es lo que hace
+55:3655 minutes, 36 secondsaquí ejemplo
+55:4455 minutes, 44 secondssimplement es otro tipo de codificación inus pued
+56:0256 minutes, 2 secondsestá l sin ningún problema hay varias formas de como puedo hacer la codificación pero
+56:1056 minutes, 10 secondsen este momento me voy a quedar con encoder nada más y ordinal encoder para probar Entonces por ejemplo
+56:1856 minutes, 18 secondsTengo estas variables las quiero codificar con encoder y estas variables con encoder directamente obsen por aquí
+56:2656 minutes, 26 secondsy a continuación a esta le voy a aplicar y Johnson por defecto no por el momento Listo confines didácticos Entonces
+56:3556 minutes, 35 secondsejecuto por acá y no lo vamos a hacer por partes hay una herramienta porque he importado pipeline si ustedes observan
+56:4256 minutes, 42 secondspor aquí y vamos a aplicar un método más avanzado vamos a trabajar con pipeline qué es lo que voy a qué es lo que hace
+56:4856 minutes, 48 secondspipeline me permite encapsular pasos de procesamiento de los datos entonces voy
+56:5556 minutes, 55 secondsa decir lo siguiente voy a generar un un transformador categórico categorical Transformer One H
+57:0357 minutes, 3 secondsencoder Aunque este está simplemente voy a llamarlo así más más
+57:1357 minutes, 13 secondspequeñ categórica transformación voy a dejar más chiquito
+57:2157 minutes, 21 secondsy va a ser igual que a un pipeline miren una instancia de pipeline donde yo le paso Como si fuese miren su parámetro de
+57:3057 minutes, 30 secondsentrada steps una lista y quiero simplemente decirle en una encoder quiero aplicar este
+57:3857 minutes, 38 secondsencoder Qué tipo de encoder voy aplicar One encoder justo uno que que he
+57:4457 minutes, 44 secondscreado parámetros por defecto ignorar eliminar directamente la variable nueva reemplazarla
+57:5357 minutes, 53 secondsborrarse perfecto por aquí por defecto luego a continuación me voy y voy a hacer lo mismo voy a generar otro otro
+58:0258 minutes, 2 secondspipeline con otro transformador llamado ordinal y le digo en corder y genero un
+58:1058 minutes, 10 secondsordinal encod por efecto listo y finalmente las variables numéricas yo las quiero les quiero aplicar lo que sería una codificación pero con power
+58:1958 minutes, 19 secondsTransformer no y por efecto se aplica el método de y Johnson Entonces por aquí num es igual a pipeline steps no encoder
+58:2758 minutes, 27 secondsPower Transformer listo he generado mis tres transformadores y ahora lo voy a aplicar
+58:3358 minutes, 33 secondsa las columnas respectivas categoría bar 1 categoría bar 2 número bar cómo lo aplico con colum Transformer que está
+58:4158 minutes, 41 secondspor aquí entonces gener un preprocesamiento preprocessor es igual a colum Transformer y le mando dos
+58:4958 minutes, 49 secondstransformadores nada dentro de una lista primero le paso como entrada el nombre que va a tener cada
+58:5758 minutes, 57 secondscategoría para distinguirla no Cut One Hot por ejemplo y recibe por recibe por aquí el transformador c trans trans One
+59:0659 minutes, 6 secondsperfecto y el nombre de las categorías que van que van a tener esa transformación luego le aplico cad
+59:1459 minutes, 14 secondsordinal por ejemplo por aquí está c transacción ordinal que es aquí que va a recibir y va a aplicar esa
+59:2359 minutes, 23 secondstransformación en estas dos variables education y y y finalmente num que va a aplicar en todas en todas las numricas así se llama
+59:3259 minutes, 32 secondsnuestro num nuestra transformador no un Trans transformador de variables numéricas y le voy a
+59:4059 minutes, 40 secondsaplicar toda esa transformación a las variables numéricas listo una vez que genero este preprocessor simplemente me voy por acá
+59:4759 minutes, 47 secondspipeline es igual a pipeline Step preprocessor y le aplico el preprocesador gigante y finalmente le
+59:5559 minutes, 55 secondsaplico un F nada más pipeline y le aplico listo con
+1:00:031 hour, 3 secondseso entrena aprend las transformaciones y simplemente yo gener un nuo
+1:00:121 hour, 12 secondsdatame transf para aplicarle la transformación al dataframe o simplemente aquí pud haber colocado fit b transf y lo aplicaba directo ya no
+1:00:191 hour, 19 secondshacía Este paso de aquí me lo saltaba y luego simplemente colum son las columnas
+1:00:261 hour, 26 secondssimplemente las columnas son fit get feature names out el nombre las columnas de salida y lo mand una lista y esto es
+1:00:341 hour, 34 secondslo que se va a pasar por aquí en esa salida ejeo de acá directamente y con este proceso miren
+1:00:421 hour, 42 secondsencapsulado automáticamente a las variables que yo indiqué ya les apliqué la transformación tenemos categoría
+1:00:521 hour, 52 secondsOne yes Blue J J J J marit mar s por
+1:01:001 hour, 1 minuteejemplo educational education Por ejemplo si ustedes Ven por aquí y la numéric edad balance day duration Camp
+1:01:091 hour, 1 minute, 9 secondsPR le apliqué todos las transformaciones las tres transformaciones que he generado por aquí arriba y ya está miren
+1:01:171 hour, 1 minute, 17 secondsde esta forma este ustedes lo encapsulan todo y lo hacen directamente en uno solo
+1:01:261 hour, 1 minute, 26 secondsMuy bien Entonces miren eso para eso sirve un pipeline esto de aquí es un poquito más avanzado pero directamente les puede
+1:01:341 hour, 1 minute, 34 secondsservir Listo Ya está ahora qué es lo que hago Voy a analizar nuevamente la distribución de mis datos No quedan
+1:01:411 hour, 1 minute, 41 secondsperfecto Porque todavía tengo Players Pero al menos ya tengo un paso más directamente por acá muy bien Por ejemplo Miren la variable numérica edad
+1:01:511 hour, 1 minute, 51 secondsla edad por ejemplo está con una transformación que va de men a tres si se dan cuenta pero ha sido transformada
+1:01:581 hour, 1 minute, 58 secondsdirectamente y tiene una distribución que se aproxima a una normal Esa es la idea estoy miren Aquí estaba la edad
+1:02:051 hour, 2 minutes, 5 secondsesta era la var edad real y con lo que sería la transformación ha quedado así
+1:02:121 hour, 2 minutes, 12 secondssi se dan cuenta Luego por acá tengo la variable bueno la varidad miren con su con su transformación como que losers se
+1:02:211 hour, 2 minutes, 21 secondshan qued quedado poquitos la variable n balance por ejemplo a pesar de todo tiene este tipo de distribución centrada en cero que
+1:02:291 hour, 2 minutes, 29 secondsustedes Ven por acá miren Cómo queda todo centrado en cero y por aquí los datos distribuidos
+1:02:371 hour, 2 minutes, 37 secondsse dan cuenta lo mismo va a pasar con un day que tampoco no es una distribución tan normal pero ya tiene un efecto un poquito más diferente si se dan cuenta
+1:02:461 hour, 2 minutes, 46 secondscentrado en cero directamente n duration miren cómo queda bueno como era valor negativo no
+1:02:561 hour, 2 minutes, 56 secondsse puedo hacer mucho directamente per tiene cierta distribución entonces estimados se ha hecho una transformación
+1:03:031 hour, 3 minutes, 3 secondsdirectamente los datos se dan cuenta por es es el primer punto que quería mostrarles ahora entonces con es tipo de
+1:03:111 hour, 3 minutes, 11 secondscodificadores ustedes pueden probar directamente cómo les queda Arturo uro qui hacer una
+1:03:191 hour, 3 minutes, 19 secondsconsulta profesor una consulta cuando usted llama transformación a las variables numéricas prácticamente le
+1:03:261 hour, 3 minutes, 26 secondsestá haciendo un escalamiento verdad no no las está escalando las está transformando nada más todavía no las ha escalado
+1:03:341 hour, 3 minutes, 34 secondsy me perdí me he perdido Cómo Cómo que los está transformando o sea tiene un valor al inicio qué les está haciendo
+1:03:421 hour, 3 minutes, 42 secondsahorita una transformación Este es un x y lo llevo a un x prima de tal forma que se aproximen a una distribución normal
+1:03:501 hour, 3 minutes, 50 secondsEso lo que les estaba mostrando por aquí lo que les mencioné la vez pasada pero no están escalados observa aquí por ejemplo la
+1:03:581 hour, 3 minutes, 58 secondssalida por ejemplo está aquí m encoding Mira por ejemplo mira las salidas por
+1:04:071 hour, 4 minutes, 7 secondsejemplo no balance está entre -30 y 20 si te das cuenta no está escalado por ejemplo No bance mira tiene valores
+1:04:161 hour, 4 minutes, 16 secondsentre 20 y men2 por acá Bueno un poquito más bajo de -30 no están escalados
+1:04:231 hour, 4 minutes, 23 secondsdirectamente ya vamos ahora Les explico Qué es el escalamiento realmente para que entiendan days por ejemplo -2 y 1.5 más
+1:04:321 hour, 4 minutes, 32 secondso menos Mira duration duración está entre -4 y 4 más o menos directamente -1
+1:04:411 hour, 4 minutes, 41 secondsy 2 por ejemplo los datos en a través de esta transformación no están escalados pero s han sido llevados a un nuevo
+1:04:491 hour, 4 minutes, 49 secondsespacio y Dentro de este espacio los datos están distribuidos con un en un menor Rango de
+1:05:001 hour, 5 minutesvalores se han transformado directamente ya los puntos se han llevado exactamente a este tipo de distribución claro ahí
+1:05:071 hour, 5 minutes, 7 secondspor ejemplo están normalizados les han aplicado una transformación para normalizar los datos pero no están todavía escalados dir y
+1:05:161 hour, 5 minutes, 16 secondsprofesor eso de ahí entonces este con la transformación afecta lo que es el valor de los datos ahora s le afecta porque
+1:05:231 hour, 5 minutes, 23 secondsestamos modificando su como sería modificando su distribución original o sea están normalizados
+1:05:301 hour, 5 minutes, 30 secondsdirectamente si te das cuenta ya ya le voy entendiendo Y entonces Y de y de ahí para volverlos a su valor original es
+1:05:381 hour, 5 minutes, 38 secondsotro proceso ya sí es una inversa invers transform es es una inversa nada más una inversa normal en la práctica
+1:05:491 hour, 5 minutes, 49 secondsnormalmente vamos a ver por acá lo que yo he hecho es transformar los valores nada más por acá
+1:05:561 hour, 5 minutes, 56 secondspero no he tocado í bueno se me olvidó sacar í arriba pero en realidad y no debería sacarlo yamp no debería alterar
+1:06:041 hour, 6 minutes, 4 secondsa y porque es una variable tipo categórica creo que no heado a y porque ya tiene valores este si no vuelto
+1:06:121 hour, 6 minutes, 12 secondssolamente y d la clase y no no he colocado y
+1:06:191 hour, 6 minutes, 19 secondsperfecto he colocado por suerte listo también puedes hacer inverso Mira hacer una inversa directamente por
+1:06:281 hour, 6 minutes, 28 secondsacá los datos y volverlos a su estado normal no no no no hay problema en ese aspecto esto se hace con fines de que
+1:06:351 hour, 6 minutes, 35 secondsesto ingrese a un modelo a un modelo de Machine learning o sea lo que hice hasta aquí es aplicar una
+1:06:431 hour, 6 minutes, 43 secondstransformación que sí afectó la distribución la distribución de la variable entonces la variable está así y si me voy por acá
+1:06:521 hour, 6 minutes, 52 secondsdirectamente este es bueno este es mi Este es el X prima nuevo y ahora Esto va a entrar a tu modelo de Machine learning
+1:07:011 hour, 7 minutes, 1 secondque está por aquí abajo y aquí vas a tener una predicción de y con estos datos a y no le he tocado
+1:07:091 hour, 7 minutes, 9 secondsentonces y está en su espacio original ojo con es det y está espacio
+1:07:151 hour, 7 minutes, 15 secondsoriginal y y simplemente el punto original lo único que he hecho es transformar toda esta x nada má Entonces
+1:07:241 hour, 7 minutes, 24 secondssi quisieras por iOS poder regresar perfecto lo puedes hacer No hay hay un hay un reverse que se
+1:07:311 hour, 7 minutes, 31 secondsaplica Exacto Por qué Y por qué justamente Samuel quiero hacer eso porque hay modelos que
+1:07:381 hour, 7 minutes, 38 secondsfuncionan netamente con datos que tien con variables Morelos que
+1:07:461 hour, 7 minutes, 46 secondsfuncionan con variables que tienen distribución normal sobre todo los modelos probabilísticos que ustedes utilizan
+1:07:541 hour, 7 minutes, 54 secondsbastante No sé si ya les han enseñado esos modelos por ejemplo un regresor lineal funciona mejor si los datos tienen una distribución normal si las
+1:08:021 hour, 8 minutes, 2 secondsvariables Disculpen tienen un distribución normal Un regreso logístico también hay modelos que no que no les afecta por ejemplo los árboles de
+1:08:101 hour, 8 minutes, 10 secondsdecisión los Random Forest xg porm Ah no les afecta porque trabajan con otro tipo
+1:08:171 hour, 8 minutes, 17 secondsde de formas reglas de asociación pero otros modelos por ejemplo una sbm también la afecta porque al final una
+1:08:241 hour, 8 minutes, 24 secondssbm solamente es una mejora de un modelo lineal por vector má un knn Por ejemplo si quieren hacer
+1:08:321 hour, 8 minutes, 32 secondsclasing también le conviene tener datos así ese tipo de distribución Incluso el knn le afecta las variables
+1:08:401 hour, 8 minutes, 40 secondscategóricas entonces estimados es todo un rollo realmente es un realmente Entonces el objetivo es que mientras más
+1:08:481 hour, 8 minutes, 48 secondsse aproximan a la normalidad los las variables directamente ustedes mejor
+1:08:551 hour, 8 minutes, 55 secondsmejor directamente tienen tienen mucho más probabilidad que el modelo funcione muchísimo mejor y les
+1:09:031 hour, 9 minutes, 3 secondsha una mejor predicción es un buen punto realmente ahorita ya hemos hecho la
+1:09:111 hour, 9 minutes, 11 secondsclaro ahorita hicimos transformación si te das cuenta los datos ya están transformados y sus niveles de escala no son tan elevados samel
+1:09:191 hour, 9 minutes, 19 secondsya numéricas ya no sería necesario incluso escalar porque ya las tenemos
+1:09:261 hour, 9 minutes, 26 secondsel espacio es chiquito no Mira -4 4 no - 4 4 1 2 La hay un tipo de escalamiento
+1:09:351 hour, 9 minutes, 35 secondsque es estándar que es estándar scaler donde tú a x le quitas su media y lo divide sobre su media y lo divide sobre su
+1:09:451 hour, 9 minutes, 45 secondsdistribución su desviación estándar disculpa y más o
+1:09:531 hour, 9 minutes, 53 secondsmenos tienes valores así -2 1.5 Entonces en este punto ya es necesario hacer
+1:10:001 hour, 10 minutesescalamiento comento Pero podemos aplicarlo también y ver cómo nos queda sobre todo estas transformaciones se hacen cuando ustedes necesitan utilizar
+1:10:091 hour, 10 minutes, 9 secondsSí o sí un modelo que por que ya por teoría necesit variables
+1:10:161 hour, 10 minutes, 16 secondstipo variables que tengan una distribución aproxim aproximada la normal como un pca pca sí o sí necesita tener esa regla
+1:10:251 hour, 10 minutes, 25 secondspca camin un pca discp pca Sí o sí funciona con esto porque tiene que ver con los autovalores y los autovectores o algunos
+1:10:351 hour, 10 minutes, 35 secondsotros modelos estadísticos directamente regres lineal como les menci muy bien ya en este
+1:10:421 hour, 10 minutes, 42 secondspunto vamos al siguiente paso Qué pasa profesor si yo no quiero aplicar esto a ver apliquemos otro tipo de de por si
+1:10:511 hour, 10 minutes, 51 secondsacaso el un escalador no afecta ojo no afecta la distribución de una variable porque es
+1:10:591 hour, 10 minutes, 59 secondsescalador nada más acuerdo no afecta la distribución de la variable la variable simplemente se va a un Rango menor de datos pero nada
+1:11:081 hour, 11 minutes, 8 secondsmás por si acaso vamos a verlo el día de hoy voy a copiar esto por acá le voy a explicar un poquito los
+1:11:161 hour, 11 minutes, 16 secondsescaladores los escaladores mantienen la distribución sea normal o
+1:11:241 hour, 11 minutes, 24 secondsno Okay un escalador mantiene la distribución de la variable no la
+1:11:321 hour, 11 minutes, 32 secondsmodifica estamos acostumbrados a utilizar los escaladores por defecto no la distribución de la
+1:11:441 hour, 11 minutes, 44 secondsvariable listo por ejemplo yo tengo un escalador
+1:11:531 hour, 11 minutes, 53 secondstipo muy bien Así es Mira por ejemplo tengo el famoso método maxmin que es bien famoso qué es lo que hace
+1:12:021 hour, 12 minutes, 2 secondssimplemente imaginemos que yo tengo esta distribución de datos así por ejemplo no hay nada de normalidad aquí los datos
+1:12:111 hour, 12 minutes, 11 secondsestán por ejemplo entre C entre menos no sé entre C por ejemplo
+1:12:201 hour, 12 minutes, 20 seconds0 y 500 maxmin Qué hace los lleva a una escala que ustedes quieran a un nuevo min y a un nuevo
+1:12:281 hour, 12 minutes, 28 secondsmáximo nuevo máximo y a un nuevo y a un nuevo mínimo los lleva por efecto se
+1:12:361 hour, 12 minutes, 36 secondslleva 01 entonces simplemente ustedes al escalar van a tener la misma distribución exactamente el mismo comportamiento pero los datos están
+1:12:451 hour, 12 minutes, 45 secondsentre C y 1 Nada más eso es lo que hace un escalador máx directamente qué es lo que hace No
+1:12:531 hour, 12 minutes, 53 secondselar scer simplemente como les dije no le quitan la le quitan la media y la dividen sobre la división
+1:13:021 hour, 13 minutes, 2 secondsestándar Solo que los datos van a seguir con su misma distribución Solo que los datos van a
+1:13:091 hour, 13 minutes, 9 secondsestar centrados en cero directamente por acá no y por aquí -3 menos por aquí un 3
+1:13:161 hour, 13 minutes, 16 secondsy la y la propiedad Es que su varianza va a ser igual igual a un Eso es todo pero
+1:13:251 hour, 13 minutes, 25 secondsel escalamiento no ha transformado la variable no ha hecho que la variable se aproxime a una normal de acuerdo Entonces no no hay que confundirse con
+1:13:331 hour, 13 minutes, 33 secondseso profesor Per esc la variable ya está como normal no tiene que hacer una transformación netamente con boxc no
+1:13:411 hour, 13 minutes, 41 secondsdirectamente o o la o y Johnson que es por defecto profesor Sí í en la justo en
+1:13:491 hour, 13 minutes, 49 secondsesta parte en la fila cuatro eh la dos primeras la dos y la tres eh entiendo que ahí solo ha codificado no
+1:13:581 hour, 13 minutes, 58 secondsjusto donde estaba d estaba hace un momentito Ah dice aquí pueden seleccionar las variables no entonces ahí dice en la fila dos esa celda dos y
+1:14:061 hour, 14 minutes, 6 secondstres ahí solo entiendo que ha codificado no con esos métodos agarrado la variable y lo ha codificado dependiendo de la cantidad de valores que tenga y en la
+1:14:151 hour, 14 minutes, 15 secondsparte en la fila cuatro lo que hace es hacer una transformación no Y esto se hace para llevar las o las categorías o
+1:14:231 hour, 14 minutes, 23 secondslas variables a una distribución normal cierto en caso de que por ahí consumas un modelo que requiera este este caso de
+1:14:291 hour, 14 minutes, 29 secondsuso Exacto as es el escalado si se hace normalmente he visto que el escalado se hace para casi todos los modelos No eso
+1:14:381 hour, 14 minutes, 38 secondsmodelos Esa es la diferencia no es la fila cu es lo único para m eso es nuevo no había visto antes claro normalmente
+1:14:461 hour, 14 minutes, 46 secondslo vemos entonces profesor pero si esty escalando mi variable por no funciona el modelo de repente utizando modelo cuya definición teórica te dice que que las
+1:14:551 hour, 14 minutes, 55 secondsvariables tienen que tener cierta aproximación normal ent el escalado no te hace una una aprim en estos casos
+1:15:021 hour, 15 minutes, 2 secondsusaría es de la fila cuat no que es Johnson y creo que había otro más otro el
+1:15:091 hour, 15 minutes, 9 secondsbox Okay profor genial mucha gracias entonces por ejemplo tú lo haces pero por qué no funciona el modelo porque simplemente por ejemplo profesor estoy
+1:15:171 hour, 15 minutes, 17 secondsutilizando un pca para reducción dimensionalidad y luego estoy mandando a un camin o a un a una sbm o un Random
+1:15:241 hour, 15 minutes, 24 secondsfor no me funciona bien De repente porque el pca no te el pca es el problema no el pca no es el problema El
+1:15:321 hour, 15 minutes, 32 secondsproblema es que la variable no las No la has transformado a una a una distribución próxima a la normal
+1:15:401 hour, 15 minutes, 40 secondsentonces decisión lo tomarías previamente conociendo las características del algoritmo pues no para que puedas implementar esta parte
+1:15:471 hour, 15 minutes, 47 secondsexactamente así es por eso muchas veces noss volvemos muy muy técnicos en la cuestión de código pero nos olvidamos de la parte
+1:15:551 hour, 15 minutes, 55 secondsfundamental de de qué es lo que necesita un algoritmo justamente entonces todo un rle cabezas realmente Les comento por
+1:16:031 hour, 16 minutes, 3 secondsejemplo de acá más que todo código automatización para que no no tengan que hacer varios códigos para hacer por parte sino cuando esto aquí
+1:16:121 hour, 16 minutes, 12 secondssolo pero en general Lo importante es eso entender por eso le dije que esto de aquí lo van a hacer manual eso más les convien hacerlo manual porque ustedes
+1:16:201 hour, 16 minutes, 20 secondsestudian sus variables van a pasar por un proceso de análisis por ejemplo aquí Me puse a analizar las variables por aquí pu analizar las variables tipo
+1:16:281 hour, 16 minutes, 28 secondscategóricas me di cuenta que hay muchas categorías y no me conviene ponerlas en un lado incluso podemos colocar a ver la encoder
+1:16:351 hour, 16 minutes, 35 secondsno por acá simplemente la transformación voy colocar transformación un transformación
+1:16:441 hour, 16 minutes, 44 secondsdos Ahí está entonces mir transformación un por acá pueden tener más
+1:16:531 hour, 16 minutes, 53 secondstransformadores por si acaso ese detalle y aquí al education le voy a colocar
+1:17:001 hour, 17 minutessimplemente le
+1:17:091 hour, 17 minutes, 9 secondsencod vamos a ver qué
+1:17:151 hour, 17 minutes, 15 seconds[Música]
+1:17:181 hour, 17 minutes, 18 secondssalió pas encoder encoder que dice transf Take
+1:17:261 hour, 17 minutes, 26 secondsdos positional Ah Ya entendí Acá hay un problema por
+1:17:341 hour, 17 minutes, 34 secondsaquí aquí hay un problema con el ev enc directamente me está diciendo que necesito bares por
+1:17:431 hour, 17 minutes, 43 secondsdefecto rápidamente
+1:17:551 hour, 17 minutes, 55 secondspor acá
+1:18:101 hour, 18 minutes, 10 secondsvamos
+1:18:131 hour, 18 minutes, 13 seconds[Música]
+1:18:151 hour, 18 minutes, 15 secondstransf aquí tengo que corregir esta parte porque me dice que x y un y
+1:18:291 hour, 18 minutes, 29 secondstrans
+1:18:331 hour, 18 minutes, 33 seconds[Música]
+1:18:391 hour, 18 minutes, 39 secondspar hacer con
+1:18:541 hour, 18 minutes, 54 secondscategorías usa usas este método no Y qué cómo funciona eso o sea no crea
+1:19:021 hour, 19 minutes, 2 secondscomo los otros una variable por cada por cada valor est 1 2 3 cu Ah Es ig
+1:19:121 hour, 19 minutes, 12 secondses per Y eso no implica un orden O sea no implicaría un orden por si por ejemplo son distritos no distritos No
+1:19:201 hour, 19 minutes, 20 secondsnecesariamente tienen un orden si le pone 1 2 3 cu el modelo no lo entendería como si fuera estar dando un orden al a
+1:19:281 hour, 19 minutes, 28 secondslos distritos por ejemplo para este caso uso claro le está dando un peso Mejor dicho claro y eso no afectaría porque en caso de que sean distritos por ejemplo
+1:19:371 hour, 19 minutes, 37 secondsno que gancho No eso No necesariamente tiene un peso no O sea ninguno Es mayor que el otro en esos casos convendría el
+1:19:431 hour, 19 minutes, 43 secondsordinal o cambio el método ninguno el encoder uno distinto cl pero ah me cre
+1:19:511 hour, 19 minutes, 51 secondsun montón de columnas no y caeríamos en lo que ca encoder también hay una librería que tiene
+1:19:581 hour, 19 minutes, 58 secondsencoder hay una librería por aquí categor el se genera menos
+1:20:091 hour, 20 minutes, 9 secondsdirectamente Aquí lo tengo recordar por acá tenía mi el del
+1:20:171 hour, 20 minutes, 17 secondsbinario podría aplicar el que comentó que había uno que era codificación binaria No eso podría aplicar para el tema de los distritos por ejemplo
+1:20:251 hour, 20 minutes, 25 secondspuedes aplicarlo por el tema de Sin problemas aquí estáen que instalar esta
+1:20:331 hour, 20 minutes, 33 secondslibrería vamos instalar esta libr no está por efecto hay una Lia que tiene
+1:20:411 hour, 20 minutes, 41 secondsbastante est la que ustedes podran utilizar categor encoders
+1:20:471 hour, 20 minutes, 47 secondsEsta tiene un montón de codificaciones directamente
+1:21:011 hour, 21 minutes, 1 secondvamos a ver aquí está mir categor encoders y voy escribir por acá categor
+1:21:091 hour, 21 minutes, 9 secondsencoders B encoder Ahí está
+1:21:171 hour, 21 minutes, 17 secondseste encer un ejito chiquito y todos tienen su invers
+1:21:231 hour, 21 minutes, 23 secondstrans caso toces tien transformación inversa directamente per no da ejemplo no da
+1:21:351 hour, 21 minutes, 35 secondsejemplo vamos vamos a ponerlo por efecto que es lo que hace por aquí
+1:21:431 hour, 21 minutes, 43 secondsdirectamente Aquí está Dónde está aquí V encoder
+1:21:521 hour, 21 minutes, 52 secondssample por ejemplo y aquí este aquí puede ayudar
+1:22:011 hour, 22 minutes, 1 seconddirectamente de aquí no es está
+1:22:111 hour, 22 minutes, 11 secondsdando me dando informaciones directas lo que yo quiero es tener la
+1:22:261 hour, 22 minutes, 26 secondsvo por aquí un
+1:22:381 hour, 22 minutes, 38 secondssegundito vamos a probarlo por
+1:22:451 hour, 22 minutes, 45 secondsacá vamos a probar a ver si nos funciona este caso de repente vamos a ver si es que es
+1:22:531 hour, 22 minutes, 53 secondscompatible con est si es
+1:22:591 hour, 22 minutes, 59 secondscompatible el 2er encoder vamos a ver
+1:23:051 hour, 23 minutes, 5 secondsqued y ahí
+1:23:121 hour, 23 minutes, 12 seconds[Música]
+1:23:141 hour, 23 minutes, 14 secondsestá ahí está tenemos
+1:23:221 hour, 23 minutes, 22 seconds[Música]
+1:23:251 hour, 23 minutes, 25 secondsAcá está Mira por ejemplo aquí tenemos las variables
+1:23:321 hour, 23 minutes, 32 secondstipo las variables ordinales nivel educación 0 1 y dos por solamente ha generado tres variables
+1:23:401 hour, 23 minutes, 40 secondsnada más depende la cantidad de valores que tenga est a la n vamos aquí d
+1:23:491 hour, 23 minutes, 49 secondsestaba la variable era educación educación aquí mira
+1:23:551 hour, 23 minutes, 55 secondseducation Aquí está 1 2 3 4 directamente lo que te hace es aplicarte una fórmula
+1:24:021 hour, 24 minutes, 2 secondslogaritmo base dos de n n es el número de categorías entonces logaritmo en base 2s en este
+1:24:101 hour, 24 minutes, 10 secondscaso de Quién sería 1 2 3 cu de education que sería de cu si no
+1:24:201 hour, 24 minutes, 20 secondsequivoco no equivoco es dos ent aquí tenía que haber saado Dj por acá que haber sacado
+1:24:291 hour, 24 minutes, 29 secondsdirectamente AC bajo un ats de bajo doso por
+1:24:381 hour, 24 minutes, 38 secondsaquí por acá ya y este es
+1:24:451 hour, 24 minutes, 45 secondsData Ah ahora sí no lo había sacado bien Mira education te lo saca as
+1:24:521 hour, 24 minutes, 52 seconds0 y acá 0 1 2 y 3 por ejemplo y yo por
+1:24:591 hour, 24 minutes, 59 secondsejemplo es esto mira ahí tiene mucho más y en valores qué sería ese es un binario
+1:25:051 hour, 25 minutes, 5 secondso sea en valores si ve vemos el dataset Y qué valores tiene ahora qué sería 0 1
+1:25:131 hour, 25 minutes, 13 secondsson combinaciones son combinaciones por ejemplo Dónde está el
+1:25:211 hour, 25 minutes, 21 secondsordinal acá le puesto ordinal no no era ordinal Era binario per Mira 0 1 y 2
+1:25:261 hour, 25 minutes, 26 secondsAh le pone 0 y 1 no más 00 00 1 0 1 0 1 te cuenta te cuenta en binario Mejor
+1:25:341 hour, 25 minutes, 34 secondsdicho cuenta si no 00 001 01
+1:25:411 hour, 25 minutes, 41 seconds001 0 0 Ah Disculpe
+1:25:451 hour, 25 minutes, 45 seconds0 01 1 1 no 10 por ejemplo y 1 1 1 dat
+1:25:531 hour, 25 minutes, 53 secondste cuenta es logaritmo en base 2s d n Por ejemplo si tú tienes ocho categorías necesitas solamente con tres
+1:26:021 hour, 26 minutes, 2 secondste cuenta las ocho categorías por que puedes contar del uno al o en binario Entonces te reduce la cantidad mira ahora salió
+1:26:101 hour, 26 minutes, 10 secondsmenos hay que hacer un arreglo por acá para que no se vea tanan así V a colocar por ejemplo c
+1:26:191 hour, 26 minutes, 19 secondsbajo y aquí Entonces ahora sí visualiz mejor ahí
+1:26:281 hour, 26 minutes, 28 secondsestá no la binaria education tres niveles y cuatro niveles directamente y lo hizo se redujo
+1:26:361 hour, 26 minutes, 36 secondsbastante lo reduce Cómo por ejemplo cuando es el One Shot es de ahí tú lo interpretas No si es uno o cero no O se
+1:26:451 hour, 26 minutes, 45 secondss o es No y este aquí que tiene 4 3 cómo lo interpretarías ahí porque esto es más complejo de interpretar no claro
+1:26:541 hour, 26 minutes, 54 secondsdirectamente lo que tienes que hacer es garantizar nada más que no exista una una intersección entre categorías directamente entonces tú
+1:27:031 hour, 27 minutes, 3 secondssimplemente lo ves por ejemplo a ver yo Ob serero no Bueno aquí lo he puesto así no esto de aquí lo he puesto
+1:27:111 hour, 27 minutes, 11 secondsSimplemente porque es así no 0 1 Bueno este de aquí j0 j1 j2 y j3
+1:27:201 hour, 27 minutes, 20 secondsno Entonces tú te vas por acá Y ves la categoría por ejemplo
+1:27:281 hour, 27 minutes, 28 secondsadmin es categoría admin sí ha en un registro donde tienes la categoría admin simplemente imaginemos que su
+1:27:351 hour, 27 minutes, 35 secondscodificación sea 001 listo en un registro d aparece admin es simplemente 001 otro registro donde
+1:27:431 hour, 27 minutes, 43 secondses Blue color por ejemplo que sea 001 listo el otro registro también es lo mismo no entonces 00 Así te vo ir
+1:27:531 hour, 27 minutes, 53 secondscontando otro registro por ejemplo es entre prene ya y es por ejemplo 0011 Ese
+1:28:001 hour, 28 minuteses su conteo smente está codificando o sea esto de aquí es la codificación para
+1:28:071 hour, 28 minutes, 7 secondsadmin con cuatro variables este de aquí es la codificación para Blue color no
+1:28:151 hour, 28 minutes, 15 secondsdirectamente y este de aquí es su codificación para no directamente estas Aquí son las
+1:28:221 hour, 28 minutes, 22 secondscodificaciones nada más te pone todos estos Como si fuese
+1:28:301 hour, 28 minutes, 30 secondsasí pero lo interpretas más fácil porque es estudiante o o no per aquí como tien que ver
+1:28:421 hour, 28 minutes, 42 secondstodos Es que aquí sea directamente adenes interpretación individual
+1:28:541 hour, 28 minutes, 54 secondses fácil para ti pero difícil para la máquina directamente un detalle Entonces tenemos
+1:29:011 hour, 29 minutes, 1 secondque ver no como directamente qué es lo que nos conviene y hacer las pruebas experimentales para ver qué proceso de
+1:29:081 hour, 29 minutes, 8 secondsaquí nos va a servir directamente pero muy bien muy bien Está bien que ustedes pregunten no cositas más más elaboradas
+1:29:161 hour, 29 minutes, 16 secondspara que todos vean directamente a ver vamos a ver cómo quedó la bueno las numéricas no la afect para nada las numéricas igualitas
+1:29:241 hour, 29 minutes, 24 secondsy lo bueno de de este pipeline es que si te das cuenta le cambié el encoder por aquí nada más y no pasó nada s igualito
+1:29:331 hour, 29 minutes, 33 secondstranquilo las numéricas Siguen con su propia transformación muy bien Vamos a ver
+1:29:411 hour, 29 minutes, 41 secondspodemos seguir haciendo modificaciones por
+1:29:491 hour, 29 minutes, 49 secondsacá por ejemplo
+1:30:001 hour, 30 minutespor ejemplo vamos a ver Power Transformer vamos a ver si me deja colocarle por
+1:30:171 hour, 30 minutes, 17 secondsaquí vamos a ver si me deja agregarle una una transformación por ejemplo
+1:30:241 hour, 30 minutes, 24 seconds[Música]
+1:30:261 hour, 30 minutes, 26 secondsno vamos a agregar a ver un para ver cómo lo dej vamos a
+1:30:441 hour, 30 minutes, 44 secondsver aquí
+1:30:511 hour, 30 minutes, 51 secondsvamos C Aquí voy colocar enc y voy a hacer un
+1:31:011 hour, 31 minutes, 1 secondn Entonces yo puedo seguir analizando mis datos y me puedo dar cuenta por ejemplo asumamos
+1:31:091 hour, 31 minutes, 9 secondsque asumamos que por ejemplo me di cuenta que la edad que el día por ejemplo el día
+1:31:191 hour, 31 minutes, 19 secondsnoen salidas se dan cuenta normal por ejemplo aquí no Camp no tiene
+1:31:281 hour, 31 minutes, 28 secondsnada que ver aquí igualito Entonces por ejemplo lo voy a
+1:31:351 hour, 31 minutes, 35 secondsdejar voy a dejar por ejemplo simplemente una transformación más más sencilla no hacer
+1:31:431 hour, 31 minutes, 43 secondsproblemas quito vamos a ver número de D tamb no se afecta para nada
+1:31:541 hour, 31 minutes, 54 secondsel número de igualito no pasa nada no le afecta para nada la transformación entonces me voy por
+1:32:011 hour, 32 minutes, 1 secondacá está coloca por acá ya y lo retiro de
+1:32:091 hour, 32 minutes, 9 secondsAC entonces hago esto de aquí entonces tengo número entonces Aquí
+1:32:161 hour, 32 minutes, 16 secondsle voy aplicar un vo colocar simplemente un me voy por acá abajo transformación
+1:32:261 hour, 32 minutes, 26 secondsdos este un bar
+1:32:371 hour, 32 minutes, 37 seconds1 Ya está no y est les voy a llamar
+1:32:451 hour, 32 minutes, 45 secondseho t y este
+1:32:511 hour, 32 minutes, 51 secondssc transformación normal colocar aquí tn listo bajo
+1:32:591 hour, 32 minutes, 59 secondsun bajo doso por acá actualizo
+1:33:061 hour, 33 minutes, 6 secondsesto Bueno aquí esto ya no es un encoder no est es un scer es un scer
+1:33:151 hour, 33 minutes, 15 secondsdirectamente y ejecuto por acá y Listo Ya está aplic un
+1:33:221 hour, 33 minutes, 22 secondsescalamiento y por aquí muest mi info y aquí está estas variables por
+1:33:311 hour, 33 minutes, 31 secondsejemplo
+1:33:321 hour, 33 minutes, 32 seconds[Música]
+1:33:381 hour, 33 minutes, 38 secondsestán balance creo que se F vamos está
+1:33:471 hour, 33 minutes, 47 seconds[Música]
+1:33:491 hour, 33 minutes, 49 secondsbien aquí se me fue ya ahora sí ejecuto por
+1:33:571 hour, 33 minutes, 57 secondsacá listo ejecuto por aquí y ahí está miren days y Camp ellos
+1:34:061 hour, 34 minutes, 6 secondssiguen por ejemplo con han sido escalados pero me he dado cuenta que estas tres estas variables De aquí sí he
+1:34:141 hour, 34 minutes, 14 secondsnecesitado por ejemplo a ellas aplicar una transformación para que se aproximen a una normal Entonces cuando me voy por
+1:34:221 hour, 34 minutes, 22 secondsacá observo todas mis variables directamente edad perfecto balance
+1:34:281 hour, 34 minutes, 28 secondsTambién bien d por ejemplo duration por ejemplo está por
+1:34:371 hour, 34 minutes, 37 secondsaquí escalado directamente previos directamente por
+1:34:441 hour, 34 minutes, 44 secondsacá bajo p por ejemplo y tiene simplemente su estándar scer también se
+1:34:511 hour, 34 minutes, 51 secondsdan cuenta y normal no no hay ningún problema solamente las he escalado y no he afectado para nada su distribución esos estimados entonces
+1:35:001 hour, 35 minuteslo que ustedes pueden hacer A través de este código un poquito más más establecido ustedes definen y hacen un estudio de qué variables requieren
+1:35:091 hour, 35 minutes, 9 secondsencoder qué variables requieren un ordinal encoder o un binary encoder qué variables requieren ser transformadas para aproximarse a una normal qué
+1:35:171 hour, 35 minutes, 17 secondsvariables no necesitan Eso y puedo aplicar un scer o un standar scer directamente y obviamente también esto como men su compañero depende mucho de
+1:35:251 hour, 35 minutes, 25 secondsla del método que yo quiero utilizar directamente del algoritmo mach que quiero aplicar muy
+1:35:361 hour, 35 minutes, 36 secondsbien listo muy bien estimados eso más que todo lo que quería mostrarles y Bueno hay diferentes escaladores por
+1:35:451 hour, 35 minutes, 45 secondsejemplo pueden aplicar uner pueden aplicar unar les invito a
+1:35:541 hour, 35 minutes, 54 secondsque lo prueben directamente también lo pueden hacer sin ningún problema aquí ustedes simplemente con
+1:36:031 hour, 36 minutes, 3 secondseste Codigo ya pueden hacerlo sin ningún sin ningún problema adicional Este Entonces es lo que
+1:36:101 hour, 36 minutes, 10 secondsestamos viendo el día de hoy el encoding de las variables y la transformación de la variables numéricas cuando se necesita o
+1:36:191 hour, 36 minutes, 19 secondsdirectamente el escalamiento de las variables numéricas ahí ustedes lo pueden aplicar sin ningún
+1:36:271 hour, 36 minutes, 27 secondsproblema muy bien alguna consulta por aquí más que todo para que lo practiquen ustedes y lo vayan repasando
+1:36:351 hour, 36 minutes, 35 secondssiempre voy a cerrar esto de aquí y Ah verad Había algo más que quería mostrarles por cuestiones de
+1:36:451 hour, 36 minutes, 45 secondstiempo creo que sí puedo mostrarles algo más hay unas funciones bastante bonitas que permiten ver
+1:36:581 hour, 36 minutes, 58 secondsuna parte bastante bon ha encontrado por aquí vamos a hacer la eliminación deers para ver cómo quedan los datos limpios
+1:37:051 hour, 37 minutes, 5 secondsen este caso Me faltó hacer la eliminación deers ya que llegué Este paso es H de pasar estimados a quitar
+1:37:141 hour, 37 minutes, 14 secondslosers acuerdo vamos a quitar losers ahora de esto ya que tenemos un poco de
+1:37:211 hour, 37 minutes, 21 secondstiempo parte habíamos hecho Aquí voy a utilizar la práctica el código de la práctica si ustedes recuerdan est la
+1:37:291 hour, 37 minutes, 29 secondspráctica estaba con este dataset y simplemente para eliminar losers me por
+1:37:361 hour, 37 minutes, 36 secondsacá y necesitaba instalar p Entonces miren vamos a hacer un trabajo más más
+1:37:441 hour, 37 minutes, 44 secondsrefinado en este punto con p me voy por aquí directamente mientras
+1:37:501 hour, 37 minutes, 50 secondsinstala y voy a quitar voy SEP mi Data en x
+1:37:581 hour, 37 minutes, 58 secondsy visto bien X prun en este
+1:38:071 hour, 38 minutes, 7 secondscaso no tengo la eso bueno directamente es es
+1:38:151 hour, 38 minutes, 15 secondsbueno entonces simplemente Data y DF si no me equivoco 10 se llama
+1:38:251 hour, 38 minutes, 25 secondsvamos por acá ya está no y simplemente tenía que observar los tamaños nada
+1:38:361 hour, 38 minutes, 36 secondsmás x y y ya está Mira Ahí está x es data.to
+1:38:451 hour, 38 minutes, 45 secondscopy que es todo los datos
+1:38:541 hour, 38 minutes, 54 secondsy o transformados y y simplemente son las etiquetas correspondientes hasta aquí estamos bien entonces con el
+1:39:011 hour, 39 minutes, 1 secondsiguiente paso y bueno vamos a utilizar el modelo el algoritmo AB que está por
+1:39:081 hour, 39 minutes, 8 secondsAC por acá y simplemente le voy a quitar a x bueno en este caso que no está
+1:39:151 hour, 39 minutes, 15 secondsimputado simplemente le voy a quitar los valores nulos
+1:39:281 hour, 39 minutes, 28 secondsesperamos un poquito que procese esta parte y luego vamos a hacer el análisis de la Data a ver cómo
+1:39:351 hour, 39 minutes, 35 secondsqueda aquí está no por
+1:39:421 hour, 39 minutes, 42 secondsacá voy a pegar Bueno aquí aquía para colocar
+1:39:491 hour, 39 minutes, 49 secondsx está bien x
+1:40:041 hour, 40 minutes, 4 secondsAquí voy a esperar un poquito aquí se demora estimados aquí demora un poquito porque ya son muchos datos y simplemente estoy copiando esta
+1:40:121 hour, 40 minutes, 12 secondsparte de acá no y vamos a esperar bueno ojalá que no demore mucho el
+1:40:191 hour, 40 minutes, 19 secondsalgoritmo directamente ya está acabó ejeo por
+1:40:261 hour, 40 minutes, 26 secondsaquí Me faltó observar el tamaño de xr para saber lo
+1:40:351 hour, 40 minutes, 35 secondsdiferencia de los 45,000 registros me quedé con 40,000 no he perdido más o menos 5000 registros
+1:40:421 hour, 40 minutes, 42 secondscomprometiendo el 10% Parece que la base de datos tenía muchísimos suppliers no y observando por
+1:40:501 hour, 40 minutes, 50 secondsacá observando por acá directamente a ver los lers se han reducido bastante por aquí en menos los lers se han
+1:40:591 hour, 40 minutes, 59 secondsminimizado mucho siguen habiendo Players pero solamente estoy observando los los de nivel univariante ojo con ese detalle
+1:41:071 hour, 41 minutes, 7 secondsaquí hay unos
+1:41:221 hour, 41 minutes, 22 secondscuantitlan Entonces esto estimados ya me permite varias cosas Me permite poder interpretar mis datos de una forma
+1:41:281 hour, 41 minutes, 28 secondsbastante más robusta sin aciendo estos puntos pero son los que mejor son loser
+1:41:361 hour, 41 minutes, 36 secondsque peor afectan al dat set recuerden si yo quisiera eliminar más of lers podría colocar 20% aquí 0.2 y volver a realizar el
+1:41:461 hour, 41 minutes, 46 secondsproceso y tendría por acá o también podría utilizar algún otro método creo que había un método diferente
+1:41:541 hour, 41 minutes, 54 secondscre que si equivoco Había otro método creo
+1:42:041 hour, 42 minutes, 4 secondsque exe quitar
+1:42:121 hour, 42 minutes, 12 secondsquit sol por ejemp
+1:42:221 hour, 42 minutes, 22 secondsotor mucho más rápido directamente y también me permite observar Cómo han quedado mis
+1:42:301 hour, 42 minutes, 30 secondsregistros directamente listo y aquí estimados están ya con ciertos con la mayor
+1:42:391 hour, 42 minutes, 39 secondscantidad de blers eliminados directamente listo estimados Entonces eso más que todo lo que les quería
+1:42:461 hour, 42 minutes, 46 secondsMostrar el día de hoy para que ustedes observen la próxima sesión vamos a ver a ver qué más me
+1:42:531 hour, 42 minutes, 53 secondsfaltaría mostrarles a ustedes para que ya completen el aprendizaje ya pasamos por los puntos más importantes no imputación de datos ya pasamos por opers
+1:43:031 hour, 43 minutes, 3 secondsy ya estamos juntando todas las piezas ya pasamos también por lo que sería escalamiento o transformación
+1:43:121 hour, 43 minutes, 12 secondsdependiendo de lo que ustedes van a hacer con la variable y también hemos pasado por el encoding no el encoding de las categóricas es para las categóricas
+1:43:211 hour, 43 minutes, 21 secondsno se olviden Y esto es para las numéricas no se olviden también de ese detalle muy bien ya estamos siguiendo
+1:43:291 hour, 43 minutes, 29 secondsPor acá todo este proceso que estamos siguiendo directamente el aprendizaje qué nos falta nos
+1:43:351 hour, 43 minutes, 35 secondsfalta selección de características nos falta reducción de
+1:43:421 hour, 43 minutes, 42 secondsla dimensionalidad no es lo mismo Okay no es lo mismo nos falta
+1:43:501 hour, 43 minutes, 50 secondsestudiar estos dos lo vamos a ver la próxima sesión voy a voy a presentarles métodos de selección de características y métodos para reducción de la
+1:43:581 hour, 43 minutes, 58 secondsdimensionalidad y vamos a observar Cómo esto de aquí ya va a impactar en un modelo hacemos el miércoles esta parte y el viernes
+1:44:071 hour, 44 minutes, 7 secondsustedes hacen una práctica solito les traig un caso de uso y ustedes aplican todo lo que han visto y entrenamos un modelito y veamos cómo queda al final
+1:44:161 hour, 44 minutes, 16 secondssí estimados Entonces nos vamos a quedar en este punto selección de características reducción de dimensionalidad a y la próxima las últimas sesiones
+1:44:251 hour, 44 minutes, 25 secondsvamos a ver métodos para balance de datos Aunque aquí todavía hay una controversia Porque algunos dicen que sí otros dicen que no depende de mucho de
+1:44:321 hour, 44 minutes, 32 secondscómo están distribuidos los datos en su espacio de características vamos a ver balance de datos directamente y vamos a hacer una
+1:44:411 hour, 44 minutes, 41 secondspráctica que incluya todo esto estimados y con ello ya si no Aunque no creo que nos alcance
+1:44:481 hour, 44 minutes, 48 secondsel tiempo porque solamente tenemos creo que nueve clases no 9 por 2 18 y finalmente con ello ya ustedes van a trabajar entonces no se
+1:44:571 hour, 44 minutes, 57 secondsolviden que los viernes trabajamos siempre no todos Hacemos unas practiques para que ustedes refuercen lo aprendido estimados Entonces nos vamos
+1:45:051 hour, 45 minutes, 5 secondsquedando por acá no no tendrías problemas pero realmente ya no sería tal necesario que
+1:45:131 hour, 45 minutes, 13 secondsla escales porque si te das cuenta están entre os3 y 3 menos men 5 y 10 puedes intentar esel
+1:45:211 hour, 45 minutes, 21 secondsescalarla pero ya no sería tanto porque un un standar scaler te lleva más o menos por este por estos valores cuando tú lo aplicas un standar scaler
+1:45:311 hour, 45 minutes, 31 secondsdirectamente el método el método el min Max sí te lleva siempre entre C y un pero el stand desc te lo deja más o
+1:45:381 hour, 45 minutes, 38 secondsmenos así como lo estás viendo ahora en pantalla Entonces entonces no ser neces Si gustas puedes probarlo no nunca
+1:45:461 hour, 45 minutes, 46 secondssabemos lo que no que puedo coner Si tienes una var que tiene 20 categorías depende ardo Ah nos faltaba ver también aunque creo que ustedes ya lo vieron En
+1:45:541 hour, 45 minutes, 54 secondsestadística han visto ustedes correlación entre variables lo que podemos hacer este Eduardo es aplicar método de selección de variables y ver
+1:46:021 hour, 46 minutes, 2 secondssi es que esa variable te puede servir o no directamente ti una variable tiene 20 categorías la puedes este Eduardo si tú
+1:46:101 hour, 46 minutes, 10 secondsquieres codificar utiliza una binary en cod este Eduardo es log en base 2 de 20 no directamente es igual x a la n ig x a
+1:46:191 hour, 46 minutes, 19 secondsla y ig 20 no bueno dos Entonces por ejemplo logaritmo en
+1:46:271 hour, 46 minutes, 27 secondsbase de 20 en base 2 por ejemplo a ver sería dos a la 4 16 2s a la 5 cinco mira
+1:46:351 hour, 46 minutes, 35 secondscon con cinco categorías te te lo codific bien Mira Eduardo con cinco con
+1:46:411 hour, 46 minutes, 41 secondsun con binary tendrías cinco nada más tendrías cinco niveles cinco nuevas variables no y podrías probar cómo te
+1:46:491 hour, 46 minutes, 49 secondsqueda en tu modelo y y intentarlo Descargar no descartarla o en todo caso las pruebas que yo a veces le hago es
+1:46:571 hour, 46 minutes, 57 secondspor ejemplo darle una codificación así ordinar que no es lo adecuado pero luego en los experimentos veo si es que esto realmente afecta o no
+1:47:051 hour, 47 minutes, 5 secondsafecta mi modelo porque a veces no afecta te comento a veces el modelo no interpreta que hay cierto orden a veces sí depende mucho cómo se relaciona con
+1:47:131 hour, 47 minutes, 13 secondsotras variables muy bien Eduardo buena consulta que hiciste he visto en que relación al negocio realizan agrupaciones como una categoría ordinal
+1:47:201 hour, 47 minutes, 20 secondsagrupaciones Cómo así este Eduardo No te entendí eso agrupación agrupación de variables te refieres Eso sí eso es
+1:47:281 hour, 47 minutes, 28 secondsparte de la ingeniería si te refieres a eso sí también lo suelen hacer suelen analizar por se suele analizar por ejemplo qué variables son altamente
+1:47:351 hour, 47 minutes, 35 secondscorrelacionadas por ejemplo la variable A B y C y esta de aquí las juntan las juntan en una sola variable no también
+1:47:421 hour, 47 minutes, 42 secondshe visto que lo hacen algunos lo hacen Si te refieres a eso directamente muy bien este Eduardo muy
+1:47:501 hour, 47 minutes, 50 secondsbien estimado Muchas gracias por la sesión del día de hoy por haber estado aquí espero que les sirva lo que les estoy enseñando poquito a poquito se va
+1:47:591 hour, 47 minutes, 59 secondsaprendiendo y se van y se van mejorando las el aprendizaje cosas trato de enseñarles cosas nuevas cosas un poquito
+1:48:061 hour, 48 minutes, 6 secondsmás fuera de lo común que van a ver que les enseñan Cómo trabajarlo cómo interpretarlo tanto a nivel de código
+1:48:131 hour, 48 minutes, 13 secondscomo a nivel de a nivel teórico para que puedan saber qué es lo que están haciendo eso es más que todo el la idea no del aprendizaje el día de
+1:48:211 hour, 48 minutes, 21 secondshoy buen de todas las sesiones
+1:48:261 hour, 48 minutes, 26 seconds[Música]

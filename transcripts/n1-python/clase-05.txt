@@ -1,0 +1,75 @@
+# Python para Ciencia de Datos - M1-5 - Resolviendo consultas
+# (título en el video: Python para Ciencia de Datos - Modulo 1 - Resolviedo consultas)
+
+0:022 seconds[Música]
+0:066 secondsahora la pregunta es cómo lo identifico Uy creo que alguien levantó la mano Arturo Arturo una
+0:1414 secondsconsulta un problemita con eso de la imputación de datos usted para trabajar
+0:2424 secondsun de un modelo datos faltantes tendrían que ser porque he encontrado mucha discusión eso hasta hasta en papers y
+0:3434 secondspor ejemplo a mí este el modelo que yo estaba haciendo en aquella no tenía tenía por ejemplo 20%
+0:4242 secondsde datos faltantes el total del no Y aún así teniendo el 20% del total de dataset
+0:4949 secondsme arrojaba Pues 7% de más o menos O sea como que se ajustaba un poco no pero o sea yo le iba le iba metiendo más más y
+0:5959 secondsmás datos así como que rellenos imput no mejoraba la el margen de error
+1:061 minute, 6 secondsel map no no veí alguna mej pas ya en esa colum En qué tenías 20% de
+1:161 minute, 16 secondsdatos faltantes en toda la base de datos o en una columna en una columna al correlación te faltaba el 20% de
+1:251 minute, 25 secondsdatos sea y corrio asaltando 20% daba un margen de error pues más o menos
+1:341 minute, 34 secondsaceptable ya y luego cuando lo disputaba qué
+1:411 minute, 41 secondspasaba no no se movía se movía muy poco un caso muy raro muy extraño porque
+1:481 minute, 48 secondssi se supone que es una es una columna que es una correlación alta entonces
+1:541 minute, 54 secondscualquier variación en esa debería de cambiar el no pero no no
+2:022 minutes, 2 secondsse movía se movía nada a ver a ver vamos por parte está interesante tu caso a ver creo que más o
+2:102 minutes, 10 secondsmenos te entiendo Imagínate que tú ya imaginemos que tenías una columna a b c
+2:162 minutes, 16 secondsy por aquí una d ya la d tenías el 20% de datos faltantes correcto hasta aquí te entendí y luego
+2:242 minutes, 24 secondsla imput correct la imput y mandaste a entrenar tu modelo verdad sí lo imput primero lo hice así sin imputar y salía
+2:322 minutes, 32 secondssiete y luego lo imput saliendo siete con una variación pequeñita así no Pero cómo lo mandaste a entrenar si los datos
+2:412 minutes, 41 secondsestaban nulos o le pusiste un valor por defecto AC cas cero Ah sí le puse un valor por defecto que
+2:482 minutes, 48 secondsera cero Ah ya te entendí ahora sí ya me quedó claro o sea primero le pusiste valor todos los números pusiste cero por efecto y mandaste a entrenar y tuviste
+2:552 minutes, 55 secondsmás o menos un error de siete sí m mape creo que me dijiste no El
+3:033 minutes, 3 secondsM yae un map de s luego lo impe Y seguiste salendo sig saliendo siete sí
+3:113 minutes, 11 secondsseguía saliendo Si ya pero me dices que esta columna era altamente correlacionada Supongo que tenas una objetivo y por acá
+3:193 minutes, 19 secondsverdad el tema era hallar este Por ejemplo yo en ese momento estaba intentando hallar proyecciones de
+3:263 minutes, 26 secondstráfico a los centros comerciales como un ret Y entonces este el tema era allar el tráfico diario que iba a haber en todas
+3:343 minutes, 34 secondslas cadenas que que se manejaba la empresa no y lanz Ah claro pero tenía serie de tiempo entonces era una serie
+3:423 minutes, 42 secondsde tiempo Ah ya entonces mira era una serie de tiempo entonces aquí la cuestión cambio Es una serie de tiempo sí tenía datos desde el si mal no me
+3:513 minutes, 51 secondsacuerdo desde junio del 21 hasta la última fecha será septiembre 15 algo así
+3:593 minutes, 59 secondsya normalmente cuando esta columna cuando es una serie de tiempo tú
+4:064 minutes, 6 secondsves t puedes visualizar en el tiempo t puedes ver el hueco que queda Bueno voy hacer lo más grande imagina que este es el puedes
+4:164 minutes, 16 secondshueco que hay Con qué le imput Ase interpolación
+4:224 minutes, 22 secondsha un cómo se llama allí como que seguía esa solo en ese Rango de tiempo
+4:304 minutes, 30 secondsy lo partí y puse la que tenían que ir ahí ya cuando hablamos de serie de tiempo son
+4:384 minutes, 38 secondsotro tipo de imputación hay varias imputaciones realmente para serie de tiempo la más famosa es la interpolación interpolación
+4:454 minutes, 45 secondscon como son unas como son curvas una búbica una una polinomial de grado TR se
+4:524 minutes, 52 secondsacabó acabó con eso lo puedes imputar o puedes aplicar otras estrategias también hay bastantes realmente te comento ya
+5:005 minutesmuy bien tú imput y te salió entonces tú estabas haciendo una tarea de regresión bueno era una serie de tiempo pero serie
+5:075 minutes, 7 secondsde tiempo multivariable porque me mencionas que tenías más de una variable correcto sí Por lo general sí tenemos más de una
+5:155 minutes, 15 secondsvariable que son dos ent ten afecta ya entonces habría que verlo realmente tu
+5:235 minutes, 23 secondscaso pero una cosa te digo este esta el que una variable tenga alta correlación con otra
+5:315 minutes, 31 secondstiene que verse también qué pasa con las demás variables porque es una es una serie de tiempo multivariable entonces posiblemente las
+5:405 minutes, 40 secondsotras también influían directamente con tu var objetivo habría que verlo Mira te comento tengo un caso un chico que está
+5:475 minutes, 47 secondshaciendo predicción por ejemplo de precio de bitcoin y está colocando varias variables juntas y está trabajando con ventan de tiempo y la
+5:555 minutes, 55 secondsventana de tiempo por ejemplo son los que le están afectando performance a él está afectando bastante la performance de su
+6:036 minutes, 3 secondsmodelo Entonces él Creo que si tuvo que imputar no sé dónde dónde sacó cierta Data Pero tenía que imputar y en su caso
+6:116 minutes, 11 secondsla imputación lo único que hacía era completarle cierta línea algo así como lo que te muestro pero no no en bueno en
+6:196 minutes, 19 secondssu caso él sí le ha mejorado sí le mejoró le mejoró directamente y es porque cuando tú imput esta variable junto con las otras cuatro
+6:286 minutes, 28 secondsimaginos que tenías cuatro variables más las cuatro en conjunto tienen que en el espacio mapear tu var objetivo es algo
+6:366 minutes, 36 secondsBastante bonito ya si me da tiempo Les explico luego directamente tienes que ver qué tanta explicaba hay directamente
+6:436 minutes, 43 secondsno en en esta serie de tiempo entonces posiblemente algo ha tenido que ocurrir con tu modelo o sea creo que debió ser un análisis más allá que iba más de la
+6:516 minutes, 51 secondsvariable realmente tenías que haber analizado de repente la ventana no la ventana de móvil o Cuántos días también tenías directamente previos
+7:007 minutescreo que eso también pude ha influido bastante en tus resultados y y otra cosa
+7:087 minutes, 8 secondsinteresante es que me dices que le colocaste cero por defecto saló un map de s que es elevado y luego otro
+7:177 minutes, 17 secondsimputando s otro mapa de tendría que analizar tendría que ver en conjunto Cómo quedaba tu tu código pero está
+7:247 minutes, 24 secondsinteresante lo que mencionas está interesante real y Qué modelo utilizaste Disculpa
+7:357 minutes, 35 secondsesteo era un modelo predefinido que se llama si mal no me acuerdo Ah no no
+7:447 minutes, 44 secondsdirectamente por eemplo él utilizó buen está utizando de tiempo pero multivariable pero con
+7:537 minutes, 53 secondsmachando una l una y una red Transformer ahora no no he llegado a ver el caso la que me
+8:018 minutes, 1 secondmencionando la estrategia que revisar a ver si es que influye directamente
+8:088 minutes, 8 secondscomo pero interesante lo que mencionas directamente Muy bien gracias
+8:158 minutes, 15 secondsArturo compartir tu experiencia lo que su colega dice es correcto a veces la imputación no me
+8:228 minutes, 22 secondsafecta mucho Bueno pero ser tiempo es un caso diferente tener que varias cuestiones sobre todo la variable la variable
+8:318 minutes, 31 secondstiempo en la que Define y serie de tiempo Les comento ya para que vayan teniendo en cuenta tiene que ver con la
+8:388 minutes, 38 secondsdefinición de datos secuenciales el comportamiento necesita ustedes
+8:458 minutes, 45 secondsnecesitan extraer si me vuelvo más teórico información espacio temporal no directamente de un dato secuencial se ya
+8:538 minutes, 53 secondsno va más simplemente de una variable sino va de cómo se comporta cierta variable en el tiempo y como todo el comportamiento de las var en el tiempo
+9:019 minutes, 1 secondinfluyen en una variable objetivo ustedes definan y ahora el análisis se puede hacer por ventanas de tiempo Les
+9:109 minutes, 10 secondscomento y hay estrategias incluso de normalización que normalizan métodos antiguos que trabajan con datos
+9:169 minutes, 16 secondssecuenciales y permiten alinear ciertas tendencias Ahí está recer modelos warping que tamb funcion
+9:249 minutes, 24 secondsbastante bien i

@@ -58,6 +58,13 @@ Abre la carpeta con `claude` y tendrás disponibles:
 | `/progreso` | Resumen de avance, puntos débiles y qué estudiar después |
 | `/proyecto <n1-…\|mentor-ia> [planificar\|revisar] [capa]` | Planifica o revisa un proyecto modular o una capa de Mentor IA |
 
+**Skills interactivos** (nuevos):
+- `/explicar <tema>` - Explica un concepto con analogía, código y ejemplo
+- `/quiz <tema>` - Quiz de 5 preguntas con corrección inmediata
+- `/entrevista` - Simulación de entrevista técnica con feedback
+- `/pista-gradual <clase o problema>` - Pistas graduales nivel 1→2→3
+- `/siguiente` - Qué estudiar a continuación según tu progreso
+
 Agentes (en `.claude/agents/`):
 
 - **tutor** — explica conceptos, nunca entrega la solución completa de un ejercicio a la primera.
@@ -71,8 +78,10 @@ Agentes (en `.claude/agents/`):
 ├── CLAUDE.md                 # Reglas del repo para Claude Code
 ├── FLUJO.md                  # Flujo por clase + prompts para copiar
 ├── ROADMAP.md                # Temario oficial, dependencias y capas de Mentor IA
+├── PROGRESO.md               # Visualización amigable del progreso (auto-generado)
 ├── progreso.json             # Lo actualiza el evaluador (no editar a mano)
 ├── framework/                # Motor de evaluación y progreso (Python)
+│   └── llm/                  # FakeLLM y ClaudeLLM para ejercicios con LLMs
 ├── data/                     # Generadores de datasets de práctica
 ├── transcripts/              # n1-python/, n2-ml/, n3-dl/, curso-1/ … curso-5/
 ├── cursos/

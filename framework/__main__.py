@@ -9,6 +9,13 @@ from pathlib import Path
 
 import pytest
 
+# Configurar encoding UTF-8 para Windows
+if sys.platform == "win32":
+    import codecs
+    sys.stdout = codecs.getwriter("utf-8")(sys.stdout.buffer, "strict")
+    if hasattr(sys.stderr, "buffer"):
+        sys.stderr = codecs.getwriter("utf-8")(sys.stderr.buffer, "strict")
+
 from . import progreso
 from .plugin import Calificador
 
@@ -66,6 +73,10 @@ def evaluar(ruta_txt: str, verbose: bool = False) -> int:
 def mostrar_progreso() -> int:
     datos = progreso.cargar()["clases"]
     clases = progreso.clases_disponibles()
+
+    # Actualizar PROGRESO.md
+    progreso.actualizar_progreso_md()
+
     print("\n📊 Progreso — AI Engineer Journey\n")
     grupo_actual = None
     for ruta in clases:
@@ -77,11 +88,15 @@ def mostrar_progreso() -> int:
         info = datos.get(clave)
         if info:
             nota = info["mejor_nota"]
-            print(f"    {_barra(nota, 15)} {nota:5.1f}  {clase_nombre}")
+            emoji = "✅" if nota >= progreso.NOTA_APROBATORIA else "📝"
+            print(f"    {emoji} {_barra(nota, 15)} {nota:5.1f}  {clase_nombre}")
         else:
-            print(f"    {GRIS}{'░' * 15}   ---  {clase_nombre} (pendiente){RESET}")
+            print(f"    ⬜ {GRIS}{'░' * 15}   ---  {clase_nombre} (pendiente){RESET}")
     aprobadas = sum(1 for c in clases if datos.get(_clave(c), {}).get("aprobada"))
-    print(f"\n  ✅ {aprobadas}/{len(clases)} clases aprobadas (nota ≥ {progreso.NOTA_APROBATORIA})\n")
+    total = len(clases)
+    progreso_pct = int(aprobadas / total * 100) if total > 0 else 0
+    print(f"\n  ✅ {aprobadas}/{total} clases aprobadas ({progreso_pct}% completado)")
+    print(f"  {GRIS}PROGRESO.md actualizado · ver con tu editor o en GitHub{RESET}\n")
     return 0
 
 

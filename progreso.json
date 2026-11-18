@@ -12,6 +12,28 @@
       "ultima_nota": 100.0,
       "aprobada": true,
       "tests_fallidos": []
+    },
+    "curso-1-fundamentos-software-ia/m1-rol-y-sistemas/clase-01-roles": {
+      "intentos": 1,
+      "mejor_nota": 0,
+      "historial": [
+        {
+          "fecha": "2026-11-17T21:09:36",
+          "nota": 0.0
+        }
+      ],
+      "ultima_nota": 0.0,
+      "aprobada": false,
+      "tests_fallidos": [
+        "test_ml_engineer",
+        "test_prompt_engineer",
+        "test_data_scientist",
+        "test_llm_developer",
+        "test_ai_engineer_por_defecto",
+        "test_mayusculas",
+        "test_quiz_completo",
+        "test_quiz_correctitud"
+      ]
     }
   }
 }
